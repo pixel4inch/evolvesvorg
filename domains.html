@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>DOMAINS - Evolv.cc</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+
+  <!--============================
+    PLACEKEEPTER BANNER
+=============================-->
+
+  <!--section class="section placekeeper_section theme-1">
+    <div class="container">
+      <div class="row align-items-center">
+
+      </div>
+    </div>
+  </section-->
+
+  <!--================================
+=            Page Title            =
+=================================-->
+  <div class="body-content">
+    <section class="design-team section pt-0">
+      <div class="container">
+        <div class="row">
+          <h3 class="b-0 text-center w-100 font-display1 main-font-color">TECH DOMAINS</h3>
+
+        </div>
+        <div class="row mt-3">
+          <div class="row mx-0 pb-4 d-flex flex-wrap aling-items-center justify-content-center" id="domain-list">
+            <script src="https://code.jquery.com/jquery-3.7.0.js"
+              integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+            <script>
+              // Fetch the JSON data file
+              fetch('./data/showdomains.json')
+                .then(response => response.json())
+                .then(data => {
+                  // Sort the data based on the 'name' property
+                  const sortedData = data.sort((a, b) => a.Title.localeCompare(b.Title));
+                   // Display the sorted data in the document
+                   var output = '';
+                   var preevent= 'A';
+                   output += `
+                              `;
+                   $.each(sortedData, function (key, value) {
+                    
+                      if(preevent == value.alphapatic){
+                        output += `   
+                                <div class=" col-lg-3 col-md-4 col-sm-6 col-6 px-0 mb-3 mx-0 domain-items `+ value.alphapatic + `">
+                                 <a href="./domain_innerpage.html?EventId=` + value.EventId + `" target="_blank"  class="mx-2 domain-list-items  ">`+ value.Title + ` </a>       
+                              </div>`                             
+                          }else{
+                            output += `</div>
+                             
+                                <div class="alphaindex"> 
+                                <p>`+ value.alphapatic + `</p>
+                                </div>
+                                <div class=" col-lg-3 col-md-4 col-sm-6 col-6 mb-3 px-0 mx-0 domain-items `+ value.alphapatic + `">
+                                 <a href="./domain_innerpage.html?EventId=` + value.EventId + `" target="_blank"  class="mx-2 domain-list-items  ">`+ value.Title + ` </a>       
+                              </div>                               
+                              `;
+                            } 
+                            preevent= value.alphapatic;
+                      });
+
+                           
+               
+
+                  $('#domainlist').html(output);
+                }).fail(function () {
+                  document.write("An error has occurred.");
+                });
+            </script>
+          </div>
+
+
+
+          <div id="domainlist" class="domainlist d-flex flex-wrap justify-content-cener align-items-center p-2">
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </div>
+  <!--====  End of Page Title  ====-->
+
+
+
+  <!--============================
+	           Footer            
+=============================-->
+  <footer-component></footer-component>
+
+
+  <!---============================
+           ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('LANGUAGE');
+        $('.goog-te-menu-frame.skiptranslate').load(function () {
+          setTimeout(function () {
+            $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+          }, 100);
+        });
+      });
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+         ================================================== -->
+    <meta charset="utf-8">
+    <title>NextTech</title>
+    <!-- Mobile Specific Metas
+         ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Evolv">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Evolv ">
+    <meta name="generator" content="Evolv">
+    <!-- theme meta -->
+    <meta name="theme-name" content="Evolv" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- PLUGINS CSS STYLE -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+    <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="plugins/aos/aos.css" />
+    <!-- CUSTOM CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custome.css" rel="stylesheet" />
+    <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+    <!---WEB COMPONETNS-->
+    <script src="./webcomponts/headerComponents.js"></script>
+    <script src="./webcomponts/FooterComponent.js"></script>
+    <script src="./webcomponts/ScrollToTop.js"></script>
+    <script src="./webcomponts/dummytext.js"></script>
+    <script>
+        function SavePower_Request_invite() {
+            //alert('Saved');
+
+
+            var vFirst_Name = $("#first_name").val();
+            var vLast_Name = $("#last_name").val();
+
+            var vLinkedin = $("#linkedInLink").val();
+            var vPosition = $("#Position").val();
+            var vCompany = $("#Company").val();
+            var vEmail = $("#email").val();
+            var vCountry = $("#country").val();
+            var vSource_Page = '';
+
+
+
+            //alert(vLast_Name);	
+            if (vEmail != null && vEmail != '') {
+                //alert(vReportName);
+                $.ajax({
+                    url: "Ajax_AddRequest_invite.asp",
+                    type: "POST", data: 'vSource_Page=' + encodeURIComponent(vSource_Page) + '&vEmail=' + encodeURIComponent(vEmail) + '&vFirst_Name=' + encodeURIComponent(vFirst_Name) + '&vLast_Name=' + encodeURIComponent(vLast_Name) + '&vLinkedin=' + encodeURIComponent(vLinkedin) + '&vPosition=' + encodeURIComponent(vPosition) + '&vCompany=' + encodeURIComponent(vCompany) + '&vCountry=' + encodeURIComponent(vCountry) + '',
+                    success: function (data) {
+                        //alert(data);
+                        //alert('Thanks for submitting!');	
+                        window.open("https://www.evolv.cc/loginLinkedin_User.asp?UsID=0&rcode=0&ecode=" + encodeURIComponent(vEmail));
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert(xhr.status);
+                        alert(thrownError);
+                        alert(xhr.responseText);
+                    }
+                });
+
+                //window.opener.location.reload(false);
+                //window.opener.location.reload()
+            }
+            else {
+
+                alert("values can't be left blank");
+
+            }
+        }
+    </script>
+
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+    <!--============================
+         =            HEADER           =
+         =============================-->
+    <header-component></header-component>
+    <!--============================
+         PLACEKEEPTER BANNER
+         =============================-->
+    <div class="body-content">
+        <section class="section  pt-4 page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="w-100">
+                        
+						
+						
+						
+						
+                       
+						
+						
+						<a data-toggle="collapse" href="#influencerProminent" role="button" aria-expanded="false" aria-controls="collapseExample"> <h3 class="font-weight-bold main-font-color my-1 w-100 mb-3"> PROMINENT PARTICIPANTS (A-Z)</h3>
+						</a>
+						
+						<div class="collapse show" id="influencerProminent">
+							
+							
+							<script  src="https://code.jquery.com/jquery-3.7.0.js"></script>
+						  
+						  <div class="w-100">
+                                <div id="influencer_speakers"
+                                    class="speaker-evolv-submit  d-flex flex-wrap  justify-content-lg-center  justify-content-xl-center justify-content-md-center justify-content-center">
+
+                                    <script>
+                                        $(document).ready(function () {
+                                            $.getJSON("./data/InfluencerSpeakersList2.json", function (data) {
+                                                var output = '';
+                                                console.log(data)
+                                                $.each(data, function (key, value) {
+
+                                                    output += `
+                                                    <div class="card-md card-style1  ">
+                                                           <div class="img-block">
+                                                               <img src="./images/evolv/INFLUENCERS_PROMINENT/`+ value.image_link + `" alt=" ` + value.Name + `" title=" ` + value.Name + `">																</a>
+                                                           </div>
+                                                           <div class="card-content">
+                                                           <h3 title=" ` + value.Name + `"> ` + value.Name + `</h3>
+                                                           <h4 title=" ` + value.Designation + ` "> ` + value.Designation + `</h4>
+                                                           <h4 title=" ` + value.Company + `"> ` + value.Company + `</h4>
+                                                           </div>
+                                                       </div>
+                                                    
+                                                    
+                                                    `;
+
+                                                });
+                                                $('#influencer_speakers').html(output);
+                                            }).fail(function () {
+                                                document.write("An error has occurred.");
+                                            });
+                                        });
+                                    </script>
+
+
+                                </div>
+
+
+                            </div>
+							
+						</div>
+						
+					
+						
+
+                       
+
+
+
+                       
+
+
+
+                       
+
+                       
+                        
+
+
+
+
+                        
+
+						
+                       
+
+						
+                        
+					
+
+
+
+                    </div>
+
+                    <!------->
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </section>
+    </div>
+
+    </div>
+    <!--====  End of Page Title  ====-->
+    <!--============================
+         Footer            
+         =============================-->
+    <footer-component></footer-component>
+    <!---============================
+         ScrollTop        
+         =============================--->
+    <scrolltop-component></scrolltop-component>
+    <!-- JAVASCRIPTS -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+    <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+    <script src="plugins/google-map/gmap.js"></script>
+    <script src="js/script.js"></script>
+    <script src="./js/submenu_select.js"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+                $('.goog-te-menu-value span:first').html('LANGUAGE');
+                $('.goog-te-menu-frame.skiptranslate').load(function () {
+                    setTimeout(function () {
+                        $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+                    }, 100);
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+</body>
+
+</html>

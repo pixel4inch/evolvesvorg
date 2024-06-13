@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>Evolv</title>
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Evolv">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Evolv ">
+    <meta name="generator" content="Evolv">
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="Evolv" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- PLUGINS CSS STYLE -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+    <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="plugins/aos/aos.css" />
+
+
+    <!-- CUSTOM CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custome.css" rel="stylesheet" />
+    <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+
+    <!---WEB COMPONETNS-->
+
+    <script src="./webcomponts/headerComponents.js"></script>
+    <script src="./webcomponts/FooterComponent.js"></script>
+    <script src="./webcomponts/ScrollToTop.js"></script>
+    <script src="./webcomponts/dummytext.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+</head>
+<body class="body-wrapper" id="container" data-spy="scroll" data-target=".privacy-nav" onBeforePrint="document.body.style.display='none';" onAfterPrint="document.body.style.display='block';" onContextmenu="return false" onSelectstart="return false" onDragstart="return false"  topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
+
+<!--============================
+=            HEADER           =
+=============================-->
+    <header-component></header-component>
+
+
+    <!--================================
+=            Page Title            =
+=================================-->
+
+    <section class="section pt-5 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 m-auto ">
+                    <h1 class="font-display1 main-font-color text-center">INNOVATOR ECO-CONNECTS </h1>
+                </div>
+
+                <div class="row">
+      
+                    <h1 class="font-display2 text-center main-font-color  col-lg-11 mt-3 col-md-12 mx-auto " >
+                        Myriad of Programs Driven by Evolv<sup>TM</sup> Members, Partners, and Supporters
+                    </h1>
+          
+                    <h2 class="font-display1 mt-0 text-center  col-lg-11 col-md-12 mx-auto text-capitalize">Let's <u>Evolve</u> Together!</h2> 
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="timeline_area section_padding_130">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Timeline Area-->
+                    <div class="apland-timeline-area">
+
+
+                        <!-- Single Timeline Content-->
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft w-100" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>MARCH 2023</p>
+                            </div>
+                            <!---INPERSON EVENT -->
+                            <div class="row mx-0" id="mar">
+                                <div
+                                    class="  col-12 col-md-6 col-lg-5 col-xl-4  px-1 calender-lables   inpersonalevent-block   ">
+                                    <div class="single-timeline-content inpersonal d-flex wow fadeInLeft"
+                                        data-wow-delay="0.3s"
+                                        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><img src="./images/evolv/icons/calender/live.png">
+                                        </div>
+                                        <div class="timeline-text">
+                                            <h6 class="d-flex flex-column"><span style="color:black" class="mb-1">EVOLV<sup>TM</sup> 2023 KICKOFF</span> <span style="color:black">B20 2023 ROADSHOW
+                                                    </span> </h6>
+                                            <h5>March 27-30, 2023</h5>
+                                        </div>
+                                    </div>
+                                    </a> </div>
+                            </div>
+                        </div>
+                        <!-- Single Timeline Content-->
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>APRIL 2023</p>
+                            </div>
+                            <div class="row pb-4" id="april">
+                                <script>
+                                    $(document).ready(function () {
+                                        $.getJSON("./data/calender.json", function (data) {
+                                            var output = '';
+                                            console.log(data)
+                                            $.each(data.APRIL, function (key, value) {
+                                                output += `
+                                                <div class="  col-12 col-md-6 col-lg-4 px-1 calender-lables`+ ` ` + value.Multi + ` ` + value.dg + ` ` + value.live + `">
+                                                    <a href="./calevents_evolv.html?EventId=` + value.EventId + ` "target="_blank">  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                                        <div class="timeline-icon"><img src="` + value.icon + `"/></div>
+                                                        <div class="timeline-text">
+                                                            <h6>` + value.Title + `</h6>
+                                                            <h5>` + value.date + `</h5>
+                                                        </div>
+                                                    </div>
+                                               </a> </div> `;
+                                            });
+                                            $('#april').html(output);
+                                        }).fail(function () {
+                                            document.write("An error has occurred.");
+                                        });
+                                    });
+                                </script>
+                            </div>
+
+
+                        </div>
+                        <!-- Single Timeline Content-->
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>MAY 2023</p>
+                            </div>
+                            <div class="row pb-4" id="may">
+
+                                <script>
+
+                                    $(document).ready(function () {
+                                        $.getJSON("./data/calender.json", function (data) {
+                                            var output = '';
+                                            console.log(data)
+                                            $.each(data.MAY, function (key, value) {
+                                                output += `
+                                                
+                                                <div class="  col-12 col-md-6 col-lg-4 px-1 calender-lables`+ ` ` + value.Multi + ` ` + value.dg + ` ` + value.live + `">
+                                                    <a href="./calevents_evolv.html?EventId=` + value.EventId + ` "target="_blank">  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                                        <div class="timeline-icon"><img src="` + value.icon + `"/></div>
+                                                        <div class="timeline-text">
+                                                            <h6>` + value.Title + `</h6>
+                                                            <h5>` + value.date + `</h5>
+                                                        </div>
+                                                    </div>
+                                               </a> </div> `;
+                                            });
+                                            $('#may').html(output);
+                                        }).fail(function () {
+                                            document.write("An error has occurred.");
+                                        });
+                                    });
+                                </script>
+
+
+
+                            </div>
+                              <!---INPERSON EVENT-->
+                              <div class="row" >
+                                <div
+                                    class="  col-12 col-md-6 col-lg-5 col-xl-4  px-1 calender-lables   inpersonalevent-block   ">
+                                    <a href="javascript:valid(0) ">
+                                        <div class="single-timeline-content inpersonal d-flex wow align-items-start fadeInLeft"
+                                            data-wow-delay="0.3s"
+                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon d-flex  flex-column"><img src="./images/evolv/icons/calender/live.png"/>
+                                            </div>
+                                            <div class="timeline-text">
+                                                <h6 class="d-flex flex-column"><span style="color:black"
+                                                        class="mb-1">WORLD INNOVATOR SUMMIT </span>  </h6>
+                                                <h5 class="mb-0 mt-2">May 22, 23, 24, & 25, 2023</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>JUNE 2023</p>
+                            </div>
+                            <div class="row pb-0" id="june">
+
+
+                                <script>
+                                    $(document).ready(function () {
+                                        $.getJSON("./data/calender.json", function (data) {
+                                            var output = '';
+                                            console.log(data)
+                                            $.each(data.JUNE, function (key, value) {
+                                                output += `
+                                                
+                                                <div class="  col-12 col-md-6 col-lg-4 px-1 calender-lables`+ ` ` + value.Multi + ` ` + value.dg + ` ` + value.live + `">
+                                                    <a href="./calevents_evolv.html?EventId=` + value.EventId + ` "target="_blank">  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                                        <div class="timeline-icon"><img src="` + value.icon + `"/></div>
+                                                        <div class="timeline-text">
+                                                            <h6>` + value.Title + `</h6>
+                                                            <h5>` + value.date + `</h5>
+                                                        </div>
+                                                    </div>
+                                               </a> </div> `;
+                                            });
+                                            $('#june').html(output);
+                                        }).fail(function () {
+                                            document.write("An error has occurred.");
+                                        });
+                                    });
+                                </script>
+
+
+
+
+
+
+                            </div>
+
+
+
+                            <!---inperson event-->
+                            <div class="row " >
+
+                                <div
+                                    class="  col-12 col-md-6 col-lg-5 col-xl-4  px-1 calender-lables   inpersonalevent-block   ">
+                                    <a href="javascript:valid(0) " >
+                                        <div class="single-timeline-content inpersonal d-flex wow fadeInLeft"
+                                            data-wow-delay="0.3s"
+                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon"><img
+                                                    src="./images/evolv/icons/calender/live.png"></div>
+                                            <div class="timeline-text">
+                                                <h6 class="d-flex flex-column"><span style="color:black"
+                                                        class="mb-1">EVOLV<sup>TM</sup> ANNUAL SUMMIT</span> <span
+                                                        style="color:black" class="mb-1">INNOVATOR AWARDS NIGHT</span>
+                                                    <!--span style="color:black"></!--span> B20 2023 FAST TRACK</span-->
+                                                </h6>
+                                                <h5>June 27-30, 2023</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>JULY 2023 </p>
+                            </div>
+                            <div class="row pb-4" id="OCT">
+
+
+                                <script>
+                                    $(document).ready(function () {
+                                        $.getJSON("./data/calender.json", function (data) {
+                                            var output = '';
+                                            console.log(data)
+                                            $.each(data.JULY, function (key, value) {
+                                                output += `
+                                                
+                                                <div class="  col-12 col-md-6 col-lg-4 px-1 calender-lables`+ ` ` + value.Multi + ` ` + value.dg + ` ` + value.live + `">
+                                                    <a href="./calevents_evolv.html?EventId=` + value.EventId + ` "target="_blank"> <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                                        <div class="timeline-icon"><img src="` + value.icon + `"/></div>
+                                                        <div class="timeline-text">
+                                                            <h6>` + value.Title + `</h6>
+                                                            <h5>` + value.date + `</h5>
+                                                        </div>
+                                                    </div>
+                                               </a> </div> `;
+                                            });
+                                            $('#OCT').html(output);
+                                        }).fail(function () {
+                                            document.write("An error has occurred.");
+                                        });
+                                    });
+                                </script>
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>AUGUST 2023</p>
+                            </div>
+                            <div class="row pb-4" id="aug">
+
+
+                                <script>
+                                    $(document).ready(function () {
+                                        $.getJSON("./data/calender.json", function (data) {
+                                            var output = '';
+                                            console.log(data)
+                                            $.each(data.AUG, function (key, value) {
+                                                output += `
+                                                
+                                                <div class="  col-12 col-md-6 col-lg-4 px-1 calender-lables`+ ` ` + value.Multi + ` ` + value.dg + ` ` + value.live + `">
+                                                    <a href="./calevents_evolv.html?EventId=` + value.EventId + ` "target="_blank">  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                                        <div class="timeline-icon"><img src="` + value.icon + `"/></div>
+                                                        <div class="timeline-text">
+                                                            <h6>` + value.Title + `</h6>
+                                                            <h5>` + value.date + `</h5>
+                                                        </div>
+                                                    </div>
+                                               </a> </div> `;
+                                            });
+                                            $('#aug').html(output);
+                                        }).fail(function () {
+                                            document.write("An error has occurred.");
+                                        });
+                                    });
+                                </script>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>SEPTEMBER 2023</p>
+                            </div>
+                            <div class="row pb-0" id="sep">
+
+
+                                <script>
+                                    $(document).ready(function () {
+                                        $.getJSON("./data/calender.json", function (data) {
+                                            var output = '';
+                                            console.log(data)
+                                            $.each(data.SEP, function (key, value) {
+                                                output += `
+                                                
+                                                <div class="  col-12 col-md-6 col-lg-4 px-1 calender-lables`+ ` ` + value.Multi + ` ` + value.dg + ` ` + value.live + `">
+                                                    <a href="./calevents_evolv.html?EventId=` + value.EventId + ` "target="_blank"> <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                                        <div class="timeline-icon"><img src="` + value.icon + `"/></div>
+                                                        <div class="timeline-text">
+                                                            <h6>` + value.Title + `</h6>
+                                                            <h5>` + value.date + `</h5>
+                                                        </div>
+                                                    </div>
+                                               </a> </div> `;
+                                            });
+                                            $('#sep').html(output);
+                                        }).fail(function () {
+                                            document.write("An error has occurred.");
+                                        });
+                                    });
+                                </script>
+
+                            </div>
+                            <!---INPERSON EVENT-->
+                            <!---div class="row" >
+                                <div
+                                    class="  col-12 col-md-6 col-lg-5 col-xl-4  px-1 calender-lables   inpersonalevent-block   ">
+                                    <a href="javascript:valid(0) " >
+                                        <div class="single-timeline-content inpersonal d-flex wow align-items-start fadeInLeft"
+                                            data-wow-delay="0.3s"
+                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon d-flex  flex-column"><img src="./images/evolv/icons/calender/b20.png" class="mt-3"> 
+                                               
+                                            </div>
+                                            <div class="timeline-text">
+                                                <h6 class="d-flex flex-column"><span style="color:black"
+                                                        class="mb-1">B20 2023 B2B SUMMIT </span> <span style="color:black"
+                                                        class="mb-1">@ G20 2023 SUMMIT </span> </h6>
+                                                <h5 class="mb-0 mt-0">September 6-8 B20 SUMMIT</h5>
+                                                <h5 class="mt-1">September 9 & 10 G20 SUMMIT</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div--->
+                        </div>
+
+
+
+                        <!--div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>NOVEMBER 2023</p>
+                            </div>
+                            <div class="row pb-4" id="nov">
+                                
+                                
+                                <script>
+                                    $(document).ready(function () {
+                                        $.getJSON("./data/calender.json", function (data) {
+                                            var output = '';
+                                            console.log(data)
+                                            $.each(data.NOV, function (key, value) {
+                                                output += `
+                                                
+                                                <div class="  col-12 col-md-6 col-lg-4 px-1 calender-lables`+ ` ` + value.Multi + ` ` + value.dg + ` ` + value.live + `">
+                                                    <a href="` +value.Links + ` "target="_blank">  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                                        <div class="timeline-icon"><img src="` + value.icon + `"/></div>
+                                                        <div class="timeline-text">
+                                                            <h6>` + value.Title + `</h6>
+                                                            <h5>` + value.date + `</h5>
+                                                        </div>
+                                                    </div>
+                                               </a> </div>`;
+                                            });
+                                            $('#nov').html(output);
+                                        }).fail(function () {
+                                            document.write("An error has occurred.");
+                                        });
+                                    });
+                                </script>
+
+
+                            
+
+
+
+                            </div>
+                        </div--->
+
+
+                        <p style="color:red;font-size: 14px;" class="my-3 ml-4">Calendar subject to
+                            change</p>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <!--====  End of Page Title  ====-->
+
+
+    <!--============================
+	           Footer            
+=============================-->
+
+    <footer-component></footer-component>
+
+
+    <!---============================
+           ScrollTop        
+=============================--->
+
+    <scrolltop-component></scrolltop-component>
+
+    <!-- JAVASCRIPTS -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+    <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+    <script src="plugins/google-map/gmap.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="./js/submenu_select.js"></script>
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+                $('.goog-te-menu-value span:first').html('LANGUAGE');
+                $('.goog-te-menu-frame.skiptranslate').load(function () {
+                    setTimeout(function () {
+                        $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+                    }, 100);
+                });
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

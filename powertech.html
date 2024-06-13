@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+        var writeuptitle = '';
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (selURL == value.Event) {
+            writeuptitle += `<h2>` + value.eventtitle + `</h2>`;
+          } else {
+
+          }
+        });
+        $('#writeup-title').html(writeuptitle);
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+  <div id="writeup-title">
+
+  </div>
+
+  <div class="body-content">
+
+
+
+
+    <!--================================
+         WHATS TRENDING
+=================================-->
+
+    <section class="section" id="writeup">
+      <div class="container">
+        <div class="row pb-3 page-title">
+          <div class="col-sm-12 m-auto text-center -3">
+            <!-- Page Title -->
+            <h1 class="font-display2 main-font-color">WHAT'S TRENDING</h1>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-12 mx-auto">
+
+            <div id="accordionExample" class="accordion custome-accordion border-0">
+
+
+              <div class="card">
+                <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                  <h2 class="mb-0">
+                    <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                      aria-controls="collapseOne"
+                      class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Women
+                      are Powerful Agents of Change. Here’s Why</button>
+                  </h2>
+                </div>
+                <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                  <div class="card-body p-5">
+                    <p class=" m-0">Change is one of the most valued words of the 21st century, and women are indeed
+                      powerful agents of this change. As the world wakes up to the benefits of having women in
+                      leadership positions and as decision makers, the role of women only continues to expand. With
+                      greater recognition today for gender parity in decision-making and leadership, and extensive
+                      benefits of diversity than ever before, the number of women decision-makers across political,
+                      enterprise and community levels continues to grow. This reflects that time has come for
+                      governments, public and private organizations to place more women in higher hierarchies.</p>
+
+                    <p class=" m-0">Having women as decision-makers and leaders at all levels is important for bringing
+                      in a culture of gender equality and gender justice, which can go a long way in furthering the
+                      political, economic and social progress of all. Active representation and higher involvement of
+                      women in leadership bodies, including courts, legislatures, boardrooms and community councils can
+                      result in rulings, laws and decisions that are representative, inclusive and take diverse opinions
+                      and views into account. Countries with legislative bodies where women are in higher proportion
+                      tend to have lower disparity of income. There is also greater likelihood (up to 35%) for peace
+                      agreements between nations to last no less than 15 years, whenever women leaders are involved in
+                      their creation and execution. In the corporate world, businesses with executive boards having
+                      women leaders in higher proportion often generate greater revenues. Within households, their
+                      leadership and decision making with respect to household budget and land often enhances access to
+                      healthcare and education of their families.</p>
+                    <br />
+
+                    <p class=" m-0">Even as this could be an awaking call for all to bring more women in decision to
+                      balance the leadership power equation for political, organizational and community benefits, having
+                      panels with more women involved in lawmaking/ imparting justice, making business decisions or even
+                      maneuvering a household is no easy task. For this to happen and happen continuously, the
+                      governments and non-government organizations, businesses, academia, and the society as a whole
+                      need to contribute with a change of mindset, acceptance, acknowledgment and recognition to the
+                      power of women. However, this change does not imply such as just having a more diverse workforce,
+                      but having greater gender diversity within the decision-making and leadership groups. The wheel of
+                      fortune can gain greater momentum only when more women are elevated to leadership and
+                      decision-making positions.
+                    </p>
+
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card">
+                <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                  <h2 class="mb-0">
+                    <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                      aria-controls="collapseTwo"
+                      class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Decoding
+                      the ‘Why’</button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                  <div class="card-body p-5 textless">
+                    <p class=" m-0">Statistics: Statistics are a good indicator of why there is a need to increase the proportion of women who can lead and decide what to do. In 2019, there were up to 29% more women in senior management roles across the world than previously. While this proportion remained mostly stable in 2020 owing to the COVID-19 pandemic, their percentage grew to 31% in 2021. This paves the way for an optimistic outlook where old records could be broken and new benchmarks could be set worldwide. The key is inspiration for young women by women leaders. Several surveys also demonstrate women to be more honest, intelligent, compassionate, creative and outgoing then men.</p>
+
+    
+                    <br />
+                   <ul>
+                    <li><strong>Transformational Leadership Style:</strong> Unlike the two-dimensional (active and passive) management style adopted by male leaders, women in leadership positions are known to be very transformational. Their transformational leadership style has often demonstrated building of personal and social identification among team members/groups, as well as building of goals and mission established by leaders and businesses, which creates a positive working environment and takes the entire organization towards greater success.</li>
+                    <li><strong>Nurturing the Spirit of Teamwork:</strong> Women are known to be capable of taking commanding position in a given situation, and when they combine this ability with their enthusiasm and passion, they can create pure magical results. They can take wise and bold decisions as leaders, build a more cooperative and less authoritative environment, which motivates the team and boosts teamwork, creating room for a new culture to thrive within an organization.</li>
+                    <li><strong>Leveraging the Power of Communication:</strong> Women tend to have strong communication skills, which businesses with women leaders can benefit from. Being good conversationist, they can use this skill for establishing meaningful conversations across all orders of hierarchy within the organizations, as well as with partners, creating open and clear communication with employers, seniors, subordinates and partners.</li>
+                    <li><strong>Newer Perspectives and Outlooks:</strong> Innovation is the product of a different perspective, and women leaders can bring new perspectives on board. Their perspectives, skills and innovative ideas can help shape better decisions for a business to grow and expand.</li>
+                    <li><strong>Mentorship Talent:</strong> Given the influence that role models can have on people, especially the younger generation, women leaders can inspire and mentor young talent. Being more effective as mentors than men, women can lead by example to teach the young minds, who often believe belonging to a particular gender can create hindrances for career advancement, that women can be as good performers as men.</li>
+                    <li><strong>The Ability to Multi-task:</strong> Women inherently are multi-taskers from taking care of household, family, aged parents to careers, they are pro at the act of balancing. Their ability to adjust to different situations quickly, apply unique solutions to same or different problems, and focus on seeking solutions for every hurdle, makes women a good choice for leadership positions.</li>
+                    <li><strong>Closing the Gender Pay Gap:</strong> The voices for gender pay gap have become louder in recent years. Women themselves can play the biggest role in closing the gender pay gap. More women in leadership roles would ensure right strides in the closing the pay gap, as bias is out and everyone employee is counted as an equal.</li>
+
+
+                   </ul>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card">
+                <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                  <h2 class="mb-0">
+                    <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                      aria-controls="collapseThree"
+                      class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Trends Filling the Gender Gap in Technology Sector</button>
+                  </h2>
+                </div>
+                <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                  <div class="card-body p-5 textless">
+                    <p class=" m-0">Women have made great strides in workforce representation, rising from 30 million in 1970 to more than 75 million in the years since. Women’s participation in the labor force has increased in recent years, with participation high in some health and social fields. This is in most part due to the implementation of gender diversity initiatives during the 80s and 90s. Recruitment practices changed with women candidates given equal opportunities for the majority of roles. Globally representation of women in senior and leadership roles has witnessed a steady increase in recent years. In 2022, global gender parity for women reached 42.7%, reporting the highest gender parity score yet. The percentage of women managers has also gone up when compared to twenty years ago. Despite this meaningful progress, gender parity is still a long way off. Women predominate in key roles as nurses, social workers, and caregivers.  </p>
+                   
+
+               <p>Compared to the private sector, the proportion of women working in the public sector is higher in most countries. This can be attributed to the fact that wages in the public sector are highly regulated which indicates that there is limited scope for wage discrimination. As a result, the public sector is better at achieving gender parity due to greater wage equality. The better employment and wage prospects coupled with non-wage benefits entices more women to favor public-sector employment over private-sector employment. A better work-life balance with fewer working hours is another important driver that explains women’s preference for the public sector. </p>
+               <p>To increase the women’s participation in corporate boards, countries such as France, Germany, Italy, the Netherlands, Norway, South Korea and India have implemented quotas for women on boards of public companies. In France and Mexico, public sector quotas are in place, which have led to a jump in women’s representation in senior positions. In Australia, flexible working is being tested across the civil service. In the UK and Singapore, public service departments are trialing a gender-blind recruitment platform to make hiring processes as free from bias as possible. Mentorship and talent programs targeting women have been implemented to push more women into senior roles. In the private sector, the onus is on corporations to resolve this promotional breakdown by creating a work culture that provides equal opportunities to grow and advance. </p>
+               <p>For tech companies in particular, the lack of diversity due to bias has always been a major issue, and they are betting on AI for rooting out the problem. AI is being used for identifying and screening candidates, for ultimately closing the diversity gap. AI can be that third-party that can objectively identify implicit biases. AI-enabled communication pattern analysis, about the receivers and senders, can be employed for screening bias patterns. Organizations can use such pattern analysis for creating a platform for gender-neutral and other discrimination-free postings. This could reduce both time-to-hire and also the costs. Strategies have to be set at different areas in the organization for identifying and addressing biases. One way of addressing identified bias is linking bias examples to bonus payments and promotions of employees. Organizations this way can explicitly demonstrate that such inclusion would help employees earn their bonuses and promotions. AI interfaces could also be employed for objectively measuring behavior patterns between workers. Technology does not consider hierarchy in the way humans do therefore, it is able to offer better analytical reports to management. Accountability is also important in changing bias patterns. It must be the responsibility of managers at all the levels in the organization to promote subordinates who are distinct from themselves. It holds managers accountable for justifying hire which is similar in race, gender and age, to themselves. While the AI technology can be used for detecting sameness patterns, the responsibility placed on recruiting managers to explain the similarity, eliminates chances of unworthy arguments for sustained sameness in hiring. The tech company can thus send a powerful message across to all in the organization that it values diversity the most.</p>
+               <p>AI or ML interfaces can help in closing tech companies’ diversity gaps only so long as the interfaces themselves are not at risk of the bias. AI and ML tools must therefore be trained fairly. It is also important to train AI/ML models to avoid unintentional outcomes. For example, a model could pick up from a statistics-based relationship between probable high performance in sales related jobs and football quarterbacks in college. However, the unintended consequence of such would be exclusion of women applicants. The algorithm would work in favor of an attribute that could never be found in women applicants, which would place them at a disadvantage. Nonetheless, the advantage with artificial intelligence here is that unlike biases of the human mind, biases of the machine can be easily audited and removed. It is done by testing the algorithms, simply by using them against numerous applicants and rectifying them iteratively.</p>
+               <p>A few tech companies are also using AI/ML tools for addressing other manifestations of biases for instance, gendered language use in job-descriptions. Gendered job listings implies use of terms that are either male or female-skewed in the job descriptions. It has been negatively impacting number of women technologists applying for open roles and also the number that is hired eventually. Tech companies are using the tools to eliminate gender biased language in job-descriptions, which can help diversify their applicant pool and increase chances for women technologists. There are now tools, like the one offered by Textio, helping tech companies in this area. The predictive index of Textio uses data secured from over 45 million posts and combines it with outcomes for assessing hiring performance as well as gender tone of job postings. It thus arrives at a quantitative assessment of language impact on job-descriptions and helps companies change them for attracting more diverse and better candidates.</p>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!--============================
+           Footer            
+=============================-->
+
+  <footer-component></footer-component>
+
+
+  <!---============================
+       ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+  <script src="./js/jquery.readall.js"></script>
+
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+  <script src="./webcomponts/banner.js"></script>
+
+  <script>
+    $('.textless').readall({
+      showheight: null,
+      showrows: 8
+    });
+
+
+  </script>
+
+
+
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('LANGUAGE');
+        $('.goog-te-menu-frame.skiptranslate').load(function () {
+          setTimeout(function () {
+            $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+          }, 100);
+        });
+      });
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+  </script>
+</body>
+
+</html>

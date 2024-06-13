@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+        var writeuptitle = '';
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (selURL == value.Event) {
+            writeuptitle += `<h2>` + value.eventtitle + `</h2>`;
+          } else {
+
+          }
+        });
+        $('#writeup-title').html(writeuptitle);
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+  <div id="writeup-title">
+
+  </div>
+
+  <div class="body-content">
+
+
+
+
+
+  <!--================================
+         WHATS TRENDING
+=================================-->
+
+<section class="section" id="writeup">
+  <div class="container">
+    <div class="row pb-3 page-title">
+      <div class="col-sm-12 m-auto text-center -3">
+        <h1 class="font-display2 main-font-color">WHAT'S TRENDING</h1>
+      </div>
+    </div>
+      <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+      
+          <div id="accordionExample" class="accordion custome-accordion border-0">
+
+          
+            <div class="card">
+              <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Quantum Computing: Innovative Concept to Reset the Realm of Computing Power</button>
+
+                </h2>
+              </div>
+              <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                <div class="card-body p-5">
+                  <p class=" m-0">Quantum computing is a rapidly-emerging technology that is taking centre stage in science, technology and politics worldwide. Leveraging quantum computing, financial institutions would be able to design fully-tailored investment portfolios for institutional and retail customers. Similarly, healthcare systems could deploy the concept to build genetically-targeted medical care solutions and novel therapeutics. US-based global technology majors ––IBM, Google, and Microsoft are investing billions of dollars on quantum computing techniques. IBM for instance aims to roll out a 1,000-qubit quantum computer by 2023, through its Quantum Network, which has participation of universities, research entities, and laboratories. Besides the US-based tech giants, Chinese & European universities and technology firms are actively participating in the quantum computing ecosystem through full-fledged programs. </p>
+
+                  <p class=" m-0">The global quantum computing market is set to scale new heights owing to its sheer processing power and intriguing ramifications for swathes of industries. The market is primarily steered by increasing government and private funding on research programs intended to leverage quantum computing for information processing and other applications. The market is being significantly influenced by major strategic developments, most notably in North America. On the other hand, private players are investing heavily in quantum computing to attain foothold in the promising market. Factors such as increasing incidents of cybercrime coupled with growing adoption of emerging technologies such as machine learning, smart manufacturing, cloud computing and molecular structure research are anticipated to set a perfect stage for growth of the quantum computing market. While increasing application in sectors like defense, healthcare, chemicals and banking are favoring the market, availability of fault-tolerance systems and efforts to leverage quantum computing for realistic programs are expected to fuel the market growth. Quantum computing is anticipated to hold a critical role in supporting new applications and technologies such as artificial intelligence, edge computing, big data analytics, IoT and smart city projects. The technology is also used in cryptography for quantum-encrypted, secure communications, creating strong prospects for the market expansion. On the flip side, lack of sufficient expertise and knowledge regarding quantum computing techniques is expected to hinder the market growth.</p>
+
+                 
+
+                  <p class=" m-0">Hardware is an important segment in the global market for quantum computing and its growth is attributed to nascent nature of the market and increasing focus of companies on development of hardware systems. The market growth is likely to be facilitated by major applications including material simulation, optimization and machine learning among others, with simulation holding a notable share due to its use in the automotive</p>
+   
+
+                    
+                </div>
+              </div>
+            </div>
+ 
+            <div class="card">
+              <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Key Industry Sectors Which are Going to Benefit from Quantum Computing in 2023</button>
+                </h2>
+              </div>
+              <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <ul>
+                    <li><strong>Space & Defense: </strong>Existing encryption standards depend on mathematical algorithms to encode data that are extremely challenging to break. Quantum computers are expected to eliminate the requirement of sequential trial-and-error techniques to process these complex mathematical problems. Quantum cryptanalysis is driving various countries to collect encrypted communications to extract secrets. The availability of quantum cryptanalysis is likely to influence international relations owing to its ability to decrypt intercepted or broadcast communications for military or other operations. While superconducting magnetometers relying on quantum technology for measuring any small change in magnetic fields to locate submarines, quantum radars are expected to detect low-observable aircraft. In addition, quantum technologies are being investigated to miniaturize atomic clocks intended for timing, navigation and position purposes.</li>
+                    <li><strong>Transportation Sector -</strong> Manufacturers in the transportation industry are anticipated to significantly gain from quantum computing owing to its ability to address different issues, right from design and development to repair and maintenance. The technology is likely to be used for making connected cars smarter, enabling next-generation electric vehicles, ensuring data security and optimizing traffic routing. Quantum computing is being exploited by various companies for developing autonomous cars capable of predicting traffic conditions and avoiding accidents using computational power. In addition, leading players are making efforts to simulate behavior of electronic/electric components and equip new car models with artificial intelligence. Moreover, the technology is expected to be used for developing new materials to improve fuel economy and reduce pollution emissions.</li>
+                    <li><strong>Healthcare & Lifesciences -</strong> Expedited drug discovery & development, in-silico clinical trials, gene sequencing, decision support to medical professionals, and insights from health data & secure data systems are among the primary application areas for quantum computing. Pharmaceutical companies and researchers are increasingly relying on emerging technologies such as artificial intelligence, in-silico trials and human organs-on-chips for expediting the drug discovery & development process. The use of superconductors with intricate neural network allows companies to screen over 100 million compounds per day and select therapies from extensive databases of molecular structures. The approach along with smart algorithms can be exploited for considerably shortening time taken to select desirable drug candidates from months to few days.</li>
+                    <li><strong>Finance & Banking -</strong> With its mindboggling processing power, quantum computing is set to extend its potential beyond high-speed stock trading and present endless opportunities in the field of banking & finance. Quantum computing allows financial institutions and banks to use customer data for delivering enhanced customer services and developing financial products intended to move money, access credit and store value. Financial institutions are eying on impressive processing capabilities of the technology and holding plans to leverage quantum computing for big data analytics. The technology accelerates transactional activities and supports a broad spectrum of tasks such as asset appraisal, portfolio analysis and high-frequency trading. Leading financial and banking institutions are eying on quantum computing to create sophisticated algorithms for gaining insights into big data. The technology is anticipated to also support artificial intelligence and machine learning for consumer engagement, risk analysis and product development.</li>
+                    <li><strong>Energy -</strong> Quantum computing holds the key for allowing optimization of energy systems to improve overall efficiency. The concept is gaining considerable attention and investment from various participants in the energy sector. In 2019, ExxonMobil announced collaboration with IBM for developing advanced energy technologies by exploiting quantum computing. On the other hand, the US Department of Energy is set to allocate US$40 million to develop advanced software and algorithms for quantum computers. Quantum computing holds the key for allowing optimization of energy systems to improve overall efficiency. The concept is gaining considerable attention and investment from various participants in the energy sector. In 2019, ExxonMobil announced collaboration with IBM for developing advanced energy technologies by exploiting quantum computing. On the other hand, the US Department of Energy is set to allocate US$40 million to develop advanced software and algorithms for quantum computers.</li>
+                    <li><strong>Chemical - </strong>Quantum computing offers powerful capabilities to model quantum-mechanical systems such as polymers, solids and molecules in a highly precise manner. The technique can be employed to identify optimal molecular structures and designs for specific tasks and effects, even before the synthesis of a molecule in laboratory. The platform holds potential to support R&D and radically transform product development, with positive implications for the chemical industry. Chemical researchers rely heavily on accurate predictions regarding molecular properties for designing new polymers and molecules. Quantum computing is likely to be used for modeling new luminescent molecules for application in OLED displays. Researchers can precisely develop new molecules offering desirable levels of the hue and brightness. The technique can be used to identify and design molecular targets for interactions with proteins, custom-made to the docking energy of small substrates and proteins.</li>
+
+                  </ul>
+            
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!--============================
+           Footer            
+=============================-->
+
+<footer-component></footer-component>
+
+
+<!---============================
+       ScrollTop        
+=============================--->
+
+<scrolltop-component></scrolltop-component>
+
+<!-- JAVASCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<script src="js/script.js"></script>
+<script src="./js/submenu_select.js"></script>
+<script src="./js/jquery.readall.js"></script>
+
+
+<!---WEB COMPONETNS-->
+<script src="./webcomponts/headerComponents.js"></script>
+<script src="./webcomponts/FooterComponent.js"></script>
+<script src="./webcomponts/ScrollToTop.js"></script>
+<script src="./webcomponts/dummytext.js"></script>
+<script src="./webcomponts/banner.js"></script>
+
+<script>
+  $('.textless').readall({
+    showheight: null,
+    showrows: 8
+  });
+
+
+</script>
+
+
+
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+      $('.goog-te-menu-value span:first').html('LANGUAGE');
+      $('.goog-te-menu-frame.skiptranslate').load(function () {
+        setTimeout(function () {
+          $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+        }, 100);
+      });
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+  }
+</script>
+</body>
+
+</html>

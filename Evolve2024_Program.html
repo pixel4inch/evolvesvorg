@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+         ================================================== -->
+    <meta charset="utf-8">
+    <title>EVOLVE 2024 - AI<>Deep-Tech Summit</title>
+    <!-- Mobile Specific Metas
+         ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Evolv">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Evolv ">
+    <meta name="generator" content="Evolv">
+    <!-- theme meta -->
+    <meta name="theme-name" content="Evolv" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- PLUGINS CSS STYLE -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+    <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="plugins/aos/aos.css" />
+    <!-- CUSTOM CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custome.css" rel="stylesheet" />
+    <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <!---WEB COMPONETNS-->
+    <script src="./webcomponts/headerComponents.js"></script>
+    <script src="./webcomponts/FooterComponent.js"></script>
+    <script src="./webcomponts/ScrollToTop.js"></script>
+    <script src="./webcomponts/dummytext.js"></script>
+
+
+    <script>
+        function SavePower_Request_invite() {
+            //alert('Saved');
+
+
+            var vFirst_Name = $("#first_name").val();
+            var vLast_Name = $("#last_name").val();
+
+            var vLinkedin = $("#linkedInLink").val();
+            var vPosition = $("#Position").val();
+            var vCompany = $("#Company").val();
+            var vEmail = $("#email").val();
+            var vCountry = $("#country").val();
+            var vSource_Page = '';
+
+
+
+            //alert(vLast_Name);	
+            if (vEmail != null && vEmail != '') {
+                //alert(vReportName);
+                $.ajax({
+                    url: "Ajax_AddRequest_invite.asp",
+                    type: "POST", data: 'vSource_Page=' + encodeURIComponent(vSource_Page) + '&vEmail=' + encodeURIComponent(vEmail) + '&vFirst_Name=' + encodeURIComponent(vFirst_Name) + '&vLast_Name=' + encodeURIComponent(vLast_Name) + '&vLinkedin=' + encodeURIComponent(vLinkedin) + '&vPosition=' + encodeURIComponent(vPosition) + '&vCompany=' + encodeURIComponent(vCompany) + '&vCountry=' + encodeURIComponent(vCountry) + '',
+                    success: function (data) {
+                        //alert(data);
+                        //alert('Thanks for submitting!');	
+                        window.open("https://www.evolv.cc/loginLinkedin_User.asp?UsID=0&rcode=0&ecode=" + encodeURIComponent(vEmail));
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert(xhr.status);
+                        alert(thrownError);
+                        alert(xhr.responseText);
+                    }
+                });
+
+                //window.opener.location.reload(false);
+                //window.opener.location.reload()
+            }
+            else {
+
+                alert("values can't be left blank");
+
+            }
+        }
+    </script>
+
+    <style>
+        .degiblock {
+            padding-left: 6px;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+    <!--============================
+         =            HEADER           =
+         =============================-->
+    <header-component></header-component>
+
+
+
+
+    <!--============================
+         PLACEKEEPTER BANNER
+         =============================-->
+    <div class="body-content">
+        <section class="section  pt-4 ">
+            <div id="evolve-program-block">
+                <div class="container">
+
+                    <!-- TITLE BLOCK--->
+                    <div class="row mx-0">
+                        <div class="w-100 event-title-section">
+
+                            <h1 class="">EVOLVE 2024 </h1>
+                            <h4 style="font-size: 17px;"><b>AI <> Deep-Tech Convergence</b></h4>
+                            <h3 style="color: brown;">A Global Innovation Summit</h3>
+
+<p class=" p-3 col-lg-10 mx-auto " style="
+    font-size: 16.5px;
+    font-weight: 500;
+    font-style: italic;
+    font-weight: 400;
+    color: brown;
+">Delivering exclusive insights and fostering meaningful connections among investors, entrepreneurs, and industry leaders. Attendees can look forward to thought-provoking discussions, insightful perspectives, and plenty of chances to network. Join our data-driven Global  Network of Innovators.</p>
+
+
+                            <h1 class="subtext">Event Highlights</h1>
+
+                            <ul>
+                                <li><span>Presentations</span> by more than 120 of the most disruptive emerging technology
+                                    companies from around the world</li>
+                                <li>Thought-leading <span>Keynote Speakers</span></li>
+                                <li>Insightful <span>Panel Discussions</span> on Trending Topics - Corporate, VC, and
+                                    Entrepreneur </li>
+
+                                <li><span>International Pitch Competition</span> drawing out the best-of-breed innovators
+                                </li>
+
+                                <li>Set up meetings in advance </br> for potential <span> Strategic Partnerships </span>
+                                </li>
+
+                            </ul>
+
+
+                            <!---h2>September 2024, Santa Clara Convention Center</h2--->
+                            <h5
+                                style="font-size: 18px;color: #d10d0d;font-weight: bold;letter-spacing: 1px;margin-top: 32px !important;display: block;">
+                                Agenda is still under development and subject to change. </h5>
+                            <h5 style="font-size:18px; font-weight: bold">Event registration will begin on June 20, 2024
+                            </h5>
+                        </div>
+                    </div>
+
+
+                    <div id="bootstrapAccordion" class="mx-auto col-lg-9 col-lg-10 col-md-12 col-sm-12 col-12">
+
+                        <div class="w-100">
+                            <div class="mb-0 mt-4">
+                                <ul id="evolveTabbutton" class="nav nav-pills d-flex  justify-content-center aling-items-cener w-100 evolveTabbutton " style="border-bottom: #fbeec9 solid 3px;">
+                                    <li class="nav-item"> <a class="nav-link active px-5 programday-btn" id="home-tab"
+                                            data-toggle="tab" href="#DAY-1" role="tab" aria-controls="home"
+                                            aria-selected="true">DAY-1</a></li>
+                                    <li class="nav-item"> <a class="nav-link  px-5 programday-btn" id="profile-tab"
+                                            data-toggle="tab" href="#DAY-2" role="tab" aria-controls="profile"
+                                            aria-selected="false">DAY-2</a></li>
+											
+									<li class="nav-item"> <a class="nav-link  px-5 programday-btn" id="profile-tab"
+                                            data-toggle="tab" href="#pitchfest" role="tab" aria-controls="profile"
+                                            aria-selected="false">PITCHFEST</a></li>
+											
+									<li class="nav-item"> <a class="nav-link  px-5 programday-btn" id="profile-tab"
+                                            data-toggle="tab" href="#expro" role="tab" aria-controls="profile"
+                                            aria-selected="false">EXPO</a></li>
+                                    <!--li class="nav-item"><a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact" aria-selected="false">My Profile</a></li-->
+                                </ul>
+                            </div>
+
+                            <div class="tab-content mb-4">
+                                <div class="tab-pane fade show active" id="DAY-1" role="tabpanel"
+                                    aria-labelledby="home-tab">
+
+                                    <div class="evolve-program-schedule">
+                                        <div class="row mx-0 ">
+                                            <div class=" col-lg-12 col-12 mx-0 my-0 p-0">
+
+
+                                                <div class="program-content">
+
+                                                    <div class=" text-center hall">
+                                                        <h3 class=""> HALL A </h3>
+                                                    </div>
+
+                                                    <article>
+                                                        <h4 class="imptext">MORNING POWER SESSIONS: 8:00 AM – 12:00 PM
+                                                        </h4>
+                                                        <p>All Other Sessions And Innovator Pavilion Shall Remain Closed
+                                                            During Keynotes
+                                                        </p>
+                                                    </article>
+
+
+                                                    <article>
+                                                        <span class="event-time">8:00 AM – 9:00 AM</span>
+                                                        <h4>EVOLVE SV - THE GLOBAL INNOVATION GATEWAY </h4>
+                                                        <p>Evolve SV -The Global Innovation Gateway </p>
+
+                                                        <h4 class="childTwo">GRAND KEYNOTES </h4>
+                                                        <p>Keynotes or Fireside Chats featuring modern day Silicon
+                                                            Valley icons. </p>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">9:00 – 9:40 AM</span>
+                                                        <p>Keynote 1 </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">9:40 – 10:20 AM</span>
+                                                        <p>Keynote 2 </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">10:20 – 11:00 AM</span>
+                                                        <p>Keynote 3 </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">11:00 – 12:00 AM</span>
+                                                        <h4>Global Venture Capital Landscape - What Venture Capitalists
+                                                            & Angels Are Funding </h4>
+
+                                                        <p>Session 1 - Panel </p>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">12:00 – 2:00 PM</span>
+                                                        <h4 class="imptext">LUNCH </h4>
+                                                    </article>
+
+                                                    <article>
+                                                        <div class="specialSection">
+                                                            <h4>EXECUTIVE ROUNDTABLES </h4>
+                                                            <p>Exclusive Closed-door Parallel Sessions. Each session
+                                                                will be 90 minutes.
+                                                                It will be a working lunch.</p>
+                                                        </div>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">12:15 PM – 01:45 PM</span>
+                                                        <div class="specialSection">
+                                                            <h4>UNICORN FOUNDERS ROUNDTABLE </h4>
+                                                            <p>Session 2 - Panel </p>
+                                                            <p>15 Unicorn Founders/CEOs with a Global Representation</p>
+                                                            <p>Representing U.S.A., Europe, and Asia</p>
+                                                            <p>Speaker Felicitation by Board/Advisory: 10 Minutes</p>
+                                                        </div>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">12:15 PM – 01:45 PM</span>
+                                                        <div class="specialSection">
+                                                            <h4>CEO ROUNDTABLE </h4>
+                                                            <p>Session 3 - Panel </p>
+                                                            <p>15 CEOs with a Global Representation</p>
+                                                        </div>
+
+                                                    </article>
+
+
+
+
+                                                    <article>
+                                                        <span class="event-time">2:00 – 2:45 PM</span>
+                                                        <h4>Deep-Tech Market Trajectories </h4>
+                                                        <p class="mt-2">
+														Research-based perspectives on what 200+ domain experts are saying. The talk highlights new directions that will transform current industries and markets. Artificial Intelligence and Machine Learning impacting every conventional industry; multidimensional adoption of new scientific and engineering innovations will create new markets and new industry leaders. 
+														</p>
+														<p class="mt-1">
+														New innovations will break conventional boundaries providing novel solutions to longstanding issues, and create new business models. Deep-tech not only pushes technological limits but also drives significant societal and industrial progress, leading to unprecedented advancements in efficiency and capabilities. This talk will highlight major shifts and provide a birds eye view of what's in the future. 
+														</p>
+                                                        <p>Session 4 – Trend Talk</p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">2:45 – 3:30 PM</span>
+                                                        <h4>Corporate Venture Capital – Innovator &lt;&gt; Big
+                                                            Enterprise Synergies
+                                                        </h4>
+                                                        <p class="mt-2">Corporate Venture Capital (CVC) has become a crucial mechanism for large enterprises aiming to draw external innovations that complement their internal competencies. Even during downturns in the venture capital market, corporations use CVC to access groundbreaking technologies and ideas, particularly in later-stage investment rounds. This strategic approach helps corporations diversify, mitigate disruption risks, and maintain a competitive edge. Effective CVC operations require alignment with the parent company's long-term goals. Despite economic uncertainties, CVC remains a vital element of corporate strategy, offering a low-risk, high-reward path to innovation. The expert panel provides valuable insights into how and why innovators should  consider CVC as a strategic value. </p>
+
+                                                        <p>Session 5 – Panel</p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">3:30 – 4:15 PM</span>
+                                                        <h4>Today’s Angel Investor – Raising SAFE &amp; Seed Rounds
+                                                        </h4>
+                                                        <p class="mt-2">Angel investors, often seasoned entrepreneurs, provide vital capital and mentorship, significantly boosting startup growth. Angels contribute $50 billion annually to startups and account for most seed funding deals worldwide. Our panel of Angels will discuss fundraising elements for early-stage startups. </p>
+
+                                                        <p>Session 6 - Panel </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">4:15 – 5:00 PM</span>
+                                                        <h4>Thriving Innovation Ecosystems </h4>
+                                                        <p class="mt-2">
+														Nations and cities are competing to draw innovators for enriching their ecosystems, job creation, and sustained future economic leadership. A panel of ecosystem influencers from the United States, India, Japan, Europe, Israel, Australia, Canada, and others will share perspectives on why innovators should consider them, presenting incentives and opportunities. 
+</p>
+                                                        <p> Session 7 - Panel </p>
+                                                    </article>
+
+                                                    <div class=" text-center hall my-4">
+                                                        <h3 class=""> HALL B </h3>
+                                                    </div>
+
+
+
+
+                                                    <article>
+
+                                                        <h4 class="text-center imptext"> ARTIFICIAL INTELLIGENCE &
+                                                            MACHINE LEARNING
+                                                        </h4>
+                                                    </article>
+
+
+
+                                                    <article>
+                                                        <span class="event-time">2:00 PM – 2:45 PM</span>
+                                                        <h4>Enterprise AI – In Constant Flux: Adopt & Adapt </h4>
+                                                        <p class="mt-2">Enterprise AI, valued at over $19 billion, offers many opportunities for enhancing operations, decision-making, and customer Integrating AI. There's a general growing anxiety amongst big enterprises on how AI will affect their competitive edge. Successful AI integration requires balancing traditional business practices with innovative technologies, maintaining operational integrity and ethical standards. AI adoption while protecting their proprietary data remains a major concern. The expert panel presents a 360 perspective on how companies can plan and implement AI. 
+
+ </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">2:45 AM – 3:30 PM</span>
+                                                        <h4>AI-generated Video Innovations – Stretching the Boundaries
+                                                            of Human
+                                                            Creativity</h4>
+                                                        <p class="mt-2">The AI-generated video market, valued at $500
+                                                            million, is transforming video production by automating
+                                                            tasks like scriptwriting, editing, and post-production, thus
+                                                            reducing costs and time. Using machine learning algorithms,
+                                                            AI converts text descriptions into engaging, realistic
+                                                            videos with techniques such as generative adversarial
+                                                            networks (GANs). This technology enables the creation of
+                                                            lifelike AI avatars and intricate visual narratives,
+                                                            expanding creative possibilities. While it democratizes
+                                                            content creation and benefits sectors like digital
+                                                            marketing, entertainment, and education, AI in video
+                                                            production also presents ethical challenges, such as
+                                                            ensuring authenticity and mitigating algorithmic biases.
+                                                            Overall, AI heralds a new era of innovative storytelling and
+                                                            engagement.</p>
+
+                                                        <p>Session 9 – Panel </p>
+                                                        <p>Featuring Two Leading Edge Startups</p>
+                                                        <p>Startup 1: 20 Minutes</p>
+                                                        <p>Startup 2: 20 Minutes</p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">3:30 PM – 4:15 PM</span>
+                                                        <h4>Gen AI – LLMs, SLMs &amp; Compressed Models</h4>
+                                                        <p class="mt-2">The generative AI market is projected to grow at
+                                                            over 40% CAGR, potentially surpassing $1 trillion by 2030,
+                                                            driven by the popularity of products like Google’s Bard and
+                                                            OpenAI’s ChatGPT. Generative AI, including Large Language
+                                                            Models (LLMs) and Small Language Models (SLMs), is
+                                                            revolutionizing sectors with diverse applications. LLMs,
+                                                            known for their extensive parameters and deep learning
+                                                            capabilities, generate high-quality text but require
+                                                            significant computational resources. SLMs, with fewer
+                                                            parameters, offer a resource-efficient alternative ideal for
+                                                            on-device applications. Emerging hybrid models combine the
+                                                            strengths of both, balancing large-scale data processing
+                                                            with efficiency. Advances in AI are enhancing model
+                                                            capabilities, addressing explainability, energy consumption,
+                                                            and domain-specific needs. Integrating Generative AI into
+                                                            business operations is crucial for maintaining
+                                                            competitiveness and innovation in the evolving market
+                                                            landscape.</p>
+                                                        <p>Session 10 – Panel </p>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">4:15 PM – 5:00 PM</span>
+                                                        <h4>Future of Search - Impact of AI </h4>
+                                                        <p class="mt-2">Will a personalized AI agent replace the conventional search engine? AI will soon change search as we know it, forever! According to Bill Gates, there's a 50% chance that the company that will dominate the future search paradigm will not Google or Microsoft or another big tech enterprise. Quoting Bill Gates - “Whoever wins the personal agent, that’s the big thing, because you will never go to a search site again, you will never go to a productivity site, you’ll never go to Amazon again”. An expert panel will discuss this futuristic topic which can change everything we do at home and work. </p>
+                                                        <p>Session 11 – Panel </p>
+
+                                                    </article>
+
+                                                    <!--div class=" text-center hall2 ">
+                                        <h3 class=""> EXPO HALL</h3>
+                                    </div-->
+
+                                                    <div class=" text-center hall my-4">
+                                                        <h3 class=""> HALL C </h3>
+                                                    </div>
+
+
+                                                    <article>
+
+                                                        <h4 class="text-center imptext mb-3">BIOCONVERGENCE – FUTURE
+                                                            LIFESCIENCE DISRUPTIONS</h4>
+															
+															<p class="p-3" style="border-radius:8px; box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;">Bioconvergence is a new and rapidly evolving industry segment within healthcare. It’s a revolutionary convergence of multiple foundational deep technologies that was previously unthinkable. This intersection between biology, engineering/technology and computerized systems will fundamentally change the future of healthcare. This track will attempt to highlight breakthrough areas and feature a few exciting and disruptive innovators. </p>
+
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">2:00 PM – 2:45 PM</span>
+                                                        <h4>Biotechnology – Innovative New Therapies</h4>
+                                                        <p class="mt-2">The global biotechnology market is currently valued at over $750 billion and continues to expand. Key innovations in disciplines such as personalized medicine, drug discovery, artificial intelligence, synthetic biology, treatment, are transforming biotechnologies. AI driven integrations into genetic engineering, gene-editing technologies such as CRISPR, bioprinting, tissue engineering, and other advances will transform healthcare and quality of life.  Our eminent panel will discuss what's to come. 
+
+</p>
+
+                                                        <p> Session 12 – Panel</p>
+                                                    </article>
+
+
+                                                    <article>
+                                                        <span class="event-time">2:45 PM – 3:30 PM</span>
+                                                        <h4>Digital Health – New Frontiers</h4>
+                                                        <p class="mt-2">The Digital Health (DH) space is expanding,
+                                                            driven by smart wearable technologies and the Internet of
+                                                            Things (IoT). Innovations like digital biomarkers and
+                                                            diagnostics leverage portable and wearable devices to
+                                                            predict, diagnose, and monitor health conditions,
+                                                            significantly advancing medical precision. Digital
+                                                            therapeutics, which encompasses specialized software such as
+                                                            apps, offer clinically validated treatment, improving
+                                                            patient outcomes. Digital therapeutics provides more
+                                                            effective management of chronic conditions.</p>
+
+                                                        <p> Session 13 – Panel</p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">3:30 PM – 4:15 PM</span>
+                                                        <h4>Future of Drug Discovery – Emergence of AI </h4>
+                                                        <p class="mt-2">The future of drug discovery will increasingly be shaped by AI. Our panel will discuss recent advances in drug development. This new and rapidly evolving space will expand from an estimated $1.4 billion in 2023 to more than $7 billion by 2030. Some of the breakthrough innovators will join our panel and share their vision. </p>
+
+                                                        <p> Session 14 – Panel</p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">4:15 PM – 5:00 PM</span>
+                                                        <h4>Personalized Medicine </h4>
+
+                                                        <p class="mt-2">Personalized medicine is reshaping global healthcare, driven by a shift from a one-size-fits-all approach to more tailored treatments, enhancing patient satisfaction and treatment efficacy. The demand for personalized medicine is driven by each individual's unique physiological, molecular, and genetic characteristics. Innovations in bioinformatics, immunotherapy, and pharmacogenetics are enabling more customized treatments, such as home-based chemotherapy for cancer patients. Concierge medicine, which offers exclusive, membership-based care, signifies a significant shift towards personalized healthcare. The current market, estimated at $7 billion, is expected to grow substantially as more disease modalities and innovations emerge. A panel of innovative startups delivering next generation medicines will be featured on the panel. </p>
+                                                        <p> Session 15 – Panel</p>
+                                                    </article>
+
+                                                    <div class=" text-center hall my-4 hallsDEspacing">
+                                                        <h3 class=""> HALLS D&amp;E </h3>
+                                                    </div>
+
+                                                    <article>
+                                                        <span class="event-time">2:00 PM – 5:00 PM </span>
+                                                        <div class="alternatesection">
+                                                            <h4>STARTUP & SCALE-UP PITCHFEST </h4>
+                                                            <p>
+                                                                <b>Featuring 30 Top Global Innovators:</b> <br>
+                                                                Startups and fast-track scale-ups will present to a
+                                                                world-class expert
+                                                                audience of Silicon Valley Venture Capitalists, Angel
+                                                                Investors, and
+                                                                Senior Enterprise Executives. About 40 accredited and
+                                                                well recognized
+                                                                Angel Investors and Venture Capitalists will
+                                                                participate. Presenters are
+                                                                matched to investors based on synergies and mutual
+                                                                interests.
+                                                                Additionally, we will facilitate connections via the
+                                                                Evolve EcoConnect
+                                                                Program with a pool or 450+ Angels and 700+ Venture
+                                                                Capitalists.
+                                                                <br><br>
+                                                                Format: <br>
+                                                                10-Minute Fast-Pitch Slots Back-Back
+                                                                <br><br>
+                                                                Why Present?<br>
+                                                                Investment; Strategic Partnering; Business Development;
+                                                                Go-to-Market;
+                                                                M&amp;A; IPO.
+                                                                Matching &amp; Scheduling one-on-one via Program Mobile
+                                                                App and
+                                                                Post-Conference.
+                                                                <br><br>
+                                                                Requirements:<br>
+                                                                You Must Be Pre-Approved And Exhibit In The Innovator
+                                                                Pavilion To
+                                                                Participate.
+                                                            </p>
+                                                        </div>
+
+                                                    </article>
+                                                    <!---article>
+
+
+                                                        <p><span class="font-weight-bold">Pitchfest Hall D:</span> Early
+                                                            Stage </p>
+                                                        <p><span class="font-weight-bold">Pitchfest Hall E: </span>
+                                                            Mid-Late Stage </p>
+
+                                                    </article>
+
+                                                    <div class=" text-center hall my-4 ">
+                                                        <h3 class=""> EXPO HALL </h3>
+                                                    </div>
+
+                                                    <article>
+                                                        <span class="event-time">11:00 AM – 5:00 PM </span>
+                                                        <div class="alternatesection">
+                                                            <h4>INNOVATOR PAVILION &amp; EXPO </h4>
+                                                            <p>300 Startups & Enterprise Exhibitors</p>
+                                                            <p>Expo Will Be Open After Grand Keynotes </p>
+                                                        </div>
+
+                                                    </article---->
+
+                                                </div>
+
+
+                                            </div>
+
+
+
+
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+
+                                <!-----DA-2----->
+                                <div class="tab-pane fade" id="DAY-2" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="evolve-program-schedule">
+                                        <div class="row mx-0 ">
+
+
+                                            <!----DAY 2-->
+
+
+                                            <div class="col-lg-12 col-12  mx-0 my-0 p-0">
+
+
+                                                <div class="program-content">
+
+                                                    <div class=" text-center hall">
+                                                        <h3 class=""> HALL A </h3>
+                                                    </div>
+
+
+                                                    <article>
+                                                        <h4 class="imptext">MORNING POWER SESSIONS: 8:00 AM – 12:00 PM
+                                                        </h4>
+                                                        <p>All Other Sessions And Innovator Pavilion Shall Remain Closed
+                                                            During Keynotes
+                                                        </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">8:00 AM – 8:30 AM</span>
+                                                        <h4>Welcome by Evolve SV Chairman (15 Minutes) </h4>
+                                                        <p>Rainmakers: Day 1 Update &amp; Day 2 Program Highlights (15
+                                                            minutes) </p>
+
+                                                        <h4 class="childTwo">GRAND KEYNOTES </h4>
+                                                        <p>Keynotes or Fireside Chats featuring modern day Silicon
+                                                            Valley icons. </p>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">8:30 AM – 9:15 AM</span>
+                                                        <h4>Sustainability </h4>
+                                                        <p>The New Change-makers</p>
+                                                        <p> Keynote 4</p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">9:15 AM – 10:00 AM</span>
+                                                        <p> Keynote 5</p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">10:00 – 11:20 AM</span>
+                                                        <h4>India Inflect </h4>
+                                                        <p> Keynote 6</p>
+                                                        <p>Session 16 – Panel </p>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">11:20 AM – 12:00 PM</span>
+                                                        <h4>The Innovator Mindset - Research Insights </h4>
+                                                        <p>Session 17 – Panel</p>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">12:00 – 2:00 PM</span>
+                                                        <h4 class="imptext">LUNCH
+                                                        </h4>
+                                                    </article>
+
+                                                    <article>
+                                                        <div class="specialSection">
+                                                            <h4>EXECUTIVE ROUNDTABLES </h4>
+                                                            <p>Exclusive Closed-door Parallel Sessions. Each session
+                                                                will be 90 minutes.
+                                                                It will be a working lunch</p>
+                                                        </div>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">12:15 PM – 01:45 PM</span>
+                                                        <div class="specialSection">
+                                                            <h4>CIO &amp; CSO ROUNDTABLE </h4>
+                                                            <p>Session 18 – Panel</p>
+                                                            <p>Moderator – 10 minutes</p>
+                                                            <p>Talk Time 90 minutes</p>
+                                                            <p>Speaker Felicitation by Board/Advisory: 5 Minutes</p>
+                                                        </div>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">12:15 PM – 01:45 PM</span>
+                                                        <div class="specialSection">
+                                                            <h4>CMO ROUNDTABLE </h4>
+                                                            <p>Session 19 – Panel </p>
+                                                        </div>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">2:00 PM – 4:00 PM</span>
+                                                        <h4>Impact Investing </h4>
+                                                        <p class="mt-2"> Panelists from Enterprise CSR, Donor Advisories, Philanthropists, and high impact Charities will discuss this $700+ (2023) Billion industry. Impact investing is on the rise, with investors prioritizing social and environmental benefits along with financial returns. Focus areas for Impact Investing primarily addresses areas such as renewable energy, sustainable agriculture, healthcare, and education. This growth is driven by increased awareness of global issues such as climate change and social inequality. Enhanced metrics for measuring social impact now allow for more informed investment decisions, aligning financial gains with positive societal outcomes. 
+
+
+                                                        </p>
+
+                                                        <h4 class="childTwo">Featured Charities</h4>
+                                                        <p class=" mt-2">The conference will feature few high impact charities across the globe.</p>
+
+                                                        <p> Keynote 7</p>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">4:00 PM – 5:00 PM</span>
+                                                        <h4>Cloud Security </h4>
+                                                        <p class="mt-2">Businesses worldwide are increasingly adopting cloud-based tools and services into their digital transformation strategies, necessitating adoption of robust cloud security protocols. Cloud security measures are vital as over 80% of organizations worldwide have experienced cloud-related security incidents in 2023. In the future, the adoption of cybersecurity mesh for distributed network protection and the rise of multiple and hybrid cloud environments for balanced security and flexibility is set to grow. The esteemed panel will discuss this most critical problem for enterprises in the wake of AI and Quantum Computing while also highlighting future opportunities for service providers.
+
+
+                                                        </p>
+
+                                                        <p> Trend Talk & Session 21 – Panel</p>
+
+                                                    </article>
+
+
+
+                                                    <div class=" text-center hall ">
+                                                        <h3 class=""> HALL B </h3>
+                                                    </div>
+
+                                                    <article>
+
+                                                        <h4 class="text-center imptext">TECHNOLOGY TRENDS</h4>
+
+
+                                                    </article>
+
+
+                                                    <article>
+                                                        <span class="event-time">2:00 PM – 2:45 PM</span>
+                                                        <h4>Gaming – AI Changing The Game</h4>
+                                                        <p class="mt-2">The gaming industry has transformed
+                                                            significantly, driven by
+                                                            immersive experiences, online betting legalization, fantasy
+                                                            sports apps, intense competition, and technologies like AI.
+                                                            AI has revolutionized game development, providing adaptive
+                                                            and engaging experiences, and enabling games to learn and
+                                                            adapt independently with generative AI. Generative AI in
+                                                            gaming has huge potential, with the market set to reach US$7
+                                                            billion by 2032. AI is enhancing non-player characters
+                                                            (NPCs), making games more unpredictable and replayable.
+                                                            Also, cloud-based gaming is enabling high-end game streaming
+                                                            on any device, while blockchain and NFTs facilitate in-game
+                                                            economies and ownership transparency. AI, when combined with
+                                                            AR, VR, and the metaverse, is making gaming more interactive
+                                                            and immersive.</p>
+
+                                                        <p>Session 22 - Panel </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">2:45 PM – 3:30 PM</span>
+                                                        <h4>Future of Education & Artificial Intelligence</h4>
+                                                        <p class="mt-2">The traditional classroom is transforming with
+                                                            AI, which
+                                                            personalizes learning experiences and tailors instruction to
+                                                            individual needs. Driven by the benefits of AI, the market
+                                                            for AI in education sector is forecast to reach US$30
+                                                            billion by 2030. AI is automating administrative tasks,
+                                                            providing real-time support, and customizing educational
+                                                            content based on learning styles. Intelligent tutoring
+                                                            systems offer immediate feedback, while AI-powered platforms
+                                                            analyze student data to create personalized learning paths.
+                                                            Adaptive learning platforms, AI analytics, immersive VR and
+                                                            AR, gamification, and ethical AI development all promise a
+                                                            more personalized and efficient educational landscape.
+                                                            Gamified learning powered by AI makes education engaging,
+                                                            especially for students struggling with traditional methods.
+                                                        </p>
+
+                                                        <p>Session 23 - Panel </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">3:30 PM – 4:15 PM</span>
+                                                        <h4>Marketing & Customer Engagement - Impact of AI</h4>
+                                                        <p class="mt-2">AI is already revolutionizing marketing and customer engagement by enabling highly personalized experiences, real-time interactions, and predictive analytics. The technology will automate content creation, optimize ad targeting, and implement dynamic pricing strategies to maximize ROI. Enhanced customer insights from AI will refine products and services, while voice and visual search technologies will transform shopping experiences. AI's impact includes personalized recommendations, efficient chatbot support, optimized customer journeys, and dynamic content creation. Panel discusses future trends.</p>
+                                                        <p>Session 24 - Panel </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">4:15 PM – 5:00 PM</span>
+                                                        <h4>New AI Wearables - What's Coming</h4>
+                                                        <p class="mt-2">Wearables are rapidly evolving beyond simple health tracking to become advanced, AI-powered devices. Future wearables, including smart glasses and goggles, will offer sophisticated insights and personalized recommendations. AI will enhance functionalities like object recognition and real-time interaction, making wearables more intuitive and context-aware. Health monitoring will become predictive, identifying potential issues early and providing personalized advice. Augmented Reality (AR) will offer immersive experiences and practical applications, while voice and gesture control will improve accessibility. For businesses, AI wearables offer benefits in the form of enhanced productivity and efficiency, transforming them into versatile, intelligent devices that enhance daily life and work. </p>
+
+                                                        <p>Session 25 - Panel </p>
+                                                    </article>
+
+                                                    <div class=" text-center hall ">
+                                                        <h3 class=""> HALL C </h3>
+                                                    </div>
+
+                                                    <article>
+
+                                                        <h4 class="text-center imptext">TECHNOLOGY TRENDS </h4>
+
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">2:00 PM – 2:45 PM</span>
+                                                        <h4>AutoTech AI</h4>
+                                                        <!---p class="mt-2">AI is transforming transportation by improving
+                                                            traffic
+                                                            management, enhancing public transit, and optimizing parking
+                                                            and traffic incident response. AI-driven traffic management
+                                                            systems have potential to reduce congestion by 30%, while
+                                                            there is potential to reduce traffic accidents by 25%
+                                                            through 2030 through AI in mobility. AI integration in smart
+                                                            mobility platforms boosts efficiency, sustainability, and
+                                                            safety, allowing real-time data-driven decisions. Autonomous
+                                                            vehicles promise safer roads and shorter commutes by using
+                                                            AI for real-time navigation and response. AI is also
+                                                            optimizing public transit routes, predicts passenger demand,
+                                                            and enhances ride-hailing and logistics.</p---->
+                                                        <p>Session 26 - Panel </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">2:45 PM – 3:30 PM</span>
+                                                        <h4>Space Tech & Future Aviation</h4>
+                                                        <p class="mt-2">A new space race is driven by private companies
+                                                            and governments aiming to return to the moon, launch space
+                                                            tourism, colonize Mars, and explore beyond our solar system.
+                                                            Led by growing space activities, General VC investments in
+                                                            SpaceTech reached US$6.8 billion in 2023.The satellite
+                                                            industry is booming with rapid advancements in technology,
+                                                            leading to faster design cycles and advanced payloads. Key
+                                                            trends include AI, small satellites, high-throughput
+                                                            satellites, and cybersecurity. Data gathering, earth
+                                                            observation, and communication applications are
+                                                            significantly impacting the industry. Partnerships between
+                                                            private companies and governments, such as SpaceX's
+                                                            ventures, are vital. Reduced launch costs and technological
+                                                            advancements are creating opportunities for startups and
+                                                            growth in space tourism, debris cleanup, and low earth orbit
+                                                            projects.</p>
+                                                        <p>Session 27 - Panel </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">3:30 PM – 4:15 PM</span>
+                                                        <h4>Quantum Computing – Are We Prepared?</h4>
+                                                        <p class="mt-2">Quantum computing is poised to be a major
+                                                            technological shift, following the mainstream adoption of
+                                                            generative AI. Global VC investment in quantum computing
+                                                            reached $1.2 billion in 2023. Key trends include focusing on
+                                                            qubit quality and error correction, which are crucial for
+                                                            practical applications. Sectors such as finance,
+                                                            pharmaceuticals, and sustainability are exploring its
+                                                            potential, with significant impacts expected on data
+                                                            security and encryption standards. Increase in qubit count
+                                                            and coherence times in quantum devices and improving quantum
+                                                            algorithms will be vital for adoption. The transition from
+                                                            physical qubits to error-corrected logical qubits and
+                                                            increased global collaboration will mark significant
+                                                            progress. Quantum computing’s advancements could
+                                                            revolutionize industries, drive new applications, and
+                                                            require robust cybersecurity measures to mitigate emerging
+                                                            threats.</p>
+                                                        <p>Session 28 - Panel </p>
+                                                    </article>
+
+                                                    <article>
+                                                        <span class="event-time">4:15 PM – 5:00 PM</span>
+                                                        <h4>Global Supply Chains</h4>
+                                                        <p class="mt-2">The future of global supply chains will focus on
+                                                            increasing resilience, agility, and sustainability.
+                                                            Companies are focusing on digitization of supply chains,
+                                                            with around 44% supply chains of supply chains being
+                                                            digitized. Key trends include the adoption of AI and
+                                                            automation to improve decision-making and efficiency, and
+                                                            the use of IoT devices for better traceability and quality
+                                                            control. Flexibility will be enhanced through larger
+                                                            inventories, diversified suppliers, and reliable logistics
+                                                            partners. Sustainability will become a priority as companies
+                                                            comply with ESG standards and meet consumer demands.
+                                                            Geopolitical challenges will drive strategies to reduce
+                                                            risks by diversifying supply sources. Overall, technological
+                                                            advancements and a focus on sustainability and flexibility
+                                                            will shape future supply chains.</p>
+                                                        <p>Session 29 - Panel </p>
+                                                    </article>
+
+                                                    <div class=" text-center hall my-4">
+                                                        <h3 class=""> HALLS D&amp;E </h3>
+                                                    </div>
+
+                                                    <article>
+                                                        <span class="event-time">2:00 PM – 5:00 PM </span>
+                                                        <div class="alternatesection">
+                                                            <h4>STARTUP &amp; SCALE-UP PITCHFEST </h4>
+                                                            <p>
+                                                                <b>Featuring 30 Top Global Innovators: </b><br>
+                                                                Startups and fast-track scale-ups will present to a
+                                                                world-class expert
+                                                                audience of Silicon Valley Venture Capitalists, Angel
+                                                                Investors, and
+                                                                Senior Enterprise Executives. About 40 accredited and
+                                                                well recognized
+                                                                Angel Investors and Venture Capitalists will
+                                                                participate. Presenters are
+                                                                matched to investors based on synergies and mutual
+                                                                interests.
+                                                                Additionally, we will facilitate connections via the
+                                                                Evolve EcoConnect
+                                                                Program with a pool or 450+ Angels and 700+ Venture
+                                                                Capitalists.
+                                                                <br><br>
+                                                                Format: <br>
+                                                                10-Minute Fast-Pitch Slots Back-Back
+                                                                <br><br>
+                                                                Why Present?<br>
+                                                                Investment; Strategic Partnering; Business Development;
+                                                                Go-to-Market;
+                                                                M&amp;A; IPO.
+                                                                Matching &amp; Scheduling one-on-one via Program Mobile
+                                                                App and
+                                                                Post-Conference.
+                                                                <br><br>
+                                                                Requirements:<br>
+                                                                You Must Be Pre-Approved And Exhibit In The Innovator
+                                                                Pavilion To
+                                                                Participate.
+                                                            </p>
+                                                        </div>
+
+                                                    </article>
+
+                                                    <!---article>
+
+
+                                                        <p><span class="font-weight-bold">Pitchfest Hall D:</span> Early
+                                                            Stage </p>
+                                                        <p><span class="font-weight-bold">Pitchfest Hall E: </span>
+                                                            Mid-Late Stage </p>
+
+                                                    </article>
+
+                                                    <div class=" text-center hall my-4">
+                                                        <h3 class=""> EXPO HALL </h3>
+                                                    </div>
+
+
+                                                    <article>
+                                                        <span class="event-time">11:00 AM – 5:00 PM </span>
+                                                        <div class="alternatesection">
+                                                            <h4>INNOVATOR PAVILION &amp; EXPO</h4>
+                                                            <p>300 Startups &amp; Enterprise Exhibitors </p>
+                                                            <p>Expo Will Be Open After Grand Keynotes </p>
+                                                        </div>
+                                                    </article--->
+
+                                                </div>
+
+
+
+
+
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+								
+								
+								<!----pitchfest---->
+								<div class="tab-pane fade" id="pitchfest" role="tabpanel" aria-labelledby="pitchfest">
+                                    <div class="evolve-program-schedule">
+                                        <div class="row mx-0 ">
+
+
+                                            <!----pitechfest--->
+
+
+                                            <div class="col-lg-12 col-12  mx-0 my-0 p-0">
+													<div class="program-content">
+													
+															<h2 class="text-center  text-center mt-3" style="color:#04489b; letter-spacing:1px">Fundraise <> Partner <> Promote </h2>
+													
+															<div class=" text-center hall">
+																<h3 class=""> HALL A </h3>
+															</div>
+															
+															<!---article>
+                                                        <span class="event-time">9:00 PM 12:00 PM & 1:00 PM – 5:00 PM</span>
+                                                        <div class="alternatesection">
+                                                            <h4 class="mb-2">STARTUP & SCALE-UP PITCHFEST </h4>
+															<p class="font-weight-bold mb-0">Featuring 35 Top Global Innovators:</p>
+                                                            <p>
+                                                                Startups and fast-track scale-ups will present to a world-class expert audience of Silicon Valley Venture Capitalists, Angel Investors, and Senior Enterprise Executives. About 40 accredited and well recognized Angel Investors and Venture Capitalists will participate. Presenters are matched to investors based on synergies and mutual interests. Additionally, we will facilitate connections via the Evolve EcoConnect Program with a pool or 450+ Angels and 700+ Venture Capitalists. Presentations will be recorded and made accessible to Angels and Venture Capitalists for post-event follow-on engagement based upon interest.  
+                                                            </p>
+															<p class="font-weight-bold mb-0">Format:</p>
+															<p>10-Minute Fast-Pitch Slots Back-Back</p>
+															
+															<p class="font-weight-bold mb-0">Why Present?</p>
+															<p>Investment; Strategic Partnering; Business Development; Go-to-Market; M&A; IPO. Matching & Scheduling one-on-one via Program Mobile App and Post-Conference.</p>
+
+															<p class="font-weight-bold mb-0">Requirements:</p>
+															<p>You Must Be Pre-Approved And Exhibit In The Innovator Pavilion To Participate.</p>
+
+                                                        </div>
+
+                                                    </article>
+													
+													
+													<article>
+
+
+                                                        <p><span class="font-weight-bold">Pitchfest Hall D:</span> Early
+                                                            Stage </p>
+                                                        <p><span class="font-weight-bold">Pitchfest Hall E:  </span>
+                                                            Mid-Late Stage </p>
+
+                                                    </article--->
+													
+													
+													
+													
+													<article>
+                                                        
+                                                        <div class="alternatesection">
+                                                            <h4 class="mb-2">STARTUP & SCALE-UP PITCHFEST </h4>
+															<p class="font-weight-bold mb-0">Featuring 140 (Days 1 & 2) Top Global Innovators:</p>
+                                                            <p>
+                                                                Startups and fast-track scale-ups are pre-screened by our domain expert review committee members for the value proposition, funding or partnering fit and invited to present to a world-class expert audience of Silicon Valley Venture Capitalists, Angel Investors, and Senior Enterprise Executives. About 40 accredited and well recognized Angel Investors and Venture Capitalists will participate. Presenters are matched to investors based on synergies and mutual interests. Additionally, we will facilitate connections via the Evolve EcoConnect Program with a pool or 450+ Angels and 700+ Venture Capitalists.
+                                                            </p>
+															<p class="font-weight-bold mb-0">Format:</p>
+															<p>10-Minute Fast-Pitch Slots Back-Back</p>
+															
+															<p class="font-weight-bold mb-0">Why Present?</p>
+															<p>Investment; Strategic Partnering; Business Development; Go-to-Market; M&A; IPO. Matching & Scheduling one-on-one via Program Mobile App and Post-Conference.</p>
+
+															<p class="font-weight-bold mb-0">Requirements:</p>
+															<p>You Must Be Pre-Approved And Exhibit In The Innovator Pavilion To Participate.</p>
+
+                                                        </div>
+
+                                                    </article>
+													
+													
+													<article>
+
+
+                                                        <p><span class="font-weight-bold">Pitchfest Halls D & E</span> </p>
+                                                        <p>Presentation schedules are by domain and published a few days prior to the conference.  </p>
+
+                                                    </article>
+													
+													</div>
+											</div>
+									</div>
+									
+									</div>
+									
+									</div>
+								
+								
+								<!---Expo---->
+								
+								<div class="tab-pane fade" id="expro" role="tabpanel" aria-labelledby="expro">
+                                    <div class="evolve-program-schedule">
+                                        <div class="row mx-0 ">
+
+
+                                            <!----DAY 2-->
+
+
+                                            <div class="col-lg-12 col-12  mx-0 my-0 p-0">
+											
+											<div class="program-content">
+													
+															<h2 class="text-center  text-center mt-3" style="color:#04489b; letter-spacing:1px">Amplify Your Brand, Product, Service </h2>
+													
+															<div class=" text-center hall">
+																<h3 class=""> EXPO HALL </h3>
+															</div>
+															
+															<article>
+                                                        <span class="event-time">10:00 AM – 5:00 PM</span>
+                                                        <div class="alternatesection">
+                                                            <h4 class="mb-1 font-weight-bold">INNOVATOR PAVILION & EXPO </h4>
+															<p class="mb-2">
+                                                                120 Startups & Enterprise Exhibitors
+                                                            </p>
+															
+															<p>Expo Will Be Open After Grand Keynotes</p>
+															
+											
+                                                        </div>
+
+                                                    </article>
+													
+													
+													
+													
+													</div>
+											</div>
+									</div>
+									
+									</div>
+									
+									</div>
+								
+								
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- TITLE BLOCK--->
+
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+    </div>
+    </section>
+
+
+    </div>
+    <!--====  End of Page Title  ====-->
+    <!--============================
+         Footer            
+         =============================-->
+    <footer-component></footer-component>
+    <!---============================
+         ScrollTop        
+         =============================--->
+    <scrolltop-component></scrolltop-component>
+    <!-- JAVASCRIPTS -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+    <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+    <script src="plugins/google-map/gmap.js"></script>
+    <script src="js/script.js"></script>
+    <script src="./js/submenu_select.js"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+                $('.goog-te-menu-value span:first').html('LANGUAGE');
+                $('.goog-te-menu-frame.skiptranslate').load(function () {
+                    setTimeout(function () {
+                        $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+                    }, 100);
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+            var eventmessage = document.querySelector(".eventprogamheader"); // Use querySelector instead of getElementsByClassName
+            if (selURL === "Evolve2024_Program") {
+                eventmessage.style.display = "none"; // Use dot notation for style properties
+            }
+        });
+    </script>
+	
+	
+	<script>
+	var startProductBarPos=-1;
+	window.onscroll=function(){
+	  var bar = document.getElementById('evolveTabbutton');
+	  if(startProductBarPos<0)startProductBarPos=findPosY(bar);
+
+	  if(pageYOffset>startProductBarPos){
+		bar.classList.add("fixed-top");
+		bar.style.top=0;
+	  }else{
+		bar.classList.remove("fixed-top")
+	  }
+
+	};
+
+	function findPosY(obj) {
+	  var curtop = 0;
+	  if (typeof (obj.offsetParent) != 'undefined' && obj.offsetParent) {
+		while (obj.offsetParent) {
+		  curtop += obj.offsetTop;
+		  obj = obj.offsetParent;
+		}
+		curtop += obj.offsetTop;
+	  }
+	  else if (obj.y)
+		curtop += obj.y;
+	  return curtop;
+	}
+	
+	</script>
+
+</body>
+
+</html>

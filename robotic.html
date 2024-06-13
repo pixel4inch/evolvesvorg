@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+        var writeuptitle = '';
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (selURL == value.Event) {
+            writeuptitle += `<h2>` + value.eventtitle + `</h2>`;
+          } else {
+
+          }
+        });
+        $('#writeup-title').html(writeuptitle);
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+  <div id="writeup-title">
+
+  </div>
+
+  <div class="body-content">
+
+
+
+
+
+    <!--================================
+         WHATS TRENDING
+=================================-->
+
+    <section class="section" id="writeup">
+      <div class="container">
+        <div class="row pb-3 page-title">
+          <div class="col-sm-12 m-auto text-center -3">
+            <!-- Page Title -->
+            <h1 class="font-display2 main-font-color">WHAT'S TRENDING</h1>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+
+          <div class="col-lg-12 mx-auto">
+
+            <div id="accordionExample" class="accordion custome-accordion border-0">
+
+
+              <div class="card">
+                <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                  <h2 class="mb-0">
+                    <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                      aria-controls="collapseOne"
+                      class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Robotics. Is Your Business Ready to Reap the Rewards?</button>
+                  </h2>
+                </div>
+                <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                  <div class="card-body p-5">
+                    <p class=" m-0">Mankind’s biggest invention transforming lives & work practices is poised for its biggest growth ever. Robotics has emerged as a phenomenal force and is slated to enter into corridors of power with unabated technological strides and new application avenues. The technology is transforming various industries, including manufacturing, transportation, healthcare and entertainment by enabling efficient production, autonomous transportation, safer surgery and smart weapons. Social trends and evolving consumer preferences are expediting uptake of robotic solutions, while the need for faster deliveries is pushing adoption in manufacturing and logistics landscapes. Robots are poised to become standard workers across industries due to increasing attention on automation amid ongoing digitalization and the Industry 4.0 wave that indicate strong push to efficiency and productivity while reduced reliance on human workers. Robots improve accuracy and safety, work without getting tired, and take operational efficiency to new levels. Driven by their convenience and precision, robots are finding increasing use in diverse industries for tasks that are hazardous or challenging for humans. The need for enhanced precision makes these machines an effective option for manufacturing, entertainment, retail and agriculture domains. Robots are attractive replacement for humans for repetitive and time-consuming tasks. The technology is also poised to garner considerable attention across industries to boost productivity and worker safety. By performing tasks faster and in a more efficient manner, robots free employees for creative and important tasks. Some of the advanced robots can communicate with customers and respond to emails or comments on social media platforms. The use of robots in dangerous environments like confined areas, hazardous chemicals and poor illumination relieves workers of these high-risk tasks. Robots can lift heavy loads and can be effectively employed in potentially dangerous situations for employee safety. These benefits of automated robots make them an attractive option for manufacturing units with low or high temperature settings.</p>
+                    <br />
+                    <p class=" m-0">Robots will become a fixture in smart factories which rely on modern technology for creating a self-adapting, flexible manufacturing environment boasting enhanced efficiency, speed and productivity. Smart factories with automation solutions and industrial robots are bound to enjoy speed, fewer errors and precise processes. The use of robots is poised to reduce reliance on human involvement and help smart factories in attaining new levels of flexibility and efficiency. The technology’s use of for monitoring, sensing and tracking is expected to make robotics a compelling proposition for smart factory in the coming years. Connected robots with edge computing platforms are likely to allow collection and transfer of data for feedback-driven workflow for smart factories. Aggressive efforts by leading retailers to upgrade and modernize warehouse to deal with burgeoning demand as a result of substantial growth of e-commerce are slated to augment the demand for robotic equipment for logistics, indicating opportunities for robot manufacturers. While increasing aging population is poised to create the need for mobile service robots for meal delivery, personal hygiene and exercise, strong focus on sustainability measures like recyclability are bolstering the demand for robots for disassembly as well as sorting tasks.</p>
+                    <br />
+
+                    <p class=" m-0">Robotics is anticipated to also benefit from increasing integration of emerging technologies like artificial intelligence, machine learning and the Internet of Things that are adding new dimensions to robotic capability. The bright outlook of the industry and increasing demand for robots are poised to encourage a large number of leading and startup companies to join the bandwagon and come up with specialized, modern solutions catering to diverse applications. AI and other emerging technologies are likely to improve human-to-robot interactions. AI is likely to help robots in handling unexpected and unsupervised scenarios, while swarm intelligence is slated to assist mobile robots in altering and sharing tasks. The integration of advanced imaging systems is expected to improve autonomous inspections, movements and analysis. In addition, 5G is poised to augment these capabilities by offering enhanced bandwidth to increase operating radii of robots. Moreover, edge services are anticipated to expand the senor and robot computing power. The integration of OT and IT is expected to expedite development and introduction of smart, connected robots for manufacturing environments. Increasing use of simulation tools for training robots is anticipated to help them in dealing with real-world problems. Next-generation robots powered by smart technologies are likely to present an effective option for custom, single-batch production processes. Robotics is slated to enjoy a significant boost from Level 3 mobile robots intended to navigate autonomously in pre-defined settings in an efficient manner, such as warehouses. Upcoming Level 4 capabilities are projected to yield self-driving, mobile machines for specific environments, including last-mile delivery robots and hotel room service robots. These development and evolving requirements are set to create a perfect environment for broader adoption of robotics across different domains.</p>
+
+
+                    <br />
+
+                    <p class=" m-0">Robotics is anticipated to also benefit from increasing integration of emerging
+                      technologies like artificial intelligence, machine learning and the Internet of Things that are
+                      adding new dimensions to robotic capability. The bright outlook of the industry and increasing
+                      demand for robots are poised to encourage a large number of leading and startup companies to join
+                      the bandwagon and come up with specialized, modern solutions catering to diverse applications. AI
+                      and other emerging technologies are likely to improve human-to-robot interactions. AI is likely to
+                      help robots in handling unexpected and unsupervised scenarios, while swarm intelligence is slated
+                      to assist mobile robots in altering and sharing tasks. The integration of advanced imaging systems
+                      is expected to improve autonomous inspections, movements and analysis. In addition, 5G is poised
+                      to augment these capabilities by offering enhanced bandwidth to increase operating radii of
+                      robots. Moreover, edge services are anticipated to expand the senor and robot computing power. The
+                      integration of OT and IT is expected to expedite development and introduction of smart, connected
+                      robots for manufacturing environments. Increasing use of simulation tools for training robots is
+                      anticipated to help them in dealing with real-world problems. Next-generation robots powered by
+                      smart technologies are likely to present an effective option for custom, single-batch production
+                      processes. Robotics is slated to enjoy a significant boost from Level 3 mobile robots intended to
+                      navigate autonomously in pre-defined settings in an efficient manner, such as warehouses. Upcoming
+                      Level 4 capabilities are projected to yield self-driving, mobile machines for specific
+                      environments, including last-mile delivery robots and hotel room service robots. These development
+                      and evolving requirements are set to create a perfect environment for broader adoption of robotics
+                      across different domains.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card">
+                <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                  <h2 class="mb-0">
+                    <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                      aria-controls="collapseTwo"
+                      class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Exciting
+                      New Technologies Shaping Growth</button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                  <div class="card-body p-5 textless">
+                    <p class=" m-0">Listed below are cutting edge new technologies that are taking robotics to the next
+                      level of development, intelligence and functionality. Breakthrough advancements in connectivity,
+                      machine intelligence and flexibility are paving way for smart robots capable of handling dynamic
+                      and complex work/task scenarios. Intelligence capabilities and technological flexibility are
+                      enabling players to customize robot modules for diverse applications, while IoT and AI are leading
+                      to smart and more capable robots.</p>
+                    <br />
+                    <ul>
+                      <li> <strong>AI & Machine Learning - </strong> After leading to radical transformations across
+                        various verticals, artificial intelligence (AI) and machine learning are enjoying increasing
+                        traction in the world of robotics. The blend of machine learning and robotics is an intriguing
+                        combination with tremendous potential to take automation to a new level for disrupting diverse
+                        industries and applications. AI-powered robots are smarter and more efficient in comparison to
+                        standard robots, and poised to change traditional practices across industries. Robotics and
+                        sophisticated automation have gained notable attention in the industrial sector to save on human
+                        effort and time while boosting productivity. However, the evolving landscape requires solutions
+                        beyond conventional robots, indicating an important role for AI and machine learning. AI helps
+                        robots in gaining desired motion control and computer vision for understanding the environment
+                        for proper action. On the other hand, machine learning is used for conditioning robots to help
+                        them learn from mistakes and evolve with time. The approach reduces parallel efforts and human
+                        intervention, leading to adaptability for robotics. </li>
+                      <li> <strong>Robotic Process Automation (RPA) – </strong> RPA is witnessing increasing adoption
+                        for automation of various repetitive tasks by imitating the way humans perform them. RPA is
+                        anticipated to garner notable attention and emerge as a mainstream technology for industries
+                        with repetitive operations. RPA is expected to be used for automating procedures like invoicing
+                        or inventory management and appointment scheduling. RPA is anticipated to drive uptake of
+                        Robots-as-a-Service (RaaS) as subscription-based options that blend monitoring, preventative
+                        maintenance and data analytics. RaaS holds high relevance for companies making efforts to save
+                        on costs and time associated with robot development & maintenance functions. The service model
+                        is poised to deliver various benefits such as high level of flexibility and faster scaling as
+                        per evolving requirements. In the recent years, RPA has notably evolved from traditional screen
+                        scraping or desktop automation functions to boats cognitive aspects. While RPA software is
+                        poised to receive notable investments in the coming years, the automation may lack desired level
+                        of intelligence. The effectiveness of RPA to boost efficiency and productivity in the future is
+                        anticipated to rely heavily on incorporation of cognitive elements with enhanced intelligence.
+                        The aspect requires solutions to extract information from various unstructured sources. Natural
+                        Language Processing (NLP) solutions hold relevance for these tasks. The technology can support
+                        robotics by addressing issues related to extraction of insights from different sources in a
+                        cost-efficient manner. </li>
+                      <li> <strong>Blockchain - </strong> While robotics holds a bright future for these domains, there
+                        are specific challenges such as unmanned navigation, inter-robotic communication and data
+                        security. These issues point towards the promising role of blockchain technology that can
+                        overcome these issues and make robotic operations more flexible, secure and beneficial.
+                        Blockchain can play a pivotal role in addressing different concerns and paving way for full
+                        autonomy for robotics, signifying operations with minimal human intervention. The technology
+                        adds security and safety elements for robotic communication. Blockchain involves assignment of a
+                        pair of private and public keys to individual robots within a group, like swarm robots. While
+                        the public key signifies information related to the robot, the private key allows identification
+                        of a robot prior to the communication. Blockchain technology can also allow robots to tap smart
+                        contracts for selling their services without relying on third-party authentication. Swarm robots
+                        depend on artificial swarm intelligence and specific rules for communicating with each other
+                        along with the surrounding to display the collective behavior. The communication is required to
+                        be effectively secured for desired operations. On the other side, the presence of a faulty or
+                        malicious robot within the group can affect the communication. Blockchain can be used to ensure
+                        a highly secure, decentralized communication among swarm robots. The technology also enables
+                        advanced security measures for entity authentication, data confidentiality and data integrity.
+                      </li>
+
+
+
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card">
+                <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                  <h2 class="mb-0">
+                    <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                      aria-controls="collapseThree"
+                      class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Here’s
+                      What’s Trending for 2023</button>
+                  </h2>
+                </div>
+                <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                  <div class="card-body p-5 textless">
+                    <p class=" m-0">Keeping up to date with current trends is important for your company to continuously
+                      learn and identify new opportunities for technology use and find newer ways leverage the highest
+                      ROI on investments made.</p>
+                    <br />
+
+                    <ul>
+
+                      <li> <strong>Smarter, Customized Robots Will Be the New Flavor - </strong> Robots are set to
+                        become smarter and more efficient due to increasing integration of emerging technologies such as
+                        machine learning, AI and the Internet of Things, paving way for broader uptake across diverse
+                        areas, including delivery, manufacturing plants, distribution centers and warehouses. Industrial
+                        robots are likely to work more efficiently and faster to push automation and minimize
+                        discrepancies. Increasing use of AI in robotics is anticipated to drive deployment of these
+                        technologies alongside autonomous mobile robots (AMRs), which would exploit smart software for
+                        enhanced speed, efficiency and flexibility. Robots are poised to evolve from simple machines to
+                        perform tasks to a smart automation solution. The technology is slated to gain from increasing
+                        focus on data acquisition and connectivity for future manufacturing. The combination of AI and
+                        robotics is expected to help robots in using real-time data to optimize tasks and allow
+                        operators to make informed decisions. The use of real-time data and large datasets for training
+                        is anticipated to make robots more effective and accurate. Smart robots can effectively sense
+                        their environment and quickly distinguish objects for independent, seamless navigation. </li>
+                      <li> <strong>Cobots to Rise in Popularity - </strong> Collaborative robots or cobots represent a
+                        phenomenal advancement over conventional industrial robots as they are powered by sophisticated
+                        algorithms and sensors to ensure safe behavior when used around people. Multi-tasking robots
+                        such as cobots are expected to find broader adoption across different domains, mainly in the
+                        retail arena owing to substantial growth of e-commerce. These robots support digital workflow
+                        and help users in routine operations like floor cleaning and moving merchandise. Cobots offer an
+                        effective alternative to human workers for various applications due to their higher
+                        productivity, continuous operations and efficiency. These robots are increasingly being used for
+                        repetitive and hazardous tasks to free the human staff for more important tasks. Powered by
+                        advanced algorithms, cobots automate different assembly activities such as screw drilling and
+                        part welding. In addition, collaborative robots can efficiently lift hazardous items for
+                        employees, including polymers and heavy metals.</li>
+                      <li> <strong>Robots Will Become Standard Automation Options - </strong> Favored by continuing
+                        advances and progress in functional capacities, robots are anticipated to become a highly
+                        standard automation option in the coming years. Robotics is slated to provide industries with
+                        sophisticated automation solutions that are easy to deploy, integrate or configure. Robotics
+                        would encompass plethora of options for diverse applications, including autonomous picking
+                        robots, delivery robots and e-vehicle charging robots. While leading companies are likely to
+                        focus on standardization, startups are anticipated to pay more attention to specialized areas
+                        with non-customizable robots. Mobile autonomous robots are expected to find extensive use in
+                        manufacturing operations to free human workers from hazardous applications such as heavy
+                        machinery, confined spaces and toxic chemicals. These smart robots would leverage AI,
+                        sophisticated sensors and computer vision for navigation along with scanners for monitoring
+                        stock levels.</li>
+                      <li> <strong>Humanoid Robots & Cyber Security - </strong> Humanoid robots have gained significant
+                        traction in the post-pandemic era for tasks such as in-hospital delivery and contactless
+                        cleaning. These robots are witnessing increasing acceptance for plant inspections, recovery and
+                        maintenance operations to reduce involvement of human workers in hazardous operations. Humanoid
+                        robots can welcome or serve guests, visit the old and sick, and automate tasks for enhanced
+                        efficiency. Robotic cyber security platforms are another major trend that is gaining attention
+                        due to increasing risk of cyber-attacks for connected robots. Robotic cyber security solutions
+                        are capable of securing connection stacks and endpoints for preventing asset outages and data
+                        breaches.</li>
+                      <li> <strong>Robotics to Boost to EV Revolution - </strong> The electrification trend within the
+                        automotive industry is slated to receive a major push from robotics. In contrast to internal
+                        combustion engines that need conventional linear manufacturing, EVs require a shift towards
+                        flexible and modular production process. The aspect is anticipated to be significantly supported
+                        by robotics as it overcomes various challenges associated with the process. Since EVs go beyond
+                        the powertrain and focus on digitalized vehicles, the transition indicates immense opportunities
+                        for robotics and other advanced technologies. The move is poised to help manufacturers in
+                        optimizing component delivery through facilities and achieve advanced, scalable production
+                        cells. The electrification trend is slated to create high demand for lightweight, agile robotic
+                        arms with technologies like navigation for different applications.</li>
+                      <li> <strong>Accelerating Democratization - </strong> Robotics is anticipated to witness a notable
+                        expansion of application scope due to increasing use of robots across existing as well as new
+                        markets, including e-commerce, retail and logistics. The trend received a significant stimulus
+                        from the pandemic that led to supply chain disruptions and labor shortages. In the recent years,
+                        warehouses and distribution centers globally have deployed a large number of robots to deal with
+                        pressing challenges and drive operational efficiency. The increasing adoption of advanced
+                        technology and associated opportunities to fulfill customer demand are poised to augur well for
+                        robotic automation. The scenario is anticipated to propel global demand for robots in areas that
+                        had limited use of robots. Labor shortages are likely to drive service-oriented businesses
+                        towards humanoid robots. Robotic democratization is slated to gain further from ongoing efforts
+                        to make the technology more affordable and user-friendly. Continuing efforts to develop easy to
+                        deploy and affordable robots that need no programming are anticipated to boost adoption, even
+                        among small- and mid-sized businesses.</li>
+                      <li> <strong>Service Robots to Emerge as the New Growth Frontier - </strong> Service robots are
+                        gradually moving from shop floors to homes, offices, hospitals, museums, and other public places
+                        in the form of self-navigating lawn movers, vacuum cleaners, window washers, and surgical
+                        operators. Robots are also poised to assist surgeons in operations, intervene in life-critical
+                        or dangerous environments for search and rescue operations, operate in field areas such as
+                        agriculture, forestry, mining, cleaning, construction, demolition and freight transport, among
+                        others. The advances in technology are likely to empower future robots to assist humans in a
+                        more intuitive and natural manner, in the process empowering humans themselves. Professional
+                        service robots are increasingly being commercialized, owing to their usefulness in specific
+                        purposes and clearly defined business objectives that can be realized with modest R&D efforts.
+                        SMEs (small and medium enterprises) are well positioned to exploit the advantages of
+                        professional service robots in applications such as outdoor and field operations, autonomous
+                        transport, cleaning, logistics, underwater maintenance and exploration, medical and
+                        rehabilitation, and as exoskeletons. Domestic or personal use robots are likely to be
+                        mass-produced, given their valuable ability to relive time stressed home owners/makers from
+                        everyday household chores like home vacuuming and floor cleaning. </li>
+                      <li> <strong>Defense Robotics to Hit Prime Time – </strong> An increasing number of nations are
+                        making investments on robotic solutions on the back of growing terrorist and border encroachment
+                        activities. About 90 countries have already deployed defense robots in military operations in
+                        one form or the other. Defense robotics are utilized in various forms including unmanned aerial
+                        vehicles (UAVs), unmanned marine vehicles (UMVs) and unmanned ground vehicles (UGVs). UAVs, the
+                        pilot-less aircraft, constitute the most widely used form of defense robotics. The US has been a
+                        pioneer in development of military UAVs, and currently holds a large fleet of UAVs supplementing
+                        its military operations in Afghanistan, Iraq & Syria, and other parts of the world. Similarly,
+                        UMVs are mostly made available in the form of USVs (or Unmanned Surface Vessels) and UUVs (or
+                        Unmanned Underwater Vehicles) and extend superior capabilities to naval forces in maritime
+                        operations. Rising emphasis on robotic solutions in command, control, communications and
+                        computers (C4); intelligence, surveillance & reconnaissance (ISR); and battlefield combat
+                        operations are consistently fuelling momentum in the defense robotics space. At the same time,
+                        growing concerns over rising human casualties in military operations and sustained focus on
+                        reducing warfield deaths through advanced strategies are creating strong business case for
+                        military robotics. </li>
+                      <li> <strong>Healthcare to Benefit Most from Robotics - </strong> The healthcare domain is being
+                        increasingly transformed with deployment of AI-driven robotics. While machine learning-based
+                        robotics is supporting the healthcare chain and related tasks like surgery, function testing,
+                        data integration and research, AI robotics is extensively used to track health status of
+                        patients, design personalized health activities for patients, and create a supply chain of
+                        essentials like medications. The combination of robotics and AI is benefitting hospitals by
+                        enabling precise diagnosis, assisting robots and remote treatments. Physicians can benefit from
+                        robotic proactive analysis for identifying specific patterns in health graphs of patients. On
+                        the other hand, machine learning-based robots are widely used in healthcare settings for
+                        micro-surgeries like unclogging of blood vessels. AI robotics is transforming healthcare by
+                        enabling delivery of medical services to remote areas. In addition, robotics is one of the key
+                        technologies for leading companies managing large-sized warehouses for operational gains and
+                        cost savings. Automated robots rely on sophisticated sensors such as haptic, auditory, visual
+                        and thermal sensors for efficient warehouse operations. Haptic and thermal sensors are
+                        associated with AI and improve safety through enhanced perception of the environment. These
+                        sensors are critical to decision-making ability of robots, enabling seamless and safe
+                        operations.</li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!--============================
+           Footer            
+=============================-->
+
+  <footer-component></footer-component>
+
+
+  <!---============================
+       ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+  <script src="./js/jquery.readall.js"></script>
+
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+  <script src="./webcomponts/banner.js"></script>
+
+  <script>
+    $('.textless').readall({
+      showheight: null,
+      showrows: 8
+    });
+
+
+  </script>
+
+
+
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('LANGUAGE');
+        $('.goog-te-menu-frame.skiptranslate').load(function () {
+          setTimeout(function () {
+            $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+          }, 100);
+        });
+      });
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+  </script>
+</body>
+
+</html>

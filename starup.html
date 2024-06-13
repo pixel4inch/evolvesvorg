@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+        var writeuptitle = '';
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (selURL == value.Event) {
+            writeuptitle += `<h2>` + value.eventtitle + `</h2>`;
+          } else {
+
+          }
+        });
+        $('#writeup-title').html(writeuptitle);
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+  <div id="writeup-title">
+
+  </div>
+
+  <div class="body-content"><!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+ <!-- theme meta -->
+ <meta name="theme-name" content="Evolv" />
+
+ <!-- Favicon -->
+ <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+ <!-- PLUGINS CSS STYLE -->
+ <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css" />
+ <link rel="stylesheet" href="..plugins/themify-icons/themify-icons.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+ <!-- CUSTOM CSS -->
+ <link href="../css/style.css"" rel="stylesheet" />
+ <link href="../css/custome.css" rel="stylesheet" />
+ <link href="../plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+ <link href="../css/jquery.readall.css" rel="stylesheet" />
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+
+
+ <!--================================
+        WHATS TRENDING
+=================================-->
+
+<section class="section" id="writeups">
+    <div class="container">
+      
+
+      <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+
+          <div id="accordionExample" class="accordion custome-accordion border-0">
+
+
+            <div class="card">
+              <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">How
+                    Startup Ecosystem Is Becoming the Goldmine of Opportunities for Investors?</button>
+                </h2>
+              </div>
+              <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                <div class="card-body p-5">
+                  <p class=" m-0">The global startup ecosystem has been constantly evolving over the years. Over the
+                    past decade, the global average of Series A rounds has witnessed a threefold increase to over US$18
+                    million. Tech companies have grown 2.3 times more than non-tech companies since the pandemic. North
+                    America, which has been continuously experiencing a decline in funding share since 2016, accounted
+                    for less than half of the early-stage funding raised in 2021, allowing Asia and Europe to make up
+                    the majority of the total funding. Meanwhile, the venture capital investments in Latin American
+                    startups saw a twofold increase from figures in 2021. In 2021, record levels of venture funding were
+                    raised by North American startups at US$329.5 billion and Asian startups at US$165 billion. Latin
+                    America was the fastest-growing region in the world in 2021, with investors pouring in an estimated
+                    US$19.5 billion into the region. Startup funding in Australia more than tripled in size in 2021,
+                    while startups in Africa raised US$4.8 billion from investors during the year, which is 2.5 times
+                    more than the year before. In the MENA region, Egypt’s startups particularly stood out, witnessing a
+                    year-on-year growth of 155% in venture capital funding rounds and a 60% increase compared to 2017.
+                    In 2021, unicorn status was achieved by a record 540 firms, up from 150 firms in 2020, with 110
+                    ecosystems churning out at least one US$1 billion-plus behemoth. Meanwhile, 19 ecosystems, including
+                    Ho Chi Minh City, Santiago-Valparaiso, Luxembourg, Brisbane, saw unicorns emerge for the first time
+                    in 2021. The number of unicorns in North America increased more than three times from 83 in 2020 to
+                    310 in 2021. Africa, on the other hand, created three new unicorns, which were all Fintech startups.
+                  </p>
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">AI & ML
+                    Startups Create Substantial Venture Capital Investment Opportunities</button>
+                </h2>
+              </div>
+              <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">Over the years, artificial intelligence (AI) and machine learning (ML) technologies
+                    have achieved remarkable success in transforming a wide range of industries and domains, including
+                    biotech and healthcare, transportation, entertainment, energy, education, automotive, real estate,
+                    urban management, legal and fraud detection and compliance, communication, sales and marketing,
+                    defense and security, ecommerce, and human resources. With AI and ML technologies beginning to
+                    increasingly make impressions on various fields, it is creating tremendous opportunities for
+                    companies to invest in startups that are engaged in using these technologies. One key sector where
+                    startups are particularly focusing on integrating AI and ML technologies is healthcare. In the
+                    healthcare industry, AI technology has already been implemented for chatbots and virtual assistance,
+                    which is expected to borne positive growth over the next few years. AI and ML startups are currently
+                    focusing primarily on other areas of healthcare, including fitness wearables, drug discovery, image
+                    analysis, robotic surgery, diagnosis, and monitoring of chronic conditions. AI and ML technologies
+                    also hold tremendous potential in transforming the banking, financial services, and insurance (BFSI)
+                    sector in the near future. In the current digital world, the emergence of AI and ML technologies has
+                    been creating new opportunities for enhancing the scope of BFSI offerings. Several startups have
+                    emerged in the market in recent years that are leveraging AI for delivering a plethora for
+                    operations for BFSI. In developing markets, governments have been focusing on preparing an ecosystem
+                    with seamless connectivity, where AI technology is conventional, and developed for improving various
+                    aspects of e-governance. This would further help in nurturing innovations in conventional
+                    industries, allowing novel business models as well as rising number of startups. The increasing
+                    application of AI technology is already bringing seismic changes in the retail sector. In addition,
+                    AI and ML technologies are being increasingly used for operating various functions, including
+                    payment services, logistics and delivery, manufacturing, customer recommendations, and sales and CRM
+                    applications. AI startups are also looking at ways to develop solutions that would help retailers in
+                    improving their inventory management. </p>
+                  <br />
+                  <p class="m-0">With the US leading the world in terms of discoveries and adoption of AI technology,
+                    the country also holds a major share of investments from public and private sectors. US-based
+                    startups have been actively involved in the research and development of AI technology. Moreover,
+                    prominent tech giants, such as Microsoft, IBM, Apple, Google, and Baidu, have been continuously
+                    eyeing merger and acquisition opportunities with AI and ML startups. The European AI market, on the
+                    other hand, is extremely fragmented with the presence of several leaders and startups utilizing AI
+                    technology for scaling up their returns. In recent years, the European Union and the European
+                    Commission have rolled out an initiative to invest around US$22.5 billion in AI and ML startups. The
+                    funding would be made by the private sector, member states, and the European Union. AI and ML
+                    technologies offer lucrative avenues for triggering future growth for forward-thinking corporations,
+                    pioneering entrepreneurs, investors, and venture capitalists. In the coming years, AI is expected to
+                    foster significant innovations for consumers as well as corporations. Within the automotive
+                    industry, AI startups are actively looking at ways of developing technology for self-driving or
+                    driverless cars. In conjunction with other transformative technologies, such as Internet of Things
+                    (IoT) and big data analytics, AI holds tremendous potential in generating new avenues of economic
+                    growth as well as substantial societal value in the coming years.</p>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Metaverse
+                    Startups Rapidly Making a Breakthrough in the Digital World</button>
+                </h2>
+              </div>
+              <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">Metaverse is the latest buzzword to capture the imagination of the technology
+                    industry. Every year, thousands of startups are launched, with these emerging companies having the
+                    potential of disrupting the metaverse industry. These startups offer significant promise in
+                    redefining the metaverse landscape by offering highly immersive and engaging experiences to
+                    consumers in the future. While metaverse is still in its early development stages and its future
+                    outlook continues to remain shrouded with a dense fog of uncertainty, it is not deterring investors
+                    from pumping money into metaverse startups. Europe’s metaverse startups raised around US$666 million
+                    in funding in 2022, up from US$143 million a year before. Two of the largest funding rounds during
+                    the year went to Improbable, a UK-based developer of metaverse platform, which raised US$150 million
+                    and US$112 million in two funding rounds. In addition, France-based nfinite, an AI-powered ecommerce
+                    and visualization startup banked US$100 million in a Series B funding led by New York-based global
+                    technology investor Insight Partners. These funding rounds clearly indicate that investors are keen
+                    on jumping on the bandwagon in order to monetize the prospects of the immersive virtual world in the
+                    future. Global tech giants, such as Meta and Microsoft, have been spending billions of dollars on
+                    developing metaverse components, while metaverse startups, such as Roblox, have been raising
+                    significant funds. It still remains unclear which form of the metaverse would prevail or whether
+                    several forms would coexist. The metaverse space is evolving rapidly and companies, whether leaders
+                    or startups, capable of establishing a truly engaging and immersive space would be the ones that
+                    would succeed in the future.</p>
+                  <br />
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div id="heading4" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false"
+                    aria-controls="collapse4"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">How SaaS
+                    is Reshaping the Startup Scenario and Attracting Young Talent?</button>
+                </h2>
+              </div>
+              <div id="collapse4" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">Software-as-a-service (SaaS) has rapidly emerged as a dominant technology trend in the
+                    recent times. Over the past decade, most of the globally leading software companies have
+                    successfully switched to offering cloud-based products, while several others are gradually moving in
+                    that direction. The recent COVID-19 pandemic significantly accelerated the trend towards
+                    digitalization, which in turn is anticipated to drive enormous growth in the SaaS industry over the
+                    next few years. For SaaS companies to succeed, they need to hire skilled workforce in the area of
+                    sales with the aim of remote expanding in global markets and closing large deals. For this,
+                    companies are primarily focusing on a digital go-to-market strategy, which is expected to augment
+                    the demand for skilled digital marketing experts. While companies generally give preference to
+                    individuals with a prior B2B technology experience, they are also open to hiring talented
+                    professionals from diverse backgrounds and industries. Since SaaS operates on a subscription model,
+                    existing customers make up for most of the revenues of SaaS companies. This brings forth the
+                    importance of maintaining clear focus on developing meaningful relationships with customers as well
+                    as offering them efficient service to ensure continuous revenue growth. This increased focus on
+                    customer support and service roles presents lucrative opportunity for IT/BPO professionals to foray
+                    into the SaaS industry. Irrespective of the candidate’s prior experience, SaaS companies are
+                    willingly offering job aspirants fast-growing and well-paying jobs in case they identify that the
+                    candidate has the right skill sets and willing to adapt and learn quickly. Over the years, there has
+                    been a tremendous increase in demand for individuals with IT skills, such as Angular JS, data
+                    analytics, full-stack development, Android app development, and cloud infrastructure technology.
+                    SaaS companies are offering young talent higher salaries and shorter and innovative projects. With
+                    increasingly remote and distributed work, companies are also looking at ways to boost culture of
+                    employee engagement and innovation. SaaS startups are attracting young talent by offering perks that
+                    are most relevant to them, such as gym membership, group health insurance, and mental health
+                    sessions.</p>
+                  <br />
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div id="heading4" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false"
+                    aria-controls="collapse4"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">How
+                    Startups Can Cost-Effectively Protect Their Data</button>
+                </h2>
+              </div>
+              <div id="collapse4" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">Data privacy and security is a major concern for everyone, and is even more critical
+                    for technology-dependent companies. For established companies, it can be nuisance to address issues
+                    related to data security, but they still have vast resources for hiring a skilled data security
+                    expert or an established IT security vendor. For cash-strapped startups, however, it is not always
+                    easy to afford these options. There are various other solutions through which startups can ensure
+                    data privacy and security without incurring high costs. One of these includes keeping IT informed
+                    and visible. IT needs to be constantly aware and visible about the different tools being used in the
+                    company, how and where company data is being stored, and what workers are doing with this data. In
+                    the modern work environment, the line between business and personal devices is blurring rapidly and
+                    mobile devices are ubiquitous. Employees could unknowingly introduce threat of data breaches to the
+                    company. IT needs to be proactively involved in preventing such data breaches and addressing them in
+                    case they occur. In addition, startups need to create data security policies that comprise specific
+                    file sharing guidelines. Small businesses are generally targeted by cybercriminals as they are aware
+                    that adequate resources are not allocated by these companies for addressing these risks. It is vital
+                    for startups to identify the assets that are critical, with complete clarity on where these assets
+                    are stored, and whether they have been secured via encryption. Another important aspect for startups
+                    to protect their data is by minimizing collection. Companies should refrain from collecting
+                    protected information from employees and customers unless this information is truly required for
+                    their operations. In addition, information that is not required anymore should be destroyed. </p>
+
+                  <br />
+                  <p class="m-0">Startups should also allocate some time and money for training their employees on how
+                    to prevent cyberattacks. Employee training could include identification of suspicious attachments
+                    and links from phishing attacks, ways to create a secure and reliable password, physical security of
+                    devices, least privilege access, social engineering identification, and data loss prevention.
+                    Moreover, startups can opt for outsourcing data breach prevention and other data security functions
+                    to established compliant vendors and experts. Most startups generally cannot afford having in-house
+                    threat intelligence for protecting against threats. Moreover, it is often difficult for startups to
+                    afford advanced, industrial-grade tools. Startups can opt for storing their data on a cloud-based
+                    solution that offers both application-level security as well as data-centric security. Several
+                    established technology players, such as Google and Microsoft, offer solution specifically designed
+                    to meet the requirements of small businesses, and are reasonably priced and available with the
+                    option of scaling in accordance with the startup’s growth. Another cost-effective method for
+                    startups to protect their data is through encryption. In addition to encrypting sensitive
+                    information, such as social security numbers and credit card numbers, other types of information,
+                    including email addresses, should also be considered for encryption. Encryption keys should ideally
+                    be stored on a server different from the one storing secured data. Startups can also protect
+                    themselves from data breaches by regularly conducting penetration testing. Several penetration
+                    testing tools are available in the market in different price range. </p>
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div id="heading5" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false"
+                    aria-controls="collapse5"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">The Role
+                    of Freelancing Economy in the Startup Ecosystem</button>
+                </h2>
+              </div>
+              <div id="collapse5" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">Freelancing is one trend that has been gaining steady pace over the past few years. In
+                    2015, more than 34% of the American workforce in the US was earning income from freelancing jobs. In
+                    India, the number of gig workers has been witnessing steep growth over the past few years. Apart
+                    from the growing freelancing economy, another major trend that has emerged in recent times is the
+                    startup ecosystem maturing in the Indian subcontinent. In the near future, freelancing and startup
+                    ecosystem are likely to feed off the growth story of both. Most startups globally are generally
+                    either service-based or product-based. For product-based companies, it is imperative for them to
+                    have a robust technology team comprising the most skilled product managers and programmers. Indian
+                    startups are primarily service-based, developing solutions for completing a task using technology.
+                    For service-based firms, there is a need to validate their business model before it can churn out
+                    world-class apps or websites. This typically requires a strong technical team. Irrespective of
+                    whether the startup is service-based or product-based, the freelancing domain can contribute
+                    significantly in helping them in scaling in a cost-efficient and asset-light manner. This can be
+                    achieved through outsourcing the entire product to freelancers or supplementing the core technical
+                    team with freelancers. Freelancers can help companies in building a minimum viable product or a
+                    basic workable solution, which can help startups in saving considerable amounts of money, as well as
+                    validating their ideas quickly. In case the business model seems viable, companies can go for
+                    additional funding for creating a more extensive product. In case the pilot succeeds, the minimum
+                    viable product can be utilized for refining the ideas and improving the product’s credibility, both
+                    for potential employees as well as funding sources. Apart from technology, the two other major areas
+                    where freelancing could prove to be conducive are content writing and design. While there are
+                    already various websites available that detail previous projects and experiences of various
+                    freelancers, a few startups are emerging that are pushing the envelope by providing validation of
+                    the freelancers’ skill sets, matching the most appropriate freelancer as per the requirements, and
+                    easing the project execution. These aspects have significantly revolutionized the entire freelancing
+                    experience as well as have made it extremely compelling for companies to hire freelancers. Startups,
+                    especially those operating in India, stand to benefit the most of the emerging freelancing
+                    landscape. Companies can leverage the benefits of receiving a customized solution to their problems
+                    as well as enable the budding entrepreneurs in hiring the best talent without incurring heavy costs.
+                    Whether a nascent startup, an entrepreneur, or just a person with an idea, freelancing can be an
+                    ideal solution for transforming dreams into reality without the hassle of investing in an in-house
+                    workforce. </p>
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div id="heading6" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false"
+                    aria-controls="collapse6"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Here Are
+                    Top Startup Trends to Watch For in Near-Term</button>
+                </h2>
+              </div>
+              <div id="collapse6" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">There are several trends that are likely to drive the future of startup landscape over
+                    the next few years. </p>
+                  <ul>
+                    <li> Biotech startups are witnessing renewed interest from investors with more and more people
+                      across the globe now increasingly focusing on personal health and wellness brought on by the
+                      recent COVID-19 pandemic. In recent years, a host of new biotech startups have emerged across the
+                      globe. The global biotech market is expected to expand with DNA analysis becoming more mainstream
+                      and advanced. Over the last decade, ancestry tests have gained prominence as means of finding
+                      about genetic relatives and ancestors. In the coming years, DNA analysis could also offer people
+                      the prospect of identifying their future actions. For instance, UK-based healthcare firm, DnaNudge
+                      Ltd., offers a cheek swab DNA test, a wristband, and mobile app for providing users nutrition
+                      recommendations specifically tailored to their individual DNA. </li>
+                    <li> New products are being developed that are leveraging AI technology for identifying the most
+                      appropriate exercise routine or skincare products based on the user’s DNA. In the future,
+                      technology could also advance to enable an individual’s DNA to align with the current lifestyle
+                      and goals rather than the individual adapting to the DNA. </li>
+                    <li> Another major trend that is evolving is the gradual spreading of digital innovation in Africa.
+                      Over the past few years, African startups are attracting a considerable amount of venture capital
+                      investment. In 2020, African startups raised venture capital funding of US$2 billion. For
+                      instance, Twiga Foods, a Kenya-based food logistics startup, has received funding from lenders and
+                      investors led by US-based investment bank Goldman Sachs. In addition, South African AI-powered
+                      fintech startup Jumo has secured significant investment. Another Africa-focused ecommerce startup
+                      Jumia ended up listing on the New York Stock Exchange. Success of these African startups is paving
+                      way for more startup ventures to emerge on the continent. </li>
+                    <li> A notable trend surrounding startups is that sustainable finance is going mainstream.
+                      Sustainable finance refers to the process of taking environmental, social and governance
+                      considerations into account when making investment decisions. With investors now broadening their
+                      scope of return on investment, startups are also pitching for aspects beyond revenue trajectories
+                      and including their ecological and social effects. For instance, Beyond Meat Inc., a Los Angeles,
+                      California-based food startup has been emphasizing in their investor relations presentation that
+                      their plant-based vegan meat is good for consumers as well as the planet.</li>
+                    <li> Over the past few years, startups such as DoorDash, Uber Eats, and GrubHub, have established a
+                      business model for food delivery, while ride-hailing apps Lyft and Uber have disrupted the
+                      conventional taxi industry. Startups are now attracting venture capital investment for rolling out
+                      the same proven business models in other geographies. One such example includes Spanish startup
+                      Glovo, which has secured funding worth US$1.2 billion. Glovo offers a standard food delivery app
+                      and operates across Europe, with plans of expanding operations in North Africa and South America.
+                      Glovo offers users the facility of tracking their deliveries in real-time. In addition, apart from
+                      food items, Glovo also delivers other items, including flowers, pet food, smartphone accessories,
+                      and even macarons. </li>
+                    <li> In recent years, there has been a tremendous boom in no-code startups. San Francisco,
+                      California-based Webflow, Inc., which offers a platform to enable users build no-code to low-code
+                      customized websites and apps, has secured funding worth US$334.9 million. </li>
+                    <li> Over the past decade, the sharing economy has gained tremendous momentum. The sharing economy
+                      initially emerged in the hotel industry, with Airbnb allowing homeowners to rent out their houses
+                      for earning an additional income. In current times, the scope of shared economy is expanding to
+                      various other sectors, such as delivery-only restaurants. </li>
+                    <li> Startups are also looking actively at streamlining agile development with tools and techniques
+                      that help in removing friction and enforcing good practices. </li>
+                    <li> Consumer markets are placing higher emphasis on convenience. One such startup is Lensabl,
+                      which offers an online prescription lenses replacement service, thus disrupting the traditional
+                      market by offering convenience to customers. </li>
+                    <li> Agtech innovations are also witnessing an increased demand and hence are increasing attracting
+                      the attention of venture capital investors. </li>
+                    <li> Startups are also increasingly focused on personalization, and this trend is likely to
+                      continue over the next few years. </li>
+                    <li> Wealthtech is an area where startups are witnessing increased investment. Wealthtech startups
+                      such as Robinhood and Webull continue to secure significant funding from investors.</li>
+                  </ul>
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--============================
+           Footer            
+=============================-->
+
+<footer-component></footer-component>
+
+
+<!---============================
+       ScrollTop        
+=============================--->
+
+<scrolltop-component></scrolltop-component>
+
+<!-- JAVASCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<script src="js/script.js"></script>
+<script src="./js/submenu_select.js"></script>
+<script src="./js/jquery.readall.js"></script>
+
+
+<!---WEB COMPONETNS-->
+<script src="./webcomponts/headerComponents.js"></script>
+<script src="./webcomponts/FooterComponent.js"></script>
+<script src="./webcomponts/ScrollToTop.js"></script>
+<script src="./webcomponts/dummytext.js"></script>
+<script src="./webcomponts/banner.js"></script>
+
+<script>
+  $('.textless').readall({
+    showheight: null,
+    showrows: 8
+  });
+
+
+</script>
+
+
+
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+      $('.goog-te-menu-value span:first').html('LANGUAGE');
+      $('.goog-te-menu-frame.skiptranslate').load(function () {
+        setTimeout(function () {
+          $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+        }, 100);
+      });
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+  }
+</script>
+</body>
+
+</html>

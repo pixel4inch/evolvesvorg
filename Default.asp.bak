@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Dayton Pain Center</title>
+
+<LINK href="Aspincludes/daytonpc.css" type=text/css rel=stylesheet>
+
+<script language="JavaScript" src="aspincludes/topstripfunc.js"></script>
+<script language="JavaScript" src="mm_menu.js"></script>
+<style type="text/css">
+ 
+html,body{
+      margin:0;
+      padding:0;
+      //height:99%;
+      border:none;
+      vertical-align:top;
+   }
+</style>
+</head>
+
+
+<body bgcolor="#667BB4" >
+<script language="JavaScript1.2">mmLoadMenus();</script>
+<table width="60%" height="100%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" valign="top">
+  <!--#include file="aspincludes/topstrip.htm"-->
+
+  <!--Left strip Strats here-->
+   <!--#include file="aspincludes/leftstrip.asp"-->
+		<!--Left Ends here-->
+        <td width="85%" height="100%" valign="top" style="padding-left:10px; padding-right:10px; padding-top:10px"><table  height="100%" width="100%" border="0" cellspacing="0" cellpadding="0" >
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="bluetext" ><b class="bluehead" >Welcome to Dayton Pain Center<br />
+                  <br />
+                </b><b class="Greenhead">Pain Management Center</b><br />
+                              <br />
+                            At Dayton Pain Center (DPC) offers a comprehensive range of services for patients with acute or chronic pain. 
+                            Through the combined expertise of a multidisciplinary team of pain specialists, DPC offers the most advanced                    treatment options currently available, in a supportive, compassionate environment.<br />
+                            <br />
+                            Pain is a complex medical problem that can have profound effects on your physical and mental well-being.  Our goal is to help you decrease your level of pain and suffering, to return you to your maximum level of functioning and independence, and to help you restore your quality of life.
+                            The DPC provides care for thousands of hospitalized and ambulatory patients with acute, chronic and cancer pain problems. On these pages you will find information on some of the services we offer. &nbsp; &nbsp; <!--a href="Aboutus.asp" class="orngtext">Read more &raquo;</a--> <br />
+                      </td>
+              </tr>
+              <tr>
+                <td height="1" background="Images/new_hr.gif"></td>
+              </tr>
+              <tr>
+                <td valign="top"><br />
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr valign="top">
+                              <td width="100%" align="left" style="padding-left:8px" >&nbsp;</td>
+                            </tr>
+                            <tr>
+                              <td class="bluetext" style="padding-right:5px; padding-top:5px" height="1" background="Images/new_hr.gif"></td>
+                            </tr>
+                        </table></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center"><table width="50%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="35%" height="25" align="center"><a href="#" target="_blank" class="orngtext">Members Agreement </a> </td>
+                    <td width="0" style="padding-left:1px" background="Images/new_vr.gif"></td>
+                    <td width="35%" height="25" align="center"><a href="#" target="_blank" class="orngtext">Privacy Policy </a></td>
+                    <td width="0" style="padding-left:1px" background="Images/new_vr.gif"></td>
+                    <td width="35%" height="25" align="center"><a href="#" target="_blank" class="orngtext">Disclaimer </a></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <!--#include file="aspincludes/bottomstrip.htm"-->
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

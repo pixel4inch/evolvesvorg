@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+        var writeuptitle = '';
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (selURL == value.Event) {
+            writeuptitle += `<h2>` + value.eventtitle + `</h2>`;
+          } else {
+
+          }
+        });
+        $('#writeup-title').html(writeuptitle);
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+  <div id="writeup-title">
+
+  </div>
+
+  <div class="body-content"><!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="..plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="../css/style.css"" rel="stylesheet" />
+  <link href="../css/custome.css" rel="stylesheet" />
+  <link href="../plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="../css/jquery.readall.css" rel="stylesheet" />
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+
+
+  <!--================================
+         WHATS TRENDING
+=================================-->
+
+ 
+<section class="section" id="writeup">
+  <div class="container">
+    <div class="row pb-3 page-title">
+      <div class="col-sm-12 m-auto text-center -3">
+     
+        <h1 class="font-display2 main-font-color">WHAT'S TRENDING</h1>
+      </div>
+    </div>
+      <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+      
+          <div id="accordionExample" class="accordion custome-accordion border-0">
+
+          
+            <div class="card">
+              <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Governance in the Modern World Will Become More Technology-Centric </button>
+                </h2>
+              </div>
+              <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                <div class="card-body p-5">
+                  <p class=" m-0">Though there have been innovative strides in technology that have transformed lives and businesses, government processes have not kept pace with technology. State and local governments still follow antiquated bureaucratic processes and are a major stumbling block to economic development initiatives and infrastructure projects. GovTech solutions are here to ensure better operations and service provision. GovTech solutions promise to bring in the much needed modernization of the system along with achieving transparent and efficient governance.  Administrative workflows can be automated and streamlined. Cloud-based systems ensure data backup and security of data. Several technology companies concentrate on GovTech solutions in much the same way as some focus on FinTech sector. The introduction of technology in governance affects every government department.</p>
+<br/>
+                  
+                  <ul>
+                    <li><strong>Clerical Department -</strong> Cloud-based GovTech solutions enable paperless workflows in the clerk’s department. Government websites provide downloadable permit and license applications and submissions. The software saves time and effort and easier processing applications.  </li>
+                    <li><strong>Health Department -</strong> Cloud-based GovTech solutions were increasingly deployed during COVID-19. Online licensing approvals could be granted as most of the paperwork was replaced with online applications. These solutions facilitated mobile health inspections. With the use of customizable templates, health inspection software was seamlessly deployed. The vast database stored on the cloud provides easy access to documentation.</li>
+                    <li><strong>Public Works Department (DPW) -</strong> Public works software helps in keeping track of all public works projects and their status. All new orders are scheduled and tracked through the online systems. There is lesser turnaround time and seamless communication. All complaints are stored within the complaint management system. These include situations such as potholes or displaced telephone wires. With a centralized database, these jobs can be attended to efficiently. All government equipment and vehicles can be accounted for and kept track of. The contracts for public works are stored and processed through the cloud. This makes for easier reporting and tracking of projects. </li>
+                    <li><strong>Municipal and County Clerks -</strong> The pandemic worsened the situation at courthouses that have already been weighed down by significant backlogs. Virtual court operations were enabled by cloud-based solutions that eased the working of courts during COVID-19. Transcript requests and scheduling of court dates were expedited. Municipal courts functioned in a paperless format and administrative clerks saved hours of administrative tasks.</li>
+                    <li><strong>Engineering Department - </strong>GovInspect feature facilitates inspections of local buildings to ensure that they are up to code. This facility ushered paperless engineering departments.</li>
+                    <li><strong>Emergency Management -</strong> GovTech-1GovTech solutions are of utmost assistance during natural disasters. Resilience measures can be leveraged through emergency management software. The floodplain management module of GovPilot helps to track potential hazards within a flood zone as per the requirements of FEMA Risk Rating 2.0. The FEMA funding can be tracked and expenditures can be reported professionally. 3D GIS maps on the website are updated in real-time giving information about potential storm-hit areas, flood risk, evacuation routes, and other warnings.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          
+            <div class="card">
+              <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Technology Developments and Trends to Influence GovTech Market</button>
+                </h2>
+              </div>
+              <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                    <p class="m-0">Post-pandemic, public sector entities and governments are looking to leverage digital acceleration. Digital initiatives have been successful in supporting new workforce practices, efficient scaling of operations, addressing constituent needs, and building a sustainable technology foundation.</p>
+                    <br/>
+                    <ul>
+                      <li><strong>GovTech and MetaVerse -</strong> Metaverse is a digital destination that includes an alternative and integrated community. Users can engage in full-immersive and interactive experiences thereby transcending physical barriers and boundaries. Hailed as the 4IR (Industrial Revolution), the Metaverse provides users a toggle between the physical and virtual worlds. Providing this interchangeability is a challenge as it involves syncing the physical identity with the digital identity. This ecosystem has to have its set of legislations, regulations, and overseeing as the services expand and innovate. GovTech platforms will need to sync with metaverse and Web3 features. This will help manage identities, user access, UX (user experience), and off-chain oracle services. The traditional front end might be replaced with new concepts, mobile applications, and integrations. Such a digitized government service will need to harness the available technology to the best advantage. This need not result in a reduction of staff. Monotonous and repetitive tasks can be automated to usher innovation and improvement.  The decentralization and distribution of services must ensure continuity. This can be enabled by an unrestricted and accessible protocol for data sharing. The Metaverse can be wielded by the government as a valuable tool to provide services sans bias and prejudice. Citizens can be empowered to decide how they will be governed. Citizen participation and increased diversity can be incorporated. Such a virtual system can help unshackle physical restraints. Future technology breakthroughs will help expand the network of connected people. It can help compress space and time. Authorities must prevent malicious entities from this platform and oversee the concerns of its citizens.</li>
+                      <li><strong>Modernization of Legacy Assets -</strong> The expectations from business and technology environments have increased manifold. Legacy core systems that are already in place cannot be ripped and replaced. Instead, they can be extended and leveraged to include AI-powered middleware solutions, refreshed user interfaces, and advanced microservices applications. Government has many ‘legacy assets’ that have been in place for decades. They can be fitted with cloud, security, AI, ML, and incremental service improvements to enhance efficiency and effectiveness.</li>
+                      <li><strong>Blockchain Enables Decentralized Ecosystems & Architectures - </strong>Blockchain is emerging as an integral technology in building digital trust. Blockchain-powered architectures and ecosystems facilitate decentralized business models and digital ledger technologies. Cryptography, technology protocols, and code are leveraged to facilitate Web3 – a decentralized Internet. These technologies can be applied to everyday enterprise applications too to build stakeholder trust. Blockchain-enabled solutions can be harnessed by governments to automate and transform processes with other organizations outside the government. This allows regulatory and policy clarity to be built. Blockchain provides the fulcrum to build trust, reengineer, and automate transactions within and outside the government.</li>
+                      <li><strong>Upgrading the Tech Workforce -</strong> Technical skills are getting obsolete every few years on account of the rapid pace of technical and digital innovation. The technological talent must be built to cater to the fast-expanding technology. AI technology is also being harnessed for lower-order tasks. Governments can build a talent pool with skills-based programs and recruit top talent. This helps foster a culture of innovation and growth.</li>
+                      <li><strong>Managing Multi-cloud Chaos - </strong>The operational complexity of maintaining multiple platforms and security protocols, databases, and applications can be simplified with multi-cloud management. The super-cloud or meta-cloud is a group of techniques that can help manage the multi-cloud complexity with abstraction and automation. Meta-cloud provides a common platform to control the multi-cloud environment so that activities on several cloud platforms can be synchronized. Storage, data management, computation, security, AI, operations, governance, data, etc. are managed therein. Most organizations function in siloes on account of the wide range of services and applications in use. This complexity is well handled by COTS (commercial off-the-shelf) tools that help in provisioning, providing security and rights, and access to different cloud vendors. These tools help in simplifying the complexity.</li>
+<li><strong>Harnessing AI -</strong> AI-powered enterprises are more commoditized and standardized to gain a competitive edge. AI helps in decision-making and works with algorithms to go beyond mere number crunching. By taking the help of AI judgment, organizations can become more efficient, and support automation, and implementation. </li>
+<li><strong>Immersive Experiences -</strong> Users will soon move from mere screens to a more immersive experience. In the coming years, tangible, virtual, and conversational interfaces will become more immersive. Interacting with mixed reality will become the trend for employees to learn, collaborate, and streamline operations. Governments will also move towards physical and virtual engagement to improve the experience for employees and constituents. Virtual office visits will help with remote meetings with government officials. This can reduce time and transportation constraints. With virtual and augmented reality, immersive training is possible. This can be deployed in several sectors such as law enforcement, social work, and inspection.</li>
+<li><strong>Composable Government Enterprise - </strong>Governments must move their mission-critical IT systems to a composable design approach in the coming years. This initiative is a move away from the siloed and program-centric approach. It focuses on citizen-centric services by deploying modern design principles, modularity, and business architecture. This would ease the move towards a composable government.</li>
+<li><strong>Adaptive Security -</strong> Government CIOs have to incorporate security for operational and mission-critical technology environments. Cybersecurity must be an area of focus that can be implemented by a robust and talented team. Training programs on cybersecurity practices, awareness programs, and awareness education can go a long way in bringing about awareness and response.  </li>
+<li><strong>Digital Identity Ecosystems -</strong> In the coming years, most citizens must be offered mobile-based identity wallets. Some of them will be interoperable across jurisdictions and states. Identity proofing, organizations and objects’ identity, BYOI (Bring Your Own Identity), and identity ecosystems will need to be provided to citizens. </li>
+<li><strong>Total Experience -</strong>TX (Total Experience) strategy will ensure that governments can enhance talent management and build robust digital skills across organizations. This is crucial for successful government services transformation. A tactical TX strategy can help reduce the risk of service delays, underwhelming service experiences, and service friction.</li>
+<li><strong>XaaS (Anything as a Service) -</strong> XaaS solutions will encompass several software and IT infrastructure services to be made available on a subscription-based model.</li>
+<li><strong>Accelerated Legacy Modernization -</strong> Core legacy business systems collapsed during the pandemic. It is imperative to modernize continuously to keep pace with technology so that there are no disruptions.</li>
+<li><strong>CMaaS (Case Management as a Service) -</strong> CMaaS helps the government build institutional agility. Composable business practices and principles can replace legacy case management systems. </li>
+<li><strong>Hyperautomation - </strong> Hyperautomation involves seamless and connected services. This can be accomplished by cross-cutting initiatives that efficiently work with the entire process and not merely siloed functions.</li>
+<li><strong>Decision Intelligence -</strong> AI and data analytics will play an increasingly important role in real-time operational decisions and outcomes. Data science and Business intelligence will help predictive and proactive decision-making. This will translate into timely responses from government services. </li>
+<li><strong>Data Sharing as a Program - </strong> Data sharing in a systematic and scalable manner must be implemented within the government. Organizations that promote data sharing have been more successful than their competitors who have not implemented it. This cultural shift must be promoted instead of the current compartmentalization of the data.</li>
+                    </ul>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-----End of WriteUps  ====-->
+</div>
+
+<!--============================
+           Footer            
+=============================-->
+
+<footer-component></footer-component>
+
+
+<!---============================
+       ScrollTop        
+=============================--->
+
+<scrolltop-component></scrolltop-component>
+
+<!-- JAVASCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<script src="js/script.js"></script>
+<script src="./js/submenu_select.js"></script>
+<script src="./js/jquery.readall.js"></script>
+
+
+<!---WEB COMPONETNS-->
+<script src="./webcomponts/headerComponents.js"></script>
+<script src="./webcomponts/FooterComponent.js"></script>
+<script src="./webcomponts/ScrollToTop.js"></script>
+<script src="./webcomponts/dummytext.js"></script>
+<script src="./webcomponts/banner.js"></script>
+
+<script>
+  $('.textless').readall({
+    showheight: null,
+    showrows: 8
+  });
+
+
+</script>
+
+
+
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+      $('.goog-te-menu-value span:first').html('LANGUAGE');
+      $('.goog-te-menu-frame.skiptranslate').load(function () {
+        setTimeout(function () {
+          $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+        }, 100);
+      });
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+  }
+</script>
+</body>
+
+</html>
+
+</html>

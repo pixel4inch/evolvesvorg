@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+         ================================================== -->
+    <meta charset="utf-8">
+    <title>Evolve 2024 - Empowering Global Innovation - September 2024, Santa Clara Convention Center</title>
+    <!-- Mobile Specific Metas
+         ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Evolv">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Evolv ">
+    <meta name="generator" content="Evolv">
+    <!-- theme meta -->
+    <meta name="theme-name" content="Evolv" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- PLUGINS CSS STYLE -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+    <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="plugins/aos/aos.css" />
+    <!-- CUSTOM CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custome.css" rel="stylesheet" />
+    <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <!---WEB COMPONETNS-->
+    <script src="./webcomponts/headerComponents.js"></script>
+    <script src="./webcomponts/FooterComponent.js"></script>
+    <script src="./webcomponts/ScrollToTop.js"></script>
+    <script src="./webcomponts/dummytext.js"></script>
+	
+	
+    <script>
+        function SavePower_Request_invite() {
+            //alert('Saved');
+
+
+            var vFirst_Name = $("#first_name").val();
+            var vLast_Name = $("#last_name").val();
+
+            var vLinkedin = $("#linkedInLink").val();
+            var vPosition = $("#Position").val();
+            var vCompany = $("#Company").val();
+            var vEmail = $("#email").val();
+            var vCountry = $("#country").val();
+            var vSource_Page = '';
+
+
+
+            //alert(vLast_Name);	
+            if (vEmail != null && vEmail != '') {
+                //alert(vReportName);
+                $.ajax({
+                    url: "Ajax_AddRequest_invite.asp",
+                    type: "POST", data: 'vSource_Page=' + encodeURIComponent(vSource_Page) + '&vEmail=' + encodeURIComponent(vEmail) + '&vFirst_Name=' + encodeURIComponent(vFirst_Name) + '&vLast_Name=' + encodeURIComponent(vLast_Name) + '&vLinkedin=' + encodeURIComponent(vLinkedin) + '&vPosition=' + encodeURIComponent(vPosition) + '&vCompany=' + encodeURIComponent(vCompany) + '&vCountry=' + encodeURIComponent(vCountry) + '',
+                    success: function (data) {
+                        //alert(data);
+                        //alert('Thanks for submitting!');	
+                        window.open("https://www.evolv.cc/loginLinkedin_User.asp?UsID=0&rcode=0&ecode=" + encodeURIComponent(vEmail));
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert(xhr.status);
+                        alert(thrownError);
+                        alert(xhr.responseText);
+                    }
+                });
+
+                //window.opener.location.reload(false);
+                //window.opener.location.reload()
+            }
+            else {
+
+                alert("values can't be left blank");
+
+            }
+        }
+    </script>
+
+	<style>
+		.degiblock{
+			padding-left:6px; 	
+		}
+		
+	</style>
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+    <!--============================
+         =            HEADER           =
+         =============================-->
+    <header-component></header-component>
+	
+	
+	
+	
+    <!--============================
+         PLACEKEEPTER BANNER
+         =============================-->
+    <div class="body-content">
+        <section class="section  pt-4 ">
+            <div id="evolve-program-block">
+                <div class="container">
+
+                    <!-- TITLE BLOCK--->
+                    <div class="row mx-0">
+                        <div class="w-100 event-title-section">
+                           
+							<h1 class="">EVOLVE 2024 </h1>
+<h3>FutureTech Summit</h3>
+<h4 style="font-size: 22px;">Global Innovator Nexus</h4>							
+
+
+
+
+						   <h1 class="subtext">Event Highlights</h1>
+
+                            <ul>
+                                <li><b>Presentations</b> by more than 40 of the most disruptive emerging technology
+                                    companies from around the world</li>
+                                <li>Thought-leading <b>Keynote Speakers</b></li>
+                                <li>Insightful <b>Panel discussions</b> on Trending Topics - Corporate, VC, and
+                                    Entrepreneur </li>
+
+                                <li><b>International Pitch Competition</b> drawing out the best-of-breed innovators
+                                </li>
+
+                                <li>Set up meetings in advance with <b>potential strategic partner</b>
+                                </li>
+
+                            </ul>
+
+
+                            <!---h2>September 2024, Santa Clara Convention Center</h2--->
+                            <h5 style="font-size: 18px;color: #d10d0d;font-weight: bold;letter-spacing: 1px;margin-top: 32px !important;display: block;">Agenda is still under development and subject to change. </h5>
+                            <h5 style="font-size:18px; font-weight: bold">Event registration will begin on June 20, 2024 </h5>
+                        </div>
+                    </div>
+					
+					
+					<div id="bootstrapAccordion" class="mx-auto col-lg-8 col-md-10 col-sm-12 col-12">
+					
+						<div class="w-100">
+							<div class="mb-0">
+										  <ul class="nav nav-pills d-flex  justify-content-center aling-items-cener w-100 mt-4" style="border-bottom: #fbeec9 solid 3px;">
+											 <li class="nav-item"> <a class="nav-link active px-5 programday-btn" id="home-tab" data-toggle="tab" href="#DAY-1" role="tab" aria-controls="home" aria-selected="true">DAY-1</a></li>
+											 <li class="nav-item"> <a class="nav-link  px-5 programday-btn" id="profile-tab" data-toggle="tab" href="#DAY-2" role="tab" aria-controls="profile" aria-selected="false">DAY-2</a></li>
+											 <!--li class="nav-item"><a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact" aria-selected="false">My Profile</a></li-->
+										  </ul>
+									   </div>
+									   
+									   <div class="tab-content mb-4">
+										  <div class="tab-pane fade show active" id="DAY-1" role="tabpanel" aria-labelledby="home-tab">
+											
+											<div class="evolve-program-schedule">
+                        <div class="row mx-0 ">
+                            <div class=" col-lg-12 col-12 mx-0 my-0 p-0">
+                                
+
+                                <div class="program-content">
+
+                                    <div class=" text-center hall">
+                                        <h3 class=""> HALL A </h3>
+                                    </div>
+
+                                    <article>
+                                        <h4 class="imptext">MORNING POWER SESSIONS: 8:00 AM – 12:00 PM</h4>
+                                        <p>All Other Sessions And Innovator Pavilion Shall Remain Closed During Keynotes
+                                        </p>
+                                    </article>
+
+
+                                    <article>
+                                        <span class="event-time">8:00 AM – 9:00 AM</span>
+                                        <h4>EVOLVE SV - THE GLOBAL INNOVATION GATEWAY </h4>
+                                        <p>Evolve SV -The Global Innovation Gateway </p>
+
+                                        <h4 class="childTwo">GRAND KEYNOTES </h4>
+                                        <p>Keynotes or Fireside Chats featuring modern day Silicon Valley icons. </p>
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">9:00 – 9:40 AM</span>
+                                        <p>Keynote 1 </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">9:40 – 10:20 AM</span>
+                                         <p>Keynote 2 </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">10:20 – 11:00 AM</span>
+                                         <p>Keynote 3 </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">11:00 – 12:00 AM</span>
+                                        <h4>Global Venture Capital Landscape - What Venture Capitalists & Angels Are Funding </h4>
+                                       
+                                        <p>Session 1 - Panel </p>
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">12:00 – 2:00 PM</span>
+                                        <h4 class="imptext">LUNCH </h4>
+                                    </article>
+
+                                    <article>
+                                        <div class="specialSection">
+                                            <h4>EXECUTIVE ROUNDTABLES </h4>
+                                            <p>Exclusive Closed-door Parallel Sessions. Each session will be 90 minutes.
+                                                It will be a working lunch.</p>
+                                        </div>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">12:15 PM – 01:45 PM</span>
+                                        <div class="specialSection">
+                                            <h4>UNICORN FOUNDERS ROUNDTABLE </h4>
+                                            <p>Session 2 - Panel </p>
+                                            <p>15 Unicorn Founders/CEOs with a Global Representation</p>
+                                            <p>Representing U.S.A., Europe, and Asia</p>
+                                            <p>Speaker Felicitation by Board/Advisory: 10 Minutes</p>
+                                        </div>
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">12:15 PM – 01:45 PM</span>
+                                        <div class="specialSection">
+                                            <h4>CEO ROUNDTABLE </h4>
+                                            <p>Session 3 - Panel </p>
+                                            <p>15 CEOs with a Global Representation</p>
+                                        </div>
+
+                                    </article>
+
+
+                                   
+
+                                    <article>
+                                        <span class="event-time">2:00 – 2:45 PM</span>
+                                        <h4>Deep-Tech Market Trajectories </h4>
+                                        <p>Research-Based Perspectives For Today’s Entrepreneur. What 200+ Domain
+                                            Experts Are Saying. </p>
+                                        <p>Session 4 – Trend Talk</p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">2:45 – 3:30 PM</span>
+                                        <h4>Corporate Venture Capital – Innovator &lt;&gt; Big Enterprise Synergies
+                                        </h4>
+                                        <p>Session 5 – Panel</p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">3:30 – 4:15 PM</span>
+                                        <h4>Today’s Angel Investor – Raising SAFE &amp; Seed Rounds </h4>
+                                        <p>Session 6 - Panel </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">4:15 – 5:00 PM</span>
+                                        <h4>Thriving Innovation Ecosystems </h4>
+                                        <p>Nations and cities are competing to draw innovators for driving future
+                                            economic leadership and job creation. A panel of ecosystem influencers from
+                                            the United States, India, Japan, Europe, Israel, and Canada to share
+                                            perspectives.
+
+                                        </p>
+                                        <p> Session 7 - Panel </p>
+                                    </article>
+
+                                    <div class=" text-center hall my-4">
+                                        <h3 class=""> HALL B </h3>
+                                    </div>
+
+
+
+                                  
+                                    <article>
+
+                                        <h4 class="text-center imptext"> ARTIFICIAL INTELLIGENCE & MACHINE LEARNING
+                                        </h4>
+                                    </article>
+
+
+
+                                    <article>
+                                        <span class="event-time">2:00 PM – 2:45 PM</span>
+                                        <h4>Enterprise AI – In Constant Flux: Adopt & Adapt </h4>
+                                        <p> Session 8 - Panel </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">2:45 AM – 3:30 PM</span>
+                                        <h4>AI-generated Video Innovations – Stretching the Boundaries of Human
+                                            Creativity</h4>
+                                        <p>Session 9 – Panel </p>
+                                        <p>Featuring Two Leading Edge Startups</p>
+                                        <p>Startup 1: 20 Minutes</p>
+                                        <p>Startup 2: 20 Minutes</p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">3:30 PM – 4:15 PM</span>
+                                        <h4>Gen AI – LLMs, SLMs &amp; Compressed Models</h4>
+                                        <p>Session 10 – Panel </p>
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">4:15 PM – 5:00 PM</span>
+                                        <h4>Future of Search - Impact of AI </h4>
+                                        <p>Session 11 – Panel </p>
+
+                                    </article>
+
+                                    <!--div class=" text-center hall2 ">
+                                        <h3 class=""> EXPO HALL</h3>
+                                    </div-->
+
+                                    <div class=" text-center hall my-4">
+                                        <h3 class=""> HALL C </h3>
+                                    </div>
+
+
+                                    <article>
+
+                                        <h4 class="text-center imptext">BIOCONVERGENCE – FUTURE LIFESCIENCE DISRUPTIONS</h4>
+
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">2:00 PM – 2:45 PM</span>
+                                        <h4>Biotechnology – Innovative New Therapies</h4>
+										<p> Session 12 – Panel</p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">2:45 PM – 3:30 PM</span>
+                                        <h4>Digital Health – New Frontiers</h4>
+                                        <p> Session 13 – Panel</p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">3:30 PM – 4:15 PM</span>
+                                        <h4>Future of Drug Discovery – Emergence of AI </h4>
+                                        <p> Session 14 – Panel</p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">4:15 PM – 5:00 PM</span>
+                                        <h4>Personalized Medicine </h4>
+                                        <p> Session 15 – Panel</p>
+                                    </article>
+
+                                    <div class=" text-center hall my-4 hallsDEspacing">
+                                        <h3 class=""> HALLS D&amp;E </h3>
+                                    </div>
+
+                                    <article>
+                                        <span class="event-time">2:00 PM – 5:00 PM </span>
+                                        <div class="alternatesection">
+                                            <h4>STARTUP & SCALE-UP PITCHFEST </h4>
+                                            <p>
+                                                <b>Featuring 30 Top Global Innovators:</b> <br>
+                                                Startups and fast-track scale-ups will present to a world-class expert
+                                                audience of Silicon Valley Venture Capitalists, Angel Investors, and
+                                                Senior Enterprise Executives. About 40 accredited and well recognized
+                                                Angel Investors and Venture Capitalists will participate. Presenters are
+                                                matched to investors based on synergies and mutual interests.
+                                                Additionally, we will facilitate connections via the Evolve EcoConnect
+                                                Program with a pool or 450+ Angels and 700+ Venture Capitalists.
+                                                <br><br>
+                                                Format: <br>
+                                                10-Minute Fast-Pitch Slots Back-Back
+                                                <br><br>
+                                                Why Present?<br>
+                                                Investment; Strategic Partnering; Business Development; Go-to-Market;
+                                                M&amp;A; IPO.
+                                                Matching &amp; Scheduling one-on-one via Program Mobile App and
+                                                Post-Conference.
+                                                <br><br>
+                                                Requirements:<br>
+                                                You Must Be Pre-Approved And Exhibit In The Innovator Pavilion To
+                                                Participate.
+                                            </p>
+                                        </div>
+
+                                    </article>
+                                    <article>
+
+
+                                        <p><span class="font-weight-bold">Pitchfest Hall D:</span> Early Stage </p>
+                                        <p><span class="font-weight-bold">Pitchfest Hall E: </span> Mid-Late Stage </p>
+
+                                    </article>
+
+                                    <div class=" text-center hall my-4 ">
+                                        <h3 class=""> EXPO HALL </h3>
+                                    </div>
+
+                                    <article>
+                                        <span class="event-time">11:00 AM – 5:00 PM </span>
+                                        <div class="alternatesection">
+                                            <h4>INNOVATOR PAVILION &amp; EXPO </h4>
+                                            <p>300 Startups & Enterprise Exhibitors</p>
+                                            <p>Expo Will Be Open After Grand Keynotes </p>
+                                        </div>
+
+                                    </article>
+
+                                </div>
+
+
+                            </div>
+
+                           
+
+
+                            
+                        </div>
+                    </div>
+											
+											
+											
+										  </div>
+										  
+										  
+							<!-----DA-2----->
+										  <div class="tab-pane fade" id="DAY-2" role="tabpanel" aria-labelledby="profile-tab">
+											<div class="evolve-program-schedule">
+                        <div class="row mx-0 ">
+                          
+
+                            <!----DAY 2-->
+
+
+                            <div class="col-lg-12 col-12  mx-0 my-0 p-0">
+                                
+
+                                <div class="program-content">
+
+                                    <div class=" text-center hall">
+                                        <h3 class=""> HALL A </h3>
+                                    </div>
+
+
+                                    <article>
+                                        <h4 class="imptext">MORNING POWER SESSIONS: 8:00 AM – 12:00 PM</h4>
+                                        <p>All Other Sessions And Innovator Pavilion Shall Remain Closed During Keynotes
+                                        </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">8:00 AM – 8:30 AM</span>
+                                        <h4>Welcome by Evolve SV Chairman (15 Minutes) </h4>
+                                        <p>Rainmakers: Day 1 Update &amp; Day 2 Program Highlights (15 minutes) </p>
+
+                                        <h4 class="childTwo">GRAND KEYNOTES </h4>
+                                        <p>Keynotes or Fireside Chats featuring modern day Silicon Valley icons. </p>
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">8:30 AM – 9:15 AM</span>
+                                        <h4>Sustainability </h4>
+                                        <p>The New Change-makers</p>
+                                        <p> Keynote 4</p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">9:15 AM – 10:00 AM</span>
+                                       <p> Keynote 5</p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">10:00 – 11:20 AM</span>
+                                        <h4>India Inflect </h4>
+                                       <p> Keynote 6</p>
+                                        <p>Session 16 – Panel </p>
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">11:20 AM – 12:00 PM</span>
+                                        <h4>The Innovator Mindset - Research Insights </h4>
+                                        <p>Session 17 – Panel</p>
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">12:00 – 2:00 PM</span>
+                                        <h4 class="imptext">LUNCH
+                                        </h4>
+                                    </article>
+
+                                    <article>
+                                        <div class="specialSection">
+                                            <h4>EXECUTIVE ROUNDTABLES </h4>
+                                            <p>Exclusive Closed-door Parallel Sessions. Each session will be 90 minutes.
+                                                It will be a working lunch</p>
+                                        </div>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">12:15 PM – 01:45 PM</span>
+                                        <div class="specialSection">
+                                            <h4>CIO &amp; CSO ROUNDTABLE </h4>
+                                            <p>Session 18 – Panel</p>
+                                            <p>Moderator – 10 minutes</p>
+                                            <p>Talk Time 90 minutes</p>
+                                            <p>Speaker Felicitation by Board/Advisory: 5 Minutes</p>
+                                        </div>
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">12:15 PM – 01:45 PM</span>
+                                        <div class="specialSection">
+                                            <h4>CMO ROUNDTABLE </h4>
+                                            <p>Session 19 – Panel </p>
+                                        </div>
+
+                                    </article>
+
+                                    
+
+                                    <article>
+                                        <span class="event-time">2:00 PM – 4:00 PM</span>
+                                        <h4>Impact Investing </h4>
+                                        <p>  Session 20 – Panel  Panelists from
+                                            Enterprise CSR, Donor Advisories, Philanthropists, High Impact Charities</p>
+
+                                        <h4 class="childTwo">Featured Charity </h4>
+                                        <p>  Keynote 7</p>
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">4:00 PM – 5:00 PM</span>
+                                        <h4>Cloud Security </h4>
+                                        <p>  Trend Talk & Session 21 – Panel</p>
+
+                                    </article>
+
+
+
+                                    <div class=" text-center hall ">
+                                        <h3 class=""> HALL B </h3>
+                                    </div>
+
+                                    <article>
+
+                                        <h4 class="text-center imptext">TECHNOLOGY TRENDS</h4>
+
+
+                                    </article>
+
+
+                                    <article>
+                                        <span class="event-time">2:00 PM – 2:45 PM</span>
+                                        <h4>Gaming – AI Changing The Game</h4>
+                                        <p>Session 22 - Panel </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">2:45 PM – 3:30 PM</span>
+                                        <h4>Future of Education & Artificial Intelligence</h4>
+                                        <p>Session 23 - Panel </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">3:30 PM – 4:15 PM</span>
+                                        <h4>Marketing & Customer Engagement - Impact of AI</h4>
+                                        <p>Session 24 - Panel </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">4:15 PM – 5:00 PM</span>
+                                        <h4>New AI Wearables - Where its Going</h4>
+                                        <p>Session 25 - Panel </p>
+                                    </article>
+
+                                    <div class=" text-center hall ">
+                                        <h3 class=""> HALL C </h3>
+                                    </div>
+
+                                    <article>
+
+                                        <h4 class="text-center imptext">TECHNOLOGY TRENDS </h4>
+
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">2:00 PM – 2:45 PM</span>
+                                        <h4>Mobility AI</h4>
+                                        <p>Session 26 - Panel </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">2:45 PM – 3:30 PM</span>
+                                        <h4>Space Tech & Future Aviation</h4>
+                                        <p>Session 27 - Panel </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">3:30 PM – 4:15 PM</span>
+                                        <h4>Quantum Computing – Are We Prepared?</h4>
+                                        <p>Session 28 - Panel </p>
+                                    </article>
+
+                                    <article>
+                                        <span class="event-time">4:15 PM – 5:00 PM</span>
+                                        <h4>Global Supply Chains</h4>
+                                        <p>Session 29 - Panel </p>
+                                    </article>
+
+                                    <div class=" text-center hall my-4">
+                                        <h3 class=""> HALLS D&amp;E </h3>
+                                    </div>
+
+                                    <article>
+                                        <span class="event-time">2:00 PM – 5:00 PM </span>
+                                        <div class="alternatesection">
+                                            <h4>STARTUP &amp; SCALE-UP PITCHFEST </h4>
+                                            <p>
+                                                <b>Featuring 30 Top Global Innovators: </b><br>
+                                                Startups and fast-track scale-ups will present to a world-class expert
+                                                audience of Silicon Valley Venture Capitalists, Angel Investors, and
+                                                Senior Enterprise Executives. About 40 accredited and well recognized
+                                                Angel Investors and Venture Capitalists will participate. Presenters are
+                                                matched to investors based on synergies and mutual interests.
+                                                Additionally, we will facilitate connections via the Evolve EcoConnect
+                                                Program with a pool or 450+ Angels and 700+ Venture Capitalists.
+                                                <br><br>
+                                                Format: <br>
+                                                10-Minute Fast-Pitch Slots Back-Back
+                                                <br><br>
+                                                Why Present?<br>
+                                                Investment; Strategic Partnering; Business Development; Go-to-Market;
+                                                M&amp;A; IPO.
+                                                Matching &amp; Scheduling one-on-one via Program Mobile App and
+                                                Post-Conference.
+                                                <br><br>
+                                                Requirements:<br>
+                                                You Must Be Pre-Approved And Exhibit In The Innovator Pavilion To
+                                                Participate.
+                                            </p>
+                                        </div>
+
+                                    </article>
+
+                                    <article>
+
+
+                                        <p><span class="font-weight-bold">Pitchfest Hall D:</span> Early Stage </p>
+                                        <p><span class="font-weight-bold">Pitchfest Hall E: </span> Mid-Late Stage </p>
+
+                                    </article>
+
+                                    <div class=" text-center hall my-4">
+                                        <h3 class=""> EXPO HALL </h3>
+                                    </div>
+
+
+                                    <article>
+                                        <span class="event-time">11:00 AM – 5:00 PM </span>
+                                        <div class="alternatesection">
+                                            <h4>INNOVATOR PAVILION &amp; EXPO</h4>
+                                            <p>300 Startups &amp; Enterprise Exhibitors </p>
+                                            <p>Expo Will Be Open After Grand Keynotes </p>
+                                        </div>
+                                    </article>
+
+                                </div>
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+										  </div>
+										  <!---div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab">
+											 <p>For what reason would it be advisable business content?</p>
+										  </div--->
+									   </div>
+							
+						</div>
+					
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
+
+                    <!-- TITLE BLOCK--->
+                    
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+    </div>
+    </section>
+   
+
+    </div>
+    <!--====  End of Page Title  ====-->
+    <!--============================
+         Footer            
+         =============================-->
+    <footer-component></footer-component>
+    <!---============================
+         ScrollTop        
+         =============================--->
+    <scrolltop-component></scrolltop-component>
+    <!-- JAVASCRIPTS -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+    <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+    <script src="plugins/google-map/gmap.js"></script>
+    <script src="js/script.js"></script>
+    <script src="./js/submenu_select.js"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+                $('.goog-te-menu-value span:first').html('LANGUAGE');
+                $('.goog-te-menu-frame.skiptranslate').load(function () {
+                    setTimeout(function () {
+                        $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+                    }, 100);
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+	
+	<script>
+	
+		$(document).ready(function () {
+		
+			var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+			
+			var eventmessage = document.querySelector(".eventprogamheader"); // Use querySelector instead of getElementsByClassName
+			if (selURL === "Evolve2024_Program") {
+				eventmessage.style.display = "none"; // Use dot notation for style properties
+			}
+			});
+</script>
+	
+</body>
+
+</html>

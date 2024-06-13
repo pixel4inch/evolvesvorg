@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Innovator Synergies - Evolve Foundation</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolve Foundation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolve Foundation ">
+  <meta name="generator" content="Evolve Foundation">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+
+  <script>
+function SaveAngelsData(){ 
+//alert('hi');
+			var vFirst_Name = $("#Afirst_name").val();
+			var vLast_Name = $("#Alast_name").val();
+			var vEmail = $("#Aemail").val();	
+			var vPhone = $("#Aphone").val();
+			var vLinkedin = $("#AlinkedInLink").val();
+			var vlocation = $("#Alocation").val();
+			
+			
+		
+			var checkbox1_check = 0;
+		
+			if($('#Aacceptprivacy').prop('checked')) {
+				checkbox1_check = 1;
+			} else {
+				checkbox1_check = 0;
+			}
+
+			if (vEmail != null && vEmail != '' && vFirst_Name != null && vFirst_Name != '' && vLast_Name != null && vLast_Name != ''  && vLinkedin != null && vLinkedin != '' && vlocation != null && vlocation != '' )	 
+			{
+				if (checkbox1_check == 1)
+				{
+					//alert(vReportName);
+					$.ajax({
+								url: "Ajax_Add_AngelsData.asp",
+								type: "POST",						
+								data:'vPhone='+encodeURIComponent(vPhone)+'&vEmail='+encodeURIComponent(vEmail)+'&vFirst_Name='+encodeURIComponent(vFirst_Name)+'&vLast_Name='+encodeURIComponent(vLast_Name)+'&vLinkedin='+encodeURIComponent(vLinkedin)+'&vlocation='+encodeURIComponent(vlocation)+'',
+								success: function(data){
+									//alert(data);
+									alert('Thanks for submitting!');
+									document.getElementById('Afirst_name').value = "";
+									document.getElementById('Alast_name').value = "";
+									document.getElementById('AlinkedInLink').value = "";
+									document.getElementById('Alocation').value = "";
+									document.getElementById('Aemail').value = "";
+									document.getElementById('Aphone').value = "";
+														  
+								},
+								error: function (xhr, ajaxOptions, thrownError) {
+								alert(xhr.status);
+								alert(thrownError);
+								alert(xhr.responseText);
+								}
+							});	
+				 } 
+				 else
+				 {
+					alert("Please accept our privacy policy to continue");
+				 }
+			 }
+			 else
+			 {			    
+				alert("Fields marked with * are mandatory");			  
+			 }
+			}
+</script>
+
+</head>
+
+<body class="body-wrapper" id="container" data-spy="scroll" data-target=".privacy-nav" ><!--onBeforePrint="document.body.style.display='none';" onAfterPrint="document.body.style.display='block';" onContextmenu="return false" onSelectstart="return false" onDragstart="return false"  topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"-->
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+    PLACEKEEPTER BANNER
+=============================-->    
+<div class="body-content">
+  <section class="section pb-0">
+    <div class="container">
+		
+
+      <!---div class="row mx-0">      
+          <h1 class="font-display1 text-center main-font-color col-lg-11 col-md-12 mx-auto" style="text-transform: uppercase;">BUILDING GLOBAL INNOVATOR GATEWAYS & EXPLORING SYNERGIES</h1>
+      </div--->
+		
+		 <!---div class="row mx-0 my-2">      
+          <h1 class="font-display1 text-center main-font-color col-lg-10 col-md-12 mx-auto mb-0" style="font-size: 24px;">INNOVATOR FACILITATION INITIATIVES</h1>
+      </div--->
+		
+		 
+     
+
+		
+	
+<!--div class="w-100 mt-3 text-center">
+              <a target="_new1" href="https://www.evolv.cc/show_innovator_synergies.asp?GetTypePage=SYNNOVATE100" class="text-white program-buttons">SYNNOVATE &nbsp;ES™</a>
+              <a target="_new1" href="https://www.evolv.cc/show_innovator_synergies.asp?GetTypePage=OMNISCALE" class="text-white program-buttons">OMNISCALE™</a>
+              <a target="_new1" href="https://www.evolv.cc/Innovator_Synergies.asp" class="text-white program-buttons">ECOSYSTEMS </a>
+              <a target="_new1" href="https://www.evolv.cc/show_innovator_synergies.asp?GetTypePage=SPONSOR" class="text-white program-buttons">SPONSOR </a>
+              <a href="https://www.evolv.cc/JoinUs.asp?PageType=INNOVATOR%20SYNERGIES" target="_new1" class="text-white program-buttons">JOIN US!</a>
+            </div> 
+		
+      </div-->
+  
+	<!-- START OF MEMBERSHIP-->
+	<div class="container">
+            <div class="row">
+				<div class="col-sm-12 col-md-12  col-lg-12 col-xl-11  mb-4 m-auto">
+	     			 <h1 class="font-display2 text-center main-font-color">INITIATIVES</h1>
+				</div>
+                <div class="col-sm-12 col-lg-11 m-auto">
+					
+					
+					
+					<div class="w-100 mt-4">
+						<p class="para-display2 font-weight-bold mb-2">ECO-CONNECT PLATFORM</p>
+						<!--<p class="font-weight-bold para-display3" style="color:#3A7C22">Innovator >> Corporates <> Venture Capitalists <> Angels <> Academia <> Governments</p>-->
+					
+					<p class="text-left para-display2">Our Eco-Connect Platform is designed for innovators to custom configure engagements with Corporates, Venture Capitalists, Angels, Academia, and Governments. Regardless of what stage your startup or scaleup is in, you can  curate domain experts best suited to your needs from areas of expertise including strategy, business development, product, engineering, GTM, and other skills. Access a vast  pool of global domain experts facilitated through a data-driven, consensual, value-added, online engagement. This online service will launch in September at the Evolve 2024 Deep Tech Summit. <a data-toggle="collapse" href="javascript:valid(0)" role="button" aria-expanded="false" aria-controls="synnovate"  class="form-check-labe ml-0 mb-0 mt-2 main-font-color font-weight-bold " style="cursor:pointer" ></a></p>
+						
+						
+						<!--	<div class="collapse  my-4" id="synnovate">
+								 <iframe src="Add_Awards.asp?PgType=SYNNOVATE" class="synnovate_Ommani_iframe"></iframe>
+							</div>-->
+						
+						<div class="col-11  mx-auto my-3">
+							  <img src="./images/evolv/Data_Driven.jpg" class="border shadow mb-2 p-2 img-fluid d-block m-3 mx-auto">
+							 
+						 </div>
+						
+						
+					</div>
+					<hr class="divider" style="margin-top:14px !important"/>
+					
+					<div class="w-100 mt-4">
+						<p class="para-display2 font-weight-bold mb-2">SYNNOVATE ES™ - EARLY-STAGE STARTUPS</p>
+					
+					<p class="text-left para-display2">This program supports pre-seed and seed level deep-tech innovators by connecting them to Angel Investor groups and individuals. Participation requires validated IP with POC involving expert due diligence. Expert advisory support can also be pursued.  <a data-toggle="collapse" href="#synnovate" role="button" aria-expanded="false" aria-controls="synnovate"  class="form-check-labe ml-0 mb-0 mt-2 main-font-color font-weight-bold " style="cursor:pointer" >Sign-up</a> for more details.</p>
+						
+							
+							<div class="collapse  my-4" id="synnovate">
+								 <iframe src="Add_Awards.asp?PgType=SYNNOVATE" class="synnovate_Ommani_iframe"></iframe>
+							</div>
+						
+					</div>
+					
+
+					
+					
+                       
+					   
+						<hr class="divider" style="margin-top:14px !important"/>
+					
+					<div class="w-100">
+						<p class="para-display2 font-weight-bold mb-2">OMNISCALE™ - MID-LATE STAGE SCALEUPS</p>
+					
+					<p class="text-left para-display2">Designed for fast-track scaling of mid-to-late-stage tech innovators with validated unique product or service offerings matched with domain-suited big enterprises. Usually involves business licensing or sales partnering in a non-exclusive omni-channel setting. Innovator benefits from big enterprise's strong captive market and financial power while fueling revenues for all parties. The Evolve Foundation's Program only acts as a facilitator.<a data-toggle="collapse" href="#omniscale" role="button" aria-expanded="false" aria-controls="omniscale"  class="form-check-labe ml-0 mb-0 mt-2 main-font-color font-weight-bold " style="cursor:pointer" > Sign-up </a> for more details.</p>
+						
+						
+						<div class="collapse   my-4" id="omniscale">
+								 <iframe src="Add_Awards.asp?PgType=OMNISCALE" class="synnovate_Ommani_iframe"></iframe>
+						</div>
+						
+					</div>
+					
+					
+					<hr class="divider" style="margin-top:14px !important"/>
+					
+					<div class="w-100 ">
+						<p class="para-display2 font-weight-bold mb-2">STARTUP & SCALE-UP VIRTUAL SHOWCASE</p>
+					
+					
+					<p class="text-left para-display2">We invite startups and scale-ups worldwide to get engaged with our programs. As a registered participant of our global startup community, you will have privileged access to our domain-centric virtual networking programs. Other privileges include automatic application to domain suited Global Top 1000 Rankings (soon to be announced), speaking opportunities, eco-connecting with suited member enterprises, hosting co-branded events, and invitation to our in-person events at discounted insider pricing for in-person events.  <a data-toggle="collapse" href="#StartupShowcase" role="button" aria-expanded="false" aria-controls="StartupShowcase"  class="form-check-labe ml-0 mb-0 mt-2 main-font-color font-weight-bold " style="cursor:pointer" >Sign-up</a> for more details. </p>	
+						
+						<div class="panel-collapse collapse   shadow-sm border mt-3 p-4" id="StartupShowcase">
+							<div class="panel-body">							
+							<h3 class="font-display3 main-font-color text-center mb-1  pb-3">STARTUP & SCALE-UP VIRTUAL SHOWCASE </h3>							
+								<div class="row mx-0">
+									<iframe src="register_new.asp?page_source=STARTUP" class="synnovate_Ommani_iframe"></iframe>
+								</div>
+							</div>
+						 </div>	
+						
+					</div>
+					
+					<hr class="divider" style="margin-top:14px !important"/>
+					
+					<div class="w-100 ">
+						<p class="para-display2 font-weight-bold mb-2">CORPORATE & INSTITUTIONAL PARTNERS</p>
+					
+					
+					<p class="text-left para-display2">We invite institutions supporting innovation ecosystems worldwide - Corporations, Venture Capital Firms, Private Equity Funds, Family Practices, Angel Groups, Incubators, Accelerators, Co-working Facilities, Governments, and providers of Legal, Financial, and other services which can support entrepreneurs, to join forces with us. The Evolve Collective group of like-minded entities can effectively contribute to a global framework while also benefiting partners with branding and goodwill driven by purpose.  <a data-toggle="collapse" href="#corporteInstitutionalAnchors" role="button" aria-expanded="false" aria-controls="corporteInstitutionalAnchors"  class="form-check-labe ml-0 mb-0 mt-2 main-font-color font-weight-bold " style="cursor:pointer" >Sign-up</a> for more details. </p>	
+						
+						<div class="panel-collapse collapse   shadow-sm border mt-3 p-4" id="corporteInstitutionalAnchors">
+							<div class="panel-body">							
+							<h3 class="font-display3 main-font-color text-center mb-1  pb-3">CORPORATE & INSTITUTIONAL ANCHORS</h3>							
+								<div class="row mx-0">
+									<iframe src="register_new.asp?page_source=CORPORATE" class="synnovate_Ommani_iframe"></iframe>
+								</div>
+							</div>
+						 </div>	
+						
+					</div>
+					
+					
+					
+					<hr class="divider" style="margin-top:14px !important"/><div class="w-100 ">
+						<p class="para-display2 font-weight-bold mb-2">EVOLVE ANGELS™</p>
+					
+					
+					<p class="text-left para-display2">Evolve Angels™ is a syndicate of fully wetted angel investors worldwide. The program will launch later this year with about 200 angles with a proven track-record across multiple domains. We will build this syndicate diligently over time and ensure we deliver great outcomes for both the angels, and the innovators. All deal flows and engagements will be structured to support Synnovate ES™ members worldwide. Participating individual and institutional angels will independently evaluate and score member startups for discrete cross-pollinated syndication or provide founders with valuable feedback on why they decline to invest.   <a data-toggle="collapse" href="#evolveangels" role="button" aria-expanded="false" aria-controls="StartupShowcase"  class="form-check-labe ml-0 mb-0 mt-2 main-font-color font-weight-bold " style="cursor:pointer" >Sign-up</a> for more details. </p>	
+						
+						<div class="collapse mt-5 mb-4" id="evolveangels">
+                            <div class="w-100">
+                                 <div class="row mx-0">
+                                     <div class="col-sm-6 mb-2 p-1">
+                                         <span class="floating-label"> First Name <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1 " type="text"  id="Afirst_name" name="Afirst_name" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-6 mb-3 p-1">
+                                        <span class="floating-label"> Last Name <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text" id="Alast_name" name="Alast_name" required="">
+                                     </div>
+                                   
+                                     <div class="col-sm-6 mb-3 p-1">
+                                         <span class="floating-label"> Work Email  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="email"  id="Aemail" name="Aemail" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-6 mb-3 p-1">
+                                          <span class="floating-label"> Mobile Phone  </span>
+                                         <input class="form-control main mb-1" type="number"  id="Aphone" name="Aphone" required="">
+                                     </div>
+                                   
+                                     <div class="col-sm-12 mb-3 p-1">
+                                          <span class="floating-label"> LinkedIn Link  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text" id="AlinkedInLink" name="AlinkedInLink" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-12 mb-3 p-1">
+                                         <span class="floating-label"> Location (Country & City)  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text"  id="Alocation" name="Alocation" required="">
+                                     </div>
+                                     <p class="text-left  mb-2 mandatory-msg">Fields marked with <span style="color:red">*</span> are mandatory</p>
+                                   
+									<div class="d-flex align-items-start mt-2 ml-0 pl-1">
+										 <input type="checkbox" id="Aacceptprivacy" name="Aacceptprivacy" class="mr-2 mt-1">
+										 <p>I have read and agree to the Evolve Foundation's Program  <a href="https://www.evolv.cc/privacy.html" style="color:blue"> Privacy Policy </a> and <a href="https://www.evolv.cc/serviceagreements.html" style="color:blue"> Service Agreement. </a> </p>					 
+									 </div>	
+							      
+                                     <div class="col-12 text-center">
+                                         <button class="btn btn-main-md mx-auto py-2 px-2 my-4" style="opacity:1 !important" id="AngelsSubmitButton" onclick="SaveAngelsData()" >Submit</button>
+								    </div>
+								     
+                                 </div>
+                            
+                              </div>
+                          </div>
+						  
+						  
+						  
+						  
+						  <hr class="divider" style="margin-top:14px !important"/><div class="w-100 ">
+						<p class="para-display2 font-weight-bold mb-2">DOMAIN EXPERT NETWORK</p>
+					
+					
+					<p class="text-left para-display2">Our domain expert network is comprised of Senior Industry Executives, Academia, Venture Capitalists, leaders and key decision makers at Government Trade & Industry Policy, Regional & National Industry Associations, and others [who are involved in promoting innovation or bring latent expertise and influence to a particular domain]. We carefully review their fit and willingness to support suited innovator ecosystems. Recruitment is by invitation. Our experts are located worldwide and come together to support the global innovator community through an online interactive platform. They are invited to in-person, virtual, and hybrid events hosted by Evolve SV and our affiliated entities worldwide. They bring profound knowledge and value to such engagements. <a  href="https://www.evolvesv.org/DomainExpertApplication.html"   class="form-check-labe ml-0 mb-0 mt-2 main-font-color font-weight-bold " style="cursor:pointer" > Sign-up</a> </p>	
+						
+						  
+						
+					</div>
+					
+					<hr class="divider" style="margin-top:14px !important"/>
+					
+					
+					<!--<div class="row mt-4">      
+					  <h1 class="font-display1 text-center main-font-color col-lg-11 col-md-12 mx-auto" style="text-transform: uppercase;">ANNUAL MEMBERSHIPS</h1>
+				    </div>
+                         
+					
+					<p class="text-left para-display2 mb-4">We invite institutions supporting innovation ecosystems worldwide such as Corporations, Venture Capital Firms, Private Equity Funds, Family Practices, Angel Groups, Incubators, Accelerators, Co-working Facilities, Governments, and providers of Legal, Financial and other services. Members enjoy many privileges. <a id="CorporateCheck" class="form-check-labe ml-0  main-font-color font-weight-bold para-display2" style="cursor:pointer" >SIGN-UP</a>
+					</p>-->  
+					
+					
+					<div class="collapse mt-5 mb-4" id="collapseExample">
+                            <div class="w-100">
+                                 <div class="row mx-0">
+                                     <div class="col-sm-6 mb-2 p-1">
+                                         <span class="floating-label"> First Name <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1 " type="text"  id="first_name" name="first_name" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-6 mb-3 p-1">
+                                        <span class="floating-label"> Last Name <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text" id="last_name" name="last_name" required="">
+                                     </div>
+                                   
+                                     <div class="col-sm-6 mb-3 p-1">
+                                         <span class="floating-label"> Work Email  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="email"  id="email" name="email" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-6 mb-3 p-1">
+                                          <span class="floating-label"> Mobile Phone  </span>
+                                         <input class="form-control main mb-1" type="number"  id="phone" name="phone" required="">
+                                     </div>
+                                   
+                                     <div class="col-sm-12 mb-3 p-1">
+                                          <span class="floating-label"> LinkedIn Link  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text" id="linkedInLink" name="linkedInLink" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-12 mb-3 p-1">
+                                         <span class="floating-label"> Location (Country & City)  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text"  id="location" name="location" required="">
+                                     </div>
+                                     <p class="text-left  mb-2 mandatory-msg">Fields marked with <span style="color:red">*</span> are mandatory</p>
+                                   
+									<div class="d-flex align-items-start mt-2 ml-0 pl-1">
+										 <input type="checkbox" id="acceptprivacy" name="acceptprivacy" class="mr-2 mt-1">
+										 <p>I have read and agree to the Evolve Foundation's Program  <a href="https://www.evolv.cc/privacy.html" style="color:blue"> Privacy Policy </a> and <a href="https://www.evolv.cc/serviceagreements.html" style="color:blue"> Service Agreement. </a> </p>					 
+									 </div>	
+							      
+                                     <div class="col-12 text-center">
+                                         <button class="btn btn-main-md mx-auto py-2 px-2 my-4" id="submitbtn1" onclick="SaveData()" >Submit</button>
+								    </div>
+								     
+                                 </div>
+                            
+                              </div>
+                          </div>
+						  
+						  <!--hr class="divider" style="margin-top:14px !important"/>
+						   <div class="row mt-4">      
+							  <h1 class="font-display1 text-center main-font-color col-lg-11 col-md-12 mx-auto" style="text-transform: uppercase;">INDIAN INFLUENCER</h1>
+						  </div>
+							
+						  <div class="col-lg-11 col-md-12 mx-auto mt-2 mb-4">
+								<img src="./images/evolv/data/INDIAN_INFLUENCER_IMG.jpg" class="border shadow mb-2 p-2 img-fluid d-block m-3 mx-auto"/>
+							   
+							  </div-->  
+					
+					 
+					<div class="col-11  mx-auto my-3">
+          <img src="./images/evolv/data/InnovatorSynergies.jpg" class="border shadow mb-2 p-2 img-fluid d-block m-3 mx-auto">
+         
+     </div>
+					
+					
+					
+					<!----
+                         <hr class="divider" style="margin-top:14px !important"/>
+                        <p class="para-display2 font-weight-bold mb-2">CORPORATE</p>
+                        <p class="text-left para-display2">Includes Corporations, Venture Capital firms, Private Equity
+                            Funds, Family Practices, Angel Groups, Incubators, Accelerators, Co-working Facilities,
+                            Legal, Financial and other services providers. Members have privileged access to
+                            attend all EVOLV<sup>TM</sup> events (virtual & in-person) without any additional registration fee
+                            including this year's  B20 Summit. ANNUAL $10,000 <a id="CorporateCheck" class="form-check-labe ml-2 mb-0 mt-2 main-font-color font-weight-bold para-display2" style="cursor:pointer" >SIGN UP</a>
+                        </p>                       
+
+                        <div class="collapse mt-3" id="collapseExample">
+                            <div class="w-100">
+                            
+                                 <div class="row mx-0">
+                                    
+                                     <div class="col-sm-6 mb-2 p-1">
+                                         <span class="floating-label"> First Name <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1 " type="text"  id="first_name" name="first_name" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-6 mb-3 p-1">
+                                        <span class="floating-label"> Last Name <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text" id="last_name" name="last_name" required="">
+                                     </div>
+                                   
+                                     <div class="col-sm-6 mb-3 p-1">
+                                         <span class="floating-label"> Email  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="email"  id="email" name="email" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-6 mb-3 p-1">
+                                          <span class="floating-label"> Mobile Phone  </span>
+                                         <input class="form-control main mb-1" type="number"  id="phone" name="phone" required="">
+                                     </div>
+                                   
+                                     <div class="col-sm-12 mb-3 p-1">
+                                          <span class="floating-label"> LinkedIn Link  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text" id="linkedInLink" name="linkedInLink" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-12 mb-3 p-1">
+                                         <span class="floating-label"> Location (Country & City)  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text"  id="location" name="location" required="">
+                                     </div>
+                                     <p class="text-left  mb-3 mandatory-msg">Fields marked with <span style="color:red">*</span> are mandatory</p>
+                                   
+									<div class="d-flex align-items-center mt-2 ml-0 pl-1">
+										 <input type="checkbox" id="acceptprivacy" name="acceptprivacy" class="mr-2">
+										 <p>I have read and agree to the Evolv Program  <a href="https://www.evolv.cc/privacy.html" style="color:blue"> Privacy Policy </a> and <a href="https://www.evolv.cc/serviceagreements.html" style="color:blue"> Service Agreement. </a> </p>					 
+									 </div>	
+									 
+									 
+                                  
+                                     <div class="col-12 text-center">
+                                         <button class="btn btn-main-md mx-auto py-2 px-2 my-4" id="submitbtn1" onclick="SaveData()" >Submit</button>
+								    </div>
+								     
+                                 </div>
+                            
+                              </div>
+                          </div>
+
+	--->
+					
+					
+					
+                       
+                    </form><br/>
+                </div>
+            </div>
+        </div>
+	<!-- END OF MEMBERSHIP-->
+  </section>
+  
+  
+ 
+
+</div>
+
+  <!--====  End of Page Title  ====-->
+
+  <!--============================
+	           Footer            
+=============================-->
+  <footer-component></footer-component>
+
+
+  <!---============================
+           ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+
+
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+$('#google_translate_element').bind('DOMNodeInserted', function(event) {
+$('.goog-te-menu-value span:first').html('LANGUAGE');
+$('.goog-te-menu-frame.skiptranslate').load(function(){
+    setTimeout(function(){
+    $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');    
+    }, 100);
+});
+});
+});
+</script>
+
+	<script type="text/javascript">
+        $(document).ready(function () {
+            $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+                $('.goog-te-menu-value span:first').html('LANGUAGE');
+                $('.goog-te-menu-frame.skiptranslate').load(function () {
+                    setTimeout(function () {
+                        $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+                    }, 100);
+                });
+            });
+        });
+
+		$("#CorporateCheck").click(function(){
+			$("#collapseExample").toggle();
+		});
+		
+		
+		$(function() {
+		  var chk = $('#acceptprivacy');
+		  var btn = $('#submitbtn1');
+
+		  chk.on('change', function() {
+			btn.prop("disabled", !this.checked);//true: disabled, false: enabled
+		  }).trigger('change'); //page load trigger event
+		});
+
+    </script>
+	
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+</body>
+
+
+
+
+</html>

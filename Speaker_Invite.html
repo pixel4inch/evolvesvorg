@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Speaker Invite - Evolv.cc</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+
+  <script>
+function SaveData(){ 
+			var vFirst_Name = $("#first_name").val();
+			var vLast_Name = $("#last_name").val();
+			var vEmail = $("#email").val();	
+			var vPhone = $("#phone").val();
+			var vLinkedin = $("#linkedInLink").val();
+			var vlocation = $("#location").val();
+			
+			var vSource_Page = '';
+		
+			var checkbox1_check = 0;
+		
+			if($('#acceptprivacy').prop('checked')) {
+				checkbox1_check = 1;
+			} else {
+				checkbox1_check = 0;
+			}
+
+			if (vEmail != null && vEmail != '' && vFirst_Name != null && vFirst_Name != '' && vLast_Name != null && vLast_Name != ''  && vLinkedin != null && vLinkedin != '' && vlocation != null && vlocation != '' )	 
+			{
+				if (checkbox1_check == 1)
+				{
+					//alert(vReportName);
+					$.ajax({
+								url: "Ajax_Add_Corporate_Membership.asp",
+								type: "POST",						
+								data:'vPhone='+encodeURIComponent(vPhone)+'&vEmail='+encodeURIComponent(vEmail)+'&vFirst_Name='+encodeURIComponent(vFirst_Name)+'&vLast_Name='+encodeURIComponent(vLast_Name)+'&vLinkedin='+encodeURIComponent(vLinkedin)+'&vlocation='+encodeURIComponent(vlocation)+'',
+								success: function(data){
+									alert(data);
+									//alert('Thanks for submitting!');
+									document.getElementById('first_name').value = "";
+									document.getElementById('last_name').value = "";
+									document.getElementById('linkedInLink').value = "";
+									document.getElementById('location').value = "";
+									document.getElementById('email').value = "";
+									document.getElementById('phone').value = "";
+														  
+								},
+								error: function (xhr, ajaxOptions, thrownError) {
+								alert(xhr.status);
+								alert(thrownError);
+								alert(xhr.responseText);
+								}
+							});	
+				 } 
+				 else
+				 {
+					alert("Please accept our privacy policy to continue");
+				 }
+			 }
+			 else
+			 {			    
+				alert("Fields marked with * are mandatory");			  
+			 }
+			}
+</script>
+
+</head>
+
+<body class="body-wrapper" id="container" data-spy="scroll" data-target=".privacy-nav" ><!--onBeforePrint="document.body.style.display='none';" onAfterPrint="document.body.style.display='block';" onContextmenu="return false" onSelectstart="return false" onDragstart="return false"  topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"-->
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+    PLACEKEEPTER BANNER
+=============================-->    
+<div class="body-content">
+  <section class="section ">
+    
+   
+	<!-- START OF MEMBERSHIP-->
+	<div class="container">
+            <div class="row">
+						<div class="col-sm-12 col-md-12  col-lg-12 col-xl-11  mb-4 m-auto">
+							 <h1 class="font-display2 text-center main-font-color">INVITE</h1>
+						</div>
+						<div class="col-sm-12 col-lg-11 m-auto">                       
+							<div class="w-100">                            
+									 <p class="text-left para-display2 mb-3 text-center">									
+											<span class="text-center main-font-color"> Name: Srinivas Obili </span><br/>
+											<span class="text-center main-font-color"> Designation: Tech Lead </span><br/>
+											<span class="text-center main-font-color"> Company: Global Industry Analysts, Inc.</span>
+									  </p>
+							  </div>
+						<hr/>
+						<p class="text-left para-display2 mb-3">
+						<input type="checkbox" id="chk1" name="chk1" value="Participate">&nbsp; Our Company Will Participate <br/>
+						<input type="checkbox" id="chk2" name="chk2" value="Showcase">&nbsp; Please Showcase Our Company <br/>
+						<input type="checkbox" id="chk3" name="chk3" value="Membership">&nbsp; Request Annual Membership Details <br/>
+						<input type="checkbox" id="chk4" name="chk4" value="Sponsorship">&nbsp; Request Annual Sponsorship Details <br/>
+						</p>
+                        <p class="text-left para-display2 mb-3"><a id="CorporateCheck" class="form-check-labe ml-0  main-font-color font-weight-bold para-display2" style="cursor:pointer" >ADD SPEAKER DETAILS</a>
+                        </p>
+                        <div class="collapse mt-4" id="collapseExample">
+                            <div class="w-100">
+                            
+                                 <div class="row mx-0">
+                                    
+                                     <div class="col-sm-6 mb-2 p-1">
+                                         <span class="floating-label"> First Name <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1 " type="text"  id="first_name" name="first_name" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-6 mb-3 p-1">
+                                        <span class="floating-label"> Last Name <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text" id="last_name" name="last_name" required="">
+                                     </div>
+                                   
+                                     <div class="col-sm-6 mb-3 p-1">
+                                         <span class="floating-label"> Email  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="email"  id="email" name="email" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-6 mb-3 p-1">
+                                          <span class="floating-label"> Mobile Phone  </span>
+                                         <input class="form-control main mb-1" type="number"  id="phone" name="phone" required="">
+                                     </div>
+                                   
+                                     <div class="col-sm-12 mb-3 p-1">
+                                          <span class="floating-label"> LinkedIn Link  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text" id="linkedInLink" name="linkedInLink" required="">
+                                     </div>
+                                    
+                                     <div class="col-sm-12 mb-3 p-1">
+                                         <span class="floating-label"> Location (Country & City)  <span class="text-danger">*</span> </span>
+                                         <input class="form-control main mb-1" type="text"  id="location" name="location" required="">
+                                     </div>
+                                     <p class="text-left  mb-3 mandatory-msg">Fields marked with <span style="color:red">*</span> are mandatory</p>
+                                   
+									<div class="d-flex align-items-center mt-2 ml-0 pl-1">
+										 <input type="checkbox" id="acceptprivacy" name="acceptprivacy" class="mr-2">
+										 <p>I have read and agree to the Evolv? Program  <a href="https://www.evolv.cc/privacy.html" style="color:blue"> Privacy Policy </a> and <a href="https://www.evolv.cc/serviceagreements.html" style="color:blue"> Service Agreement. </a> </p>					 
+									 </div>	
+									 
+									 
+                                  
+                                     <div class="col-12 text-center">
+                                         <button class="btn btn-main-md mx-auto py-2 px-2 my-4" id="submitbtn1" onclick="SaveData()" >Submit</button>
+								    </div>
+								     
+                                 </div>
+                            
+                              </div>
+                          </div>
+
+
+					
+					
+					
+                       
+                    </form><br/>
+                </div>
+            </div>
+        </div>
+	<!-- END OF MEMBERSHIP-->
+  </section>
+</div>
+
+  <!--====  End of Page Title  ====-->
+
+  <!--============================
+	           Footer            
+=============================-->
+  <footer-component></footer-component>
+
+
+  <!---============================
+           ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+
+
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+$('#google_translate_element').bind('DOMNodeInserted', function(event) {
+$('.goog-te-menu-value span:first').html('LANGUAGE');
+$('.goog-te-menu-frame.skiptranslate').load(function(){
+    setTimeout(function(){
+    $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');    
+    }, 100);
+});
+});
+});
+</script>
+
+	<script type="text/javascript">
+        $(document).ready(function () {
+            $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+                $('.goog-te-menu-value span:first').html('LANGUAGE');
+                $('.goog-te-menu-frame.skiptranslate').load(function () {
+                    setTimeout(function () {
+                        $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+                    }, 100);
+                });
+            });
+        });
+
+		$("#CorporateCheck").click(function(){
+			$("#collapseExample").toggle();
+		});
+		
+		
+		$(function() {
+		  var chk = $('#acceptprivacy');
+		  var btn = $('#submitbtn1');
+
+		  chk.on('change', function() {
+			btn.prop("disabled", !this.checked);//true: disabled, false: enabled
+		  }).trigger('change'); //page load trigger event
+		});
+
+    </script>
+	
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+</body>
+
+
+
+
+</html>

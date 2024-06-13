@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+        var writeuptitle = '';
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (selURL == value.Event) {
+            writeuptitle += `<h2>` + value.eventtitle + `</h2>`;
+          } else {
+
+          }
+        });
+        $('#writeup-title').html(writeuptitle);
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+  <div id="writeup-title">
+
+  </div>
+
+  <div class="body-content"><!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="..plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="../css/style.css"" rel="stylesheet" />
+  <link href="../css/custome.css" rel="stylesheet" />
+  <link href="../plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="../css/jquery.readall.css" rel="stylesheet" />
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+
+
+  <!--================================
+         WHATS TRENDING
+=================================-->
+
+<section class="section" id="writeup">
+  <div class="container">
+    <div class="row pb-3 page-title">
+      <div class="col-sm-12 m-auto text-center -3">
+        <!-- Page Title -->
+        <h1 class="font-display2 main-font-color">WHAT'S TRENDING</h1>
+      </div>
+    </div>
+
+   
+
+      <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+      
+          <div id="accordionExample" class="accordion custome-accordion border-0">
+
+          
+            <div class="card">
+              <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Tech Wizards are Ruling the World!</button>
+                </h2>
+              </div>
+              <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                <div class="card-body p-5">
+                  <p class=" m-0">While energy and transportation dominated the industrial economy during the 20th century, data and information are currently leading as the world moves towards the digital era. Technology is transforming the very nature of leadership in addition to changing the way humans communicate, research, relate, buy, learn, work, and live. The leaders of technology space have an unparalleled power to transform the future and questions arise about how the tech leaders are utilizing their power.</p>
+
+                  <p class=" m-0">Apple is one of the most important examples of companies helmed by tech wizards. The company was started by a 26 years-old computer scientist with assistance from a 21-year-old individual having knowledge of basic coding. Apple is now a highly valuable public firm in the entire world and makes more profits compared to Facebook. Google search engine was built by 25 years old computer scientists in a garage while working on Stanford's research project. Facebook is built by a Harvard sophomore to connect with classmates and grew bit by bit today connecting the entire world with billions of active users and annual revenues. Microsoft was established by a 20 years-old computer scientist in the garage which now pulls in billions of annual revenue. Amazon is worth more compared to Costco, Walmart, Kohls, Target, T.J.Maxx, Ross, Ulta, Best Buy, Macy's, Nordstrom, Bed Bath & Beyond, JCPenney, Dillard's, Sears, and Saks/Lord & Taylor combined. The leaders of Google, Apple, Microsoft, Amazon, and Microsoft started with unassuming roots and possibly didn't seem like leaders in their own garages, however, managed to transform the way we live.</p>
+                  <br />
+
+                  <p class=" m-0">The highly influential leaders of today are the individuals who display enormous power due to their ability to disrupt and innovate. It is impossible to start digging a hole in one's basement for oil to start an oil company or it is not feasible to establish a production line to begin an automotive firm in one's garage. However, it is possible to develop an app or build a website in one's basement, on the kitchen table, or in a neighborhood coffee shop, and YouTube gives the entire world access to everything.</p>
+                  <br/>
+                  <p class="m-0">Steve Wozniak, Steve Jobs, Sergey Brin, Larry Page, Bill Gates, Jeff Bezos, and Mark Zuckerberg are highly popular and give a face to large corporations. All these tech wizards are highly influential & powerful and assist in creating a world where everybody possesses the means to realize the purpose of serving the poor and the community. Responsibility increases with the rise in power and it is essential to challenge yourself and everyone to encourage and train in seeing an opportunity, and technology offers leaders great opportunities to transform the world.</p>
+
+                </div>
+              </div>
+            </div>
+
+          
+           
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--============================
+           Footer            
+=============================-->
+
+<footer-component></footer-component>
+
+
+<!---============================
+       ScrollTop        
+=============================--->
+
+<scrolltop-component></scrolltop-component>
+
+<!-- JAVASCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<script src="js/script.js"></script>
+<script src="./js/submenu_select.js"></script>
+<script src="./js/jquery.readall.js"></script>
+
+
+<!---WEB COMPONETNS-->
+<script src="./webcomponts/headerComponents.js"></script>
+<script src="./webcomponts/FooterComponent.js"></script>
+<script src="./webcomponts/ScrollToTop.js"></script>
+<script src="./webcomponts/dummytext.js"></script>
+<script src="./webcomponts/banner.js"></script>
+
+<script>
+  $('.textless').readall({
+    showheight: null,
+    showrows: 8
+  });
+
+
+</script>
+
+
+
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+      $('.goog-te-menu-value span:first').html('LANGUAGE');
+      $('.goog-te-menu-frame.skiptranslate').load(function () {
+        setTimeout(function () {
+          $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+        }, 100);
+      });
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+  }
+</script>
+</body>
+
+</html>

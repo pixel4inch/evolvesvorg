@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>Evolv</title>
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Evolv">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Evolv ">
+    <meta name="generator" content="Evolv">
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="Evolv" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- PLUGINS CSS STYLE -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+    <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="plugins/aos/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+    <!-- CUSTOM CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custome.css" rel="stylesheet" />
+    <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+    <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+    <!--============================
+=            HEADER           =
+=============================-->
+    <header-component></header-component>
+    <!--============================
+=            HEADER           =
+=============================-->
+
+    <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $.getJSON("./data/events.json", function (data) {
+                var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+                var writeuptitle = '';
+                console.log(data)
+                $.each(data.eventslist, function (key, value) {
+                    if (selURL == value.Event) {
+                        writeuptitle += `<h2>` + value.eventtitle + `</h2>`;
+                    } else {
+
+                    }
+                });
+                $('#writeup-title').html(writeuptitle);
+            }).fail(function () {
+                document.write("An error has occurred.");
+            });
+        }); 
+    </script>
+    <div id="writeup-title">
+
+    </div>
+
+    <div class="body-content">
+        <!DOCTYPE html>
+
+        <html lang="en">
+
+        <head>
+
+            <!-- Basic Page Needs
+  ================================================== -->
+            <meta charset="utf-8">
+            <title>Evolv</title>
+
+            <!-- Mobile Specific Metas
+  ================================================== -->
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="description" content="Evolv">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+            <meta name="author" content="Evolv ">
+            <meta name="generator" content="Evolv">
+
+            <!-- theme meta -->
+            <meta name="theme-name" content="Evolv" />
+
+            <!-- Favicon -->
+            <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+            <!-- PLUGINS CSS STYLE -->
+            <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css" />
+            <link rel="stylesheet" href="..plugins/themify-icons/themify-icons.css" />
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+            <!-- CUSTOM CSS -->
+            <link href="../css/style.css"" rel=" stylesheet" />
+            <link href="../css/custome.css" rel="stylesheet" />
+            <link href="../plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+            <link href="../css/jquery.readall.css" rel="stylesheet" />
+
+
+        </head>
+
+        <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+
+
+            <!--================================
+         WHATS TRENDING
+=================================-->
+            <section class="section" id="writeup">
+                <div class="container">
+                    <div class="row pb-3 page-title">
+                        <div class="col-sm-12 m-auto text-center -3">
+                            <!-- Page Title -->
+                            <h1 class="font-display2 main-font-color">WHAT'S TRENDING</h1>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row">
+
+                        <div class="col-lg-12 mx-auto">
+
+                            <div id="accordionExample" class="accordion custome-accordion border-0">
+
+
+                                <div class="card">
+                                    <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseOne"
+                                                aria-expanded="false" aria-controls="collapseOne"
+                                                class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Wellbeing: A Clear Global Trend</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
+                                        class="collapse ">
+                                        <div class="card-body p-5">
+
+                                            <br />
+                                            <p class=" m-0">Wellbeing is rapidly emerging as a clear global trend that is poised to remain unabated over the coming years. People are focusing more on personal wellbeing and becoming mindful of things their body and mind needs for enjoying life. Wellbeing is a holistic experience marked by a blend of happiness, health, purpose and prosperity. The concept encompasses robust mental health, sense of purpose, life satisfaction and ability to deal with stress. The close correlation of wellbeing with plethora of positive factors makes it an appealing aspect that is sought by everyone for leading a fulfilled, positive, socially connected, healthy and meaningful life. The stress of navigating through difficult and uncertain times today is forcing consumers to focus on personal well-being of mind, body, spirit and beyond. Today, In addition to shifting attention towards robust health and holistic wellbeing, people are increasingly turning towards concepts such as wellness oriented expeditions, mindful meditation, and even blended nutrition, as health and well-being evolves as an essential spend category. People are increasingly moving away from western-oriented methods towards natural and inclusive approaches to wellbeing.</p>
+                                           
+                                           <ul>
+                                            <li><strong>Physical Wellbeing:</strong> The concept of physical wellbeing relates to the ability to ensure proper functioning of the body through exercise and healthy living. Ensuring physical wellbeing requires people to focus on an exercise and healthy diet regime. Physical wellbeing makes individuals to feel better, boost the emotional wellbeing, reduce the risk of diseases and improve the gut health.  </li>
+                                            <li><strong>Emotional Wellbeing:</strong> Emotion wellbeing encompasses relaxation and stress-busting techniques along with focus on self-love and right emotions for generating good feelings. Developing emotional wellbeing requires people to focus on emotional skills such as mindfulness, positivity and control over their emotions. Emotional wellbeing skills allow people to efficiently cope with stress, recover fast from disappointments and handle emotions in the event of a stressful condition.  </li>
+                                            <li><strong>Social Wellbeing:</strong> The idea of social wellbeing covers the ability to properly communicate, maintain the support network to overcome loneliness and develop relationships. Social wellbeing relies on social skills like kindness, gratitude and communication. These skills help people in enjoying positive interactions and making them to feel less angry, disconnected and lonely.  </li>
+                                            <li><strong>Social Wellbeing:</strong> The idea of social wellbeing covers the ability to properly communicate, maintain the support network to overcome loneliness and develop relationships. Social wellbeing relies on social skills like kindness, gratitude and communication. These skills help people in enjoying positive interactions and making them to feel less angry, disconnected and lonely.  </li>
+                                            <li><strong>Societal Wellbeing:</strong> Active participation in the community, environment and culture is the primary aspect that defines societal wellbeing. Developing societal wellbeing requires skills that can make individuals feel connected with different things. People need to build stronger communities and support the environment while promoting kindness, compassion and fairness for societal wellbeing.</li>
+                                            <li><strong>Workplace Wellbeing:</strong> Workplace wellbeing focuses on the ability to follow desired values, interests and life purpose for gaining satisfaction and professional success. Workplace wellbeing requires people to pay attention to skills that can help them in following their interests and dreams. The approach covers aspects such as attaining professional skills, ensuring work-life balance and living desired values. These skills assist people in staying motivated, more focused and successful at workplace.</li>
+                                           </ul>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card">
+                                    <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo"
+                                                class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Wellbeing and Wellness Trends Taking Hold in 2023</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5 textless">
+                                            <ul>
+
+                                                <li><strong>Wellness Travel or Tourism:</strong> Rising health & wellness awareness is driving people to focus on wellness-oriented expeditions for uplifting their physical, mental and spiritual wellbeing. These expeditions are receiving a big boost from spike in travel following a long gap created by pandemic-led travel restrictions. The trend also encompasses wellness travel or tourism that relaxes the mind and recharges the body. These travel experiences and trips are perceived to improve physical and mental wellbeing. The trend has led a large number of people to book wellness retreats and focus on holidays with workshops on yoga, breath-work and sound healing.</li>
+                                                <li><strong>Personalized Nutrition:</strong> Representing a smart way to take supplements, personalized nutrition is a big wellbeing trend that encompasses uniquely-made pills, vials or stacks containing specific minerals and vitamins as per the requirement of a person for enhanced health and wellbeing. In contrast to a traditional multivitamin, personalized nutrition offers the required nutrients. Personalized health nutrition is expected to offer solutions to successfully prevent, manage, and treat chronic medical illnesses. While the concept of personal nutrition is not new, it has gained notable attention in the recent years following popularity of personalized supplements offering personalized vitamins. The trend has also gained momentum from the pandemic that led to high health awareness and prompted people to focus on a highly personalized approach to mineral or vitamin consumption.</li>
+                                                <li><strong>Intuitive Eating:</strong> Intuitive eating is associated with several nutritional principles built on physical cues regarding food, including satiety and hunger. The approach focuses on what the body needs and how a personal feels, rather than giving undue weightage to calorie count. Intuitive eating is garnering increasing attention as an effective and restriction-free substitute to dieting. Recent studies have demonstrated that intuitive eating bears a positive correlation with various psychological benefits such as a positive self-esteem, body image and wellbeing. </li>
+                                                <li><strong>Growing Focus on Plant Care for Stress Relief & Wellbeing:</strong> There are numerous ways to beat stress and improve overall wellbeing, with plants in homes holding a high rank for their uplifting powers. Plant care holds an intrinsic connection with self-care as watching a plant glow and flourish is a highly satisfying, soothing experience. People are filling their homes with flowers and green plants to connect with the nature. Various studies have indicated that growing plants in home is an effective way to boost mental health, memory and productivity while reducing stress and anxiety levels. The approach also keeps reminding people to focus on self-care.</li>
+                                                <li><strong>Protein Boost:</strong> Protein has long remained a macronutrient of interest among athletes or people going to gym for big muscles. However, the macronutrient is witnessing increasing attention from the average individual. The protein trend is credited to rising awareness pertaining to various health and wellbeing benefit of the macronutrient. Protein has become a mainstream trend and is gaining from introduction of a large number of protein-loaded products such as chocolate bars that present an alternative way to relish chocolate while enjoying wellness benefits. Rise in interest among consumers for protein based diets is encouraging companies, including both animal and plant based protein ingredient companies, to develop advanced technologies for extracting protein alternatives and also seek new and more sustainable protein sources.</li>
+                                                <li><strong>Plant-based Protein Alternatives:</strong> With growing awareness towards sustainable and environmentally friendly alternatives to traditional meat, consumer preference for plant-based eating as a holistic lifestyle choice bodes well for market prospects. This shift of consumers towards meat alternatives has been further fuelled by the outbreak of Covid-19. Meat alternatives offer several advantages compared to meat. From plant-based to insect protein to cultured meat, the alternative protein options available in the market have disrupted the traditional meat industry. Plant proteins are the proteins derived from plants. Plant-based proteins have been witnessing surging demand around the world, as consumer fears over safety of meat supplies driving them towards plant-based diets.</li>
+                                                <li><strong>Sensehacking:</strong> Sensehacking is poised to emerge as an exciting wellbeing trend in 2023 and signifies the vital role of human senses played in routine lives. As human senses can instantly change the way people feel, there are activities to hack senses to become more productive and happier. The approach focuses on exploiting the power of human senses for uplifting the mood and wellbeing. Sensehacking is perceived to improve emotional and cognitive wellbeing, and involves various tactics such as the use of pillow sprays, candles, diffusers or wax melts. In addition, some of the people are using color psychology for a creative and positive environment for better mental health and wellbeing.</li>
+                                                <li><strong>Addition of Biophilic Features:</strong> Developments in digitalization, increasing interest among people in health & wellness, and enhanced capabilities of affordably-priced wearables are driving patient empowerment and connecting health-related data to mainstream consumer experience. The aspects of personalized healthcare, in terms of its participatory form and its data-centeredness, are combined in wearable sensors, self-tracking devices, and mobile apps for providing users with the ability of collecting, measuring, and displaying data related to any type of behavioral activity or bodily action. Wearables have evolved significantly over the years from being simple wristbands with basic functionality used by professional athletes and fitness enthusiasts to devices offering a wider range of functional capabilities to help wearers in managing their health and wellbeing. In recent years, wearables are rapidly emerging as promising tools in precision medicine.</li>
+                                                <li>Widespread availability of medical information allows patients to understand their health better, choose their health care providers, and play an active role in determining the necessary course of treatment, all these remotely without visiting a doctor. Accordingly, the traditional business models need to be modified to accommodate the more proactive role of the patients and to meet their demands for personalized and cost-effective treatments based on their personal preferences and medical history. Payers must be prepared to harness real-time analytics in order to better match physicians to patients, track wearable information in real time, and improve transparency between health outcomes and insurance premiums.</li>
+                                                <li><strong>Glucose Monitoring:</strong> Individuals with strong focus on health and wellbeing are eying on glucose monitoring using advanced devices reserved earlier for athletes. While glucose is the primary fuel source for the body, there are few options for its regulation. The availability of advanced devices is enabling people to monitor glucose levels in gyms to ensure effective training for desired performance. These user-friendly glucose tracking devices are emerging as an appealing fitness tracker and allowing people to maintain their health and wellbeing.</li>
+                                                <li>Wearable devices hold a particular relevance for diabetes control and management by facilitating non-invasive, real-time and convenient monitoring of blood glucose levels. Rising prevalence of diabetes is triggering an alarm for healthcare providers to investigate and embrace preventive measures to deal with the situation and ensure long-term management of the medical condition. The need is paving way for broader uptake of medical wearable devices intended for blood glucose monitoring and facilitating diabetes management. Advanced options offered by various companies enabling people, including the elderly, to ensure continuous monitoring of serum glucose levels along with a number of other parameters in real-time for long-term and efficient management of the medical condition. These devices present a better and more convenient option over conventional approaches that involve finger-pricks. In addition, traditional methods are unable to continuously monitor blood glucose levels, which can result in various complications and risks.</li>
+                                                <li><strong>Emphasis on Good Sleep:</strong> Sleep is getting more emphasis as an effective form of self-care as it holds potential to help people in attaining the perfect mindset and improving wellbeing. Sleep is an essential part of human life in order to maintain memory, immunity, learning ability, metabolism, and several other important functions. People are taking sleep seriously and using smart technology for synching circadian routines and timing their biological clocks. A sizeable fraction of people fail to get a quality sleep, which holds a direct impact on performance and the mindset. With an eye on quality sleep, individuals are setting the perfect environment, focusing on circadian eating and using sleep air ingredients.</li>
+                                                <li><strong>Mind-Body Therapies:</strong>  Mind-body therapies are gaining significant level of credibility due to the scientific evidence stating their positive effects on health and wellbeing. These therapies are available in different versions and touch several aspects for better results. Soundscapes such as isochronic tones, 3D spatial audio and binaural beats are popular wellbeing modalities due to their ability to stimulate brain rhythms for reducing stress, promoting healing, improving concentration and facilitating relaxation. Cold immersion therapy is another trend that is gaining attention as it reduces blood flow, tissue metabolism and cardiovascular strain. The therapy is finding increasing traction for treatment of mood disorders and migraines while boosting response of the immune system.</li>
+                                                <li><strong>Mental Wellness:</strong> Extensive uptake of mobile phones and the Internet globally is providing medical professionals, patients and family members with new options to understand mental wellbeing and find help. Mental health support over mobile devices such as smartphones is convenient and user-friendly, including video or text support. In addition, there are advanced apps that use the artificial intelligence technology for monitoring behavior patterns as well as timely identifying changes prior to a crisis. In the recent years, the mental health & wellbeing support space has witnessed influx of numerous apps that connect patients with mental health professionals and even peer counselors who can provide them with effective tools. The field is witnessing a notable progress and is likely to expand further with phenomenal uptake of telemedicine. Factors such as increasing shift towards telemedicine along with inadequate access to mental health care to a large number of people are expected to significantly benefit mental health software in the coming years.</li>
+                                                <li><strong>Employee Wellness, A Growing part of Corporate Culture: </strong>Employee wellness and wellbeing has emerged as one of the hottest trends across organizations to help employees attain their optimal potential. The idea of corporate wellness has garnered immense attention in the post-pandemic phase that is marked by high level of stress experienced by employees, indicating the need for innovative approaches. In the recent months, an increasing number of organizations have upgraded their corporate wellness programs with inclusion of innovative ideas. These innovations cover a broad range of approaches like office stretching apps and stationary sets for boosting mindfulness. Various companies are betting on new approaches to reduce stress levels while improving mental health and emotional wellbeing. Corporate wellness initiatives are increasingly focusing on on-site meditation or yoga programs, workplace wellness and pet-friendly spaces to help workers unwind during busy workdays. The addition of innovative approaches is also attributed to the millennial generation that pays more attention to mental health and mindfulness. Some of these changes include transition from the conventional eight-hour office job to six-hour day places. Corporate wellness programs are also betting on wellness challenges to encourage employees to engage with health-related activities. Some of these activities are intended to reduce stress levels and help employees connect with their colleagues. </li>
+                                                <li><strong>Low-intensity steady-state training  (LISS): </strong>Low-intensity steady-state training or LISS cardio is gaining prominence over high-intensity interval training (HIIT) as it reduces injury risks associated with the latter. Recent studies have demonstrated that low-intensity exercise is at part with HIIT in terms of health benefits. LISS represents a cardio-based exercise that engages people in a low to moderate intensity activity for continuous and extended time period. LISS covers typical activities such as swimming, running, walking and cycling. The increasing appeal of LISS can be attributed to its suitability for diverse groups of people, including pregnant women and the seniors, as kit minimizes the injury risk.  </li>
+                                            </ul>
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </div>
+
+    <!--============================
+           Footer            
+=============================-->
+
+    <footer-component></footer-component>
+
+
+    <!---============================
+       ScrollTop        
+=============================--->
+
+    <scrolltop-component></scrolltop-component>
+
+    <!-- JAVASCRIPTS -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+    <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+    <script src="plugins/google-map/gmap.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="./js/submenu_select.js"></script>
+    <script src="./js/jquery.readall.js"></script>
+
+
+    <!---WEB COMPONETNS-->
+    <script src="./webcomponts/headerComponents.js"></script>
+    <script src="./webcomponts/FooterComponent.js"></script>
+    <script src="./webcomponts/ScrollToTop.js"></script>
+    <script src="./webcomponts/dummytext.js"></script>
+    <script src="./webcomponts/banner.js"></script>
+
+    <script>
+        $('.textless').readall({
+            showheight: null,
+            showrows: 8
+        });
+
+
+    </script>
+
+
+
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+                $('.goog-te-menu-value span:first').html('LANGUAGE');
+                $('.goog-te-menu-frame.skiptranslate').load(function () {
+                    setTimeout(function () {
+                        $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+                    }, 100);
+                });
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+</body>
+
+</html>

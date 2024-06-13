@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+  <script>
+    function SaveData() {
+
+      //var iSno = rno;			
+      var vfrist_name = $("#first_name").val();
+      var vlast_name = $("#last_name").val();
+     // var vdesignation = $("#designation").val();
+      var vcompany = $("#company").val();
+
+      var vemail = $("#email").val();
+      var vPassword = $("#Password").val();
+
+
+      var vWebsite = $("#Website").val();
+      var vLinkedIn = $("#LinkedIn").val();
+      var vTwitter = $("#Twitter").val();
+	    
+	  
+
+      var vYoutube = $("#Youtube").val();
+     // var vDomain = $("#Domain").val();
+	  
+	  
+	   var vFacebook = $("#Facebook").val();
+	   var vWebsite = $("#Website").val();
+	   
+	   
+	//   var vSeledprimary = document.getElementByName("primarydomainlist").checked;
+	   
+	   var vSeledprimary = $('input[name="primarydomainlist"]:checked').val();		
+           
+		   var selected = new Array(); 
+       
+            $("#myTable input[type=checkbox]:checked").each(function () {
+                selected.push(this.value);
+            }); 
+       
+            if (selected.length > 0) {            
+			   selected.join(",");
+            }
+		var vSeledRelevent = selected;
+		var vLoginDomain ='';
+		
+	  
+     if (vemail != null && vemail != '') {
+        //alert(vchkwillvolunteer);
+        $.ajax({
+          url: "Ajax_AddRegisterUsers.asp",
+          type: "POST",
+          data: 'vSeledRelevent=' + encodeURIComponent(vSeledRelevent) + '&vSeledprimary=' + encodeURIComponent(vSeledprimary) + '&vFacebook=' + encodeURIComponent(vFacebook) + '&vYoutube=' + encodeURIComponent(vYoutube) + '&vTwitter=' + encodeURIComponent(vTwitter) + '&vLinkedIn=' + encodeURIComponent(vLinkedIn) + '&vWebsite=' + encodeURIComponent(vWebsite) + '&vPassword=' + encodeURIComponent(vPassword) + '&vemail=' + encodeURIComponent(vemail) + '&vcompany=' + encodeURIComponent(vcompany) + '&vWebsite=' + encodeURIComponent(vWebsite) + '&vfrist_name=' + encodeURIComponent(vfrist_name) + '&vlast_name=' + encodeURIComponent(vlast_name) + '',
+          success: function (data) {
+            //alert(data);
+            alert("Thank you for applying. We will respond by email within 3-4 business days. ");
+
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+            alert(xhr.responseText);
+          }
+        });
+
+        //window.opener.location.reload(false);
+        //window.opener.location.reload()
+      }
+      else {
+
+        alert("values can't be left blank");
+
+      }
+
+
+
+    }
+  </script>
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <header-component></header-component>
+
+
+
+
+
+
+  <!--============================
+    PLACEKEEPTER BANNER
+=============================-->
+
+  <section class="section page-title insider py-5   ">
+    <div class="container">
+      <div class="row tex-center ">
+        <div class="col-sm-12 m-auto text-center">
+          <!-- Page Title -->
+          <h1>REGISTRATION</h1>
+        </div>
+
+        <div class="col-lg-7 col-md-10 col-sm-12 col-12 p-3  m-auto mt-3  shadow-sm border">
+
+          <div class="w-100">
+
+            <form action="#">
+
+              <div class="row position-relative d-flex align-items-center"> 
+                <div class="col-3 medium-2 large-2 columns">
+                  <div class="circle">
+                    <img class="profile-pic" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFRUXFxcYFxcXGBUXFxgaFRcWFxUXGBoYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGBAQGC0dHSUtLS0tKy0tLS0rKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS03Lf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAADBAAFAQIGB//EAEAQAAEDAgMFBgQEBAUDBQAAAAEAAhEDIQQxQQUSUWFxgZGhscHwEyIy0QZScuFCYrLxFCMzQ4IVwtIWNHOTov/EABoBAAMBAQEBAAAAAAAAAAAAAAACAwEEBQb/xAAkEQACAgICAwACAwEAAAAAAAAAAQIRAyESMQRBURNhIjIzcf/aAAwDAQACEQMRAD8AbYVugscirTQVQITkeoEByAAuWhRHoZQBEPEYttMSewcVpi8SGNk56Bc9XqueSSpZJ8S2HFzYXGY19Q8uCWLOKPTYUY0T70XDOZ6mPEkhWnQRW0U82lFlk0tFFys6FESFPWyz8JNml2rRzQM1lm0ANNBfSTdRBJWpmNCdRiA5qeeEF9JOmJKIoFsDxRHU+1aQqpkpRIU7gNovpG1xqD6JBq2a5UTIzgdrgsa2q2WnqNQmVw9Gs5hDmmCup2ZtJtURk4Zj1C6IZL0zhyYuO0PKKFYlVImUtiz8vaP6gjkpXFG3aP6ggD0FRRRAHGsRwlWOR2FAGzkBwTBCDUCAAPCXrVA0ElMvXP7ZxN90ZDz1KScuKsaEeUqE8XXL3Sf7LahRWlFkqwoU1wZJnr4saRGUrJmjQW9CmnGNBXLJ2daQqW3yUDeSb+HwWoppRhR1FANH36qxNPND3OXcmQpXuw+eut0N1GNFbGlw+/8AZBdS95JkYyqq0uPBAdTOitKlAi4yS76fvyToVlfCG5nenKzUuW5rUIKOWhCO9qGVSxK9GpdzWzKxad5pIIyK1hAed0XOqomQkjtNk7SFZt7PGY9Qnl51g8a6nUDwcvEcF3uDxbajA9uvgdQuqEvRwZYU7XQZ5SuINu0f1BGc5L1jbtH9QVCR6MooogDhmFHYUo0plhQAwtKiy0qOQAniam60ngFyFV+84kroPxFX3WBvE+S5ykFy5pbo7fFhqx7Di0qyw4skMOyAFYU32hcM2enBDTeHcmabUpRPvgnKJ7lKihl7I0F1Cy3BbufeERlOU1BZowAC/vkstoyi7nnzzRGU9D7lMoiOQsaA/b1QalG3qrYUQOff2lL1G7psfRPxF5FPBExJzSj28lc1mjUZ5wkKrJGY59mSxKjbKerT4JR8g9VZOZ3Tol6tJMKJMMrV9NE3PfisuAQYKVBrqkMTWEDuv4K0rBVG0KYIlWxshkWtCT6ug4/2Vv8Ah3a5p1N0k7jsxwPFUNSmZHgtC4iOPFdFHG36Z6uXoNXLtb/UFV7BxZfSEmYtPLRWT8u1vmFZO0czVOj0pRRRaYcCjUygFb0ygBxhWxQqZREAch+JK81d38oA+/mkqAWMY/fqvPFx80TCMk8uK8/I9s9bBGooeouyCcYbhAo01ZUaC5ZHYjAyTmHaYQ20rqwp0Iz/ALIRraB0qNwmXGBp289FmnTtK1c2e3L3omSEbszfj6diyxxutmsvGnBE3IGX27YTJCsGZAuPTwWKl/fgtqlTl0QK1QEDPKLpk0K7FavDwSz8rG8+wmXuH7hJ1qsW09UGoVfS980rUbNk4509qXqASFgwoaWaCWx5dE5iBmEq/K/VahGK1s4VTjKLcwbcfPorPEyfXtVPiqpkjS89mStBEMktCmIYBHvolKjhPvsTNZ0ggTpnqgAWsBb3C6Ujhky8/DOMIfum29btFwV2Ona3zC822bXio135XL0hn09o8wmjrRPJvZ6YooonEOAcsNK3qhBBQA5Tcs4qtu03O4NPkhUykvxHX3cO69zA7zdLJ0hoq2jj/iXiwJOZVnhMQ1ojoJ9+qoqLokxc6jOJyHBW+Hw28226P+PnxXI4r2ekpNdFxTxTGlWOE2hTJgG/A2XL4jAVBEAHmDHaEHDuqBw3hkeEJJYlVoZZn0z0bBRmrKi5pElcVgNoGNVeYfG2zUei3Ze4hjW0nO5t0nM68EOgwEb3WyUpYwlrmyIhBp46GkajwCZyRlFwKQ199EP4O9qq3/qkA21z7JSw/ELWAw0xOdo81qaYjtFw/CkcydYhI1sPnaISY/E4P0gjqY7kVu2w6AI65d62kCkwFehA5Ksraycsv3VwzFD6XRfIx4KmxTe42m470rQ6kCqGI8kE1MlmtOhBSr33WIcOSIgpStqiOfMeK0rOB6ZrejGJPsS06ekKoxjINgSRcjmT9yArTHuP1NI0F7dqq3VBvuEzIueoHquvGcOVildwJLReJ3oyzuT2wEnUpuABIscj0TmHbFN+QJI7BfxkBaOMwB9I595VTmF6D4eTz7uK9Kwxmm0/o82rzEt7c/BemYL/AEmdGeYTInI9RUUUTCnC1QqjHbXpUn7jyQd3ey0vl3K6qBVG1sJTexxcxriGmCWgkdCsA3ZhcUaXxnPbSaW78ANeWtIkb3zZ9i5DEVatRpc95M/yj72XoFTYmFJJOHpEnMljZPVcz+KcFTpvY2mwNG6S6JjMBvSwcpTTStnRjkm6ObpU6gNvED0Kfw+OrD/ba4cnEfdCxh3QDrwVhgcDVdSfW39zcBIaBeUtJotbRkbcizqNVo4gb3km8HtLD1DAe3o75T3FU+zdqVS4hz2RBPzg6AmAReTkOZTZq0K7Z+GA7+YDOOIzH2Q8SoZZH/0vH4W0hDoViLFJ4Kk+i0vp1CGC9Sm/52AakDMWnLxS+L27ht+W1M8/ldac5toueeLVotHIvejsNmvLhPLsslsW5wMwUDY+3sLukCuze0BmfEIWL2iXv3KIDzElxPytF4nibG1lP8broo5x+mKtUkEXE8+9KPwRN5jvkoOKw1afmqEE/kDWjxDj4oBwz9cRUE/zH0AVYw/ZOUv0M09mD87xN5zKZpbPa2DvPJGV1Tvp1NK9QE83E9qzTpV7ziajeoMeRVOP7E5V6L01otJ5zy7MkQ4pp17CTfguce2uP94H9QaR4NzR8NVqi1TcAzkSbHkCkeP9jRyFjUMC3zN5Zj7pMuvlae3qnMRRDafxm1abmyJALg9vMscASOkpR4mJ9hJLG4dlVNM1m/25qVAtWsIPHksVskrGsrNp14gDO4VLvHegCePZzVpiHhxsJ4HS6r6TQDu8e2Zzgarqx9HBm2zD5deIHLPSfPxTb2GGkXZoTb6TdvI3UdTAMBpEggjVrQPmniSUV1JrS5hkNdfqG2NuIklWIPoQrUDG7Gbz3EAD0XoDGQ0DgWjuIXMYFu/WAJndeLnXdt35d66ypl2j+oJtE5HpCiii0U4h6r9o/wCm/wDSVYlL1mggg+5QBZyuU2qwvrPcfpEADT5R95VridrMpU/nduujdaTYF0WvkD9lXULiRfnn4qGaVI6vGhbbKTH4UbwgZZp7AYl7WlrfpOYic/JGfhCTJgdkz3LejhR+YDqFCzs4teitpfh1j37xdAmS3x7ld4XACjSdTApv3r3Eme+3ctqdKP4u4JlsAWsePFM8mtsxY18Ob2iwUKVQk3dTcA3rEZ9R3prDbK3G0W7jd402uMAWBEDeHEwTHRabfDXvo0Z+p2+88GU4J74jsV5s95qPdVjd3jIAFmtyaByAhJOdQ0EMd5H8RrUwzIDX02nW7R2QdFX7NeKdSrIMOqhpc5xJbNNpYSXHI3GeqvsdexHTjdc5Xw4c+rTdujfbTe1xbvQaTi1xDTYy14zyz0WYXdpsbMqppF3tCl8s5kCBz4Zdq5s03OdFgf5nR+67DA4ADDsY2TDA25EmOaoMXQAdBGuq2LXQNWJ/ibZdTDUqVQVCS+Z3QA0WsOJVPS2xUpsYRW3nHeDmkH5YIDZ0vc24XXQHCMeN1+8RP0ySJ1totq2wsLuN3W3E33s97jqYI1V4zjW0QeOX0qnYs7gqPZu71mnJp6odGqZtB4XyT2OwMgNJJaBAEyB2cEhT2eaZkZDRI5J9DcGhs0SQ4EZtI6WXP/8AWqrY3KZIiBvCRbIgtie1dKPoc4n+EnwWdggihS/QD339QttJdGOLctOjnBtXEmD8Lt3HAfZSricU4XbA7PUrpse43VVVPBT5L4V4yrsoq9GtNzmZtAH2TTHYim35QxtoLh9WU/VnqnyBLSRIkcvdkV7wKbpMmodxjczIDvmPfHYrQkjlyY3YlhquIaAG0GuJAIJ53BIm+RzKbbsis8hzyRJ3omRPDhCtsBTDYGdvmOg93T9Ss5zT8NuVt7+Efc8gpSzP0Xh48fZTjAhrjG8XnOLRZok8J3R4qxwtR5BDxBDmxxIkZ85RNkU5MC97k69U9tKhu7hFhl2hzSlxzbmhs8IrG9HoCiii7zyjhwUN63YsPCAKbawB3WkAgkkg3yEeqTbsinmwPYT+Rxb4ZFNbSd/mgcG+ZVlgaUrgzzakep4sFwKlmExI+mtP/wAjAfFsIrMPjNBhn/8A2MPkumo4eOHJMOZHL3ZSWR+0dDgvpyY/xY/2aM8qjv8AxQquJxmW7QZzl7j6Lp8TA7lzuKBqPMTuCJ5reV+jOHxiOBwZe8ued5xIkkRIGTWjRq63C0d0QO7yVZsXCSS46mAuhxGHIECBzU5uykIqJV4tmoz7ElUp7wa4NBewmA6wcHNLXNJ4EHvAT9ZpSbq18kJ0zJK9DNHbtJoDKu9QItu1BA7HfS7sKmJYyoN5pa7m0gjwWlDHA/K4SOgPhqEPEbFwj5d8NoPFksN/0wq676JJNaBCiRoCmA0n+A9/oUKn+HqVoqVR0qv/AO4lHZsE6YmuB+pvmQjmvpri/grU2cSfpjs+yw/APNi2ewlWP/p7jicR03wPIIVT8OUx9T67+tep5NITcl9F4v4c5ttoYw0sqj/la0Z3sTHAAkqyZRa1oa0yGgC/ID7Jn/pVKlLmMAd+YyXH/k6SgPdmQseS9IFjrbEMcwxKpnq2rPtEKqrZoQPQOo6FMFN3HSzfUoNZysKeGPwgU0nSFjtj1Kk9w3WiSBLo4a9ua6jD4xjqQpBobuiBA0+6X2Zs6MOKgEVCZ3uX5ekIlTCO3t8xcaaqEmdEFfYpsGiDWc02Ek9yd239FPm4n/8ATQltlO3K751YSOuS223Umpu57u4O0kEq2BXNHP5Uqg0d6osqL0DyThaZWXoTSioAoto/640+QeblbbOqAKm22CKrf0epRsLicpXn54/yPV8aVQR0uHq3vlaPVMfFBVNSxfBbHFmOSikdNh9ou3oYDcmPutX0WMAFgqnFVzIIOVx14ozqznCHBtxc7onxVIxtE5SrovNltaFePZTcz6oK4OiX0z8hkflPodO1WFLH1BbdPZfyWcH6N5r2W1bDNyJQq2ygRIE9FWOqvd9R+GOAhzjzJNh0CjMU5pG5VcfzB0EdhzC38Zn5EDx+CLLjqt203OY1zcyAeFkXE4upUG6WQ7jp1lbYVhDQJsEdILtmmExWhnu8FbYOpOfP9lVVqeoRcHX0Km0VvR0VNtsxz5nmksYI6olLEwL3SeMrA3GvgmdUJG7K3GVFS1K+64g9iexjgTwVHjHy6VkdmydG1eoJMKse+/FOYjKVXgXVY9EJM03ZcF02y6O83d4hc9SF5XXbEG6w1DkP7pcg2MuthNLqZpE/Mydc7fZOUsMTYnv1SexKZn4r/l3jvRwEWHvij1MQaj4BjhyhRKlPjae5ioNgGyekhV5cTc5lwJ7XApraNXeqPMzJDJ5Nkk96Vdp+pv8AUF3YI9s8/wAydtRPTVFFF1HEcAwozClqZRgUAVO2W/5jD/KfNKU2kFP7YF2HkR5FCwzNeGfvu8VyZVs78D/ihhkAIbsRbPPRHr0PltP2VXiqoaZkc0kYqis5Ow9A3BnPNWdKlac9VT4PFs18BKtaeOaBISNtFYxTDUsPJ5p8UogR2pTCY8A3gyrD/FseJFuRQm2a4ULV8PNwEsG3yy5K132W8ctEvVLDnn71TW0LwFajreqBSqwRf9ky6lN7EJWpSv0S2mFNDYq5iQl3gTZZYIQq4tAt5rUjHIeo4226QJ6eSWxGJ1z56pOi/fDgfqbqEtUJEzbRJKI8JGcRXm3KVXuJPYiQS4TPBEZTubWGqEqCTsVrfQkArPFiGxqqtURKXZsz1C6SnUc5nw2agT2XhUOHp7zmiFeUiaZ9UmRlMSLPC4OtUBL6pEAw0SByslsHi3tDmxJNgfMpqi8kQTAiTzSNV4bvEe+SyKsZun+jUgTAyFu3Mlak5dR5hRmSwdOrfML0IRqKR4+SXKTZ6gooonEPOWFGYUswo7CgBfa7ZYD+VwPZkfNDwot1EfZPVWBzS05ER3qqwdQglpzFjPELnzKtnZ4ztNFrh6gLS05qoq0Ll3s80243BHapVcCpI6Gc7iKTmuJaIvcafsncIHxkCc4Mnqi1qILoKao0HMuRI5JXIrjgmEo0nx9PvtTuCq7hlwMTe0ouDe0m9vfNWFCnTkHO0QcidJTRZWcUV1XFtJIAMaGJ8yEk+uR+YQujx72bpim1s6xqOC5/EEE5EnwTyJqIrXxzmgkd15SzNpV3aA9fVF+A92dgm8PRA09FFyXw1xftmtNtUiXOaOX91t/mZS2NTEJpuUX+wQ6lMuHI6rYslKKFMEy7nmwiEvXMn2MuiZxVWAKbc8vfcs4fBn6iP2Q+wXwXwtCS4+MJp9CM/JWGFohjT5fdJY2sACffRLYyKXaLs1XUrou0q0mJ4oVIKi6JSeyw2ZUa15qOyYCSrkYyniAHUz0/dcltKuRTLdXZ/pCU/D1JxqtDXFuroMCBMjyCHi5B+biejubAmVVV2gvnT1W73E5layq48HHbOfL5XJUkSVrw6t8wsypw6t8wug5D09RZUQB5m0ozClpRaZQA2CqnbFPdcKgyNnddCrRhQ8VRD2lpyI/sUso2qGxy4ysqm15CI15KqA4tcWOzBg+h7oVlQqLkqj0FJSCgTZWWArkWInh+6ri2DOiZw7gfLipSOiKLf4rYmyLRrNyjLVVxqeliFmlWyHvwWpGNsut9hzzhCrMZEgBApVSbaqVhbO/LzWSZqYrVqDglaZ19hbvbkLnnxUbmZ9VqSMbbMF2uvL3ZZdWtGR0QSYJgrFOoCZlOTNsPSjOD++qbpcDkO5Lvqj7cbLR+IAGcR5qcrKJINisVqqPGYq0z+yzisb+6qXvLimivospA2/MZKKR78lvTpQh1TJDeNvuU6JCmLki38Vh0C6TZez20WBo+o/UeJ+y541Gh4J+kOaOwG66wldGNas5M73RHIZKy4rCqQI1b8OrfMLDQtjp1HmEAenqLCiAPL3rem5a1AtGFAD9NyI5L0imAUAUP4hwuVUZizumh7ELZbxKu67ZBByK5mmfhVCw5A+dwoZI+zpwT9HQhgcM+aPRpiLaJTD1ZAhWFHkuOSPRjLRn4EyIvCMzCc0QAkptgFpWpmMT3Iz05oTnmLSPeieqMBzulalISPFDRqYu7JCquueCO5oA7uiSr1R79VsULJgn1Bl4Lam3QdUAC/VEFWLae+CcRBHujIpF7zxm95WlbESYg+kJSviNJ6o4s1yoDiKkmAs0qS2pUZRwIstEF6jwB90qTALjmbDomqgkxoM1XV6wc6dJgc76co1VsOGWWXGJLLljjjbAVnWBtAtB1J1HRdNsbEb1Fs5j5T/xy8IXLYtuoyy42EDvMImF2nUpRuwWzdsZnLPuXqZfG/HjSXo8yOXnK2dhKy1AwtdtRoe3I+480wFxFTcLBOXVvmFgla6jq3zQB6mooogDzKoEsTdN1Qk6iAGqLky0pCi5OsKAI9Uu1sLvfOMxmOI+4V09JVFjVmp07KfCYzcs7I66K3wu0ASADp3pTEYEGS2xOY0P2KqqjNx0EbpGmnVc0sZ2Qy60dvSxAzB4dEz/iJvPYMjZcLRx1VuVxyI8im27ZfN2u5fKfRT/H8LLL9OtOJ5ZCyXdXmdbdIXNna7uB7ZQ/8c48VvBh+RF1i8WIgHRJXJnJKsJn5o70T4nu/gmSoLsLviY963Qq1XP33odSpz7ks98rEgbozUqE5LFGiiUaZOV1Z06G6tZkdsVbSjkhYl0a6a6fzFMbQxIaIEl2jfX7qnq3uTPIRA8b91l0eP4s8z10Rz+RHFr2a4p0iLhsE/zONs+AO8Eu502PDQn90w102PZHFzmwO4INZsGeHW5LnfZfQ4cMMUaieLlySyS/kKC3ymMxEcv7pR7okcvKyfxIm/D3qqzEvk937pc9KI2Lsu/wtjt1xpOycZHJ3DtXUkrzik6DOXPpqu22Rj/isn+IWd9+hXjTWzsHyVBmOrfNRa712/qb5hIB6sooogDzaqkqqyogDWin2KKIA2ckqmaiiAIxchtn/wB3U6N/pWFEkuh8f9hih78VY4fRRRQkdUTZ30O6rNPI+9FFEDmDmP0/dbnLtUUWDoHiMx0CEPVRRahJFns7LuT9XXqPJRRJLspAoNpfW79A/qSJyUUX0fgf5I8Py/8ARm9D/ub5FZfmzt86iii7YdM5n2hT+D/j6BUpzKii5vJ/qVwf2Zgadqv/AMKfU79PqoovKn0diOnQT9Tf1N/qUUUgPW1FFEAf/9k=">
+                  </div>
+                  <div class="p-image">
+                    <i class="fa fa-camera upload-button"></i>
+                     <input class="file-upload" type="file" accept="image/*"/>
+                  </div>
+               </div>
+
+               <div class="col-9 d-flex  justify-content-start flex-column h-100"  style="
+               align-items: baseline;
+           ">
+                <h3 class="font-display3 mb-0 main-font-color"> Ram K Reddy</h3>
+                <h4 class="font-display4 mb-0"> CEO, GIA</h4>
+               </div>
+             </form>
+
+          </div>
+
+          <div class="w-100 mt-2" id="formblock">
+           
+
+
+              <hr/>
+
+              <div class="row mx-0">
+                <!-- First Name -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1 " type="text" placeholder="First Name" id="first_name"
+                    name="first_name" required="">
+                </div>
+                <!-- Last Name -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="text" placeholder="Last Name" id="last_name"
+                    name="last_name" required="">
+                </div>
+
+                <!-- Email -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="email" placeholder="Email " id="email" name="email"
+                    required="">
+                </div>
+                <!-- Password -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="password" placeholder="Password" id="Password"
+                    name="Password" required="">
+                </div>
+
+                <!-- Mobile Phone -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="text" placeholder="Company" id="company" name="company"
+                    required="">
+                </div>
+
+
+
+                <!-- Website -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="Website" placeholder="Company URL" id="Website"
+                    name="Website" required="">
+                </div>
+
+                
+                <div class="col-sm-12 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="text" placeholder="LinkedIn URL " id="designation" name="designation" required="">
+                </div>
+
+
+
+                 <!-- Website -->
+                <div class="col-sm-12 mb-0 p-1 mt-3 border-bottom pb-2 ">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="formmandatory">* </span>
+                    <p class="font-weight-bold main-font-color mb-0 ml-3">Domain Expertise</p>
+
+                    <a class="btn btn-sm btn-outline-primary" data-toggle="collapse" href="#collapseExample"
+                      role="button" aria-expanded="false" aria-controls="collapseExample">ADD</a>
+                  </div>
+
+                </div>
+                <div class="w-100 collapse  m-2 " id="collapseExample">
+                  <div class="col-sm-12 mb-0 p-0 border-bottom">
+                    <div>
+
+                      <input type="text" id="myInput" class="domain-search" onkeyup="myFunction()" placeholder="Search Domain"
+                        title="Type in a name" class="border shadow-sm my-3 col-11 mx-auto" style="width:90%; margin:0 auto; margin-bottom:10px">
+					  <div class="domain-table-block">
+                      <table id="myTable" class="table mb-0  table-striped" id="domain-list-table">
+                        <tr class="header" style="background-color:#f7e1d7">
+                          <th class="text-center py-1   col-9">Domain</th>
+                          <!--th class="text-center py-1   col-2">Primary</!--th-->
+                          <th class="text-center py-1   col-3">Relevent</th>
+                        </tr>
+
+
+
+                        <tbody id="domain-list">
+
+                          <script src="https://code.jquery.com/jquery-3.6.3.js"
+                            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+                            crossorigin="anonymous"></script>
+                          <script>
+                            $(document).ready(function () {
+                              $.getJSON("./data/DomainName.json", function (data) {
+                                var output = '';
+                                console.log(data)
+                                $.each(data.domainlist, function (key, value) {
+                                  output += `
+                                      <tr>
+                                        <td class="text-left py-1  pl-4 col-9">` + value.Name + `</td>
+                                        <td class="text-center py-1 col-3"> <input type="checkbox" value="`+ value.Name + `" id="secondarydomainlist_` + value.Id + `" name="secondarydomainlist"/> </td>
+                                      </tr> `;
+                                });
+                                $('#domain-list').html(output);
+                              }).fail(function () {
+                                document.write("An error has occurred.");
+                              });
+                            });
+                          </script>
+
+
+
+
+                        </tbody>
+                      </table>
+					  </div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 mb-0 p-1 mt-3  pb-2 d-flex  align-items-center ml-4">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1"  />
+                  <p class="form-check-labe ml-2 mb-0 mt-2 main-font-color font-weight-bold" for="exampleCheck1">I will
+                    support your programs on  social media</p>
+                    <br/>
+
+                </div>
+               
+                <div class="row mx-0" id="collapseblock">
+                  <div class="d-flex  justify-content-start ml-4 w-100 mt-2 ">
+
+                    <a class="mx-2 font-weight-bold" data-toggle="collapse" href="#social_support1" role="button" aria-expanded="true" aria-controls="collapseExample">
+                      LinkedIn
+                    </a>
+                    <a class="mx-2 font-weight-bold" data-toggle="collapse" href="#social_support2" role="button" aria-expanded="true" aria-controls="collapseExample">Facebook</a>
+                    <a class="mx-2 font-weight-bold" data-toggle="collapse" href="#social_support3" role="button" aria-expanded="true" aria-controls="collapseExample">Twitter</a>
+                    <a  class="mx-2 font-weight-bold" data-toggle="collapse" href="#social_support4" role="button" aria-expanded="true" aria-controls="collapseExample">Instagarm</a>
+                    <a  class="mx-2 font-weight-bold" data-toggle="collapse" href="#social_support5" role="button" aria-expanded="true" aria-controls="collapseExample">Youtube</a>
+                  
+                  </div>  
+
+                <div class="w-100 collapse   m-2 " id="social_support1" data-parent="#collapseblock">
+                  <input class="form-control main mb-1 w-100 mx-auto" type="text" placeholder="LinkedIn" id="LinkedIn"
+                  name="LinkedIn" required="">
+                </div>
+
+                <div class="w-100 collapse   m-2 " id="social_support2" data-parent="#collapseblock">
+                  <input class="form-control main mb-1 w-100 mx-auto" type="text" placeholder=" Facebook" id="LinkedIn"
+                  name="LinkedIn" required="">
+                </div>
+
+                <div class="w-100 collapse   m-2 " id="social_support3" data-parent="#collapseblock">
+                  <input class="form-control main mb-1 w-100 mx-auto" type="text" placeholder="Twitter" id="LinkedIn"
+                  name="LinkedIn" required="">
+                </div>
+
+                <div class="w-100 collapse   m-2 " id="social_support4" data-parent="#collapseblock">
+                  <input class="form-control main mb-1 w-100 mx-auto" type="text" placeholder="Instagarm" id="LinkedIn"
+                  name="LinkedIn" required="">
+                </div>
+                <div class="w-100 collapse   m-2 " id="social_support5" data-parent="#collapseblock">
+                  <input class="form-control main mb-1 w-100 mx-auto" type="text" placeholder="Youtube" id="LinkedIn"
+                  name="LinkedIn" required="">
+                </div>
+</div>
+
+
+
+
+
+
+                <!-- Submit Button -->
+                <div class="col-12 text-center">
+                  <button class="btn btn-main-md   mx-auto py-2 px-2 my-4" onclick="SaveData()">Register</button>
+                  
+                </div>
+                <p class="text-left mr-2" style="font-size:13px;font-style:italic;">Fields marked  <span
+                    style="color:red">*</span> are mandatory</p>
+              </div>
+            </form>
+          </div>
+          <!-- Page Title -->
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!--============================
+	           Footer            
+=============================-->
+
+  <footer-component></footer-component>
+
+
+  <!---============================
+           ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="./js/imageload.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+  <script src="./js/jquery.readall.js"></script>
+
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+  <script src="./webcomponts/banner.js"></script>
+
+  <script>
+    $('.textless').readall({
+      showheight: null,
+      showrows: 8
+    });
+
+
+  </script>
+
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+
+
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('LANGUAGE');
+        $('.goog-te-menu-frame.skiptranslate').load(function () {
+          setTimeout(function () {
+            $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+          }, 100);
+        });
+      });
+    });
+</script>
+
+
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+}
+  </script>
+</body>
+
+</html>

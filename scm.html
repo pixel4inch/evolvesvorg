@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+        var writeuptitle = '';
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (selURL == value.Event) {
+            writeuptitle += `<h2>` + value.eventtitle + `</h2>`;
+          } else {
+
+          }
+        });
+        $('#writeup-title').html(writeuptitle);
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+  <div id="writeup-title">
+
+  </div>
+
+  <div class="body-content"><!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="..plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="../css/style.css"" rel="stylesheet" />
+  <link href="../css/custome.css" rel="stylesheet" />
+  <link href="../plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="../css/jquery.readall.css" rel="stylesheet" />
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+
+
+  <!--================================
+         WHATS TRENDING
+=================================-->
+
+<section class="section" id="writeup">
+  <div class="container">
+    <div class="row pb-3 page-title">
+      <div class="col-sm-12 m-auto text-center -3">
+        <!-- Page Title -->
+        <h1 class="font-display2 main-font-color">WHAT'S TRENDING</h1>
+      </div>
+    </div>
+
+     
+
+
+      <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+      
+          <div id="accordionExample" class="accordion custome-accordion border-0">
+
+          
+            <div class="card">
+              <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Supply Chain Management is at a Cross Roads. Is Your Company Geared Up for an Overhaul?</button>
+                </h2>
+              </div>
+              <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                <div class="card-body p-5">
+                  <p class=" m-0">The pressure to future-proof and overhaul supply chains is an all-time high amid the challenging landscape marked by lingering effects of the pandemic, post-crisis macroeconomic scenario and the need to improve resilience and agility. COVID-19 has highlighted the many risks of a globalized supply chain including hidden costs of single-source dependencies; inability in adapting to real-time shocks; and poor flexibility and agility to changing market conditions. Transformation in supply chain management therefore remains a key area of business focus. Although supply chains have witnessed numerous technological upgrades, they have failed to tap data, provide transparency and ensure high degree of resilience. Changing consumer patterns and massive disruptions seen in the wake of the pandemic are creating a pressing need for overhauling the entire practice of supply chain management. Such an overhaul is anticipated to help organizations in identifying potential issues in time and develop effective measures. </p>
+
+                  <br/>
+                  <p class=" m-0">Volatile demand, rising product complexity, economic headwinds, weakening global trade, high inflation rate, rising interest rates, increasingly consumer-centric and a rapidly changing landscape require a different type of supply chain that boasts high stability, security and reliability. With the need to move ahead and maintain pace with consumer needs, companies are creating innovative solutions and products, implementing digital technologies, and embracing new channels to serve customers in a better manner. Organizations are leveraging advanced digital technologies to attain transformative capabilities. Supply chain management is poised to gain from cross-functional data, demand forecasting, data-driven decisions and sophisticated analytics. Companies are eying on analytical tools for compiling significant volumes of unstructured data and extracting meaningful insights.</p>
+                  <br />
+
+                  <p class=" m-0">Digital transformation is therefore a continuing trend in supply chain management and entails the use of advanced technologies, from artificial intelligence and GPS through to RFID and embedded sensors to replace manual, paper-based approaches. The move is enabling companies to turn supply chains into more open, flexible, collaborative and agile digital models. Digital supply chains also allow organizations to move assets, resources, inventory and assets in an efficient manner to reduce costs and proactively respond to different risks. Analytics can help manufacturers quickly switch to alternative providers when regular suppliers face disruption; identify and recruiting new suppliers quickly; reduce lead times; track and eliminate supply chain glitches with ease and speed. Digital supply chains are more forward-looking and provide the much needed ability to predict future requirements and disruptions as against the current reactive mode of operation. They allow companies to predict as more data is collected, analyzed and shared. Technologies like blockchain can improve visibility and transparency of supply chain. A consumer can scan a barcode to trace the origin and shipment of the vegetables, fruits, meat or any other produce. Since blockchain events cannot be corrupted, integrity of data is increased greatly, thus improving transparency.</p>
+
+
+                    <br/>
+
+                    <p class=" m-0">Digital models allow enterprises to enjoy high degree of freedom and flexibility to implement desired centralization required for seamless operations and cost savings. Centralization of several functions in an organization results in enhanced value, efficiency, quality, and productivity. In addition, digital technologies for supply chain help companies in making data-driven informed decisions for different functions. The approach enables organizations to aggregate information and other metrics for assessing performance and making right decisions. Technologies such as AI can be exploited for predictions and demand forecasting to ensure availability of the right stock. With enhanced visibility into stock levels, companies can support replenishment plans, make better decisions and deliver enhanced services.</p>
+                  <br/>
+                  <p class="m-0">Automation is also a major benefit leading to higher flexibility, resilience and efficiency. Digital platforms ensure data accuracy, boost efficiency and improve supply chain operations by automating manual processes and facilitating enhanced decision-making at different stages. Digital platforms can be effectively configured for processing real-time data to eliminate various repetitive and time-intensive processes. In addition, automation allows companies to find the optimal carrier, shipping mode and schedule. Supply chain digitalization will improve customer engagement. The strategy encompasses automated tracking systems that allow players to provide customers with real-time information about their orders and product deliveries. This provides customers with more control and security, eventually leading to higher level of trust and engagement. 
+
+                  </p>
+                
+                
+                  </div>
+              </div>
+            </div>
+
+          
+            <div class="card">
+              <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Do You Have the Right Priorities for a Successful Overhaul?</button>
+                </h2>
+              </div>
+              <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                
+                  <ul>
+                 <li><strong> You Pushing Resiliency?</strong>
+                  Supply chains continue being highly vulnerable to different forms of disruptions marked by huge economic fallouts for businesses. To ensure resiliency companies are betting on emerging technologies such as AI and predictive demand analytics for minimizing the impact of plant or store shutdowns attributed to various factors. The strategy involves rerouting of inventory from the in-store platform towards digital sales channels along with proactive efforts to ensure availability of sufficient inventory for business continuity. Labor shortages being experienced by supply chain participants like manufacturing units and fleet operators are compelling businesses to adopt creative staffing and hiring strategies. Some of these players are creating sizeable pools of warehouse workers, drivers and other staff to ensure seamless operations. In addition, companies are inventing in advanced technologies for gaining relevant insights into supply chains to identify gaps and improving surveillance. Considering the increasingly complex nature and diversity of global supply chain risks, businesses are embracing smart supply chain management platforms. The move entails sophisticated solutions such as automated tracking systems, demand forecasting tools and digital alerting solutions for tracking and automating different functions. 
+                  </li>
+
+                  <li>
+                    <strong>Is Agility Getting the Required Focus? </strong>
+The massive shift of people towards the online channel owing to closure of regular stores created a pressing need for businesses to keep products perfectly flowing to customers even in a challenging environment. Increasing popularity of consumer-generated content is reducing the ability of companies to influence consumer purchase decisions. A viral video on popular social media platforms can attract millions of people overnight and disrupt demand patterns. The influx of new players with innovative strategies is also affecting retail channels. The industry is witnessing more space for independent, smaller manufacturers, a trend that has gained high level of acceptance among young consumers amid the pandemic.  The expansion of co-manufacturing domain and third-party logistics organizations is enabling new players to compete in the consumer market with cost-effective production and supply chain assets. These changes require organizations to remodel supply chain management strategies with agility in mind. To be able to develop innovative products to meet evolving requirements of customers while managing comprehensive portfolios of products and delivering them through different channels is the need of the hour. This needs dynamic management processes for better predictions and response in line with changing product/channel mix and consumer behavior. The concept of agility is encompassing diverse areas like R&D activity, planning, procurement, manufacturing and logistics. Supply chain management needs to exploit advanced technologies related to dynamic forecasting and demand sensing. The need is prompting players to embrace AI and machine learning for planning and decision-making functions. Supply chain agility is also driving the demand for new tools and capabilities through the use of sophisticated digital technologies for diverse areas, from manufacturing and smart automation to warehouse and logistics. 
+
+                  </li>
+
+                  <li>  <strong> What's Your Return on Visibility & Transparency?</strong>
+                    Increasing concerns regarding the impact of businesses on the society and environment requires organizations to ensure high level of transparency pertaining to supply chain externalities and practices. While various organizations have started offering transparency related to ongoing efforts to curtail carbon emissions and sustainability of supply chains, the scenario requires more visibility into the social and environmental impact of supply chains. Changing global trade along with evolving corporate requirements is creating the need for companies to disclose their supply chain practices. In addition, organizations are anticipated to be required to provide data regarding sourcing strategies, labor type, transportation mode and contribution of supply chains towards job creation. Organizations providing information about different aspects of supply chains are poised to improve brand image and ensure regulatory compliance. Various countries are seeking visibility into tier-I suppliers, mainly for China-based suppliers. 
+                    </li>
+
+                    <li> <strong> Flexible & Responsive is Your Logistics Capability?</strong>
+                      The pressing requirement for supply chains to be more responsive and flexible to fluctuations and changing conditions is prompting organizations to focus on elastic logistics that safeguards businesses against market-related fluctuations. Elastic logistics makes supply chains to become more flexible in terms of various factors such as manufacturing, transportation and shipping. The approach helps supply chains in ensuring quick expansion or contraction as per market demands. Elastic logistics ensures flexibility of supply chains in line with different aspects like container usage, route optimization, sailing schedules and carrier space. Various companies are implementing advanced technologies like AI to help supply chains in adapting quickly and reducing disruptions. The adjustment allows players to deal with potential challenges including overstocking or ineffective use of vessel space. The combination of advanced technologies and elastic logistics ensures enhanced stability and helps organizations in staying relevant amid fluctuations and volatility.
+                      </li>
+</ul>
+
+                </div>
+              </div>
+            </div>
+
+       
+            <div class="card">
+              <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Emerging New Technologies in Supply Chain Management</button>
+                </h2>
+              </div>
+              <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">Several cutting edge technologies are emerging to revolutionize the field of supply chain management.  This rapidly changing landscape requires companies to keep an eye on what’s trending to make better and more informed decisions. Discussed below are major technology trends expected to make it big in 2023.</p>
+                  <br/>
+                  
+                  <ul>
+
+<li><strong>AI & Augmented Intelligence - </strong> chain management practices are increasingly implementing AI solutions such as smart warehouses, smart transportation, demand planning and route planning for efficient operations. The trend is poised to gather more momentum and touch diverse aspects of supply chain and logistics such as sustainability, last-mile delivery robots, predictive optimization software, and warehouse automated picking solutions. Artificial intelligence for supply chain encompasses technologies to assist companies in gaining relevant insights, streamlining routine activities and enhancing the staff performance. The combination of AI and data analytics is being leveraged by companies to deal with data silos and other related challenges. The technology has the potential to boost visibility and integration across stakeholder networks. Augmented intelligence is poised to be another major technology trend that blends AI automated processes and human intelligence to enable better planning, and strategy formulation. </li>
+<li><strong>IoT & Cloud Technology - </strong> The future of supply chains is predicted to be shaped by emerging technologies such as robot process automation, the Internet of Things (IoT) and the cloud. These technologies are slated to help companies in supporting automation and digitalization efforts while boosting efficiency and productivity. The IoT and cloud technology are anticipated to help companies in identifying data issues, patterns and flaws in real-time. Already playing a considerable role in transforming the supply chain, IoT is expected to continue finding increasing acceptance within the industry for supporting a diverse spectrum of applications. The combination of IoT and other technologies is poised to transform supply chain operations. Moreover, IoT in the manufacturing domain and supply chain is likely to be exploited for improving inventory control, fleet tracking, warehouse management and mechanical or technological maintenance activities. Organizations are anticipated to also rely on IoT for achieving smart warehouses and fleet operations for better efficiency and cost savings. The cloud is set to garner more attention for supply chain visibility and agility in the rapidly changing business landscape and amid disruptions. The cloud is poised to find broader acceptance to attain advanced capabilities to manage supply chains and visualize data from different platforms. The technology is slated to bridge gaps between digital and operational aspects to help organizatios in pushing safety, accuracy and efficiency in the highly competitive world. </li>
+<li><strong>Automation - </strong> Automation technologies continue maintaining their relevance among supply chain companies to reduce human intervention and drive efficiencies. Nearly all aspects of the supply chain, from settlement and booking through to warehouse operations and shipments, are anticipated to be positively influenced by automation technologies. Businesses are embracing automation to cut manpower and free up the staff for core operations. Companies are likely to automate different time-consuming tasks such as setting appointments, invoice generation and shipment status tracking for efficient shipment operations. Automation of time-intensive, repetitive operations is bound to help companies in minimizing leakages and manual errors. </li>
+<li><strong>Advanced Analytics - </strong> Focus on advanced analytics will enable companies to minimize disruptions through agile and digital supply chain management. Factors such as big data, prescriptive and predictive analytics, and sophisticated algorithms are anticipated to help companies in attaining high visibility, make data-driven decisions and push efficiency. Organizations are expected to implement supply chain analytics in heuristics or exact forms. Heuristics analytics relies on mathematical algorithms for understanding and solving complicated issues with supply chains. Accurate analytics involves the use of data-oriented processes for expediting decision making. By providing meaningful insights into the supply chain network, analytics ensures accurate decision-making for potential issues. In addition, supply chain analytics allows companies to analyze data in real-time for sending alerts to drivers or suppliers regarding potential problems. In addition to enabling users to prevent risks and attain damage control, data analytics is anticipated to help organizations in assessing the impact of specific problems on clients.</li>
+<li><strong>Qualitative Forecasting - </strong> Supply chain forecasting is an essential strategy amid challenging times, like the pandemic, as it allows companies to optimize different activities related to surplus inventory, dissatisfied clients and lost revenues. Conventional approaches of forecasting are built on assumptions that are unable to measure supply chain data in real-time for optimal results. Forecasting for supply chain is required to use reliable data for eliminating data silos. While various organizations are using quantitative forecasting, it involves the use of historical averages and data. The approach doesn’t consider latest information along with emerging trends or seasonality. Quantitative forecasting remains limited to short-term analysis of activities related to supply chains. These factors are prompting various companies to bet on qualitative forecasting that covers scenarios marked by unreliable or unavailable resources. Qualitative forecasting is an effective approach for getting accurate predictions using real information along with statistical data such as inputs from staff, historical analogies and real-time data insights to support strategic forecasting. In the coming years, qualitative forecasting is poised to find broader acceptance across organizations for strategic planning of supply chains.</li>
+<li><strong>Digital Twins - </strong> Digital twins is an appealing technology with the potential to transform the supply chain by enabling virtual presentation of diverse aspects like assets, inventory, warehouses and logistics positions. Digital twins use advanced analytics and artificial intelligence to simulate performance of supply chain, covering different vulnerabilities and risks. The technology improves visibility and helps stakeholders in tapping opportunities. Digital twins hold significant potential applications in the field of logistics. Companies associated with shipment operations can use the technology for obtaining and using product or packaging data to detect potential gaps along with recurring trends for better operations. Digital twins allow facility and warehouse operators to develop accurate 3D models of facilities and consider changes like specific layouts or equipment for assessing outcomes prior to the final decision. Digital twins of logistics centers or hubs can help users in assessing various scenarios for efficiency gains. Moreover, the technology can be exploited by delivery networks to deliver real-time information for enhanced delivery times and support to autonomous vehicles for routes. </li>
+<li><strong>Blockchain - </strong> Blockchain holds potential to play an incredible role in streamlining supply chain operations, minimizing disruptions and improving customer service. Blockchain represents an open ledger of transactions that are distributed across computers within a network. By providing stakeholders with access to same ledger of transactions, the blockchain technology ensures transparency and makes it virtual impossible for anyone to hack the system. Blockchain eliminates involvement of third-parties and improves security. Blockchain for logistics can make it highly convenient for shippers and carriers to share important data. In the recent years, blockchain has resulted in integration of diverse streams like shipping lines, carriers and logistics providers on a single platform. While the approach facilitates processing of data for logistics operations by minimizing waste, the transparency allows companies to identify issues in time for remediation.</li>
+<li> <strong>Real-Time Visibility & Agility - </strong> Technologies to push supply chain visibility and agility are slated to continue holding relevance for organizations. Visibility has emerged as one of the primary goals of supply chain companies to achieve transformation, streamline fulfillment, satisfy customers and target new markets. The concept of supply chain visibility is moving towards the next level of real-time visibility. Rising demand for real-time data from carriers and customers is poised to create the need for advanced technologies and solutions. Companies are expected to implement technologies enabling faster responses through the use of real-time data. One of the crucial components for attaining the goal is the IoT sensor technology that enables companies to track shipments and other aspects in real-time. Connected IoT devices or sensors on parcels assist warehouses in tracking their vehicles, inventory and equipment using cloud services. The IoT technology is likely to help companies in using real-time monitoring for container management, resulting in better fuel efficiency and implementation of preventative maintenance. Solutions offering real-time data such as weather, port or road conditions and traffic patterns are enabling organizations to redirect supply, reshape demand, and optimize routes for efficiency gains.</li>
+<li><strong>AR & VR - </strong> The increasing implementation of emerging technologies, including artificial intelligence (AI), augmented reality (AR), and virtual reality (VR) is enabling supply chains to touch new levels in terms of efficiency and automation.  The use of AR devices is opening new multitasking avenues for workers. These devices can also be used to predict potential uses of a product to support product development endeavors. </li>
+<li><strong>Cyber Security - </strong> Increasing frequency and sophistication of cyber-attacks is posing serious threats to the resiliency of supply chains. Burgeoning data and increasing reliance of organizations on data are creating new vulnerabilities and indicating a pressing need for advanced cyber-security tools and technologies to protect networks. In addition, growing adoption of connected devices is poised to add new risks for supply chain participants in terms of data breaches and fraud. These factors are prompting companies to invest in sophisticated solutions and focus on collaboration to protect devices, networks, programs and people. Moreover, organizations are anticipated to extend cyber security beyond their IT systems to operational technology environments associated with the factory and warehouse. The risk of cyber-attacks is expected to compel more companies to invest in firewalls and next-generation anti-hacking technologies.</li>
+                  </ul>
+                
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingfour" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                    aria-controls="collapseThree"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Top Trending Trends for 2023</button>
+                </h2>
+              </div>
+              <div id="collapseFour" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">Keeping your knowledge current is one of the most important ways you can ensure higher return on investment (ROI) for any operations management project, including supply chain operations. Discussed below are few of the trending themes for 2023.</p>
+                  <br/>
+                  
+                  <ul>
+                    <li> <strong>Sustainability Emerges as a Mega Trend -</strong> Supply chains are moving forward to become more sustainable and reduce their environmental footprint with eco-friendly measures. The significant contribution of transportation and energy to greenhouse gas emissions is prompting stakeholders to focus more on green logistics, which has emerged as one of the major trends with implications for warehousing. An increasing number of warehouse operators are implementing next-generation energy management systems with gauges and timers for monitoring gas, electricity, water, and heat usage across the facility to achieve sustainable warehouses. While these approaches enable optimal utilization of resources to reduce waste, solar-powered and electric vehicles are finding increasing acceptance to help supply chains in reducing their carbon footprint. Companies are also focusing on environmental changes attributed to climate change that are affecting availability of resources and materials to disrupt flow and functioning of supply chains. The issue is paving way for climate-smart planning for supply chains and prompting companies to explore sustainable resources. These sustainability efforts are poised to help participants in contributing to environmental protection initiatives and enjoy customer loyalty. Moreover, consumer willingness to a premium for eco-friendly products is slated to help companies in driving revenues. In addition, the rise of green consumerism is anticipated to further drive efforts to make supply chains more sustainable.</li>
+                    <li> <strong>Shift From Linear to Circular Supply Chains - </strong> Circular supply chains are anticipated to garner notable attention on the expense of linear supply chains due to sustainability benefits, cost savings and stringent government regulations. Circular supply chains involve resale and reuse of discarded products. Depleting resources along with rising uncertainty and costs associated with raw materials are prompting various players to break down products and reuse them as raw materials. A circular supply chain allows companies to cut raw material costs and mitigate concerns regarding price volatility and availability. The circular supply chain helps companies in reducing waste and environmental footprint. The adoption of circular supply chains is poised to favored further by enforcement of stringent regulations related to waste disposal and recycling. Companies pursuing sustainable practices are slated to drive gains through compliance and government incentives along with consumers seeking sustainable and environmental-friendly products. </li>
+                    <li> <strong>Indispensability of Inventory Management Software - </strong> Inventory management (IM) is referred to as a business`s process for tracking everything the business owns, ranging from equipment to products to materials. Businesses utilize IM software for inventory costing, tracking assets, producing documentation critical to business functioning, and creating work orders. Maintaining a balance between the supply and demand sides is very important for businesses. Therefore inventory management offers assistance in optimal strategy formation and stock good ordering. When a strong and organized inventory management system is implemented, a holistic view of the stock at hand is offered to the manager and the clients derive improved satisfaction levels. The warehouse manager is offered an incisive level of transparency into the whole supply chain and financial and operational advantages are derived. The criticality of inventory control is to lower the blocking of financial flows. This frees capital which would otherwise have been tied up in excessive inventory besides optimizing the liquidity stance of the enterprise. The use of correct inventory tracking modules assists business owners in taking faster decisions about the stock lying abandoned in the warehouse.</li>
+                    <li> <strong>Growing Use of Robotics - </strong> Global supply chains along with supply chain management are anticipated to be transformed by significant investments in robotics. The domain is witnessing increasing adoption of autonomous vehicles and drones for seamless, streamlined logistics operations. Ongoing advancements are set to enable delivery of small goods by drones soon. Technological progress is anticipated to push autonomous or self-driving vehicles towards viable operations and enable them to make traffic decisions in an automated manner. Warehouse operators are expected to rely more on autonomous mobile robots to expedite labor-intensive and repetitive tasks. The productivity of supply chains is slated to receive a notable boost with the combination of robotic processes and sophisticated warehouse management software. Rather than replacing human workers, the move is likely to support human efforts as it accelerates repetitive, simple tasks. The use of robots for time-consuming tasks is anticipated to help companies in shifting human workers to higher-value and business-critical tasks to drive growth and improve customer experience.                  </li>
+                    <li> <strong>Growing Importance of Integration - </strong> Ongoing efforts by companies to form partnerships and join hands with third parties are likely to result in integration of new components within the supply chain. Companies are looking forward to collaborate with third-party service providers to save on costs and improve customer service. Increasing attention of companies to deliver inland services is anticipated to reduce freight costs and streamline the supply chain. These supply chain integrations hold high relevance for shippers relying on land and sea transportation for products. The integrated service strategy accelerates delivery times and improves customer service. With an eye on supply chain optimization, more companies are likely to join hands with third-party logistics providers (3PLs) and rely on 3PL technologies. Engaged in offering outbound and inbound freight management services and handling order fulfillment on different channels, providers of 3PL services are anticipated to work with companies for enhanced supply chain management. In addition, the use of 3PL-based technologies aids integration of several management systems through API and their connectivity to the cloud. The integration helps supply chain participants in addressing limitations associated with in-house solutions. Various players are also expected to collaborate with businesses with digital solutions for better delivery estimates and streamlined operations.</li>
+                    <li> <strong>Rise of SCaaS - </strong> The supply chain domain is witnessing increasing focus of companies on ‘Supply Chain-as-a-Service’ (SCaaS) model and outsourcing of activities such as production, inventory management and logistics. The outsourcing trend is poised to shrink the size of supply chain management teams, which would pay more attention to strategic decisions regarding improvement of supply chains. Smaller in-house teams would increase the significance and adoption of digital control towers intended to provide managers with comprehensive insights into supply chains. While the cloud is bound to provide supply chain managers with access to data, advanced technologies are slated to efficiently support SCM. The availability of SCM support on tap is anticipated to help players in avoiding infrastructure, maintenance and upgrade costs to cut overhead spending.</li>
+                    <li> <strong>Short Product Lifecycles Demand Faster Supply Chains - </strong> Despite different product lifecycles, businesses rely on a single supply chain for different products. However, shorter product lifecycles and associated requirements indicate the need for more efficient and swift supply chains. The changing landscape requires organizations to rethink supply chains for accommodating changing lifecycles and maintaining bottom lines. Shorter product lifecycle is creating the need for efficient supply chains and better processes for responding to regular requirement of new products. The scenario requires a large number of small businesses to adapt and shift their attention away from manual approaches for inventory tracking. These players can benefit from advanced tools like inventory management solutions that ensure efficient inventory tracking and automate order management. Businesses are also anticipated to streamline reverse logistics for efficient management of obsolete products. </li>
+                  
+                  </ul>
+                
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-----End of WriteUps  ====-->
+</div>
+
+<!--============================
+           Footer            
+=============================-->
+
+<footer-component></footer-component>
+
+
+<!---============================
+       ScrollTop        
+=============================--->
+
+<scrolltop-component></scrolltop-component>
+
+<!-- JAVASCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<script src="js/script.js"></script>
+<script src="./js/submenu_select.js"></script>
+<script src="./js/jquery.readall.js"></script>
+
+
+<!---WEB COMPONETNS-->
+<script src="./webcomponts/headerComponents.js"></script>
+<script src="./webcomponts/FooterComponent.js"></script>
+<script src="./webcomponts/ScrollToTop.js"></script>
+<script src="./webcomponts/dummytext.js"></script>
+<script src="./webcomponts/banner.js"></script>
+
+<script>
+  $('.textless').readall({
+    showheight: null,
+    showrows: 8
+  });
+
+
+</script>
+
+
+
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+      $('.goog-te-menu-value span:first').html('LANGUAGE');
+      $('.goog-te-menu-frame.skiptranslate').load(function () {
+        setTimeout(function () {
+          $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+        }, 100);
+      });
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+  }
+</script>
+</body>
+
+</html>

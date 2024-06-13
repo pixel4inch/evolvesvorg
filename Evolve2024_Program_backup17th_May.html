@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+         ================================================== -->
+    <meta charset="utf-8">
+    <title>Evolve 2024 - Empowering Global Innovation - September 2024, Santa Clara Convention Center</title>
+    <!-- Mobile Specific Metas
+         ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Evolv">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Evolv ">
+    <meta name="generator" content="Evolv">
+    <!-- theme meta -->
+    <meta name="theme-name" content="Evolv" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- PLUGINS CSS STYLE -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+    <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="plugins/aos/aos.css" />
+    <!-- CUSTOM CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custome.css" rel="stylesheet" />
+    <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+    <!---WEB COMPONETNS-->
+    <script src="./webcomponts/headerComponents.js"></script>
+    <script src="./webcomponts/FooterComponent.js"></script>
+    <script src="./webcomponts/ScrollToTop.js"></script>
+    <script src="./webcomponts/dummytext.js"></script>
+    <script>
+        function SavePower_Request_invite() {
+            //alert('Saved');
+
+
+            var vFirst_Name = $("#first_name").val();
+            var vLast_Name = $("#last_name").val();
+
+            var vLinkedin = $("#linkedInLink").val();
+            var vPosition = $("#Position").val();
+            var vCompany = $("#Company").val();
+            var vEmail = $("#email").val();
+            var vCountry = $("#country").val();
+            var vSource_Page = '';
+
+
+
+            //alert(vLast_Name);	
+            if (vEmail != null && vEmail != '') {
+                //alert(vReportName);
+                $.ajax({
+                    url: "Ajax_AddRequest_invite.asp",
+                    type: "POST", data: 'vSource_Page=' + encodeURIComponent(vSource_Page) + '&vEmail=' + encodeURIComponent(vEmail) + '&vFirst_Name=' + encodeURIComponent(vFirst_Name) + '&vLast_Name=' + encodeURIComponent(vLast_Name) + '&vLinkedin=' + encodeURIComponent(vLinkedin) + '&vPosition=' + encodeURIComponent(vPosition) + '&vCompany=' + encodeURIComponent(vCompany) + '&vCountry=' + encodeURIComponent(vCountry) + '',
+                    success: function (data) {
+                        //alert(data);
+                        //alert('Thanks for submitting!');	
+                        window.open("https://www.evolv.cc/loginLinkedin_User.asp?UsID=0&rcode=0&ecode=" + encodeURIComponent(vEmail));
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert(xhr.status);
+                        alert(thrownError);
+                        alert(xhr.responseText);
+                    }
+                });
+
+                //window.opener.location.reload(false);
+                //window.opener.location.reload()
+            }
+            else {
+
+                alert("values can't be left blank");
+
+            }
+        }
+    </script>
+
+	<style>
+		.degiblock{
+			padding-left:6px; 	
+		}
+		
+	</style>
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+    <!--============================
+         =            HEADER           =
+         =============================-->
+    <header-component></header-component>
+    <!--============================
+         PLACEKEEPTER BANNER
+         =============================-->
+    <div class="body-content">
+        <section class="section  pt-4 page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="w-100">
+                        <div class="pb-4 mt-4">
+                            <h1 class="font-display1 text-center  mx-auto"
+                                style="margin-bottom:7px !important; text-transform: capitalize; font-size: 32px !important;">
+                                EVOLVE 2024
+                            </h1>
+							<h5 class="para-display2 mb-0" style="font-weight:600">Empowering Global Innovation</h5>
+                            <h5 class="para-display2 mb-0" style="font-weight:600">September 2024, Santa Clara Convention Center</h5>
+							<!--p class="para-display1 mb-0 mt-3" ><b>Sessions are live-streamed to 30,000+ decision-makers and again amplified post-event to 800,000+ influencers globally.</b></p-->
+							
+                            
+                        </div>
+						
+						<hr class="divider" style="margin-top:5px !important"/>
+					
+						
+                       
+                        <div class=" py-2 ">
+                           
+                            
+						   
+							 <!--h1 class="font-display1   mx-auto mt-3 " style="margin-bottom:0px !important">
+								 PROGRAM DETAILS</h1-->
+								 <!--h5 class="para-display2 mb-0" style="font-weight:400; font-size: 16px !important;
+                           letter-spacing: 1.1px;"><b>MAIN HALL @ 1500 SEATS </b></h5>
+								 <h5 class="para-display2 mb-0" style="font-weight:400; font-size: 16px !important;
+                           letter-spacing: 1.1px;">
+							<b>MORNING POWER SESSIONS: 8:00 AM – 12:00 PM<br/>
+All Other Sessions and Innovator Pavilion Shall Remain Closed During Keynotes</b>
+							</h5-->
+                        </div>
+
+
+
+                     
+
+
+
+                        
+                        <div class="row programblock">
+							
+							
+							<div class="col-md-6 col-12  m-0">
+                                
+                                <div class="px-4 py-0  timeline">
+                                    <h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold" ><b>DAY 1: SEPTEMBER, 2023</b></h3>
+									<hr class="divider" style="margin-top:5px !important"/>
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold">HALL A</h3>
+									
+									<div class="w-100 mt-2">
+                                        <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                            <span class="d-block time"> 8:00 - 9:00 AM:</span>
+                                            <div class="d-flex flex-column">
+                                                <span class="d-block "><b>EVOLVE SV - THE GLOBAL INNOVATION GATEWAY</b></span>
+												
+												<br/>
+												<span class="d-block "><b>GRAND KEYNOTES </b></span>
+												<span class="d-block ">Keynotes or Fireside Chats featuring modern day Silicon Valley icons.</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+									
+									<div class="w-100 mt-2">
+                                        <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                            <span class="d-block time"> 9:00 - 9:40 AM:</span>
+                                            <div class="d-flex flex-column">
+                                                <span class="d-block "><b>Keynote  1 </b></span>
+                                            </div>
+                                        </div>
+                                    </div>
+									
+                                    <div class="w-100 mt-2">
+                                        <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                            <span class="d-block time">9:40 – 10:20 AM:</span>
+                                            <div class="d-flex flex-column">
+                                                 <span class="d-block "><b>Keynote  2 </b></span>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+									
+									<div class="w-100 mt-2">
+                                        <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                            <span class="d-block time">10:20 – 11:00 AM:</span>
+                                            <div class="d-flex flex-column">
+                                                 <span class="d-block "><b>Keynote  3 </b></span>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+									
+									
+									 <div class="w-100 mt-2">
+                                        <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                            <span class="d-block time">11:00 – 12:00 AM:</span>
+                                            <div class="d-flex flex-column">
+                                                <span class="d-block " style="font-weight:bold;">Global Venture Capital Landscape </span>
+												<span class="d-block " >What Venture Capitalists & Angels Are Funding</span>
+											
+                                                <span class="d-block " style="font-weight:bold;">Session 1 - Panel </span>
+												
+												
+                                            </div>
+                                        </div>
+                                    </div>
+									
+									 <!---div class="w-100 mt-2">
+                                        <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                            <span class="d-block time">10:50 - 11:00 AM:</span>
+                                            <div class="d-flex flex-column">
+                                                <span class="d-block " style="text-transform:uppercase">Session Changeover  </span>
+                                            </div>
+                                        </div>
+                                    </div---->
+									
+									<hr class="divider" style="margin-top:5px !important"/>
+									
+                                    <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                        <span class="d-block time">12:00 – 2:00 PM: </span>
+                                        <div class="d-flex flex-column">
+                                           <span class="d-block" ><b style="text-transform:uppercase">LUNCH</b> [In the Expo Area for all delegates]</span>
+											<br/>
+											<span class="d-block" style="font-weight:bold;">EXECUTIVE ROUNDTABLES </span>
+<span class="d-block" >Exclusive Closed-door Parallel Sessions. Each session will be 90 minutes. It will be a working lunch.</span>
+
+                                        </div>
+                                    </div>
+                                    
+                                   
+									
+									<div class="d-flex flex-column mr-2 nexttech-program-details">
+												
+										 <span class="d-block time">12:15 PM – 01:45 PM:</span>
+											 <div class="d-flex flex-column">												 
+												<span class="d-block "style="font-weight:bold;">UNICORN FOUNDERS ROUNDTABLE</span>
+<span class="d-block " style="font-weight:bold;">Session 2 - Panel</span>
+
+
+
+
+												<span class="d-block ">15 Unicorn Founders/CEOs with a Global Representation</span>
+												<span class="d-block ">Representing U.S.A., Europe, and Asia</span>
+												<span class="d-block ">Speaker Felicitation by Board/Advisory: 10 Minutes</span>
+												</div>
+										</div>
+										
+										<div class="d-flex flex-column mr-2 nexttech-program-details">
+												
+										 <span class="d-block time">12:15 PM – 01:45 PM:</span>
+											 <div class="d-flex flex-column">												 
+												<span class="d-block "style="font-weight:bold;">CEO ROUNDTABLE</span>
+<span class="d-block " style="font-weight:bold;">Session 3 - Panel</span>
+
+
+
+
+												<span class="d-block ">15 CEOs with a Global Representation</span>
+												
+												</div>
+										</div>
+										<hr class="divider" style="margin-top:5px !important"/>
+										<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-bottom:20px;padding-top:10px;">POST-LUNCH SESSIONS - 2:00 PM – 5:00 PM</h3>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">2:00 – 2:45 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">Deep-Tech Market Trajectories</span>
+                                            <span class="d-block ">Research-Based Perspectives For Today’s Entrepreneur.</span>
+											<span class="d-block ">What 200+ Domain Experts Are Saying.</span>
+											
+											<span class="d-block " style="font-weight:bold;">Session 4 – Trend Talk</span>
+                                        </div>
+									</div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">2:45 – 3:30 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">Corporate Venture Capital – Innovator <> Big Enterprise Synergies</span>
+                                            <span class="d-block " style="font-weight:bold;">Session 5 – Panel</span>
+                                        </div>
+									</div>
+
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">3:30 – 4:15 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">Today’s Angel Investor – Raising SAFE & Seed Rounds</span>
+                                            <span class="d-block " style="font-weight:bold;">Session 6 – Panel</span>
+                                        </div>
+									</div>
+
+
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">4:15 – 5:00 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">Thriving Innovation Ecosystems</span>
+                                            <span class="d-block ">A panel of ecosystem influencers from India, Japan, Europe, Israel, Canada, and the United States to share perspectives. Nations and cities are competing to draw innovators for driving future economic leadership and job creation.</span>
+											<span class="d-block " style="font-weight:bold;">Session 7 – Panel</span>
+                                        </div>
+									</div>
+									
+									<hr class="divider" style="margin-top:5px !important"/>
+									
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-bottom:20px;padding-top:10px;">HALL B</h3>
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-bottom:20px;padding-top:10px;">POST-LUNCH SESSIONS - 2:00 PM – 5:00 PM</h3>
+									 
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">2:00 PM – 2:45 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">Enterprise AI – A Constant Flux: Adopt & Adapt</span>
+											<span class="d-block " style="font-weight:bold;">Session 8 – Panel</span>
+                                        </div>
+									</div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">2:45 AM – 3:30 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">AI-generated Video Innovations – Stretching the Boundaries of Human Creativity</span>
+											
+                                            <span class="d-block " style="font-weight:bold;">Session 9 – Panel</span>
+											<span class="d-block ">Startup 1: 20 Minutes</span>
+											<span class="d-block ">Startup 2: 20 Minutes</span>
+											
+                                        </div>
+									</div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">3:30 PM – 4:15 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">Gen AI - LLMs & Compressed Models</span>
+											<span class="d-block " style="font-weight:bold;">Session 10 – Panel</span>
+                                        </div>
+									</div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">4:15 PM – 5:00 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">Gaming – AI Changing The Game </span>
+											 <span class="d-block " style="font-weight:bold;">Session 11 – Panel</span>
+                                        </div>
+									</div>
+									
+									<hr class="divider" style="margin-top:5px !important"/>
+									
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-bottom:20px;padding-top:10px;">INNOVATOR PAVILION & EXPO</h3>
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">11:00 AM – 5:00 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">200+ Startups & Enterprise Exhibitors</span>
+											
+                                            <span class="d-block ">Expo Will Be Open After Grand Keynotes </span>
+                                        </div>
+									</div>
+									<hr class="divider" style="margin-top:5px !important"/>
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">2:00 PM – 5:00 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">STARTUP & SCALE-UP PITCHFEST</span>
+											
+                                            <span class="d-block ">Present to a world-class expert audience of Silicon Valley Venture Capitalists, Angel Investors, Investment Bankers, Legal Counsel, Private Equity Funds, Senior Enterprise Executives. </span>
+											<span class="d-block ">Why Present - Investment; Strategic Partnering; Business Development; Go-to-Market; M&A; IPO </span>
+											<span class="d-block ">Featuring 30 Top Global Innovators: 10-Minute Fast-Pitch Slots Back-Back </span>
+											<span class="d-block ">Matching & Scheduling one-on-one via Program Mobile App. </span>
+											<span class="d-block ">You Must Be A Startup Pavilion Exhibitor To Participate. </span>
+                                        </div>
+									</div>
+									<hr class="divider" style="margin-top:5px !important"/>
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-bottom:20px;padding-top:10px;">VIP BANQUET DINNER</h3>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">6:00 PM – 9:00 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">VIP BANQUET DINNER – EXCLUSIVE SPONSORED EVENT</span>											
+                                           
+                                        </div>
+									</div>
+
+
+ 
+									
+									
+									
+									
+									
+									 
+                                </div>
+						</div>
+							
+                            <div class="col-md-6 col-12  m-0">
+                                
+                                <div class="px-4 py-0 timeline">
+
+                                <h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold">DAY 2: SEPTEMBER, 2023</h3>
+								<hr class="divider" style="margin-top:5px !important"/>
+								<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold">HALL A</h3>	
+								
+								<div class="w-100 mt-2">
+									
+									<div class="w-100 mt-2">
+                                        <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                            <span class="d-block time"> 8:00 AM – 8:30 AM:</span>
+                                            <div class="d-flex flex-column">
+                                                <span class="d-block "><b>Welcome by Evolve SV Chairman (15 Minutes)</b></span>
+												<span class="d-block ">Rainmakers: Day 1 Update & Day 2 Program Highlights (15 minutes)</span>
+												<br/>
+												<span class="d-block "><b>GRAND KEYNOTES </b></span>
+												<span class="d-block ">Keynotes or Fireside Chats featuring modern day Silicon Valley icons.</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">8:30 AM – 9:15 AM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block "style="font-weight:bold;">Sustainability </span>											
+                                            <span class="d-block ">The New Change-makers</span>
+											
+											<span class="d-block " style="font-weight:bold;">Keynote 4</span>
+                                        </div>
+									</div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">9:15 AM – 10:00 AM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">Keynote 5</span>
+											
+                                        </div>
+									</div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">10:00 – 11:00 AM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">India Inflect </span>
+											<span class="d-block " style="font-weight:bold;">Session 11 - Panel</span>
+											
+                                        </div>
+									</div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">11:00 AM – 12:00 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">The Innovator Mindset - Research Insights  </span>
+									
+											<span class="d-block " style="font-weight:bold;">Session 12 - Panel</span>
+											
+                                        </div>
+									</div>
+									
+									<hr class="divider" style="margin-top:5px !important"/>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">12:00 PM – 2:00 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">LUNCH</span>
+											
+                                        </div>
+									</div>
+									
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-top:10px;">EXECUTIVE ROUNDTABLES</h3>
+									<h3 class="para-display1 mb-0 text-left" style="padding-bottom:20px;">Exclusive Closed-door Parallel Sessions. Each session will be 90 minutes. It will be a working lunch.</h3>
+									 
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">12:15 PM – 01:45 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">CIO & CSO ROUNDTABLE</span>
+											<br/>
+											<span class="d-block " style="font-weight:bold;">Session 13 - Panel</span>
+											<span class="d-block ">Moderator – 10 minutes</span>
+											<span class="d-block ">Talk Time 90 minutes</span>
+											<span class="d-block ">Speaker Felicitation by Board/Advisory: 5 Minutes</span>
+                                        </div>
+									</div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">12:15 PM – 01:45 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">CMO ROUNDTABLE </span>
+											
+											<span class="d-block " style="font-weight:bold;">Session 14 - Panel</span>
+											
+                                        </div>
+									</div>
+									
+									<hr class="divider" style="margin-top:5px !important"/>
+									
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-top:10px;padding-bottom:20px;">POST-LUNCH SESSIONS - 2:00 PM – 5:00 PM</h3>
+									
+                                    <div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">2:00 PM – 3:00 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">Impact Investing </span>
+											
+											<span class="d-block " style="font-weight:bold;">Session 15 - Panel</span>
+											<span class="d-block " >Panelists from Enterprise CSR, Donor Advisories, Philanthropists, High Impact Charities</span>
+											
+                                        </div>
+									</div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">3:00 PM – 3:45 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">Cloud Security </span>
+											
+											<span class="d-block " style="font-weight:bold;">Session 16 - Panel</span>
+											
+											
+                                        </div>
+									</div>
+									
+									 <div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">3:45 PM – 4:45 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">Age of Bio-convergence – Future Healthcare Disruptions </span>
+											
+											<span class="d-block " style="font-weight:bold;">Session 17 - Panel</span>
+											
+											
+                                        </div>
+									</div>
+									<hr class="divider" style="margin-top:5px !important"/>
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-top:10px;padding-bottom:20px;">HALL B</h3>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">2:45 PM – 3:30 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">Artificial Intelligence & Future of Education</span>
+										
+											<span class="d-block " style="font-weight:bold;">Session 18 - Panel</span>
+											
+											
+                                        </div>
+									</div>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">3:30 PM – 4:15 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">Quantum Computing – Are We Ready?</span>
+										
+											<span class="d-block " style="font-weight:bold;">Session 19 - Panel</span>
+											
+											
+                                        </div>
+									</div>
+
+									<hr class="divider" style="margin-top:5px !important"/>
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-top:10px;padding-bottom:20px;">INNOVATOR PAVILION & EXPO</h3>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">11:00 AM – 5:00 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">300 Startups & Enterprise Exhibitors</span>
+											
+											<span class="d-block " >Expo Will Be Open After Grand Keynotes </span>
+											
+											
+                                        </div>
+									</div>
+									<hr class="divider" style="margin-top:5px !important"/>
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">2:00 PM – 5:00 PM:</span>
+                                        <div class="d-flex flex-column">
+                                            <span class="d-block " style="font-weight:bold;">STARTUP & SCALE-UP PITCHFEST</span>
+											
+											<span class="d-block " >Present to a world-class expert audience of Silicon Valley Venture Capitalists, Angel Investors, Investment Bankers, Legal Counsel, Private Equity Funds, Senior Enterprise Executives. </span>
+											
+											<span class="d-block " >Why Present - Investment; Strategic Partnering; Business Development; Go-to-Market; M&A; IPO</span>
+											<span class="d-block " >Featuring 30 Top Global Innovators: 10-Minute Fast-Pitch Slots Back-Back</span>
+											<span class="d-block " >Matching & Scheduling one-on-one via Program Mobile App. </span>
+											<span class="d-block " >You Must Be A Startup Pavilion Exhibitor To Participate.</span>
+                                        </div>
+									</div>
+									<hr class="divider" style="margin-top:5px !important"/>
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-top:10px;padding-bottom:20px;">Pitchfest Hall C</h3>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">Early Stage (SAFE & Seed Rounds; Legal Guidance)</span>
+                                        
+									</div>
+									<hr class="divider" style="margin-top:5px !important"/>
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-top:10px;padding-bottom:20px;">Pitchfest Hall D</h3>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+                                        <span class="d-block time">Mid-Late Stage (Series B+ <> Enterprise Partnering <> Exploring Exit Options)</span>
+                                        
+									</div>
+									<hr class="divider" style="margin-top:5px !important"/>
+									<h3 class="para-display1 mb-0 text-left" style="font-weight:800;font-size:18px;font-weight:bold;padding-top:10px;padding-bottom:20px;">VIP BANQUET DINNER</h3>
+									
+									<div class="d-flex mr-2 nexttech-program-details">
+									<span class="d-block time">6:00 PM – 9:00 PM:</span>
+                                        <div class="d-flex flex-column">
+										<span class="d-block " style="font-weight:bold;">VIP BANQUET DINNER – EXCLUSIVE SPONSORED EVENT</span>
+										</div>
+                                        
+									</div>
+ 
+									
+										
+											</div>
+                                        </div>
+										
+										
+                                        
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+
+
+                      
+<hr class="divider" style="margin:10px 0 10px 0 !important;" />
+						
+						
+						
+						
+						<a data-toggle="collapse" href="#influencerProminent" role="button" aria-expanded="false" aria-controls="collapseExample"> <h3 class="font-weight-bold main-font-color my-3 w-100 "> SPEAKERS (A-Z) </h3>
+						</a>
+						
+						<div class="collapse " id="influencerProminent">
+							
+							
+							<script  src="https://code.jquery.com/jquery-3.7.0.js"></script>
+						  
+						  <div class="w-100">
+                                <div id="influencer_speakers"
+                                    class="speaker-evolv-submit  d-flex flex-wrap  justify-content-lg-center  justify-content-xl-center justify-content-md-center justify-content-center">
+
+                                    
+
+
+                                </div>
+
+
+                            </div>
+							<!--h3 class="font-weight-bold main-font-color mt-1 mb-3  w-100">Stay tuned for more speakers announced daily! </h3--->
+							
+							
+							
+						</div>
+						
+	<hr class="divider" style="margin:10px 0 10px 0 !important;" />							
+						<div class="w-100">
+							<h3 class="font-weight-bold main-font-color my-1 w-100">OUR SPONSORS</h3>
+							
+							
+							
+						</div>
+						
+						
+<hr class="divider" style="margin:10px 0 10px 0 !important;" />						
+						
+                        <div class="w-100 py-0">
+                           <a data-toggle="collapse" href="#whyattend" role="button" aria-expanded="false" aria-controls="collapseExample"> <h3 class="font-weight-bold main-font-color my-1 w-100">WHY ATTEND? </h3></a>
+                            <div class="collapse" id="whyattend">
+							  <div class="p-3  text-left">
+								  <p class="font-weight-bold ">Knowledge & Global Insights:</p>
+								  <p class="mb-2">These sessions will foster knowledge exchange, stimulate insightful discussions, and facilitate collaboration between industry leaders, policymakers, academics, and entrepreneurs.</p>
+								  
+								   <p class="font-weight-bold ">Leading-Edge Innovator Presentations:</h3>
+								  <p class="mb-2">Enjoy keynote style presentations from the world?s leading deep-tech innovators changing technology and business landscapes. A unique opportunity to meet and explore collaborative opportunities..</p>
+								  
+								   <p class="font-weight-bold ">Networking:</h3>
+								  <p class="mb-2"> Connect with industry leaders, innovators worldwide, heads of government institutions, and many mega influencers to forge valuable relationships and exploring potential collaborations.</p>
+								  
+								   <p class="font-weight-bold ">Inspiring Keynotes & Trending Sessions:</h3>
+								  <p class="mb-2"> Hear from inspirational keynote speakers who are driving positive change in today?s industry. Gain valuable insights and perspectives on what?s happening on the global theater. </p>
+
+							  </div>
+							</div>
+
+
+                        </div>
+			
+			<hr class="divider" style="margin:10px 0 10px 0 !important;" />		
+			
+			 <div class=" pt-2 mb-2">
+                            
+                        
+						
+			</div>
+
+						
+
+
+
+                    </div>
+
+                    <!------->
+
+
+</div></div></div>
+
+
+                </div>
+
+
+
+
+</div></div></div>
+
+
+
+
+                <br />
+
+
+
+
+
+            </div>
+        </section>
+    </div>
+
+    </div>
+    <!--====  End of Page Title  ====-->
+    <!--============================
+         Footer            
+         =============================-->
+    <footer-component></footer-component>
+    <!---============================
+         ScrollTop        
+         =============================--->
+    <scrolltop-component></scrolltop-component>
+    <!-- JAVASCRIPTS -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+    <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+    <script src="plugins/google-map/gmap.js"></script>
+    <script src="js/script.js"></script>
+    <script src="./js/submenu_select.js"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+                $('.goog-te-menu-value span:first').html('LANGUAGE');
+                $('.goog-te-menu-frame.skiptranslate').load(function () {
+                    setTimeout(function () {
+                        $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+                    }, 100);
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+</body>
+
+</html>

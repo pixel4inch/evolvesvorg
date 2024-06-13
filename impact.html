@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+  
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <header-component></header-component>
+
+ 
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var banner = '';
+        var datagrapic = '';
+        var domain='';
+        var gialink="";
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (value.Event == "impactinvest") {
+            banner += `<employee-card  title=" ` + value.eventtitle + '"  date= " ' + value.eventdate + ` "> </employee-card>`;
+            datagrapic +=`<img src="` + value.eventdatagraphic + `" class="img-fluid border shadow-sm"/>`;
+            gialink +=`<dgfooter-card glink=" ` + value.eventdatagraphiclink + `  "></dgfooter-card>`
+              if( value.eventdomainlink !== undefined ){
+                domain +=`  <div class="w-100"> <iframe class="domain-iframe"  src="` + value.eventdomainlink + `"></iframe> </div>`
+              }
+     
+          }
+        });
+        $('#pagebanner-block').html(banner);
+        $('#datagraphic-block').html(datagrapic);
+        $('#domain-experts').html(domain);
+        $('#gialinkblock').html(gialink);
+
+      }).fail(function () {
+        document.write("An error has occurred.");
+      }); 
+    }); 
+  </script>
+
+  <!--============================
+    PAGE BANNERS
+=============================-->
+  <section class="pagebanners">
+    <div class="container">
+      <div class="row mx-0" id="pagebanner-block">
+
+      </div>
+    </div>
+  </section>
+
+  <!--============================
+   DATA GRAPHIC
+=============================-->
+  <section class="section placekeeper_section page-title">
+    <div class="container">
+      <div class="row align-items-center m-0 ">
+        <div class="datagraphic-block" id="datagraphic-block">
+         
+        </div>
+
+        <div class="w-100   text-center" id="gialinkblock">
+         
+       </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <!--================================
+=            Page Title            =
+=================================-->
+
+<section class="section" id="writeups">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+      
+          <div id="accordionExample" class="accordion custome-accordion border-0">
+
+          
+            <div class="card">
+              <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Impact Investing. Did You Know that You Can Be a Part of the Solution to Global Issues?</button>
+                </h2>
+              </div>
+              <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                <div class="card-body p-5">
+                  <p class=" m-0">Impact investing emerged as a codified concept in the year 2008 and since then has gained momentum as a strategy that allows people to invest their money in a green company and/or a social enterprise. Impact investing is just like any other investment, be it debt or equity with the only difference being in the funds directed towards specific purposes such as supporting positive environmental or social changes rather than generating only profits. For long, countless communities worldwide have either been exploited or underinvested and investors and UHNW individuals are beginning to realize that investing in such communities is necessary. Impact investing can develop into an opportunity for non-HNW investors as well.  Impact investing is gradually becoming mainstream, after remaining a niche domain for quite some time now. ‘Social impact’ signifies the positive influence on the world or solutions for the world’s complex problems. It is the action which takes communities closer to environmental and economic sustainability. Enterprises driving such changes have the same intent of generating profits for shareholders, similar to other forms of investments that are commercially driven. The difference is in the companies aiming to achieve such profits in a sustainable and environment friendly way. An example of such an enterprise could be an end-to-end waste management company providing services to the community.</p>
+                    <br/>
+                  <p class=" m-0">Impact investing constitutes a part of ESG investing. While ESG navigates companies’ ESG related risks and opportunities impact investing focuses on either the environmental or social, or both. In several countries, there is a minimum investment ticket size. Also in most countries, it is the fund manager who makes investment decisions based on the terms in the investment management agreement signed with the investor. The investor has only a discretionary role to play in determining where the funds can be invested. Maintaining balance between financial and environmental/social sustainability is key to the success of an impact fund. Also, impact funds are considered high-risk investments because it is mostly the start-ups that attract them. </p>
+                  <br />
+
+                  <p class=" m-0">Impact investing has lately become highly attractive for financiers that are well-capitalized so much so that even organizations like the Aspen Institute, G8 and the WEF are looking for ways to become involved. For investment banks, foundations, UHNW individuals, and venture capitalists, impact investing makes complete sense for several reasons. It provides them a means for becoming involved with companies solving the most pressing issues of the world like extreme poverty, climate changes and limited education and healthcare access among others, which are impossible to solve solely through government funds. Private capital is necessary for meeting the SDGs in developing nations. Also, through impact investing, investors would be able to achieve market rate returns because they would be investing in enterprises developing solutions for the most current problems. Such companies are bound to be tomorrow’s financial winners. </p>
+
+
+                    <br/>
+
+                    <p class=" m-0">The funding type also helps investors to grow the number of recipients in a sustainable manner. Whether it is for the small healthcare start up, a company invested in developing solutions for energy problems or a small-holder agriculturist, the investing would help create an inclusive progress circle. Impact investing also enables coming together of people with diverse backgrounds, Investors would have the opportunity to broaden their horizons, think beyond the sectors which so far dominated their portfolios, and drive positive social change and heal the planet for future generations.  In the years ahead, impact investing will increase to account for a considerable share in the investments sector, in which PE (Private Equity) firms continue to be dominant. The US$360 billion worth impacting investing in 2022 is still a tiny fraction of the US$3 trillion managed by PE firms. </p>
+                </div>
+              </div>
+            </div>
+
+          
+            <div class="card">
+              <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">You Can Now Measure the Value of Impact Investing</button>
+                </h2>
+              </div>
+              <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">Impacting investing does not mean that investors make no returns on their investments, as it is now possible to track outcomes. The investing type allows for measurable social returns. The outcome generated by a project supported by impact investing would serve projects in the future, by demonstrating what type of environmental or social return the strategy yielded in the past. The Global Impact Investment Network has been standardizing metrics. New tools are also being developed for making investing easier for people. These tools are for helping people invest in a way to increase social good for the money, without compromising their savings plan.</p>
+                  <br/>
+                  <p>Impact investing will therefore continue to scale helped by new guidance and regulations that are trying to bring in more standardization.  However, measurement remains the most difficult part for the industry. For the present, the investing that focuses on the categories of ESG (Environmental-Social-Governance) enables tracking of returns via different exchange traded funds. Enterprises that have had social funds have been more profitable than those backed by traditional funds. A greater percentage of actively managed ESG funds are able to surpass their benchmarks compared to the traditional funds. Private markets are also witnessing similar interest.  Also, lately, there has been an evidence-based approach for estimating the environmental and social returns, helping investors to do financially well while doing good. For long, there had not been an analogue for estimating the environmental and social rewards hoped for, with impact investing, in dollar terms, unlike in the business world where there are quite a few universally accepted methods and tools for calculating IRR. The crude method of forecasting gains in social funds relied on guesswork mostly. Investors found little useful information to evaluate a company for its suitability when they looked into its track record on environmental and social front since the reporting on ESG issues is limited to information pertaining to their commitments and the processes they follow. </p>
+                  <br/>
+                  <p>The information rarely scores useful in gauging the actual impact made by these companies on the society or the environment. These have been the analytical shortcomings with impact investing. However, major industry players have stepped up and have developed means for better impact measurement. Root Capital, the Omidyar Network, the MacArthur Foundation, Skopos Impact Funds, the WEF, the Rockefeller Foundation, and Brides Impact+ have been the notable industry players who have been trying to develop tools for impact measurement. The companies were able to produce several interesting metrics such as the SROI for instance, short for Social Return on Investment. Another attempt made to better understand impact was by the Impact Management Project, which was a collaborative approach started in the year 2016, by major investors and foundations worldwide, aimed at developing practical tools for implementing the best impact investing practices. Building on the work of this project, the Rise Fund and the Bridgespan Group, have attempted to bring the approach of measuring financial performance to social & environmental impact assessment. </p>
+                  <br/>
+                  <p>The Rise Fund is an impact investing fund for companies in growth-stage while Bridgespan Group is an international social impact advisory enterprise. Through trial & error, the companies developed something called an IMM or the Impact Multiple of Money, a tool that demonstrates value from placing social underwriting on same footing as the financial underwriting. The IMM constitutes a six-stage process for social rewards estimation. The process starts with assessing the scale and relevance of the potential project/service/product followed by identification of the target outcomes, whether environmental or social. The stage involves determining the environmental and social outcomes intended and seeing if the research that already exists verifies if such outcomes are measurable and achievable. Over the past many decades, non-profits, policy makers like the US DoE’s Investing in Innovation Fund, and a few foundations relied on such past researches for guidance for social funding.   This movement of ‘what works’ led to the creation of social-outcome measurement tools. The tools were developed by social policy research organizations, the Mathematica Policy Research, and the Abdul Latif Jameel Poverty Action Lab. </p>
+                  <br/>
+                  <p>After the economic value for the society is assessed, adjustments are made for risks. Subsequently, terminal value is estimated and social return on each spent dollar is calculated in the final step. The IMM has the potential to emerge into a method that can help advance social investing. It is a forward looking method for estimating (even before any amount is committed), the environmental and social good’s financial value. It would help social impact investors, be in institutions or corporations, to evaluate the projected returns on the opportunity they have been considering. The Rise Fund performs qualitative assessment of investments and filters out the deals and only such companies with social purpose and an impact that is potentially measurable get the nod for further IMM evaluation. </p>
+                  <br/>
+                  <p>Also, impact of a program is not merely about the numbers it touched but about the improvement it was able to achieve. Monetizing environment and social costs and benefits raises certain complex questions such as does the extra income earned have greater positive impact on those in developing and under-developed countries vs. someone in developed country. There is also the question about the VSL or the Value of a Statistical Life estimated by health economists, which varies considerably across countries. Why must the human lives be differently valued across geographies? The IMM tool tried to address this question, by creating a global weighted average value of life saved instead of employing the metric that is country-specific. This prevents tipping of investments in developed markets’ favor. The Rise Fund had also looked into how people who are impoverished actually spend more than those with higher incomes. </p>
+
+                </div>
+              </div>
+            </div>
+
+       
+            <div class="card">
+              <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Trending Trends for 2023</button>
+                </h2>
+              </div>
+              <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">Discussed below are few emerging trends in this space.</p>
+                  <br/>
+                  
+                  <ul>
+                    <li> <strong>Impact Investors to Focus More on Programs Addressing Climate Crisis -</strong> Addressing issues of climate change and environmental crises will be the main focus of impact investors in 2023. Through the end of this decade, aroundUS$700 billion extra funding would be required each year, from governments and the private sector, for repairing and protecting the failing ecosystems of the planet. Investors therefore are likely to withdraw their focus on programs in industries that are heavy carbon-emitting. Such companies face higher risk of asset stranding. There can be additional risks of changing regulations and resource landscape and also fading consumer interest. Investors would therefore invest more on programs concerning climate crises. However, there is another risk associated with the ESG investment momentum that is gathered around COP26. The growing popularity of investing in climate projects could lead to neglect of other sectors which are equally significant. </li>
+                    <li> <strong>Newer Impact Metrics to Emerge - </strong> The present impact metrics continue to look at information that is backward focused instead of forward looking. Past performance does not always reflect a company’s impact trajectory. However, going forward, impact projections would be increasingly integrated into investment decisions. Systematic impact-related data capture methodologies would be employed for interpreting as well as projecting impact data. Impact metrics that are forward-looking also help companies better align with the SDG goals of the UN and other international standards and also more effectively track climate goals. Nonetheless, recently, the ambiguity in the sector came to light when several products with claims of being ‘impact’ flooded the market. Such greenwashing issues can be addressed only by establishment of ground rules and providing greater transparency, which is possible by initiatives like EU Green Taxonomy and the SFDR among others. The metrics and standardization can offer the consensus on what economic activities really count as sustainable. </li>
+                    <li> <strong>Compensation for Fund Managers Will Witness Development of Newer Tools - </strong> There will also emerge newer ways of linking impact and compensation to the fund managers. Even though impact financing professionalized to a considerable extent in the recent years, there has been a failure in incorporating measurement and non-financial incentives for compensating fund managers. Going forward, the right schemes of incentives, linking impact to fund performance, will help understand that the investment choices were unbiased and the impact outcomes have been given the required weightage in decision making. The VC and PE funds compensation structure is dependent on the fund’s financial successes. If a fund does not meet the set impact hurdle, a part of the performance compensation to fund manager would be forfeited. However, this all-or-nothing methodology will make way for alternative compensation methods. These methods would scale the results achieved to impact objective, or follow the pro-rata method. Funds employing such schemes translate the achievements across various impact goals into numeric scores allowing for linear increase in variable pay in conjunction with impact results. There have recently been certain tools allowing funds to measure their investment impacts, even though they have not been standardized yet. The IRIS+ of GIIN is an example. Such tools are already in use for creating comparable scorecards, criteria and frameworks needed for performance assessment of impact fund. Another method of compensation to fund managers is to offer impact bonus issued at different points in time, throughout the fund’s life. </li>
+                    <li> <strong>New Investment Avenues Emerge for Impact Investors - </strong> The coronavirus pandemic highlighted the many business practices harming the planet and people. Investors were drawn towards investing in companies developing and implementing solutions for addressing such challenges. The pandemic thus expanded opportunities for investors for promoting environmental and social causes, including community well-being, planet protection, diversity and equity among others. The pandemic thus, did not in any way disrupt the already existing trend of increasing appetite for investments that are socially responsible. It only strengthened it further. Going forward, corporations and businesses would come under greater scrutiny with investors and consumers watching them more keenly. In order to stay relevant, the businesses would be compelled to change how they conduct business for better reflecting their environmental and social priorities. Nonetheless, as with other sectors, impact investing also needs due diligence and caution. </li>
+                    <li> <strong>Innovation Speeds Up - </strong> Several new innovative funds have emerged in recent years. In the U.S. for instance, around 75 sustainable funds were launched in 2020. There are now over a thousand ESG indices and several ETFs (Exchange Traded Funds) created for tracking those indices. Over 200 more new ESG funds will be launched by asset managers in the U.S. by 2023. Such an extended choice is good for investors. </li>
+                    <li> <strong>Increasing Consolidation to help Standardization - </strong> There is currently no standard definition for key principles and concepts in the impact investing sector. Investors are flooded by an increasing amount of information and the language has not been straightforward. There are major differences in what can be considered as the E, S or the G factor and the weight of each, even among the key ratings providers. Although efforts have been taken towards standardization, consolidation of the industry will play a major role in bringing about much sought after standardization. The many acquisitions taking place in the industry indicate the shift away from the several smaller firms to just a few larger companies thus promising to ultimately bring in uniformity. </li>
+                    <li> <strong>Shareholders Become More Active - </strong> Shareholder activism has been increasing lately and has been wielding a direct influence upon operations of companies. There is a growing pressure on businesses to demonstrate equity. Based on the size of business for instance, all public companies in the state of California are now required to have a minimum number of women on the board. If getting women on board is what shareholders are able to do today what more they might be able to achieve in the years ahead can only be imagined.</li>
+
+                  </ul>
+                
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--====  End of Page Title  ====-->
+
+
+
+  <!--================================
+   PROGARAM DETAILS
+=================================-->
+
+<section class="section bg-light">
+  <div class="container">
+   <eventcolapse-component></eventcolapse-component>
+  </div>
+
+</section>
+
+
+<!--================================
+=    DOMAIN EXPERTS
+=================================-->
+
+<section class="section pt-4 " id="domain-experts">
+  
+</section>
+  <!--============================
+	           Footer            
+=============================-->
+
+  <footer-component></footer-component>
+
+
+  <!---============================
+           ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+  <script src="./js/jquery.readall.js"></script>
+
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+  <script src="./webcomponts/banner.js"></script>
+
+  <script>
+    $('.textless').readall({
+      showheight: null,
+      showrows: 8
+    });
+
+
+  </script>
+
+
+
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+$('#google_translate_element').bind('DOMNodeInserted', function(event) {
+$('.goog-te-menu-value span:first').html('LANGUAGE');
+$('.goog-te-menu-frame.skiptranslate').load(function(){
+    setTimeout(function(){
+    $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');    
+    }, 100);
+});
+});
+});
+</script>
+
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+</body>
+
+</html>

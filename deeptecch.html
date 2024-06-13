@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+  
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <header-component></header-component>
+
+
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var banner = '';
+        var datagrapic = '';
+        var domain = '';
+        var gialink = "";
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (value.Event == "deeptech") {
+            banner += `<employee-card  title=" ` + value.eventtitle + '"  date= " ' + value.eventdate + ` "> </employee-card>`;
+            datagrapic += `<img src="` + value.eventdatagraphic + `" class="img-fluid border shadow-sm"/>`;
+            gialink += `<dgfooter-card glink=" ` + value.eventdatagraphiclink + `  "></dgfooter-card>`
+            if (value.eventdomainlink !== undefined) {
+              domain += `  <div class="w-100"> <iframe class="domain-iframe"  src="` + value.eventdomainlink + `"></iframe> </div>`
+            }
+
+          }
+        });
+        $('#pagebanner-block').html(banner);
+        $('#datagraphic-block').html(datagrapic);
+        $('#domain-experts').html(domain);
+        $('#gialinkblock').html(gialink);
+
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+
+  <!--============================
+    PAGE BANNERS
+=============================-->
+  <section class="pagebanners">
+    <div class="container">
+      <div class="row mx-0" id="pagebanner-block">
+
+      </div>
+    </div>
+  </section>
+
+  <!--============================
+   DATA GRAPHIC
+=============================-->
+  <section class="section placekeeper_section page-title">
+    <div class="container">
+      <div class="row align-items-center m-0 ">
+        <div class="datagraphic-block" id="datagraphic-block">
+
+        </div>
+
+        <div class="w-100   text-center" id="gialinkblock">
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--================================
+         WHATS TRENDING
+=================================-->
+
+<section class="section" id="writeups">
+    <div class="container">
+      <div class="row pb-4 ">
+        <div class="col-sm-12 m-auto text-center -3">
+          <!-- Page Title -->
+          <h1 class="font-display2 ">WHAT'S TRENDING</h1>
+
+
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+
+          <div id="accordionExample" class="accordion custome-accordion border-0">
+
+
+            <div class="card">
+              <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Are You
+                    Ready to Catch the Next Big Wave of Innovation? </button>
+                </h2>
+              </div>
+              <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                <div class="card-body p-5">
+                  <p class=" m-0">A significant portion of conversations around startups and entrepreneurship is focused
+                    on DeepTech. This investment ecosystem is in the news for both its immense potential to generate
+                    higher revenues & ROI and for its need for higher seed and early stage funding. Currently, only a
+                    small percentage of technology funds reach this ecosystem. In India, the figure stands at 11.8%. So
+                    why is the DeepTech startup ecosystem different from the mainstream technology startup ecosystem?
+                    Primarily because their lifecycles and risk profiles are different. DeepTech startups have longer
+                    gestation periods, are R&D intensive, capital intensive and are riskier with higher possibilities of
+                    failure. Nevertheless, these startups have the potential to transform industries, societies and
+                    economies, which is a very important attribute given the backdrop of several urgent and pressing
+                    issues facing the world today. Startups that are successful have the potential to earn exponential
+                    profits. DeepTech startups use cutting edge technologies like artificial intelligence (AI),
+                    robotics, quantum, blockchain, Internet of Things (IoT), drones and augmented reality (AR) to build
+                    products and solutions that overthrow current challenges and disrupt the market. The strength of
+                    DeepTech can be highlighted by the last generation of new platform technologies such as PCs, silicon
+                    chips, the Internet and mobile technologies, and reflects the potential it has for solving or
+                    minimizing some of the major world problems such as climate change, global warming, disease
+                    prevention and treatment, enough food for the growing world population and addressing the needs of
+                    an aging population.</p>
+                  <br />
+
+                  <p class=" m-0">DeepTech startups are established with a vision to solve seemingly intractable
+                    societal or environmental challenges. It is therefore of little surprise why the investment fever in
+                    Silicon Valley and other major investment hubs like Shanghai in China is moving towards DeepTech.
+                    Truly inventive DeepTech startups will see impressive growth and global investments in this space
+                    will quadruple in the coming years. While mainstream tech investments are sensitive to economic
+                    climate, DeepTech once established will remain resilient as solutions to pressing issues are always
+                    in demand, even more so in a weak economic climate fraught with challenges. A fine example of
+                    DeepTech innovation is a startup that can apply AI to forecast natural disasters or use molecular
+                    imaging technologies to identify a disease or its predisposition that is beyond the capability of
+                    available diagnostic testing methods. Addressing a challenge is the starting point from where
+                    DeepTech startups can make a disruptive beginning. So what and where are the current challenges we
+                    face today? </p>
+                  <br />
+
+                  <ul>
+                    <li>Labor shortages & supply chain issues</li>
+                    <li>Global chip dependency & the fight for quantum supremacy</li>
+                    <li>Need for climate safe technologies </li>
+                    <li>Good health and well-being </li>
+                    <li>Sustainable cities and communities</li>
+                  </ul>
+
+                  <br />
+
+                  <p class=" m-0">Innovative entrepreneurs seeking to transform the above challenges into opportunities
+                    via development of disruptive products and solutions have a strong potential to grow their startups
+                    into successful businesses.
+
+                  </p>
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">India Enters Interesting Phase of the DeepTech Bandwagon</button>
+                </h2>
+              </div>
+              <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">The Indian DeepTech space is entering an interesting phase given the rapid pace of industrialization, infrastructure development and the internet economy threatened by the disruptive changes anticipated in the wake of climate change and rise of metaverse. The domestic DeepTech ecosystem has garnered a massive 55% growth in the previous decade and runs parallel to the well-developed European, Chinese, Israeli and the US markets. The bright minds at work in start-ups and university labs have contributed immensely to the growth of the Indian DeepTech start-up ecosystem, forcing the country to make commendable inroads in areas including clean energy, cold chain management, drone delivery and climate action. The Indian DeepTech innovation has truly generated dynamic sustainability solutions with remarkable outcomes. The country currently can boast of making headway in CRM, mobile and cloud tools deployment across various industries for unparalleled connectivity, computing power and storage solutions. However, not being the end-of-road but rather the beginning of a new era, India needs more DeepTech start-ups for further digitalization. </p>
+                  <br />
+                  <p class="m-0">Furthering the DeepTech journey would require India to find more capital for investment, as the greater the access to funding the most remarkable the results. Interestingly, the investment environment is positive, as Indian investors are more than willing to take risk, defy perceptions and prove new theories. India also needs stronger policy making, and the Indian Government is just fulfilling the gap with national initiatives including Make-in-India, Return-to-India and Atmanirbhar Bharat that are designed to expand and enrich the Indian start-up ecosystem. The introduction of AI-powered eGovernance platform, the UPI system, and other soon to be introduced digital investments such as official digital currency of India represent the initiatives of the Indian Government that showcase Indian social DeepTech applications to transcend the enterprise applications of the Deep Technologies.</p>
+                  <br />
+                  <p class="m-0">The Indian DeepTech future is vibrant given the progress made by DeepTech start-ups and a new class of entrepreneurs in multiple sectors that has contributed immensely to the organic growth of the DeepTech ecosystem in India. Further growth would come, as, in their pursuit to hone niche tech capabilities and broaden their product offering as they pursue digitalization; several large corporations and enterprises are expected to acquire DeepTech start-ups that hold potential to solve some of the world’s most complex problems. Some attractive domains in the Indian DeepTech landscape include cloud-native technologies, quantum computing, cybersecurity mesh and customer data platforms.</p>
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Cutting
+                    Edge Technologies Powering the DeepTech</button>
+                </h2>
+              </div>
+              <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">The DeepTech start-ups mostly work in areas including AI, computer science,
+                    agriculture, life sciences, chemistry, clean energy, aerospace and industry, and often have
+                    applications that can benefit more than one sector. Being game changers, DeepTech start-ups can be
+                    seen using aerospace technologies to monitor crop conditions or advanced AI to monitor a patient or
+                    produce clean energy. Unlike shallow tech start-ups, DeepTech companies often own IPs such as
+                    patents, and come into being after having spent several years in a laboratory or researching and
+                    testing a novel technology. DeepTech start-ups also need huge, long-term capital investments to
+                    support research and to being their technologies to commercial markets. Since their technologies are
+                    disruptive in nature, the time to market frame tends to be longer for commercial success.</p>
+                  <br />
+                  <p class="m-0">On the positive side, once these companies overcome hurdles and finally commercialize
+                    their technology, they bring entirely new concepts to market that disrupt the existing applications
+                    or working models. These technologies are difficult replicate, do not face competition, and
+                    therefore create higher value for companies. A case in point is fintech start-ups that used
+                    blockchain technologies to allow users to bank from their smartphones with highest level of security
+                    with decreased costs. Their model disrupted the conventional way of banking interlaced with high
+                    banking charges and cumbersome bureaucratic processes. Consider DNA sequencing, CAD (computer-aided
+                    design) and 3D printing that have increased the accessibility of and accelerated the design, testing
+                    and prototype stages.</p>
+                  <br />
+                  <ul>
+                    <li><strong> Convergence of Technologies & Approaches -</strong> The convergence of diverse
+                      technologies and approaches extends options, fuels innovation and solves issues that are
+                      challenging for existing options to overcome. DeepTech relies heavily on convergence of different
+                      approaches that starts with problem solving or the design step through identification & framing of
+                      the problem, context analysis, and creation of an idea. While science brings the theory to support
+                      the solution, engineering aids commercial and technical viability. Companies are maintaining a
+                      consistent focus on science and engineering right from the start of problem solving as they can
+                      remarkably influence potential solutions. DeepTech is also betting on emerging technologies for
+                      better outcomes from their endeavors. Cognition and computation are transforming industries and
+                      have resulted in exciting developments like robotics, the IoT and autonomous vehicles with their
+                      integration with motion and sensing. DeepTech innovation is set to receive a major stimulus from
+                      the progress associated with nanotechnology coupled with gene sequencing, writing and editing
+                      techniques. Ongoing efforts by the researcher community to develop next-generation tools for
+                      enabling designs and innovations at the nano scale are poised to help ventures in tapping the
+                      nature for sophisticated product designs. Addition of the aspect with intriguing capabilities in
+                      cognition, computation, motion, sensors, energy and matter is slated to help DeepTech in providing
+                      answers to pressing problems. The integration of AI and bio-printing for making predictions
+                      related to folding of proteins is bound to transform medicine and drug discovery. The use of AI
+                      for designing genetic constructs along with robotic process automation for building and testing
+                      these constructs is poised to push organism programing significantly forward. On the other hand,
+                      bio-fabrication techniques relying on sophisticated AI, biological engineering and automation are
+                      anticipated to allow development of novel materials. Moreover, various DeepTech players are
+                      converging laser physics, machine learning and stem cell biology for turning adult cells into
+                      desired stem cells. Players related to physics are working with fusion-grade systems for enabling
+                      abundant clean energy. In the coming years, DeepTech start-ups are expected to exploit
+                      problem-solving orientation for bringing together emerging technologies in unique ways to enable
+                      exciting innovation opportunities.</li>
+                    <li><strong> DeepTech Vs. Shallow Tech -</strong> DeepTech is quite different from ‘shallow tech’ in
+                      the sense that the latter refers to relatively simple technological advancements that enable a
+                      business to move from a conventional, non-digital working model to a completely digital model.
+                      Unlike DeepTech advances that are difficult for competitors to imitate, shallow tech advances are
+                      rather easy to replicate and do not disrupt the market in any form. As a case in point, shallow
+                      tech adoption has enabled the delivery service earlier available through telephone to be digitally
+                      offered through a mobile phase app or a brick-and-mortar bookshop offering digital download of
+                      e-books. Even the Uber hail-a-cab service that disrupted the cab/taxi services market does not
+                      feed on DeepTech, as the business only leveraged an already existing sharing economy concept and
+                      developed a new platform using readily available and pre-existing digital technologies.</li>
+                    <li><strong> CEE DeepTech Start-ups -</strong> Some of the DeepTech start-ups making waves in the
+                      CEE space include Arlabion, an agri-tech start-up dedicated to develop advanced agrochemicals that
+                      can help with sustainable production of intensified crops; Eventech, which offers highly precise
+                      measurements (2 – 3 picoseconds) for high-tech event timing; and Conelum, a biotech start-up
+                      established in 2012, to develop rapid microbiological diagnostics for food and beverage companies.
+                    </li>
+                    <li><strong> Targeting DBTL Cycle -</strong> The design-build-test-learn (DBTL) cycle mitigates
+                      risks and expedited product development and time-to-market by connecting the problem to
+                      technologies. Like the lean build-measure-learn loop, DBTL offers advantages such as agility and
+                      speed while supporting advances. In contrast to the build-measure-learn loop that is associated
+                      with bits or software, DBTL covers both bits and atoms. DBTL encompasses emerging technologies
+                      such as artificial intelligence, additive manufacturing, quantum-based algorithms, advanced
+                      sensing and robotics to push development time. The multi-dimensional design phase associated with
+                      the approach offers competitive edge and allows faster evolution of technologies. The de-risking
+                      role of DBTL for DeepTech goes beyond the market risk and covers the whole venture. The design
+                      component of the cycle holds critical relevance and value. Factors such as swift access to desired
+                      information along with powerful and affordable computing systems expedite the hypothesis-driven
+                      approach and allow designing of novel models with ease. Prototypes can be scanned and equipped
+                      with sensors for offering real-time performance data, which can be exploited as feedback for
+                      co-designing of the object. Technologies such as virtual reality and augmented reality are opening
+                      opportunities to design virtual products for enhanced precision, design improvement and cost
+                      savings. Rising accessibility of sophisticated technologies is anticipated to attract more
+                      ventures to tap them for product designs. The concept is poised to gain further from quantum
+                      computers with potential to process considerable amount of calculations and data while edging over
+                      traditional machines on the basis of algorithm execution speed, opening avenues for
+                      computation-based efforts. In the coming years, quantum computing is expected to significantly
+                      transform fluid dynamics, materials design, chemicals and biopharmaceuticals. The build & test
+                      stage of the DBTL cycle allows DeepTech start-ups to enjoy economies of scale, high precision,
+                      throughput and speed due to availability of sophisticated platforms and the robotic process
+                      automation approach along with their increasing affordability. Continuing support to emerging
+                      platforms associated with DeepTech domains is anticipated to help start-ups in leveraging and
+                      scaling capabilities that are not possible now. DeepTech start-ups are expected to exploit shared
+                      spaces and platforms related to cloud computing and synthetic biology materials for building and
+                      testing designs. Robotics process automation is likely to find broader acceptance for automating
+                      and shifting the testing part from humans towards bots. These technologies are poised to allow
+                      continuous testing with fewer errors to boost total number of tests performed for expediting the
+                      entire process. The learning step of the DBTL cycle is slated to benefit from advanced
+                      technologies such as AI with potential to expedite the process. AI is poised to be used by
+                      companies to run significant data volumes through machine learning-based algorithms for learning
+                      from product properties and test results. These technologies are expected to accelerate and
+                      increase learning exponentially.</li>
+
+                  </ul>
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="heading4" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false"
+                    aria-controls="collapse4"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Top
+                    Trending Trends for 2023</button>
+                </h2>
+              </div>
+              <div id="collapse4" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">DeepTech is glimmering with immense potential for unprecedented level of disruption as
+                    it can offer solutions for some of the most pressing and unsettling problems faced by the world.
+                    Taking innovation to the next level, DeepTech is garnering attention from maintenance institutions
+                    and start-ups as it promises to deliver much-needed products and solutions. Representing the next
+                    wave of innovation, DeepTech is powered by approaches of DeepTech ventures and emerging
+                    technologies. Ongoing efforts by DeepTech start-ups to solve some of the most complex problems are
+                    slated to radically transform the economy, society and businesses. The DeepTech wave entails
+                    emerging technologies such as nanotechnologies, artificial intelligence, quantum computing, and
+                    synthetic biology. The domain is slated to be significantly shaped by convergence of approaches and
+                    technologies that is poised to redefine and expedite innovation. DeepTech is slated to enable a
+                    powerful ecosystem with intriguing components and solutions, reflected by swift development of
+                    COVID-19 vaccines by companies using genomic sequence. The remarkable wave is likely to garner
+                    considerable momentum and bring amazing solutions to the world in the future.</p>
+                  <br />
+
+                  <ul>
+                    <li><strong> Deepening Interest in DeepTech -</strong> DeepTech is rapidly emerging as a trending
+                      domain that is witnessing increasing attention from start-ups and mainstream organizations. The
+                      concept has attracted a large number of start-ups in the past several years that are working in
+                      diverse field for coming up with disruptive solutions. DeepTech represents the fourth wave of
+                      innovation after manufacturing, information and digital revolutions that led to mega
+                      transformations across industries. The emergence of DeepTech can be attributed to crumbling
+                      conventional barriers to innovations and increasing access to new technologies. Notable boost to
+                      computing power and declining costs along with emergence of next-generation technologies are
+                      offering impetus to the wave. Increasing scope and performance of cloud computing is set to open
+                      new avenues for DeepTech start-ups while bio-foundries are emerging as hotbeds for synthetic
+                      biology. These promising technologies along with declining costs of next-generation systems,
+                      technology and better access to advanced infrastructure are poised to add momentum to the DeepTech
+                      wave. The domain is experiencing increasing influx of start-ups and ventures with goals to bring
+                      positive disruptions. While Moderna enjoyed immense recognition after its impressive feat of
+                      COVID-19 vaccine, other such as Blue Origin and SpaceX are capturing public imagination. Some of
+                      the start-ups are exploring unique concepts and associated with promising areas such as quantum
+                      computing and synthetic biology that can enable much-needed solutions to vexing problems like
+                      climate change or medical conditions. DeepTech ventures are bringing together diverse talent such
+                      as scientists, entrepreneurs and engineers for solving problems with brand-new solutions or coming
+                      up with novel applications for existing technologies. DeepTech ventures are characterized by their
+                      specific attributes such as problem-oriented nature, focus on convergence of approaches and
+                      technologies, and more attention on physical solutions than software. While DeepTech start-ups
+                      account for a relatively small fraction of start-ups, they hold potential for a massive impact due
+                      to their attention on big issues along with practical and futuristic nature of their work. These
+                      factors are prompting an increasing number of investors and businesses to bet on DeepTech, despite
+                      the risk of failure. Investments in DeepTech, including IPOs, M&As, private investments or
+                      minority stakes, are growing at a phenomenal rate. Biopharmaceutical and information &
+                      communication technology companies are making big investments in DeepTech. In the recent years,
+                      the domain has started attracting mainstream and large organizations. </li>
+                    <li><strong> More Attention to Problem Orientation -</strong> Problem orientation represents one of
+                      the most crucial aspects of DeepTech-related developments as it helps start-ups in identifying
+                      opportunities while dealing with complexity. DeepTech start-ups are poised to focus on addressing
+                      fundamental and pressing problems to bet on valuable and impactful avenues. These companies are
+                      shifting their attention from established and known solutions towards design thinking to come up
+                      with novel solutions. The next step involves selection of the right technology for dealing with
+                      the problem. The problem orientation approach also shapes organization, operations and strategies
+                      of DeepTech ventures. The approach helps ventures in maintaining unwavering attention on the
+                      purpose and outcome while enabling them to develop an effective operating system for scaling. In
+                      addition, problem orientation favors momentum, talent retention and proper communication among
+                      different teams.</li>
+                  </ul>
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div id="heading5" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false"
+                    aria-controls="collapse5"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Thriving
+                    DeepTech Ecology Faces Challenges</button>
+                </h2>
+              </div>
+              <div id="collapse5" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">DeepTech exudes immense potential to bring sweeping changes and radically transform
+                    existing business models across industries. The concept enjoyed the limelight amid the pandemic and
+                    can address some of the pressing issues faced by humans in an efficient, faster and affordable way.
+                    DeepTech presents an exciting and innovative approach to solve complicated and fundamental problems.
+                    Despite its notable potential, DeepTech comes with its own set of challenges that must be overcome
+                    by stakeholders for tapping full potential of the approach. </p>
+                  <br />
+                  <p class="m-0">DeepTech holds the key to bring transformative technologies to market, be it cleantech
+                    solutions that can combat global warming or AI scanners that can help detect counterfeit medications
+                    or next-generation database performance monitoring tools that can improve the quality of work of
+                    data professionals. While DeepTech companies bring creative solutions to address major world
+                    problems and persuasive benefits for society, commercializing DeepTech is no easy task and comes
+                    with unique set of challenges. These include the capital, time and scale, marketing and industrial
+                    and cultural challenges, among others.</p>
+                  <br />
+
+                  <ul>
+
+                    <li><strong> Need for Deeper Knowledge -</strong> Despite the significant progress in science, there
+                      are numerous areas that are marked by shallow level of knowledge and understanding. Nanoparticles
+                      for chemistry are characterized by their complex nature as multi-component 3D structures, making
+                      engineering and design challenging aspects. Researchers associated with biology are yet to gain
+                      deeper insights into different areas for moving ahead swiftly. Soft robotics is garnering
+                      increasing attention from researchers and involves the use of materials imitating those of living
+                      organisms for building advanced robots. However, the field is restricted to development of few
+                      prototypes due to limited knowledge about behavior of these materials that makes it challenging
+                      for researchers to activate and control soft materials for desired applications. While quantum
+                      computing holds significant potential to transform numerous domains, the technology is facing
+                      various challenges that are hindering overall progress. In addition, researchers are yet to
+                      exploit artificial intelligence and machine learning technologies. The requirement of deeper
+                      insights into diverse fields of science points towards the need for start-ups, academics and
+                      governments to work together for translating potential concepts into commercial products and
+                      services. </li>
+                    <li><strong> Re-Imagining Things -</strong> Science and sophisticated technology are continue
+                      playing crucial roles in reshaping traditional processes, business models and other aspects of
+                      industries, requiring stakeholders to re-imagine things. DeepTech players engaged in exploring
+                      innovative technologies for dealing with existing issues are required to find the desired business
+                      framework. Various companies face problems while identifying the value proposition with proper
+                      re-imagination of business models and value chains. Major organization eying on DeepTech for
+                      fostering innovation initiatives struggle to imagine processes and products coming from a
+                      different source. Continuous innovations and reinventions have led to a highly dynamic landscape
+                      that is providing DeepTech opportunities for ventures and threatening the dominance enjoyed by
+                      leading organizations. Tapping DeepTech requires these players to gain insights into different use
+                      cases and applications of emerging technologies and ensure exposure of employees to innovations.
+                    </li>
+                    <li><strong> Issues with Time and Scale -</strong> DeepTech involves time and scale challenge, as
+                      building business applications on these technologies and transferring them from testing phase to
+                      the market takes intensive research and development effort. For instance, the AI technology had
+                      been in research and development stage for several decades before being scaled for
+                      commercialization, and despite the successful outcomes delivered by AI applications, the
+                      technology is yet to be perfected. Another instance is of gorilla glass, the standard display
+                      glass in most smartphones currently, which had been research and developed for decades before
+                      being finally used in limited number of Apple iPhones in 2005.
+                      <br />
+                      <br />
+                      Companies engaged with DeepTech focus on innovations with potential to enable entirely new types
+                      of physical products. However, various DeepTech companies lack desired resources and know-how
+                      regarding scaling up the physical product and associated manufacturing process. The scaling up
+                      process is often a cost- and time-intensive affair. The feat requires ventures to set up physical
+                      units and deal with engineering issues to fulfill aspects linked to product design and cost.
+                      Governments and corporations can help these companies in addressing these challenges. While
+                      governments can use new products for testing, corporations can assist ventures by offering
+                      engineering know-how and measures to scale production.
+
+                    </li>
+
+                    <li><strong> Inadequate Funding -</strong> DeepTech companies tend to have rather higher capital requirement
+                        than other start-ups, making sourcing of investment capital one of the major challenges for Deep
+                        Technology commercialization. Since DeepTech involves mechanics and algorithms that are entirely
+                        unheard of, and investor knowledge with respect to these technologies and the value they can
+                        generate is limited, investors are cautious in funding such early-stage systems.
+                        <br />
+                        <br />
+                        While investments in DeepTech have increased over the last few years, there are certain issues
+                        associated with the existing investment model that is characterized by its bias towards specific
+                        technologies. The venture capital model holds issues with its scope and pays high attention to
+                        certain technologies like artificial intelligence, machine learning and life sciences. In
+                        addition, there are concerns pertaining to the shift of DeepTech from laboratory stage towards
+                        investment-based venture funding. Structural constraints associated with venture capital and
+                        private equity funds leave DeepTech struggling for desired funding. The problem is further
+                        complicated by lack of talent for gaining insights into technology and science related risks.
+                        Furthermore, numerous venture capital funds have shifted their attention to lead of other
+                        players or well-established technologies and avenues.
+                    </li>
+
+                    <li><strong> The Challenge of Marketing -</strong> DeepTech, still being in its infancy, is a less
+                      attractive proposition for most companies. Defining distribution channels, securing partnerships,
+                      finding the right people resources and/or complementary corporate infrastructure create hurdles
+                      for commercialization. Lack of sufficient market intelligence data, inadequate data about overseas
+                      markets and improper use of available data all make up for marketing challenges.</li>
+                    <li><strong> Legal, Industrial, and Cultural Challenges -</strong>DeepTech commercialization could
+                      also be hindered by legal, industrial and cultural challenges. Non-compliance with industry or
+                      cultural laws could land DeepTech start-ups in legal battles. For instance, biotechnology
+                      companies face numerous industry challenges when they seek to enter the Asian markets where
+                      regulatory environment is stringent with respect to food safety, biosafety and ethics. Asian
+                      cultures are also diverse, which present cultural challenges such as the ones faced by
+                      biotechnology companies. Asian people with certain origins may oppose use of genes derived from
+                      certain animals owing to their religious beliefs.</li>
+
+
+
+                  </ul>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!--================================
+   PROGARAM DETAILS
+=================================-->
+
+  <section class="section bg-light">
+    <div class="container">
+      <eventcolapse-component></eventcolapse-component>
+    </div>
+
+  </section>
+
+
+  <!--================================
+=    DOMAIN EXPERTS
+=================================-->
+
+  <section class="section pt-4 " id="domain-experts">
+
+  </section>
+
+
+
+
+  <!--============================
+	           Footer            
+=============================-->
+
+  <footer-component></footer-component>
+
+
+  <!---============================
+           ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+  <script src="./js/jquery.readall.js"></script>
+
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+  <script src="./webcomponts/banner.js"></script>
+
+  <script>
+    $('.textless').readall({
+      showheight: null,
+      showrows: 8
+    });
+
+
+  </script>
+
+
+
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('LANGUAGE');
+        $('.goog-te-menu-frame.skiptranslate').load(function () {
+          setTimeout(function () {
+            $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+          }, 100);
+        });
+      });
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+  </script>
+</body>
+
+</html>

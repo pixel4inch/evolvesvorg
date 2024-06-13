@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+  <script>
+    function SaveData() {
+
+      //var iSno = rno;			
+      var vfrist_name = $("#first_name").val();
+      var vlast_name = $("#last_name").val();
+      var vdesignation = $("#designation").val();
+      var vcompany = $("#company").val();
+
+      var vemail = $("#email").val();
+      var vPassword = $("#Password").val();
+
+
+      var vWebsite = $("#Website").val();
+      var vLinkedIn = $("#LinkedIn").val();
+      var vTwitter = $("#Twitter").val();
+
+      var vYoutube = $("#Youtube").val();
+      var vDomain = $("#Domain").val();
+
+
+      if (vemail != null && vemail != '') {
+        //alert(vchkwillvolunteer);
+        $.ajax({
+          url: "Ajax_AddRegisterUsers.asp",
+          type: "POST",
+          data: 'vDomain=' + encodeURIComponent(vDomain) + '&vYoutube=' + encodeURIComponent(vYoutube) + '&vTwitter=' + encodeURIComponent(vTwitter) + '&vLinkedIn=' + encodeURIComponent(vLinkedIn) + '&vWebsite=' + encodeURIComponent(vWebsite) + '&vPassword=' + encodeURIComponent(vPassword) + '&vemail=' + encodeURIComponent(vemail) + '&vcompany=' + encodeURIComponent(vcompany) + '&vdesignation=' + encodeURIComponent(vdesignation) + '&vfrist_name=' + encodeURIComponent(vfrist_name) + '&vlast_name=' + encodeURIComponent(vlast_name) + '',
+          success: function (data) {
+            //alert(data);
+            alert("Thank you for applying. We will respond by email within 3-4 business days. ");
+
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+            alert(xhr.responseText);
+          }
+        });
+
+        //window.opener.location.reload(false);
+        //window.opener.location.reload()
+      }
+      else {
+
+        alert("values can't be left blank");
+
+      }
+
+
+
+    }
+  </script>
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <header-component></header-component>
+
+
+
+
+
+
+  <!--============================
+    PLACEKEEPTER BANNER
+=============================-->
+
+  <section class="section page-title insider py-5   ">
+    <div class="container">
+      <div class="row tex-center ">
+        <div class="col-sm-12 m-auto text-center">
+          <!-- Page Title -->
+          <h1>REGISTRATION</h1>
+        </div>
+
+        <div class="col-lg-7 col-md-10 col-sm-12 col-12 p-3  m-auto mt-3  shadow-sm border">
+
+          <div class="w-100 mt-2" id="formblock">
+            <form action="#">
+              <div class="row mx-0">
+                <!-- First Name -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1 " type="text" placeholder="First Name" id="first_name"
+                    name="first_name" required="">
+                </div>
+                <!-- Last Name -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="text" placeholder="Last Name" id="last_name"
+                    name="last_name" required="">
+                </div>
+
+                <!-- Email -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="email" placeholder="Email " id="email" name="email"
+                    required="">
+                </div>
+                <!-- Password -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="password" placeholder="Password" id="Password"
+                    name="Password" required="">
+                </div>
+
+                <!-- Mobile Phone -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="text" placeholder="Company" id="company" name="company"
+                    required="">
+                </div>
+
+
+
+                <!-- Website -->
+                <div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="Website" placeholder="Company URL" id="Website"
+                    name="Website" required="">
+                </div>
+
+                <!-- Designation-->
+                <!--div class="col-sm-6 mb-1 p-1">
+                  <span class="formmandatory">* </span>
+                  <input class="form-control main mb-1" type="text" placeholder=" Designation " id="designation" name="designation" required="">
+                </div>
+
+
+
+                 <!-- Website -->
+                <div class="col-sm-12 mb-0 p-1 mt-3 border-bottom pb-2 ">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="formmandatory">* </span>
+                    <p class="font-weight-bold main-font-color mb-0 ml-3">Domain Expertise</p>
+
+                    <a class="btn btn-sm btn-outline-primary" data-toggle="collapse" href="#collapseExample"
+                      role="button" aria-expanded="false" aria-controls="collapseExample">ADD</a>
+                  </div>
+
+                </div>
+                <div class="w-100 collapse  m-2 " id="collapseExample">
+                  <div class="col-sm-12 mb-0 p-0 border-bottom">
+                    <div>
+
+                      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
+                        title="Type in a name" class="border shadow-sm my-3 col-11 mx-auto">
+
+                      <table id="myTable" class="table mb-0  table-striped" id="domain-list-table">
+                        <tr class="header" style="background-color:#f7e1d7">
+                          <th class="text-center py-1   col-8">Domain</th>
+                          <th class="text-center py-1   col-2">Primary</th>
+                          <th class="text-center py-1   col-2">Relevent</th>
+                        </tr>
+
+
+
+                        <tbody id="domain-list">
+
+                          <script src="https://code.jquery.com/jquery-3.6.3.js"
+                            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+                            crossorigin="anonymous"></script>
+                          <script>
+                            $(document).ready(function () {
+                              $.getJSON("./data/DomainName.json", function (data) {
+                                var output = '';
+                                console.log(data)
+                                $.each(data.domainlist, function (key, value) {
+                                  output += `
+                                      <tr>
+                                        <td class="text-left py-1  pl-4 col-8">` + value.Name + `</td>
+                                        <td class="text-cetner py-1 col-2"> <input type="radio" value="`+ value.Name + `" id="primarydomainlist_` + value.Name + `" name="primarydomainlist"/> </td>
+                                        <td class="text-center py-1 col-2"> <input type="checkbox" value="`+ value.Name + `" id="secondarydomainlist_` + value.Name + `" name="secondarydomainlist"/> </td>
+                                      </tr> `;
+                                });
+                                $('#domain-list').html(output);
+                              }).fail(function () {
+                                document.write("An error has occurred.");
+                              });
+                            });
+                          </script>
+
+
+
+
+                        </tbody>
+                      </table>
+
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 mb-0 p-1 mt-3 border-bottom pb-2 d-flex  align-items-center ml-4">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" data-toggle="collapse"
+                    href="#social_support" role="button" aria-expanded="true" aria-controls="collapseExample" />
+                  <p class="form-check-labe ml-2 mb-0 mt-2 main-font-color font-weight-bold" for="exampleCheck1">I will
+                    support social media (LinkedIn,Facebook,Twitter,Youtube)</p>
+
+                </div>
+
+                <div class="w-100 collapse  m-2 " id="social_support">
+
+                  <div class="row">
+
+
+
+                    <div class="col-sm-6 mb-1 p-1">
+                     
+                      <input class="form-control main mb-1" type="text" placeholder="LinkedIn Link" id="LinkedIn"
+                        name="LinkedIn" required="">
+                    </div>
+
+                    <!-- Youtube-->
+                    <div class="col-sm-6 mb-1 p-1">
+
+                      <input class="form-control main mb-1" type="text" placeholder="Facebook" id="Facebook"
+                        name="Facebook" required="">
+                    </div>
+                    <!-- Twitter-->
+                    <div class="col-sm-6 mb-1 p-1">
+
+                      <input class="form-control main mb-1" type="text" placeholder="Twitter Handle" id="Twitter"
+                        name="Twitter" required="">
+                    </div>
+
+                      <!-- Youtube-->
+                      <div class="col-sm-6 mb-1 p-1">
+
+                        <input class="form-control main mb-1" type="text" placeholder="Youtube" id="youtube"
+                          name="Facebook" required="">
+                      </div>
+
+
+
+
+                  </div>
+                </div>
+
+
+                <!-- Submit Button -->
+                <div class="col-12 text-center">
+                  <button class="btn btn-main-md   mx-auto py-2 px-2 my-4" onclick="SaveData()">Register</button>
+                  
+                </div>
+                <p class="text-left mr-2" style="font-size:13px;font-style:italic;">Fields marked with <span
+                    style="color:red">*</span> are mandatory</p>
+              </div>
+            </form>
+          </div>
+          <!-- Page Title -->
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!--============================
+	           Footer            
+=============================-->
+
+  <footer-component></footer-component>
+
+
+  <!---============================
+           ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+  <script src="./js/jquery.readall.js"></script>
+
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+  <script src="./webcomponts/banner.js"></script>
+
+  <script>
+    $('.textless').readall({
+      showheight: null,
+      showrows: 8
+    });
+
+
+  </script>
+
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+
+
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('LANGUAGE');
+        $('.goog-te-menu-frame.skiptranslate').load(function () {
+          setTimeout(function () {
+            $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+          }, 100);
+        });
+      });
+    });
+</scrip >
+
+
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+}
+  </script>
+</body>
+
+</html>

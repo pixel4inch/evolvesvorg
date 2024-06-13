@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Calender Events - Evolv</title>
+
+  <!-- Mobile Specific Metas  
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+  
+
+
+     <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+  <script src="./webcomponts/banner.js"></script>
+  <script src="./webcomponts/eventcollapse.js"></script>
+  <script src="./webcomponts/dgcomponent.js"></script>
+  <script src="./webcomponts/datafooterComponent.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
+<body class="body-wrapper startup_delegation_details" id="container" data-spy="scroll" data-target=".privacy-nav" ><!--onBeforePrint="document.body.style.display='none';" onAfterPrint="document.body.style.display='block';" onContextmenu="return false" onSelectstart="return false" onDragstart="return false"  topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0"-->
+
+
+
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <header-component></header-component>
+
+  
+
+  <!--============================
+    PAGE BANNERS
+=============================-->
+  <section class="pagebanners  delegation-banner">
+    <div class="container">
+      <div class="row mx-0" id="pagebanner-block">
+      </div>
+   </div>
+  </section>
+
+<!--============================
+	           detail
+=============================-->
+	
+	<script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+	  $(document).ready(function () {
+		$.getJSON("./data/startup_Delegation.json", function (data) {
+        // var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+        // alert("URL:"+selURL)
+        var eventid = GetParameterValues("Id");
+        //alert("Event:"+ eventid);
+        var delegdet = '';
+        
+        console.log(data)
+        $.each(data, function (key, value) {
+          if (value.Id == eventid) {
+            delegdet += `
+			
+			<div class="col-2 p-2">
+									<div class="w-100 " style="border-radius:10px; overflow:hidden">
+										<a href="` + value.Linked_In + `" target="_blank">
+										<img src="./images/evolv/Startup_Delegation/`+ value.img_path  + `" alt="  Ram Reddy" title="  Ram Reddy" >
+										</a>
+									</div>
+						
+									<!---div class="w-100">
+										<a href="Startup_Delegation.html" class="seeallspeakers-btn"> See All Speakers</a>
+									</div---->
+								</div>
+					
+											<div class="col-10 p-2">
+												<div class="w-100 bg-white border delegation-content" style="border-radius:10px">
+													<h5>SPEAKER</h5>
+													<h1> `+ value.Name  + `</h1>
+													<h2>`+ value.Designation  + `</h2>
+													<h2>`+ value.Company  + `</h2>
+													<hr/>
+													<p>`+ value.Company_Profile  + `</p>
+						  </div>
+						  </div>
+			
+			
+			`;
+       	  }
+        });
+        
+        $('#delegationDetails').html(delegdet)
+
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<section class="delegation-details mb-3 p-3" style="margin-top:-75px; z-index: 999" >
+		  <div class="container">
+			 	<div class="row mx-0" id="delegationDetails">
+										  
+					
+					
+			    </div>			 
+			</div>
+		 
+		 
+		 
+	</section>
+		
+		
+		
+
+
+
+  
+
+
+
+
+  <!--============================
+	           Footer            
+=============================-->
+
+  <footer-component></footer-component>
+
+  <!---============================
+           ScrollTop        
+=============================--->
+
+
+  <scrolltop-component></scrolltop-component>
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+  <script src="./js/jquery.readall.js"></script>
+  
+
+  <script src="./js/multi-animated-counter.js"></script>
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('LANGUAGE');
+        $('.goog-te-menu-frame.skiptranslate').load(function () {
+          setTimeout(function () {
+            $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+          }, 100);
+        });
+      });
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+  </script>
+  
+ 
+
+
+
+
+</body>
+
+</html>

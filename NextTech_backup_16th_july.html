@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Basic Page Needs
+         ================================================== -->
+      <meta charset="utf-8">
+      <title>NextTech</title>
+      <!-- Mobile Specific Metas
+         ================================================== -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="Evolv">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+      <meta name="author" content="Evolv ">
+      <meta name="generator" content="Evolv">
+      <!-- theme meta -->
+      <meta name="theme-name" content="Evolv" />
+      <!-- Favicon -->
+      <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+      <!-- PLUGINS CSS STYLE -->
+      <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+      <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+      <link rel="stylesheet" href="plugins/slick/slick.css" />
+      <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+      <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+      <link rel="stylesheet" href="plugins/aos/aos.css" />
+      <!-- CUSTOM CSS -->
+      <link href="css/style.css" rel="stylesheet" />
+      <link href="css/custome.css" rel="stylesheet" />
+      <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+      <!---WEB COMPONETNS-->
+      <script src="./webcomponts/headerComponents.js"></script>
+      <script src="./webcomponts/FooterComponent.js"></script>
+      <script src="./webcomponts/ScrollToTop.js"></script>
+      <script src="./webcomponts/dummytext.js"></script>
+      <script>
+         function SavePower_Request_invite() {
+             //alert('Saved');
+         
+         
+             var vFirst_Name = $("#first_name").val();
+             var vLast_Name = $("#last_name").val();
+         
+             var vLinkedin = $("#linkedInLink").val();
+             var vPosition = $("#Position").val();
+             var vCompany = $("#Company").val();
+             var vEmail = $("#email").val();
+             var vCountry = $("#country").val();
+             var vSource_Page = '';
+         
+         
+         
+             //alert(vLast_Name);	
+             if (vEmail != null && vEmail != '') {
+                 //alert(vReportName);
+                 $.ajax({
+                     url: "Ajax_AddRequest_invite.asp",
+                     type: "POST", data: 'vSource_Page=' + encodeURIComponent(vSource_Page) + '&vEmail=' + encodeURIComponent(vEmail) + '&vFirst_Name=' + encodeURIComponent(vFirst_Name) + '&vLast_Name=' + encodeURIComponent(vLast_Name) + '&vLinkedin=' + encodeURIComponent(vLinkedin) + '&vPosition=' + encodeURIComponent(vPosition) + '&vCompany=' + encodeURIComponent(vCompany) + '&vCountry=' + encodeURIComponent(vCountry) + '',
+                     success: function (data) {
+                         //alert(data);
+                         //alert('Thanks for submitting!');	
+                         window.open("https://www.evolv.cc/loginLinkedin_User.asp?UsID=0&rcode=0&ecode=" + encodeURIComponent(vEmail));
+                     },
+                     error: function (xhr, ajaxOptions, thrownError) {
+                         alert(xhr.status);
+                         alert(thrownError);
+                         alert(xhr.responseText);
+                     }
+                 });
+         
+                 //window.opener.location.reload(false);
+                 //window.opener.location.reload()
+             }
+             else {
+         
+                 alert("values can't be left blank");
+         
+             }
+         }
+      </script>
+	   
+
+	   
+	   
+   </head>
+   <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+      <!--============================
+         =            HEADER           =
+         =============================-->
+      <header-component></header-component>
+      <!--============================
+         PLACEKEEPTER BANNER
+         =============================-->
+      <div class="body-content">
+         <section class="section  pt-4 page-title">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-10 m-auto">
+                     <div class="border-bottom pb-4 mt-4">
+                        <h1 class="font-display1 text-center main-font-color mx-auto"
+                           style="margin-bottom:7px !important; text-transform: capitalize; font-size: 29px !important;">
+                           Evolv™ NextTech
+                        </h1>
+                        <h5 class="para-display2 mb-0" style="font-weight:400">New Delhi | August 24, 2023</h5>
+                        <p class="para-display1 mb-0 mt-3" style="font-style: italic;">All Evolv™ NextTech delegates are also registered to attend B20 India 2023 Summit without any additional delegate fees. Both events are consecutively Presented by the Confederation of Indian Industry. 
+                        </p>
+                     </div>
+                     <div class="pb-3 pt-3 mb-2">
+                        <script src="https://code.jquery.com/jquery-3.7.0.js"
+                           integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+                           crossorigin="anonymous"></script>
+                        <script>
+                           $(document).ready(function () {
+                               $.getJSON("./data/NextTechData.json", function (data) {
+                                   var executive = '';
+                                   var logistics = '';
+                                   var emcees = '';
+                                   $.each(data.NextTechInfo, function (key, value) {
+                           
+                                       if (value.type == "Executive Committee") {
+                                           executive += `
+                                              
+                                                  	  
+                                                       <div class="card-md card-style1  ">
+                                                           <div class="img-block">
+                           <a href=" `+ value.linkedIn +`" target="_blank">
+                                                               <img src="` + value.image + `"  alt=" ` + value.name + ` Chandrajit Banerjee" />																</a>
+                                                           </div>
+                                                           <h3>`+ value.name + `</h3>
+                                                       </div>
+                           
+                                                  
+                                               `;
+                                       } else if (value.type == "Logistics") {
+                                           logistics += `
+                                             
+                                                
+                                                       <div class="card-md card-style1  ">
+                                                           <div class="img-block">
+                                                               <img src="` + value.image + `"  alt=" ` + value.name + ` Chandrajit Banerjee" />
+                                                           </div>
+                                                           <h3>`+ value.name + `</h3>
+                                                       </div>
+                                                 
+                                             `;
+                                       } else if (value.type == "Emcees") {
+                                           emcees += `
+                                           
+                                                       <div class="card-md card-style1  ">
+                                                           <div class="img-block">
+                                                               <img src="` + value.image + `"  alt=" ` + value.name + ` Chandrajit Banerjee" />
+                                                           </div>
+                                                           <h3>`+ value.name + `</h3>
+                                                       </div>
+                                                  
+                                              `;
+                                       }
+                           
+                                   });
+                                   $('#Executive').html(executive);
+                                   $('#Logistics').html(logistics);
+                                   $('#Emcees').html(emcees);
+                               }).fail(function () {
+                                   document.write("An error has occurred.");
+                               });
+                           });
+                        </script>
+                        <h5
+                           class="para-display3 my-3 font-weight-bold main-font-color text-uppercase text-center">
+                           Conference Committee 
+                        </h5>
+                        <div class="row  justify-content-lg-center  justify-content-xl-center justify-content-md-center justify-content-center"
+                           id="Executive"></div>
+                        <!--h5
+                           class="para-display3 my-3 font-weight-bold main-font-color text-uppercase text-xl-left text-lg-left text-md-left text-center">
+                           Logistics Leads
+                           </h5>
+                           <div class="row row  justify-content-lg-start  justify-content-xl-start justify-content-md-start justify-content-center"
+                           id="Logistics"></div-->
+                     </div>
+                    
+                     <div class=" py-2 bg-light shadow-sm">
+                        <h1 class="font-display1 text-center main-font-color mx-auto"
+                           style="margin-bottom:7px !important; text-transform: capitalize; font-size: 22px !important; margin-bottom: 0px !important">
+                           DAY 1: August 24, 2023
+                        </h1>
+                        <h5 class="para-display2 mb-0" style="font-weight:400; font-size: 19px !important;
+                           letter-spacing: 1px;">Hotel Ashoka | New Delhi </h5>
+                     </div>
+					  
+					  
+					  
+					<!---PROGRAM SECTION--->  
+                     <div class="w-100 text-center py-3 border-bottom">
+                        <h1 class="font-display1  main-font-color mx-auto " style="margin-bottom:7px !important">PROGRAM </h1>
+                        <h4 class="font-display2  mb-0" style="font-weight:400;font-size: 19px;">COMMON SESSION</h4>
+                     </div>
+					  
+					  
+					 
+							<div class="commonsection-block">
+						  	<div class="program-section mt-3 mb-2 w-100 ">
+								<p class="font-weight-bold main-font-color time">10:00 - 10:30 AM:</p>
+								<p class="font-weight-bold text-transform-uppercase program-title">Welcome & Event kickoff</p>
+						    </div>
+					
+					  
+					   
+						  	<div class="program-section w-100  top-divider">
+								<p class="font-weight-bold main-font-color time">10:30 - 11:30 AM:</p>
+								<p class="font-weight-bold text-transform-uppercase program-title">TECH LEGENDS</p>
+								<p>Keynote 1 (TBA)</p>
+								<p>Keynote 2 (TBA)</p>
+						    </div>
+					
+					 
+						  	<div class="program-section w-100 top-divider">
+								<p class="font-weight-bold main-font-color time">11:30 AM - 12:00 PM:</p>
+								<p class="font-weight-bold text-transform-uppercase program-title"style="color:#FF8000">BREAK</p>
+						    </div>
+					  </div>
+					
+					   <hr class="divider" style="margin:10px 0 10px 0 !important;"/>
+					  <div class="row border-bottom">
+                        <div class="col-md-6 col-12  m-0">
+                           <div class="w-100   pb-2">
+                              <h2 class="para-display2 text-center main-font-color mx-auto font-weight-bold"
+                                 style="margin-bottom:2px !important">TRACK 1</h2>
+                           </div>
+                           <div class="px-4 py-0 timeline">
+                              <!--h5 class="para-display1 mb-0 text-left"  style="font-weight:400;font-size:16px;">ARTIFICIAL INTELLIGENCE</h5-->
+                              <div class="w-100 mt-2">
+                                 <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                    <span class="d-block time">12:00 - 1:00 PM:</span>
+                                    <div class="d-flex flex-column">
+                                       <span class="d-block ">GLOBAL INNOVATION ECOSYSTEMS</span>
+                                       <span class="d-block ">
+                                          Presenting perspectives with representation from the global Venture, Angel, and Corporate, communities. 
+                                    </div>
+                                 </div>
+                                 <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                 <span class="d-block time">1:00 - 2:30 PM:  </span>
+                                 <div class="d-flex">
+                                 <span class="d-block" style="color:#FF8000;font-weight:bold;">LUNCH & NETWORKING </span>
+                                 </div>
+                                 </div>
+                                 <div class="d-flex mr-2 nexttech-program-details">
+                                 <span class="d-block time">2:30 - 3:30 PM:</span>
+                                 <div class="d-flex flex-column">
+                                 <span class="d-block listed ">ARTIFICIAL INTELLIGENCE</span>
+                                 <span class="d-block listed listed ">Generative AI - Panel Discussion </span>
+                                 </span>  
+                                 </div>
+                                 </div>
+                                 <div class="d-flex mr-2 nexttech-program-details">
+                                    <span class="d-block time">3:30 - 4:00 PM:</span>
+                                    <div class="d-flex flex-column" >
+                                       <span class="d-block listed ">Keynote 3</span>
+                                       <span class="d-block listed ">Speaker TBA
+                                       </span>  
+                                    </div>
+                                 </div>
+                                 <div class="d-flex mr-2 nexttech-program-details">
+                                    <span class="d-block time">4:00 - 4:30 PM:</span>
+                                    <div class="d-flex flex-column">
+                                       <span class="d-block listed ">Keynote 4</span>
+                                    </div>
+                                 </div>
+                                 <div class="d-flex mr-2 nexttech-program-details">
+                                    <span class="d-block time">4:30 - 5:00 PM:</span>
+                                    <div class="d-flex flex-column">
+                                       <span class="d-block " style="color:#FF8000;font-weight:bold;">BREAK</span>
+                                    </div>
+                                 </div>
+                                 <div class="d-flex mr-2 nexttech-program-details">
+                                    <span class="d-block time">5:00 - 6:00 PM:</span>
+                                    <div class="d-flex flex-column">
+                                       <span class="d-block ">FEATURED INNOVATORS</span>
+                                       <span class="d-block listed mb-2">Presenting today’s leading-edge technology startups and scaleups that are disrupting the DeepTech landscape. Select companies from the "2023 Evolv™ Global DeepTech Innovators Watchlist" are invited to present. Speakers TBA.  </span>
+                                       <span class="d-block ">Featuring:  </span>
+										 <div class="d-flex flex-column">
+											
+											<span class="d-block listed ">AI & ML </span>
+											<span class="d-block listed ">GAMING & XR </span>
+											<span class="d-block listed ">QUANTUM COMPUTING  </span>
+										 </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6 col-12  m-0">
+                           <div class="w-100   pb-2">
+                              <h2 class="para-display2 text-center main-font-color mx-auto font-weight-bold"
+                                 style="margin-bottom:2px !important">TRACK 2</h2>
+                           </div>
+                           <div class="px-4 py-0  timeline">
+                              <!--h5 class="para-display1 mb-0 text-left" style="font-weight:400;font-size:16px;">CLOUD SECURITY</h5-->
+                              <div class="w-100 mt-2">
+                                 <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                    <span class="d-block time">12:00 - 1:00 PM:</span>
+                                    <div class="d-flex flex-column">
+                                       <span class="d-block ">GLOBAL INVESTMENT TRENDS</span>
+                                       <span class="d-block ">Panel of venture capitalists and angels investors discuss investor sentiments and  share perspectives on what entrepreneurs can do to weather the downturn. </span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="d-flex flex-column mr-2 nexttech-program-details">
+                                 <span class="d-block time">1:00 - 2:30 PM:  </span>
+                                 <div class="d-flex">
+                                    <span class="d-block" style="color:#FF8000;font-weight:bold;">LUNCH & NETWORKING </span>
+                                 </div>
+                              </div>
+                              <div class="d-flex mr-2 nexttech-program-details">
+                                 <span class="d-block time">2:30 - 3:00 PM:</span>
+                                 <div class="d-flex flex-column">
+                                    <span class="d-block listed">Keynote 5</span>
+                                 </div>
+                              </div>
+                              <div class="d-flex mr-2 nexttech-program-details">
+                                 <span class="d-block time">3:00 - 6:00 PM:</span>
+                                 <div class="d-flex flex-column">
+                                    <span class="d-block  ">FEATURED INNOVATORS </span>
+                                    <span class="d-block listed mb-2">Presenting today’s leading-edge technology startups and scaleups that are disrupting the DeepTech landscape. Select companies from the "2023 Evolv™ Global DeepTech Innovators Watchlist" are invited to present. Speakers TBA.
+                                    </span>  
+                                    <!--span class="d-block listed ">Speakers TBA
+                                    </span-->  
+                                 </div>
+                              </div>
+                              <div class="d-flex mr-2 nexttech-program-details">
+                                 <span class="d-block time">3:00 - 4:30 PM:</span>
+                                 <div class="d-flex flex-column">
+                                    <span class="d-block listed ">CLOUD </span>
+                                    <span class="d-block listed ">CYBERSECURITY </span>
+                                    <span class="d-block listed ">ROBOTICS </span>
+                                    <span class="d-block listed ">AUTO TECH </span>
+                                    <span class="d-block listed ">CLEAN TECH  </span>
+                                 </div>
+                              </div>
+                              <div class="d-flex mr-2 nexttech-program-details">
+                                 <span class="d-block time">4:30 - 5:00 PM:</span>
+                                 <div class="d-flex flex-column">
+                                    <span class="d-block" style="color:#FF8000;font-weight:bold;">BREAK</span>
+                                 </div>
+                              </div>
+                              <div class="d-flex mr-2 nexttech-program-details">
+                                 <span class="d-block time">5:00 - 6:00 PM</span>
+                                 <div class="d-flex flex-column">
+                                    <span class="d-block listed">BIOPHARMA  </span>
+                                    <span class="d-block listed ">MED TECH  </span>
+                                    <span class="d-block listed ">FOOD TECH  </span>
+                                     <span class="d-block listed ">BIO-CONVERGENCE  </span>
+                                    
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+					  
+					
+					  
+					 
+					<div class="commonsection-block">
+						  	<div class="program-section mt-3 mb-2 w-100 ">
+								<p class="font-weight-bold main-font-color time">6:00 - 6:30 PM:</p>
+								<p class="font-weight-bold text-transform-uppercase program-title">Awards Ceremony</p>
+								
+						    </div>
+					</div>
+					  <hr class="divider" style="margin:10px 0 10px 0 !important;"/>
+                  </div>
+                  <h3 class="font-weight-bold main-font-color mt-2 mb-4 w-100">BY INVITATION</h3>
+				   
+				   <div class="program-section mt-2 mb-2 w-100 ">
+					   INVITE CODE: <input type="text" name="invitecode">&nbsp;<input type="button" name="GO" value="GO">
+				   </div>
+					
+				   <br/><br/>
+                  <div style="width: 350px; margin: 0 auto; height: 1px; background-color: #f7a44f"></div>
+                  <div class=" pb-3 mt-4 px-2 w-100">
+                     <h1 class="font-display1 text-center main-font-color mx-auto"
+                        style="margin-bottom:7px !important; text-transform: capitalize; font-size: 22px !important; margin-bottom: 0px !important">
+                        DAY 2-4: August 25-27, 2023
+                     </h1>
+                     <h1 class="font-display1 text-center  mx-auto"
+                        style="margin-bottom:7px !important; text-transform: capitalize; font-size: 24px !important;">
+                        <a href='https://www.b20india2023.org/new-homepage' target='_new'>B20 India Summit 2023</a>
+                     </h1>
+                     <h5 class="para-display2 mb-0" style="font-weight:400">New Delhi </h5>
+                     <p class="para-display1 mb-0 mt-2" style="font-style: italic;">All foreign delegates to the
+                        Evolv™ NextTech are also registered to attend B20 India Summit without additional
+                        delegate fee.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+      <!--====  End of Page Title  ====-->
+      <!--============================
+         Footer            
+         =============================-->
+      <footer-component></footer-component>
+      <!---============================
+         ScrollTop        
+         =============================--->
+      <scrolltop-component></scrolltop-component>
+      <!-- JAVASCRIPTS -->
+      <script src="plugins/jquery/jquery.min.js"></script>
+      <script src="plugins/bootstrap/bootstrap.min.js"></script>
+      <script src="plugins/slick/slick.min.js"></script>
+      <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+      <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+      <script src="plugins/aos/aos.js"></script>
+      <!-- google map -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+      <script src="plugins/google-map/gmap.js"></script>
+      <script src="js/script.js"></script>
+      <script src="./js/submenu_select.js"></script>
+      <script type="text/javascript"
+         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <script type="text/javascript">
+         $(document).ready(function () {
+             $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+                 $('.goog-te-menu-value span:first').html('LANGUAGE');
+                 $('.goog-te-menu-frame.skiptranslate').load(function () {
+                     setTimeout(function () {
+                         $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+                     }, 100);
+                 });
+             });
+         });
+      </script>
+      <script type="text/javascript">
+         function googleTranslateElementInit() {
+             new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+         }
+      </script>
+   </body>
+</html>

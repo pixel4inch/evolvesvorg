@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+        var writeuptitle = '';
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (selURL == value.Event) {
+            writeuptitle += `<h2>` + value.eventtitle + `</h2>`;
+          } else {
+
+          }
+        });
+        $('#writeup-title').html(writeuptitle);
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+  <div id="writeup-title">
+
+  </div>
+
+  <div class="body-content">
+
+  <!--================================
+=            Page Title            =
+=================================-->
+
+<section class="section" id="writeup">
+  <div class="container">
+    <div class="row pb-3 page-title">
+      <div class="col-sm-12 m-auto text-center -3">
+        <!-- Page Title -->
+        <h1 class="font-display2 main-font-color">WHAT'S TRENDING</h1>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-sm-12 m-auto">
+
+          <h3 class="subheading">Auto Technology. Are You Ready to Wrap Your Head Around These Dynamic Technologies Shaping the Future of Mobility?</h3>
+          <div class="textless text-left">
+            <p>Disruption can be a catalyst for growth in a challenging economic environment. New intelligent automotive technologies are poised to unleash disruption in the global automotive industry, bringing with it massive opportunities for growth. Creative technologies that provide value and benefit to the entire automotive ecosystem will drive the industry’s future growth. Players across the automotive value chain are investing in new technologies for their ability to drive growth and ROI. These technologies are transformative in characteristics with potential to create massive economic value in terms reduced costs, increased profits and creation of new market opportunities. These technologies provide an incentive and opportunity for change and innovation to create new market opportunities. The need to adapt to an always changing market environment is the new reality that confronts both businesses and consumers worldwide, thus leading to the adoption of new technologies. The coming years are forecast to witness a sharp increase in venture capital investments in disruptive technology stocks.</p>
+            <p>Technology incursion into the automobile has been especially radical over the last decade. The automobile has transformed from a simple transportation machinery into a smart, and connected self-aware piece of engineering marvel capable of anticipating a driver's personal preferences and changing traffic conditions and possible impediments and risks. Modern cars are today integrated with infinite electrical components that control various integrated systems ranging from ECUs, ABS brakes, GPS navigation equipment, sensors, driver assistance systems, power windows, heated seats to sunroofs. Vehicle electrical systems help power the batteries, charging system, starting system, ignition system, lighting systems, auxiliary equipment such as windscreen wipers, horn, HVAC systems, electrical mirrors, sunroofs, TPMS, airbags, vehicle security systems etc., in-car entertainment and communication systems such as telematics, GPS, radios, music systems, DVD players etc. The envisioned future of smart cars, connected cars and autonomous cars are key factors driving the high tide of automobile "electronification". Automotive electronics help improve performance, safety, and functionality of a vehicle. An average car currently flaunts over 100 on-board sensors, and as the smart car concept gains commercialization, sensors per car are forecast to increase to over 250. Currently available premium-class automobile typically contain over 100 million lines of software codes all designed and executed by 70 to 100 microprocessor-based electronic control units (ECUs).</p>
+            <p>In recent years, connectivity has emerged as an indispensable feature in the automotive industry. As “Internet of Things” becomes a key part of the modern automotive digital infrastructure, the era of connected cars is ready to speed down the information highway. The impact of connected cars will be felt in the three broad areas of In-Vehicle Communication, Vehicle-to-Vehicle Communication, and Vehicle-to-Infrastructure Communication. Connectivity, in this regard, will be deployed through Infotainment, Navigation and Telematics. The growing interest in connected cars is strongly supported by effervescent developments in automotive electronics, specifically the evolution of five important enabling technologies i.e. in-car Wi-Fi, Bluetooth, Near Field Communication (NFC), Integrated GNSS, and Automotive Ethernet. These technologies play vital roles in vehicle connectivity, paring, and communication. Right from enabling the development of intelligent cars that can communicate wirelessly to fully autonomous self-driven cars, connectivity solutions and technologies are revolutionizing the automotive industry.</p>
+            <p>Automotive dealers, drivers and fleet operators are leveraging connectivity services for improving safety, optimizing resource utilization and automating driver functions. These services are being increasingly exploited to generate and receive valuable data regarding road conditions and vehicle performance. Connected car services are delivered in vehicles using integrated, embedded, tethered or cloud connectivity solutions. Connectivity over the cloud connects drivers, shippers, carriers, dealers, fleet operators, insurance companies, service stations and authorities with each other in real-time. The increasing attention on connected cars offering advanced services is driving the importance of automotive software solutions. Automotive software is intended to facilitate management, configuration and monitoring of IoT devices in vehicles. Connected car services are also gaining prominence due to rising safety and security concerns, increasing penetration of IoT in the automotive industry and growing demand for better driving experience. The factors are prompting tier-1 players to make heavy investments in connected services for latest automobile models. Some of the major automakers are also tying up with telecommunication and networking providers to offer their customers with digital connected services including navigation, infotainment, telematics, fleet management and automation.</p>
+            <p>The integration of AI, ML, IoT, cloud computing, 5G and big data is giving rise to disruptive technology trends in the automobile space. The top trending technology-driven themes include self-driving (autonomous) systems, human-machine interface, big data, predictive capabilities, in-vehicle infotainment systems, telematics, augmented reality dashboard, biometric seat capabilities, automatic lift gate, 3D printing and car-as-a-service. They are integral to the success of both autonomous vehicles. The edge imparted by the IoT technology to the automobile industry is rather unmatched, given the possibility of not just connecting different cars on a road, but also connecting cars with smartphones, road infrastructures and pedestrians. As more data gets generated by IoT sensors, the data could prove useful in easing traffic and making roads safer.</p>
+          </div>
+
+         <hr class="divider"/>
+
+          <h3 class="subheading">Trending Technology Themes for 2023 & Beyond</h3>
+          <div class="textless text-left">
+              <p>The automotive industry is the most dynamic and active sector with technology developments taking place at rapid speeds. Identifying emerging technology trends is therefore very important to know what to expect and be prepared for the future. Below we examine several technology dynamics affecting growth over the next couple of years.</p>
+
+              <ul>
+                <li>Autonomous Vehicles (AV) – Autonomous driving is very close to entering mainstream driven by the strength of technologies such as LiDAR, V2X, AI, among others. Having already reached stage 2 of autonomy, the aim is to reach stage 5 in the future. An autonomous or driverless vehicle operates itself to perform all necessary functions devoid of human intervention, by way of its ability to appropriately sense its operating environment. The vehicle uses a completely automated system for driving to enable it in responding to any external condition which an average human driver can manage also. AVs can be autonomous only when they are able to take decisions. The technology on which AVs are based is algorithms, which determine the course of performance or activity in a given situation. Vehicle technology that is autonomous can provide great advantages when compared with human-driven vehicles. The principal advantage is increased road safety because car crashes lead to the untimely deaths of thousands annually worldwide, and here, an automated vehicle can potentially decrease such casualties as their software makes lesser numbers of errors when compared with humans. </li>
+                <li>Automotive HMI - The automotive industry is waking up to the importance of HMI against the backdrop of the industry’s rapid migration towards an autonomous, shared, connected, electric and service (ASCES) oriented future. Integration of infotainment systems in passenger cars as standard vehicle fixtures which include embedded entertainment, communication, navigation and telematics modules require additional non-driving interaction with car, thus influencing demand for HMI solutions. HMI plays a vital role in safe use of in-vehicle connected services such as emergency services, latest and current up-to-date traffic, stock quotes, weather alerts, music streaming etc. HMI is therefore integral to the success of the automotive industry’s transformation towards digital mobility. Automotive HMI is expected to witness robust growth supported by technology developments that make HMI systems that are easy to operate, more sophisticated, provide greater comfort, ease of mind, and minimize driver distraction. The market is forecast to benefit from the development of new next generation HMI input technologies like touchscreens, voice control, gesture control, etc. given their ability to enable a low-distraction user interface. Gesture recognition especially is being used for controlling infotainment systems. They are also being used for controlling lights and for GPS navigation. </li>
+                <li>Automotive Blockchain - For autonomous cars to become mainstream, they are required to improve abilities of collecting and communicating data from the surrounding environment. The decentralized ledger of Blockchain technology would enable driverless cars to access the needed traffic data, in the real-time and also in the most accurate manner. Furthermore, the smart contracts that are enabled by the technology can simplify several other aspects related to driving, including insurance payments, and payments for tools, repairs etc. Centralization increases vulnerability of data and there is also this inability to rapidly communicate between data points, reducing its worth in real-time scenarios. The status quo however, can be improved by Blockchain technology. Blockchain enables a more efficient and rapid spread of data for autonomous vehicles. Establishing decentralized networks which transfer data more seamlessly, to all the points, constitutes the first step towards creating a safer ecosystem of driverless vehicles. Another application for Blockchain technology in autonomous cars, which holds immense promise, is in improving transactions occurring between vehicles and infrastructure surrounding them. An area where Blockchain would be likely deployed would be V2V microtransactions. Car owners would be allowed to use tokens for paying for data needed from other vehicles. Such data can be anything from weather forecasts, congestion data, gas prices etc. Vehicles would thus be made to earn tokens by sharing data. They could also sell data to manufacturers and advertisers. Blockchain in these strategies would be critical for creating the ecosystem of V2V data sharing, which rewards and incentivizes participation.</li>
+                <li>Automotive AI – AI is offering massive support to the automotive industry by enabling development of Level 4 and Level 5 autonomous vehicles. Autonomous vehicles feature different forms of sensors, including LiDAR, cameras and radars, which are used for understanding the surrounding and road conditions for effective path planning and safe movement. However, these sensors produce massive volumes of data that needs to be exploited with fast processing capabilities for effective decision making. The aspect is prompting an increasing number of automakers to bet on AI, mainly deep learning and machine learning, for development of autonomous vehicles. The option ensures processing of significant data volumes in an efficient manner while training self-driving systems. The AI technology is slated to influence diverse aspects of the autonomous vehicle domain while ensuring better and safer driving, even in challenging road or traffic conditions. The combination of AI, self-driving vehicles and blockchain is anticipated to result in innovative autonomous systems and push transparency. These technologies are expected to allow self-driving vehicles in making accurate decisions. The AI technology is slated to gain further from ongoing efforts by automakers to integrate natural conversational AI into vehicles to use speech recognition, understand natural language, smart avatars and speech synthesis for better insights into context, complex sentences, emotions and user preferences.</li>
+                <li>V2X - A key technology as important as sensors in enabling autonomous driving is “communication”. A smart connected, autonomous car in order to be safe must be capable of communicating with other vehicles, pedestrians, devices, infrastructure, grid, and smart homes. And this brings Vehicle-to-Everything (V2X) into the spotlight. With the V2X market evolving and bringing together an entire ecosystem of vital players comprising auto OEMs, mobile network operators (MNOs), cloud service providers, tier-1 suppliers, cartography and map providers, road operators, telecom suppliers and traffic infrastructure providers, the path to commercialization is becoming increasingly clear. Emerging signs of collaboration among global players in this ecosystem is a harbinger of good news and a brighter outlook for the V2X market. This is because before autonomous cars can become a reality, communication and data analytics need to evolve to overcome safety issues of a driverless future. Auto OEMs are already partnering with MNOs to provide vehicle information, driving characteristics, driver behavior analysis, location information, and OTA updates. Vehicle specific information, for instance, can be broadcasted by MNOs within and beyond the direct V2V communication range. Also known as WLAN-based V2X, DSRC uses radio communication provided by 802.11p. There are strong and clearly visible signs of C-V2X gaining momentum globally with the latest in the string of developments being the integration of C-V2X into Qualcomm® Snapdragon™ Automotive 4G/5G platforms. 5G based C-V2X has also arrived as a powerful unified connectivity fabric to expand applications and performance. With fiber-like data speeds; low latency for real-time interactivity; consistently superior performance, massive capacity for unlimited data transport, 5G is the new game changer for V2X. 5G based C-V2X opens the doors for Ultra-Reliable Low-Latency Communication (URLLC) and provides high data rate needed to support higher levels of predictability which is vital for autonomous driving. This in itself has set the V2X market on an accelerated growth path. Several RSU & OBU products are currently in pipeline while at the same time the global footprint to support system integration is getting better, bigger and smarter. There is robust activity from standards completion to independent field testing to early commercialization.</li>
+                <li>Electric Vehicles (EV) - EV sales by 2027 is expected to more than double driven by robust policy support among governments worldwide in the form of subsidies and incentives for EVs, investments in charging infrastructure, and phase-out internal combustion engines. Stringent emission regulations are encouraging auto OEMs to electrify their fleets at a pace much faster than policy targets. The number of EV models available on the market is expected to grow significantly from the 450 models currently available, underpinning the effervescent and continuous level of technology innovation and research and development activities underway. Emerging new breakthroughs in battery improvements will help OEMs tap into the growing demand for longer range vehicles. Passenger EV sales are expected to be driven by changing consumer perception. With continuing improvements in technology and driving range coupled with consistent decline in unit prices, electric vehicles are enjoying a positive perception, which is bound to eliminate barriers hindering broader adoption of these vehicles. Various countries are offering attractive subsidies and incentives to boost adoption of electric vehicles for environmental benefits and mitigating climate change. These subsidies are driving an increasing number of people to consider spending on electric vehicles despite their higher upfront costs. Electric passenger vehicles are also gaining ground and consumer acceptance owing to their convenient driving experience. </li>
+                <li>Predictive Capabilities - Predictive capabilities built upon artificial intelligence and machine learning technologies are delivering a never seen before personalized driving experience. Automobiles are built around algorithms that enable owners to select application preferences such as for their in-car infotainment system. These vehicles can easily be connected to smartphones, take voice commands and change user interface. At the same time, sensor data trigger alerts for any upcoming service or maintenance requirement. This way predictive analysis not just benefits the automobile owners but also the automakers, as they gain prior knowledge of the functioning of parts while they are still in warranty period. In the event of any malfunction or defect, the automakers can replace the particular part even before the customer sends request, building reputation and goodwill for their after-sales service in the market.</li>
+                <li>Automotive Big Data - Big data has had a transformative effect on every industry, including the automobile industry. Every new smart vehicle is equipped with GPS, ECUs, multiple cameras, sensors and several other electronic components all interconnected owing to the AI, ML and IoT technology. All these produce large volumes of data, which helps in autonomous navigation, accident prevention and interaction with other automobiles. Data ensures vehicles communicate safely over the internet. As for analysis of the data gathered from various connected devices in the form of unstructured, semi-structured and structured data, there are multiple tools such as Apache Hadoop, Splunk, Tableau and Zoho Analytics among others that are widely used for data analysis and processing. There is more to big data, as automakers can use the gathered data to minimize errors in vehicle production and manufacture higher quality vehicles; train machine learning models to help avoid malfunctions by identifying part repairs or replacements before they actually breakdown; and avoid accidents, improve security and improve driving experience. At the same time, big data also promises automakers gain edge with their automobile design and production, and supply chain management. A data driven supply chain is more robust, efficient, agile and cost effective. When leveraged for design and production, big data can help automakers significantly improve driving experiences by enhancing the engine efficiency, battery power, fuel economy and passenger and vehicle safety.</li>
+                <li>Telematics - Telematics is another advanced automobile functionality bought alive by in-vehicle Wi-Fi powered by 4G LTE that enables long-distance transmission of computerized data. Vehicle owners can remain assured of their vehicle security and safety as they monitor their automobiles, even remotely, using smartphone-enabled dashboards for advanced telematics. External cameras and sensors track the condition of an automobile and transmit data to an owner’s smartphone, triggering real-time alters in case of forced intrusion by any stranger. As a plus, the IoT technology enables the connected automobile to place a call to concerned authorities in emergency situations.</li>
+                <li>Augmented Reality Dashboard - Augmented reality dashboard, powered by augmented reality technology, allows automakers to transform an automobile’s windshield into a screen that displays useful data to the user. With the help of a HUD, the system can display key details related to the RPM, gas mileage, speed and prevailing weather conditions among others. The navigation technology helps drivers follow directions provided through holographic symbols while keeping their eyes on the road, eliminating the need to check their smartphones or other in-car displays to gain idea of speed or fuel tank levels.</li>
+                <li>Biometric Seat Capabilities - Biometric seat capabilities use data gathered from a driver’s palm and face to measure anxiety levels and make recommendations as to when the driver should take a break. This way, driver fatigue can be avoided and vehicle driving performance and experience can be improved.</li>
+                <li>3D Printing - The 3D printing technology brings superlative benefits for automakers who can now perform rapid prototyping and save considerable amount of time. Automakers can easily and speedily print designs with 3D printers, accelerate vehicle production in the design and testing phase, resulting efficiency in time utilization.</li>
+            
+            </ul>
+
+          </div>
+
+         
+      </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!--============================
+           Footer            
+=============================-->
+
+<footer-component></footer-component>
+
+
+<!---============================
+       ScrollTop        
+=============================--->
+
+<scrolltop-component></scrolltop-component>
+
+<!-- JAVASCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<script src="js/script.js"></script>
+<script src="./js/submenu_select.js"></script>
+<script src="./js/jquery.readall.js"></script>
+
+
+<!---WEB COMPONETNS-->
+<script src="./webcomponts/headerComponents.js"></script>
+<script src="./webcomponts/FooterComponent.js"></script>
+<script src="./webcomponts/ScrollToTop.js"></script>
+<script src="./webcomponts/dummytext.js"></script>
+<script src="./webcomponts/banner.js"></script>
+
+<script>
+  $('.textless').readall({
+    showheight: null,
+    showrows: 8
+  });
+
+
+</script>
+
+
+
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+      $('.goog-te-menu-value span:first').html('LANGUAGE');
+      $('.goog-te-menu-frame.skiptranslate').load(function () {
+        setTimeout(function () {
+          $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+        }, 100);
+      });
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+  }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+  <!--============================
+=            HEADER           =
+=============================-->
+  <header-component></header-component>
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $.getJSON("./data/events.json", function (data) {
+        var selURL = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1).replace(".html", "");
+
+        var writeuptitle = '';
+        console.log(data)
+        $.each(data.eventslist, function (key, value) {
+          if (selURL == value.Event) {
+            writeuptitle += `<h2>` + value.eventtitle + `</h2>`;
+          } else {
+
+          }
+        });
+        $('#writeup-title').html(writeuptitle);
+      }).fail(function () {
+        document.write("An error has occurred.");
+      });
+    }); 
+  </script>
+  <div id="writeup-title">
+
+  </div>
+
+  <div class="body-content">
+
+
+
+
+
+  <!--================================
+         WHATS TRENDING
+=================================-->
+
+<section class="section" id="writeup">
+  <div class="container">
+    <div class="row pb-3 page-title">
+      <div class="col-sm-12 m-auto text-center -3">
+        <!-- Page Title -->
+        <h1 class="font-display2 main-font-color">WHAT'S TRENDING</h1>
+      </div>
+    </div>
+      <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+
+          <div id="accordionExample" class="accordion custome-accordion border-0">
+
+
+            <div class="card">
+              <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">What
+                    Developments Are Expected to Shape the Future of Software Development & SaaS Industry?</button>
+                </h2>
+              </div>
+              <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                <div class="card-body p-5">
+                  <p class=" m-0">Over the years, software development has undergone rapid evolution, supported by a
+                    myriad of advances in software platforms, languages, and development methodologies. One of the major
+                    transitions includes the migration of software from proprietary to open source. While open-source
+                    software might appear anti-capitalist, current software has evolved from being just means of earning
+                    profit to a collective mechanism of achieving technological growth. Currently, a significant number
+                    of software products, ranging from the framework used for controlling Facebook’s appearance to the
+                    operating system powering the Android phones, are being offered as open source. Large organizations,
+                    such as IBM, Google, Microsoft, and Adobe, are actively releasing their inventions as open source
+                    for boosting software development. While this has resulted in a decline in the effort and cost
+                    required in developing new software, this approach has contributed in substantially broadening the
+                    scope of innovation, thereby empowering software development companies in delivering the best
+                    software products to their clients. The global SaaS market is paving way for a robust growth in the
+                    adoption of SaaS products among enterprises in the near future. In recent years, SaaS has gained
+                    significant popularity on back of the hyper-specialization of business as well as the growing needs
+                    of the contemporary work environment. Remote work and location changes have transformed the way
+                    employees communicate with colleagues and customers, resulting in the introduction of a wide range
+                    of new platform and collaboration tools, all of which have been developed on the SaaS model.
+                    Companies have traditionally been investing in on-premise infrastructure for the purpose of availing
+                    the benefits associated with software, such as CRM, automation, and business analytics. However, the
+                    recent advances in cloud technology has facilitated in shifting entire business operations offsite
+                    through the use of SaaS. Companies now have the ability of leveraging a broad array of applications
+                    that enable to swiftly achieve growth without the hassle of incurring high overhead costs. </p>
+
+                  <p class=" m-0">Over the past few years, the field of software-as-a-service (SaaS) has been witnessing
+                    rapid expansion with the development of new technologies and exploration of a greater number of use
+                    cases. SaaS systems are currently offering solutions across various segments, ranging from marketing
+                    and sales to video conferencing and live chats. In the coming years, this delivery model is poised
+                    to influence as well as integrate with a new and advanced immersive, collective virtual shared
+                    space, the metaverse. SaaS solutions being cloud-native solutions share the same attribute as
+                    offered by a majority of metaverse providers. It might be too early to imagine the two technology
+                    modes working in tandem with each other as the metaverse is still in early development stages.
+                    However, a close inspection of the key features of the metaverse can make the connection between the
+                    two modes clear. The metaverse offers immersive experiences within virtual environments as well as
+                    activities closely simulating virtually all aspects of human activity. For the purpose of delivering
+                    satisfactory results in providing such experiences, there is a need for the virtual world to have
+                    purpose-built, flexible network with very little latency. SaaS solutions can contribute
+                    significantly in this area. SaaS systems, leveraging advanced analytics and technologies, are
+                    designed for streamlining networks and workflows, speeding up operations, and positively influencing
+                    outcomes. These aspects are particularly vital for metaverse experiences, especially for those
+                    operating within business spaces. The delivery model has the inherent capability of being adopted as
+                    well as reoriented for working within the metaverse. In terms of connectivity, 5G networks,
+                    supported by low latency resources such as edge computing and cloud computing, can offer the
+                    capability of delivering such experiences to end-users on demand. SaaS is anticipated to play an
+                    integral role in unlocking the potential of the metaverse. </p>
+                  <br />
+
+                  <p class=" m-0">Telecom SaaS, backed by 5G connectivity, holds tremendous potential in making
+                    metaverse mainstream among public audiences. Metaverse is being designed to deliver rich experiences
+                    with the aim of achieving greater enjoyment, productivity, and safety without incurring risks,
+                    delays, and expenses generally associated with the physical world. However, for achieving such
+                    experiences, a combination of an extremely high security, extremely high bandwidth, extremely low
+                    lag time, and reliable and ubiquitous connectivity would be required. In addition, the metaverse
+                    would bring sudden spikes in requirements and demands for extreme flexibility for accommodating
+                    production surges, spontaneous crowd gatherings, and large virtual sales events. 5G would play a key
+                    role in the metaverse space for providing the necessary software-driven network with the desired
+                    device density, latency, bandwidth, security, and reliability for supporting the immersive virtual
+                    experiences for both people as well as machines within the metaverse. Service providers have been
+                    actively developing 5G networks across the globe. However, they still need a mechanism for
+                    accommodating the massive spike in demands for reliable and secure connectivity. Telecom SaaS could
+                    offer the ability of enabling rapid and on-demand ramp up required for providing immersive metaverse
+                    experiences, while also preventing the problematic economics of overbuilding networks. Apart from
+                    its capability of provisioning networks, telecom SaaS also offers the benefit of robustness,
+                    allowing operations to continue running even if the technology goes off the grid. This aspect
+                    ensures the level of reliability needed during the implementation of metaverse. Confluence of 5G and
+                    telecom SaaS can benefit brands and enterprises in monetizing various experiences, including
+                    delivering like-like service demonstrations, digitizing education and training, developing
+                    customized in-store experiences, and selling goods. Moreover, traditional SaaS can be channelized by
+                    software developers for building a completely new deployment model, the metaverse-as-a-service. </p>
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Key Transformational Changes Happening in Software Development Field</button>
+                </h2>
+              </div>
+              <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  
+             <ul>
+              <li><strong>Shift towards Agile Methodology from Waterfall Methodology -</strong> An important change that has occurred in the field of software development over the last few years is the transition from the waterfall model to agile methodology. A majority of the initial software was developed using the waterfall model, a linear and sequential approach to software development. However, in recent years, the new agile methodology has gained traction in software development owing to its benefits in allowing reiterations and fostering greater collaboration among developers. Instead of developing software as a single giant block, modern-day software are being commonly developed incrementally by splitting the development process into several dynamic phases, thus making the entire software development process much more efficient, robust, and adaptable. In the current technological world, there is an intense competition between software development companies, with each exploring the best approaches that can be utilized for creating software solutions for clients. The classical approach has involved creating silos of software developers and engineers tasked with managing software operation. However, over the past few years, software development companies have realized the importance of individuals involved in software development and operations engineers to work together. This has led to the wider popularity and adoption of DevOps in the software development industry. The concept of DevOps enables in bringing various seemingly disparate software development processes together, thereby delivering a wide range of benefits to software development companies, including faster product development and deployment, greater product reliability under varying conditions, greater scalability, and improved security through minimization of application vulnerabilities. </li>
+              <li><strong>Migration towards Cloud from On-premise Servers -</strong>  Another major transformation in software development has been the increased migration of software solutions from on-premise to cloud servers. Earlier, the adoption of internet applications was very limited owing to their high upfront cost of procurement. This changed with the introduction of cloud computing, allowing businesses to rent access to various computing services from a cloud service provider rather than owing and maintaining their own computing infrastructure. Cloud computing facilitates in delivering computing services, including software, databases, storage, servers, intelligence, and analytics, over the internet for providing flexible resources, faster innovation and economies of scale.</li>
+              <li><strong>Transition to Connected APIs from Isolated Models - </strong>Another notable change in the software development space has been the switch from isolated models to connected Application Programming Interfaces (APIs). An API refers to an approach that empowers two disparate systems with the ability of sharing data as well as functionality. APIs hold critical importance in connecting various different software products, thus enabling seamless integration between them. While APIs have been around since 2000, their true potential has been realized only in the last decade. The Google Cloud Vision API is one common example that can be utilized by developers for easily enabling image intelligence into their software products without the requirement of building the AI algorithms. Over the past few years, several APIs have swarmed the marketplace, making the internet an extremely connected environment for the benefit of both software developers as well as end-users.</li>
+              <li><strong>Increasing Adoption of Outsourcing Model - </strong>The other major change in software development has been an increased adoption of the outsourcing model. The global IT and software market is poised to exhibit exponential growth in the coming years. The outsourcing model enables companies in significantly reducing their cost of software development, as well as benefits in creating job opportunities in the provider countries. In addition, this approach enables sharing of skilled human resources across boundaries, thereby creating greater opportunities for boosting innovation as well as unprecedented levels of growth in software development. All these changes have resulted in making the software development process much easier and faster, enabling the development of smarter and more effective software products. Software development plays a pivotal role in the success of a software product, defining whether the product would be technically feasible and economically viable. In the coming years, greater incremental changes in software development processes, practices, and methodologies are expected for the benefit of developers as well as end-users.</li>
+
+
+
+             </ul>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Key Software Development Trends to Keep an Eye-on in 2023</button>
+                </h2>
+              </div>
+              <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  
+                  <ul>
+                    <li><strong>AI-assisted Coding Tools -</strong> While on one hand, the year 2023 is expected to witness the inception of certain new software development trends, such as AI-assisted coding, the year is also likely to see older trends, such as low-code programming and blockchain app development, cooling off. In addition, the year could also ultimately see cooling down in the job market for software development. For past several years, developers have built various tools to assist writing source code utilizing AI. The past year has witnessed AI-assisted programming taking off in a major way with the introduction of several new AI-assisted coding tools, such as Amazon CodeWhisperer and GitHub Copilot. In 2023, more and more software developers are expected to start adopting and experimenting with AI-assisted coding tools, and occasionally utilizing them for generating comparatively mundane code. AI-assisted coding refers to a feature that utilizes machine learning models to generate code automatically for the benefit of software developers. AI-assisted coding tools can help in increasing the productivity and focus of software developers through faster creation of logic flows. In addition, such tools can offer just-in-time help pointing to a specific reference documentation of other information sources, as well as providing pre-built component suggestions that help in eliminating knowledge gaps and friction. </li>
+                    <li><strong>Blockchain -</strong> Development of blockchain applications, on the other hand, is anticipated to wind down significantly in 2023.	Similarly, the hype surrounding low-code programming is likely to cool off, with more developers recognizing the various limitations associated with low-code tools, including security challenges and the inability of yielding cost-efficient and high-performing applications. Developers earlier faced pressure of refactoring their application code for it to run as microservices within containers. This challenge has now been mostly addressed with most applications requiring refactoring been already refactored. However, developers now face a new challenge of migrating applications to platforms, such as Kubernetes, and making their applications more environment-agnostic. For doing so, developers need to run their applications within containers. These factors are likely to drive the development of several monolithic applications that have the ability of running within containers. Running monolithic applications within containers can offer developers the benefits of reducing the number of external environment dependencies that they need to worry about while deploying the application.</li>
+                    <li><strong>Adoption of Progressive Web Applications - </strong>The year 2023 is also expected to witness greater adoption of progressive web applications. These applications are a type of native web apps delivered through the web by combining the advanced features and functionalities offered by browsers with the advantages of a mobile experience. Such applications can be easily and quickly downloaded by end-users while visiting the website in the browser and installed on their smartphone’s home screen, thereby eliminating the need for them to visit the app store for downloading. Progressive web applications offer the benefits of small size, advanced performance, and features such as offline mode and push notifications. These applications are particularly beneficial for small and new companies, owing to their low cost of creation and maintenance, as well as their ability of providing the combined benefits of the web and mobile. Progressive web applications are likely to experience wider popularity among startups and small businesses in the coming years. Some of the prominent organizations that have already adopted progressive web applications include Starbucks, BMW, Debenhams, and Flipboard. Apart from these trends, the year 2023 is also likely to witness slowing down in hiring of software developers. For past several years, companies have been desperately looking at recruiting coders, and have been paying hefty salaries for hiring and retaining them. However, the prior year has experienced significant economic slowdown that has adversely affected the technology companies, many of which have been opting for massive layoffs in the past few months. In 2023, the job market for software developers is likely to be less enviable as it was in the previous years.</li>
+
+                  </ul>
+                
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Key Trends That Are Likely to Influence the SaaS Industry in 2023</button>
+                </h2>
+              </div>
+              <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  
+                  <ul>
+                    <li><strong>Proliferation of White-label SAAS Products -</strong> One of the major trends that would drive the SaaS industry in 2023 is the continued proliferation of white-label SaaS products. A white-label SaaS product refers to an unbranded product that a company purchases and rebrands it as its own. White-label SaaS can help businesses in expanding its existing product offerings without incurring any development overhead. The white-label SaaS market has been witnessing significant growth over the last few years, resulting in the development of several different types of white-label SaaS tools and software products. One of the most common white-label SaaS used by various organizations includes email marketing software. This software solution offers users the opportunity of completely controlling their outgoing emails, besides providing them with the ability of scheduling email marketing campaigns, monitoring their statistics, building integrations, and improving customer personalization. 
+                      Another notable example of white-label SaaS includes software development tools for website and app designing and development. These tools can enable users in building websites for their customers using drag-and-drop features. In addition, there are social media management tools that provide customizable dashboards to allow marketers to view and manage activities and interactions as well as post content on various social media accounts from a single location. Another emerging white-label SaaS includes white-label integration software, which provides users the ability of developing and expanding their SaaS products using native integration capabilities.
+                      </li>
+                      <li><strong>Development of Vertical SAAS -</strong> Continuous specialization of business has been paving way for SaaS to become more industry-vertical specific. Organizations now have the option of going for SaaS solutions that have been uniquely designed to address their concerns and requirements. While a large number of vertical SaaS solutions have already been available in the market for past several years, there is still scope for tremendous growth in this segment and the demand for such solutions is likely to increase significantly in the coming years. In addition, micro SaaS apps are being developed for catering to more specific requirements within a particular industry. For instance, there could be a general vertical SaaS solution to cater to the education sector, along with specific micro apps for kindergarten and middle-school education. Vertical SaaS caters to a niche market, thereby offering providers of these products an increased likelihood of lead conversion, as well as the benefits of lower cost of customer acquisition and marketing spending, compliance with industry-specific requirements and standards, and increased customer retention owing to the high level of industry-specific expertise offered by them. </li>
+                      <li><strong>Emergence of Super Apps - </strong>Over the past few years, there has been an emergence of several super apps across various global markets. The demand for super apps is expected to continue increasing substantially in 2023, driven by the rise in the number of smartphone users and rapid growth in internet penetration across the globe. Super apps generally refer to apps that have been developed to help users perform disparate activities. Super apps could help users in shopping for groceries, paying their rent, reviewing work documents, refilling prescriptions, booking a trip, and chatting with businesses, friends, and interest groups using just one app. SaaS is typically offered in a bundled form by integrating distinctive capabilities and delivering them in discrete packages. However, in recent years, the trend is gradually shifting towards offering customers more selective pricing and packaging models through decoupling and unbundling of packages to meet specific requirements of customers. </li>
+                      <li><strong>Observable Data -</strong> Development of a successful SaaS requires good observability across the user journey over various touchpoints and interfaces. Observable data indicates the digitized artifacts that appear when any action is taken by a stakeholder. These observable artifacts are fed back by applied observability in an orchestrated and integrated approach for accelerating organizational decision-making. The prominence of applied observability is expected to rise in the near future, with this approach emerging as one of the most potent sources of enabling data-driven decision-making through strategic planning and execution.</li>
+                  </ul>
+                
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!--============================
+           Footer            
+=============================-->
+
+<footer-component></footer-component>
+
+
+<!---============================
+       ScrollTop        
+=============================--->
+
+<scrolltop-component></scrolltop-component>
+
+<!-- JAVASCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<script src="js/script.js"></script>
+<script src="./js/submenu_select.js"></script>
+<script src="./js/jquery.readall.js"></script>
+
+
+<!---WEB COMPONETNS-->
+<script src="./webcomponts/headerComponents.js"></script>
+<script src="./webcomponts/FooterComponent.js"></script>
+<script src="./webcomponts/ScrollToTop.js"></script>
+<script src="./webcomponts/dummytext.js"></script>
+<script src="./webcomponts/banner.js"></script>
+
+<script>
+  $('.textless').readall({
+    showheight: null,
+    showrows: 8
+  });
+
+
+</script>
+
+
+
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+      $('.goog-te-menu-value span:first').html('LANGUAGE');
+      $('.goog-te-menu-frame.skiptranslate').load(function () {
+        setTimeout(function () {
+          $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+        }, 100);
+      });
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+  }
+</script>
+</body>
+
+</html>
