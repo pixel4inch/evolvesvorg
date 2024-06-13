@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <header-component></header-component>
+
+
+  <!--============================
+    PAGE BANNERS
+=============================-->
+  <section class="pagebanners">
+    <div class="container">
+      <div class="row mx-0" id="pagebanner-block">
+
+        <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+        <script>
+          $(document).ready(function () {
+            $.getJSON("./data/events.json", function (data) {
+              var output = '';
+              console.log(data)
+              $.each(data.eventslist, function (key, value) {
+                if (value.Event == "ai") {
+                  output += `<employee-card  title=" ` + value.eventtitle + '"  date= " ' + value.eventdate + ` "> </employee-card>`;
+                }
+              });
+              $('#pagebanner-block').html(output);
+            }).fail(function () {
+              document.write("An error has occurred.");
+            });
+          }); S
+        </script>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--section class="section datanumbers mb-0 pb-0 " id="counters_1">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-6 col-sm-100 p-2">
+        <div class="w-100 text-center">
+          <h2 class="font-weight-bold">STARTUPS</h2>
+          <h3 class="counter c_0" data-targetnum="585655858" data-speed="7000"></h3>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-100 p-2">
+        <div class="w-100 text-center">
+        <h2 class="font-weight-bold">INFLUENCERS</h2>
+        <h3 class="counter c_0" data-targetnum="98765" data-speed="7000"></h3>
+      </div>
+      </div>
+  
+    </div>
+</div>
+</section-->
+
+
+
+  <!--============================
+    PLACEKEEPTER BANNER
+=============================-->
+  <section class="section placekeeper_section page-title">
+    <div class="container">
+      <div class="row align-items-center m-0 ">
+        <div class="datagraphic-block" id="datagraphic-block">
+          <script>
+            $(document).ready(function () {
+              $.getJSON("./data/events.json", function (data) {
+                var output = '';
+                console.log(data)
+                $.each(data.eventslist, function (key, value) {
+                  if (value.Event == "ai") {
+                    output += `<a href="` + value.eventdatagraphiclink + `" target="_blank"> <img src="` + value.eventdatagraphic + `" class="img-fluid border shadow-sm"  /></a>`;
+                  }
+                });
+                $('#datagraphic-block').html(output);
+              }).fail(function () {
+                document.write("An error has occurred.");
+              });
+            });
+          </script>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--================================
+         WHATS TRENDING
+=================================-->
+
+  <section class="section">
+    <div class="container">
+      <div class="row pb-4 page-title">
+        <div class="col-sm-12 m-auto text-center -3">
+          <!-- Page Title -->
+          <h1>WHAT'S TRENDING</h1>
+
+
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+
+          <div id="accordionExample" class="accordion custome-accordion border-0">
+
+
+            <div class="card">
+              <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Artificial
+                    intelligence. How Well Do You Understand This New Power Mantra of Today?</button>
+                </h2>
+              </div>
+              <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                <div class="card-body p-5">
+                  <p class=" m-0">AI and analytics are becoming integral components of business strategies and
+                    operations due to their ability to push productivity, deal with supply chain glitches, mitigate
+                    skill shortages and allow delivery of new products or services. The rapid increase in spending on AI
+                    reflects the growing interest in the technology among various stakeholders. Despite concerns over
+                    loss of control and job losses, AI remains a high potential technology with significant applications
+                    in different end-use industries. The pandemic played a crucial role in expediting digitalization
+                    while prompting companies to invest in data-related projects. The crisis pushed adoption of AI and
+                    data analytics, with an increasing number of companies focusing on these technologies due to their
+                    compelling benefits. In particular, developing economies across the world are rapidly shifting
+                    towards smart technologies as a means to enhance efficiency of their business activities, which also
+                    contribute to an increase in overall profitability. Such a shift towards novel and smart
+                    technologies provides significant growth opportunity for AI. </p>
+
+                  <p class=" m-0">Also benefiting AI is the escalating demand for speech-to-speech translation and smart
+                    conversational virtual assistants. AI is also being increasingly used in the development and launch
+                    of autonomous vehicles and for business process automation, specifically in developed economies.
+                    Also driving demand for AI solutions is the growing use of speech recognition systems and
+                    intelligent customer assistance bots in rapidly expanding e-commerce sector. Consequently, the
+                    ability of AI technologies to ease the operation of various business processes and contain overall
+                    costs is leading to a surge in demand for AI in end-use industries. Increasing number of IT
+                    organizations are using AI, while others are expediting implementation of the technology. AI is
+                    enabling businesses to efficiently communicate with clients through virtual assistants, securely
+                    manage networks and automate workflows. Data analytics and AI are enabling companies to deliver new
+                    products and associated services to address consumer demand. These technologies are driving
+                    innovations and allowing players in diverse industry verticals to come up with new offerings.
+                    Advances in the autonomous vehicle segment such as long-range radar, cameras, and LIDAR leverage AI
+                    to provide actionable insights. </p>
+                  <br />
+
+                  <p class=" m-0">AI tools and techniques specially designed for the field of robotics play a vital role
+                    in enabling robots to become more advanced and efficient in accomplishing tasks. In Agriculture,
+                    organizations are using automation and robotics to help farmers find more efficient ways to protect
+                    their crops from weeds. Besides robots, companies have started leveraging deep learning and computer
+                    vision algorithms to process data that are captured with the help of drones or software-based
+                    technology in monitoring the health of the soil and crops likewise. Over the past few years, AI has
+                    become an integral part of the gaming industry. In the banking industry, there is growing pressure
+                    to automate and reduce costs. The implementation of AI in the banking sector plays an important role
+                    in reducing costs, boosting revenues and uncovering new and untapped opportunities. The technology
+                    is anticipated to gain from increasing consumer preference for mobile and online banking. A large
+                    number of people are likely to reduce branch visits in the post-pandemic phase. Despite existing
+                    budgetary constraints, the trend is poised to prompt various banks to increase AI capabilities. The
+                    adoption of AI is bound to be propelled further by the need for regulatory clarity and compliance.
+                    Regulators and central banks are making efforts to facilitate safe adoption as well as making
+                    companies understand the effect of existing policy frameworks, which are poised to benefit AI.</p>
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Cutting
+                    Edge AI Enabling Technologies</button>
+                </h2>
+              </div>
+              <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">For developing an end-to-end artificial intelligence system, different technology
+                    pieces must work to together to provide the much talked about and admired AI capabilities. A few of
+                    the noteworthy enabling technologies are discussed below.</p>
+                  <br />
+                  <ul>
+                    <li><strong>Machine Learning -</strong> Machine learning techniques use real-world experience and
+                      data and with the help of statistical analysis arrive at conclusions and forecast outcomes for
+                      specific actions. ML is a subset of AI that enables automatic learning and improves experience
+                      without explicit programming. In machine learning, different algorithms are used for helping
+                      resolve problems. Over the years, the factors of internet development, collection of huge loads of
+                      data and increasing computer processing power led to significant enhancement in predictive power
+                      of machine learning. Emerging technologies such as artificial intelligence and machine learning
+                      are changing the way industries and humans work. These technologies have optimized supply chains,
+                      launched various digital products and services, and transformed overall customer experience.
+                      Various tech firms are investing in this filed to develop AI platforms, while various startups are
+                      focusing on niche domain solutions. Major applications of ML include email filtering, detecting
+                      network intruders, computer visions, and optical character recognition (OCR). ML is finding
+                      increased adoption in various applications. </li>
+                    <li><strong>Deep Learning -</strong> Deep learning, or deep neural learning, uses neural networks
+                      for analyzing different through the use of a structure similar to human neural system. This leads
+                      to a significant increase in abstraction level gradually through non-linear transformations of
+                      data. Major applications of deep learning algorithms include speech recognition systems like
+                      Amazon Alexa and Google Assistant. Deep learning AI is based on a complex learning algorithm
+                      infrastructure, which enables machines to decipher the information and create a relationship
+                      between data points and an appropriate action on a specific input. Deep learning technology
+                      continues to gain acceptance due to its complex data-driven applications. The technology has
+                      already been implemented in applications such as speech recognition, computer vision, machine
+                      translation and natural language processing, among others. Complex data driven applications such
+                      as image and voice recognition are contributing to the rising prominence of deep learning. The
+                      demand for deep learning AI has and will continue to grow led by the increasing interactions
+                      between machines and humans.</li>
+                    <li><strong>Computer Vision -</strong> Computer vision represents the most prominent technology in
+                      the AI market, given the extensive use of computer vision technology in manufacturing sector, in
+                      particular for robotics, and the auto industry. In the auto industry, the technology has a
+                      critical part to play in the development of autonomous and semi-autonomous vehicles, as computer
+                      vision is essential for the cars to understand human gestures such as hand signal. Computer vision
+                      technology has a significant share of the AI in manufacturing market. Demand for the technology
+                      continues to grow following efforts of market players to structure machine data for the purpose of
+                      predictive analysis. </li>
+                    <li><strong>Natural Language Processing -</strong> Natural language processing (NLP) technology is
+                      another major contributor to the evolution of AI. The technology is positioned for growth in the
+                      coming years, due to the continuous rise in adoption of NLP technology in e-commerce and banking
+                      sectors for providing better services to the customers. Originally intended to convert numerical
+                      data into text-based insights, NLG is being increasingly used to generate text using text-based
+                      data points, indicating notable implications for creative writing. In a notable development in
+                      this direction, OpenAI has made available its GPT-3 large language model by API. Demonstrating the
+                      potential of NLG, the GPT-3 presents an effective option for applications requiring deep knowledge
+                      of language, such as generation of answers to related questions and conversion of natural language
+                      into specific software codes. </li>
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Trending
+                    AI Business Trends for 2023</button>
+                </h2>
+              </div>
+              <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">To understand the value of AI technology, it is important for business leaders to look
+                    at AI through the lens of business capability augmentation such as automating business processes,
+                    gaining insight through data analysis, cognitive insights and engagement among others. Listed below
+                    are noteworthy trends of how industries have captured the value of AI.</p>
+                  <br />
+
+                  <ul>
+                    <li><strong>Prime time for AI in manufacturing -</strong> AI leverages statistical modeling,
+                      datasets and technologies like natural language processing and machine learning for generating
+                      useful insights from manufacturing data, records, IT systems, order ‘and stock control. The
+                      technology uses data from diverse resources for enhanced communication and decision making. The
+                      use of AI and machine learning is anticipated to help manufacturers in redefining operation and
+                      business performance. AI is expected to make manufacturing operations highly responsive,
+                      resilient, reliable and responsible. The technology allows manufacturers to focus on worker safety
+                      and health while pushing productivity of shop floors with real-time remote monitoring and high
+                      operational efficiencies. AI holds potential to make manufacturing operations resilient to
+                      external stimuli including pandemics and launch of innovative products by competitors. In addition
+                      to benefitting manufacturing operations and supply chains for competitive advantage, the
+                      technology is likely to help manufacturers in becoming more responsive to changing consumer
+                      preferences in the post-pandemic phase. Moreover, AI is expected to be increasingly used by
+                      manufacturers for gaining relevant insights for making informed decisions and scaling operations.
+                      Manufacturers can exploit IoT and AI for ensuring availability and predictability of systems along
+                      with supply chain operations, which results in higher revenues and competitiveness. In addition,
+                      machine learning can be used for predicting quality by considering input parameters such as raw
+                      materials, RPM and time-to-process, leading to enhanced product quality. </li>
+                    <li><strong>Autonomous Vehicle Commercialization Timeline Hinges Onto to AI -</strong> AI technology
+                      serves as the brains that will steer autonomous cars, aircraft, and boats that are poised to
+                      transform human society and travel in the decade to come. </li>
+                    <li><strong>Adoption of AI in Predictive Marketing & Demand Forecasting -</strong> AI enables
+                      predictive marketing analytics. The technology can be used for analyzing data pertaining to past
+                      events for inferring the probable performance in the future, based on different factors. Analyzing
+                      what customers liked the most in the past would be useful in suggesting products that could be
+                      more appropriate to them in the near future in addition to predicting products customers would
+                      most likely like or be interested in. Such increasingly personalized suggestions can result in
+                      higher quality conversions with the potential to translate into sales. Businesses can also use AI
+                      for demand forecasting and dynamic pricing. Content creation for business is also emerging as
+                      another strong point for AI. AI can offer businesses intelligent solutions which can in turn be
+                      used for creating more effective marketing strategies. AI can thus help in augmenting human talent
+                      for creating improved content. AI can also aid in manipulation of tasks and in image generation;
+                      creation of copyright-free images of objects, animals and also people who are non-existent;
+                      converting photos into paintings or sketches of different styles; restoring or in-painting removed
+                      parts in images; and upscaling images.</li>
+                    <li><strong>AI-Powered Biometric Security Solutions Soon to Gain Momentum -</strong> AI is expected
+                      to transform authentication, security, and other related factors. AI can help in preventing frauds
+                      to a great extent. AI can be used as an additional layer in organizations to help adapt, protect
+                      and prioritize their customer services and experiences. Biometrics comprises of a variety of
+                      modalities related to customer authentication such as behavioral, voice, and facial recognition,
+                      making vital considerations simpler, faster, and more secure. Biometric authentication not only
+                      improves organizational security efforts but also allows convenient and frictionless customer
+                      experiences. AI and ML enabled biometric technologies are steadily proliferating the market while
+                      holding immense potential play a major role in future security technologies. The efficiency of ML
+                      in collecting, processing, and analyzing large data sets can substantially enhance the performance
+                      of modern biometric systems. As ML networks excel in matching tasks accurately and quickly,
+                      biometrics system becomes more efficient, accurate and viable than the existing systems. A
+                      DL-based face anti-spoofing tools secures a face recognition system and prevents any attempts by
+                      fraudsters to imitate the original face that is registered in the system. AI is of special
+                      importance in biometric security, especially with regard to behavioral and multimodal biometrics.
+                    </li>
+                    <li><strong>AI Regulations to Get More Serious -</strong> The extensive and ever-increasing use of
+                      AI is bound to drive regulations in the industry. Though in its early stages, AI regulation is in
+                      the works and emerging as a major enterprise concern. Concerns are growing among companies about
+                      AI regulation by governments. Though AI regulations are unlikely to come into effect majorly in
+                      Europe and the United Kingdom, advances will take place, particularly in the EU. In April 2021,
+                      the AI Act was put forward by the European Commission. This act outlines many risk categories,
+                      applying more stringent restrictions and regulations to certain use cases coming under higher-risk
+                      categories, like facial recognition, and outrightly banning use cases like those that manipulate
+                      humans to circumvent their free will or engage in social scoring schemes by governments. In the
+                      United States, while the AI regulation is yet to be introduced, the Federal Trade Commission has
+                      already warned firms about issues like algorithmic discrimination as well as how the current
+                      legislation can penalize those guilty of flouting the rules. In 2021, China put into effect major
+                      laws – The Personal Information Protection Law and Data Security Law. Enacted in November 2021,
+                      the former determines how user data may be utilized while the latter, which was passed in
+                      September 2021, forces firms to classify information depending on its relevance and economic value
+                      to Chinese national security. More legislations are expected to follow.</li>
+                    <li><strong>Transformation in Robotics Begins With AI -</strong> AI in robotics is the integration
+                      of AI technology with robots enabling them to more efficiently perform repetitive tasks without
+                      human intervention. AI also enables robots to establish communication with other robots and
+                      humans. For companies, robots are proving to be more efficient and at the same time a cheaper
+                      labor. Emergence of new tools for analysis of big data is also expected to contribute to market
+                      growth for AI in robots going forward. Strong growth is anticipated for the market for AI in
+                      robotics over the coming years as industries recognize the powerful combination of the two
+                      technologies offering several benefits in automation of processes and tasks. AI in robotics
+                      enables industries to become increasingly flexible in their processes. The technology provides
+                      robots with the learning ability critical for applications. Companies would be able to
+                      considerably increase productivity, save time and also make workplace safer for human workers. AI
+                      and robotics combination can also enhance potential of human workers. The step ahead for AI would
+                      be augmented intelligence which would seamlessly link machine with machine for further
+                      productivity gains. </li>
+
+
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--====  End of Page Title  ====-->
+
+
+  <!--================================
+   PROGARAM DETAILS
+=================================-->
+
+  <section class="section bg-light">
+    <div class="container text-center">
+      <a href="./programsignup.html" class="btn btn-lg shadow my-4 progaram-btn" target="_blank" /> Program Details </a>
+    </div>
+
+  </section>
+
+
+  <!--================================
+=    DOMAIN EXPERTS
+=================================-->
+
+  <section class="section pb-0">
+    <div class="container">
+      <div class="row pb-4 page-title">
+        <div class="col-sm-12 m-auto text-center -3">
+
+          <h1>DOMAIN EXPERTS</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0 " id="domain-experts">
+    <div class="container">
+      <iframe class="domain-iframe"
+        src="https://www.strategyr.com/evolv/calender_Show_Event_Speakers.asp?SrcType=%EC%21%C3%E34%3E%90%D4%2E%A0%F4%9C%CE%99ww%DD%D4%2B%5D%16%C9nX%19%E4%11%ECu%F2%E6v%3D%F4%E1%F8Q%27%7D%DA&ShowType=%FE%23%D2%EB92%81%CE&EID=%9Fe"></iframe>
+    </div>
+  </section>
+
+
+
+
+
+  <!--============================
+	           Footer            
+=============================-->
+
+  <footer-component></footer-component>
+
+
+  <!---============================
+           ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+  <script src="./js/jquery.readall.js"></script>
+
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+  <script src="./webcomponts/banner.js"></script>
+
+  <script src="./js/multi-animated-counter.js"></script>
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('LANGUAGE');
+        $('.goog-te-menu-frame.skiptranslate').load(function () {
+          setTimeout(function () {
+            $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+          }, 100);
+        });
+      });
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+  </script>
+</body>
+
+</html>

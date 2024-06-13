@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Evolv</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Evolv">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Evolv ">
+  <meta name="generator" content="Evolv">
+
+  <!-- theme meta -->
+  <meta name="theme-name" content="Evolv" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+  <link rel="stylesheet" href="plugins/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="plugins/aos/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custome.css" rel="stylesheet" />
+  <link href="./plugins/jsvectormap-master/dist/css/jsvectormap.css" rel="stylesheet" />
+  <link href="css/jquery.readall.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+
+
+
+  <!--============================
+=            HEADER           =
+=============================-->
+
+  <header-component></header-component>
+
+
+  <!--============================
+    PAGE BANNERS
+=============================-->
+  <section class="pagebanners">
+    <div class="container">
+      <div class="row mx-0" id="pagebanner-block">
+
+        <script src="https://releases.jquery.com/git/jquery-git.js"></script>
+        <script>
+          $(document).ready(function () {
+            $.getJSON("./data/events.json", function (data) {
+              var output = '';
+              console.log(data)
+              $.each(data.eventslist, function (key, value) {
+                if (value.Event == "telecome5g") {
+                  output += `<employee-card  title=" ` + value.eventtitle + '"  date= " ' + value.eventdate + ` "> </employee-card>`;
+                }
+              });
+              $('#pagebanner-block').html(output);
+            }).fail(function () {
+              document.write("An error has occurred.");
+            });
+          });
+        </script>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!--============================
+    PLACEKEEPTER BANNER
+=============================-->
+
+  <section class="section placekeeper_section page-title">
+    <div class="container">
+      <div class="row align-items-center m-0 ">
+        <div class="datagraphic-block">
+          <img src="./images/evolv/data/datagraphic.jpg" class="img-fluid border shadow-sm" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--================================
+         WHATS TRENDING
+=================================-->
+
+  <section class="section">
+    <div class="container">
+      <div class="row pb-4 page-title">
+        <div class="col-sm-12 m-auto text-center -3">
+          <!-- Page Title -->
+          <h1>WHAT'S TRENDING</h1>
+
+
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-12 mx-auto">
+
+          <div id="accordionExample" class="accordion custome-accordion border-0">
+
+
+            <div class="card">
+              <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                    aria-controls="collapseOne"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">
+                    Innovation in Telecommunications Powered by 5G</button>
+                </h2>
+              </div>
+              <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse ">
+                <div class="card-body p-5">
+                  <p class=" m-0">5G or the 5th generation of mobile connection brings with it the promise of increased
+                    bandwidth, enhanced coverage and faster speeds. The technology is poised to emerge as the mobile
+                    communications technology protocol ushering speed, connectivity, and possibilities. The 5G
+                    technology offers high bandwidth and network speed for supporting high-quality video conferencing,
+                    even across remote locations. </p>
+                  <br />
+                  <p class=" m-0">5G network and telecom industry in general has progressed considerably. Unlike their
+                    earlier purely connectivity role, telecom networks have evolved to create a robust ecosystem
+                    comprising of various stakeholders mainly due to the fact that wireless is a highly complex space.
+                    5G is deemed to be the future of the mobile industry, bringing forth leading edge technologies and
+                    innovations that provide more effective communication. The 5G helps bridge the hardware design
+                    handicaps as further sophistication in software for streaming videos at extremely high speed will be
+                    required for faster speeds of Internet, and for sending input to the servers at the same speed.
+                    Another big benefit associated with 5G will be a decrease in latency that enables faster and high
+                    speed data transmission. Though the switch from 4G to 5G network has begun, it may take some time
+                    for the transition to complete. 5G network technologies that will be deployed between 2020 and 2030
+                    will offer features such as stable connections, zero-distance connectivity for machines connected to
+                    people, and uploads and downloads at extremely fast speeds, stated to be 10-100 times the speed
+                    gains over 4G networks. 5G is expected to make more premium game titles accessible to wider audience
+                    through mobile 4G network also make it difficult to for real-time multiplayer on mobile networks,
+                    especially on a competitive level. 5G offers the ability to access simultaneous connections and
+                    bigger multiplayer experience. The network is expected to bring in more subscription services.</p>
+                  <br />
+
+                  <p class=" m-0">5G can make significant inroads toward making human lives smarter, safer, and
+                    connected. Instant interaction and communication and seamless access to information can enhance the
+                    quality of life. SBA (services-based architecture), software-defined network, and AI/ML along with
+                    technologies like Virtual Reality and Augmented Reality can support smart manufacturing, smart
+                    cities, smart utilities, machine communications, and telemedicine. Smart devices, sensors,
+                    wearables, and smartphones can realize their true potential. 5G can transform a movement away from
+                    just data and voice services to advanced services such as robotics, AR/VR, V2X, gaming, IIoT, and
+                    IoMT. AI-native services will evolve as the platform moves towards 6G technology. 5G involves not
+                    only high-speed connectivity and capacity but will augment reliability, coverage, and latency. </p>
+                  <br />
+                  <p>5G is available in two significant frequency ranges – FR1 and FR2. 1GHz FR1 bands are sub-bands of
+                    low-frequency FR1 bands that are limited by carrier capacity but deployed for wide coverage. These
+                    frequency bands are not deployed for high-capacity applications on account of the limited carrier
+                    capacity. 1 GHz to 7 GHz are mid-frequency FR1 bands that are widely deployed for 5G applications on
+                    account of their coverage and capacity. This mid-band range caters to mobile data services and
+                    facilitates Industry 4.0, IoT, mobile broadband, and fixed wireless access. The mid-band spectrum is
+                    the most popularly deployed and accounts for a substantial portion of revenues.</p>
+                  <br />
+                  <p>New reference architectures are being introduced as also workflows, recommendations, and API
+                    specifications. Reworking software stacks is another trend with 5G networks. Telecoms have to take
+                    into account standards compliance and other issues when restructuring. The IT departments must
+                    facilitate the smooth integration of new software on standardized API. Managing two legacy APIs is
+                    time-consuming and expensive. </p>
+                  <br />
+                  <p>Maintenance, automation, orchestration, and zero-touch provisioning must also be factored in.
+                    Standardizing APIs comes with the risk of having to replace the vendor. The standards must
+                    facilitate easier software replacement. Standardized APIs offer a unified dashboard and decision
+                    point. This translates to lesser monitoring of dedicated systems and unified data. AI and ML
+                    analysis can be carried out. </p>
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">5G: The
+                    Technology of Choice Going Forwards</button>
+                </h2>
+              </div>
+              <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">The rollout of 5G would continue to remain the focus of wireless providers and
+                    telecommunications equipment suppliers in 2023. 5G would become available widely over the coming
+                    years and by 2025, offer wireless coverage for half of the global population. With significantly
+                    faster mobile networks, consumers and businesses can experience reduced energy usage, high capacity,
+                    low latency, massive connectivity, and enhanced reliability. Telecommunications companies are
+                    gearing up to benefit from 5G networks. They can build The B2BCX (business-to-business-to-X) model
+                    can reap the benefits of 5G and enhance revenues. The IoT (Internet of Things) can harness this
+                    enhanced connectivity to support its rapidly-rising traffic. Organizations must organize and plan
+                    their networks to capitalize on network automation. </p>
+                  <br />
+                  <p class="m-0">5G networks bring the promise of extreme reliability, high speed, and ultra-low
+                    latency. Telcom operators will need to make significant capital expenditures to provide end
+                    customers with more data and better connectivity.</p>
+
+                  <br />
+                  <p class="m-0">5G Monetization Applications</p>
+                  <br />
+                  <p class="m-0">Some of the promising applications of 5G:</p>
+
+                  <ul>
+                    <li>Autonomous vehicle control is where there is a need for high reliability and low latency to
+                      facilitate vehicle-to-people, vehicle-to-vehicle, and vehicle-sensor communications. </li>
+                    <li>Standalone video applications </li>
+                    <li>Smart factories and automation wherein the controllers must communicate with the actuators in
+                      real-time for optimum working and reducing the reliance on human intervention</li>
+                    <li>Handling stadium and outdoor events where there is high connectivity density in a small
+                      geographic area</li>
+                    <li>IoT devices that are located over a geographic area but connected through networks to transmit
+                      small data volumes with low density using sensors and actuators</li>
+                    <li>Remote medical examinations and surgeries necessitate highly reliable communications and low
+                      latency</li>
+                    <li>Smart cities with smart utility meters have a high density of low-power devices</li>
+                    <li>Traffic in smart cities can be better managed with sensors. Emergency services can also be
+                      efficiently coordinated to provide first responders and emergency teams with optimal routes</li>
+                    <li>Wearables that need moderate latency at lower densities and data transmission rates</li>
+                    <li>A smart power distribution grid requires 5G to handle high volumes of telemetry data and ensure
+                      precise synchronization, detection of changes, and taking steps accordingly</li>
+                    <li>Games, Virtual reality, and Augmented reality need very high bandwidth and low latency to
+                      provide the real-time feel</li>
+                    <li>Precise device location and satellite technologies are facilitated by 5G </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                <h2 class="mb-0">
+                  <button type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree"
+                    class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Core
+                    Features and Trends</button>
+                </h2>
+              </div>
+              <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+                <div class="card-body p-5 textless">
+                  <p class=" m-0">Rise in Preference for Standalone (SA) 5G Deployment Model: Most 5G networks were
+                    earlier deployed as non-standalone (NSA) networks, taking advantage of existing investments and LTE
+                    architecture. Operators capitalize on the existing LTE architecture and existing equipment. There is
+                    a need for RAN (radio access network) to be implemented but the core network can use the existing
+                    EPC (evolved packet core) from LTE. The need for additional CAPEX is lower. In NSA models, telcos
+                    can get the network ready sans additional time and money. They can unlock new 5G revenue streams. In
+                    case of Standalone (SA) 5G models , the RAN and the service-based architecture (SBA) are new and
+                    must be compliant with 3GPP recommendations. There is a clear demarcation between different network
+                    functions. This results in end-to-end high speed and service. New services can be quickly introduced
+                    with rapid time-to-market.</p>
+
+                  <br />
+
+                  <ul>
+                    <li>Private Network Ecosystem to Drive Demand: DSPs (digital service providers) and CSPs
+                      (communications service providers) are evolving to include the rapid growth of 5G business
+                      opportunities and the IoT. This includes private networks for some industries such as transport,
+                      utilities, Industry 4.0, and smart cities. Private networks are given certain frequencies. In the
+                      coming years, the telco equipment and services segment will grow to tens of billions of dollars.
+                      Private 5G networks will connect several products, equipment, people, tools, and heavy machinery.
+                      Each organization and industry will have its specific requirements but all of them will require
+                      high levels of security and reliability.</li>
+                    <li>5G Network Slicing Technology: Network slicing technology can be offered as a service to
+                      different vertical industries. This facilitates the emergence of network tenants who own a slice
+                      of the network. 5G network slicing can facilitate the creation of new partners and business
+                      enablers. The network slices will have specific QoS (quality of service) requirements. It is
+                      essential to provide isolation as several tenants will be competing for network resources. </li>
+                    <li>Network slicing technology enables 5G digitization of several applications. Slices are created
+                      on-demand with URLLC (ultra-reliable low-latency) services. Network applications and functions are
+                      collated at the edge thereby reducing issues of multi-hop communications. Different slices might
+                      have stringent URLLC requirements and might need to operate simultaneously. They will be served by
+                      physical resources that are delivered by edge data centers and different radio sites. If two
+                      complicated surgeries are taking place simultaneously, they must both not be impacted by other
+                      services operating on the same network.</li>
+                    <li>IoT Continues to Grow Led Mainly by 5G Technology Developments: IoT is driving change in the
+                      21st century at dizzying speeds. The proliferation of the technology is almost universal in
+                      virtually every sector of society, economy and life. Connected devices are today increasingly
+                      becoming ubiquitous in manufacturing plants, warehouses, business processes, logistics systems,
+                      retail stores, hospitals, public/government services, smart cities, and consumer homes, among
+                      others. The technology is becoming the foundation for social, business and economic innovation
+                      that promises to generate value to human civilization in ways hitherto thought impossible. IoT
+                      revolves around connecting passive objects to the Internet in a manner that each device can
+                      generate, receive and send data and information using IP connectivity thus creating a context
+                      aware, information-rich ecosystem. Wireless technologies, cellular networks ( 5G), Bluetooth;
+                      Wi-Fi, radio frequency identification (RFID), telemetry and Global Positioning System (GPS) are
+                      some of the technologies underlying IoT. 5G technology can aid healthcare delivery, natural
+                      disaster prediction, accurate weather forecasting, and remote education. AI, AR, and a supersonic
+                      Internet can hyper-connect millions of IoT devices. IoT applications require a secure and
+                      efficient 5G network to ensure seamless data transmission between the linked devices.
+
+                      <ul>
+                        <li> IoT-powered 5G sensors can help monitor machine health thereby improving productivity.
+                        </li>
+                        <li> Real-time data on temperature, speed, oil levels, and electric outputs can be gathered
+                          without stopping the machines. Production lines can be automated with 5G IoT networks.</li>
+                        <li> Automated guided vehicles and mobile robots can be harnessed for production and delivery to
+                          save time and costs.</li>
+                        <li> Health-related IoT devices can work on 5G IoT technology to remotely monitor patient health
+                          and parameters.</li>
+                        <li> Smart cities use 5G IoT networks to monitor and control cleanliness, water levels, and HVAC
+                          systems. </li>
+                        <li> AI can be seamlessly integrated with industry and IoT with 5G networks. IoT devices play a
+                          significant role in the economy. Several IoT applications affect human living, cleanliness,
+                          security, and productivity.</li>
+
+                      </ul>
+
+
+
+                    </li>
+
+                    <li>Rapid Developments in 5G Technology Space to Fastrack Metaverse Initiatives: 5G technology
+                      ushers faster speed of the Internet. This will significantly improve digital initiatives such as
+                      the Metaverse. Telecom companies can roll out 5G services to customers who can avail of innovative
+                      technologies for a more immersive experience. Increasing adoption of 5G technology is offering
+                      enhanced bandwidth as well as reducing network latency and contention. Data-transfer speeds are
+                      anticipated to further receive a boost from the impending 6G network. The technology also requires
+                      smaller and power hardware components for enabling untethered functionality, miniaturization and
+                      robust performance for mobile devices, wearable devices and smart glasses. The advent of 6G will
+                      provide nearly 100 times faster connectivity and performance for networks. The success of the
+                      metaverse largely hinges on 5G technology as it allows brands to build personalized customer
+                      experiences. These virtual worlds can be accessed through consoles and smartphones. This will
+                      herald theme-based marketing. The metaverse experience can be seamless when it can be accessed by
+                      handheld devices. Telecom companies can provide the enhanced connectivity that is required.</li>
+                    <li>The Metaverse is a new concept encompassing the digital and physical worlds in an immersive
+                      manner. The benefits of this platform extend to several stakeholders, from consumers to telecom
+                      operators. The need for industry digitization cannot be undermined. Industrial metaverse can
+                      facilitate digitized factories. This helps in creating immersive environments for factory workers
+                      and providing a real-life feel. </li>
+                    <li>While public metaverse is yet to be deployed practically and could take several years for the
+                      same, the role of 5G network technology and hyperscaler infrastructure will be significant in
+                      enabling the same. Metaverse technology in its basic form, namely integration and overlay of
+                      physical and digital twins, is already in existence and use to resolve several issues such as how
+                      to cover city using 5G coverage that can support public metaverse infrastructure. In the metaverse
+                      space, there are numerous features and requirements that go farther than pure connectivity
+                      specifications, for which 5G network technology proves beneficial. Several wireless connectivity
+                      technologies are availability today for enabling wireless connectivity. However, all of them
+                      suffer from some drawbacks. While Bluetooth lacks reliability, range and rate, Wi-Fi has issues
+                      related to congestion and high latencies when numerous XR devices are simultaneously connected. In
+                      contract, 5G technology offers range, rate, reliability and latency needed for metaverse.
+                      Currently, average DL/UL data rates of 5G are around 2000Mbps/30Mbps per user.</li>
+                    <li>The promise of 6G can enhance the immersive experience by supporting tactile services and
+                      hologram-like views of objects. These services can be updated in real-time. Wireless technology
+                      can facilitate the industrial metaverse. This could result in enhanced efficiency and a reduction
+                      in costs. Telecom providers can offer service orchestration solutions to provide E2E solutions
+                      along with the 5G/6G network. These solutions must be vertical-specific to provide a bridge
+                      between the telecom and vertical worlds.</li>
+
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--====  End of Page Title  ====-->
+
+
+  <!--================================
+ PROGARAM DETAILS
+=================================-->
+
+  <section class="section bg-light">
+    <div class="container text-center">
+      <a href="./programsignup.html" class="btn btn-lg shadow my-4 progaram-btn" target="_blank" /> Program Details </a>
+    </div>
+
+  </section>
+
+
+  <!--================================
+=    DOMAIN EXPERTS
+=================================-->
+
+  <!--section class="section pb-0">
+    <div class="container">
+      <div class="row pb-4 page-title">
+        <div class="col-sm-12 m-auto text-center -3">
+
+          <h1>DOMAIN EXPERTS</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0 " id="domain-experts">
+    <div class="container">
+      <iframe class="domain-iframe"
+        src="https://www.strategyr.com/evolv/calender_Show_Event_Speakers.asp?SrcType=%EC%21%C3%E34%3E%90%D4%2E%A0%F4%9C%CE%99ww%DD%D4%2B%5D%16%C9nX%19%E4%11%ECu%F2%E6v%3D%F4%E1%F8Q%27%7D%DA&ShowType=%FE%23%D2%EB92%81%CE&EID=%9Fe"></iframe>
+    </div>
+  </section--->
+
+
+
+  <!--============================
+	           Footer            
+=============================-->
+
+  <footer-component></footer-component>
+
+
+  <!---============================
+           ScrollTop        
+=============================--->
+
+  <scrolltop-component></scrolltop-component>
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="./js/submenu_select.js"></script>
+  <script src="./js/jquery.readall.js"></script>
+
+
+  <!---WEB COMPONETNS-->
+  <script src="./webcomponts/headerComponents.js"></script>
+  <script src="./webcomponts/FooterComponent.js"></script>
+  <script src="./webcomponts/ScrollToTop.js"></script>
+  <script src="./webcomponts/dummytext.js"></script>
+  <script src="./webcomponts/banner.js"></script>
+
+  <script>
+    $('.textless').readall({
+      showheight: null,
+      showrows: 8
+    });
+
+
+  </script>
+
+
+
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('LANGUAGE');
+        $('.goog-te-menu-frame.skiptranslate').load(function () {
+          setTimeout(function () {
+            $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+          }, 100);
+        });
+      });
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: "en,es,zh-CN,de,ja,nl,fr,it,pt,ar,ko,sv,zh-TW", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+  </script>
+</body>
+
+</html>
